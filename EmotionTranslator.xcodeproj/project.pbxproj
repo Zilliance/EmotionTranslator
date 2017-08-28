@@ -1,0 +1,873 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7F93BEBB8175AAE788CA6307 /* Pods_EmotionTranslatorUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C65FD7AAF27DCACDA7632C21 /* Pods_EmotionTranslatorUITests.framework */; };
+		889D79537741AC722652C136 /* Pods_EmotionTranslator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAA997AB957049B5551F71EB /* Pods_EmotionTranslator.framework */; };
+		C0FA5645E25EC897AF28EADC /* Pods_EmotionTranslatorTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 342B6A321EC77D91CBE565A5 /* Pods_EmotionTranslatorTests.framework */; };
+		E3BE10B51F53C6EF00787921 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3BE10B41F53C6EF00787921 /* AppDelegate.swift */; };
+		E3BE10B71F53C6EF00787921 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3BE10B61F53C6EF00787921 /* ViewController.swift */; };
+		E3BE10BA1F53C6EF00787921 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3BE10B81F53C6EF00787921 /* Main.storyboard */; };
+		E3BE10BC1F53C6EF00787921 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3BE10BB1F53C6EF00787921 /* Assets.xcassets */; };
+		E3BE10BF1F53C6EF00787921 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3BE10BD1F53C6EF00787921 /* LaunchScreen.storyboard */; };
+		E3BE10CA1F53C6EF00787921 /* EmotionTranslatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3BE10C91F53C6EF00787921 /* EmotionTranslatorTests.swift */; };
+		E3BE10D51F53C6EF00787921 /* EmotionTranslatorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3BE10D41F53C6EF00787921 /* EmotionTranslatorUITests.swift */; };
+		E3BE10E41F53C7C900787921 /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3BE10E31F53C7C900787921 /* Database.swift */; };
+		E3BE10E61F53C7CF00787921 /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3BE10E51F53C7CF00787921 /* Notification.swift */; };
+		E3BE10E81F53C7D400787921 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3BE10E71F53C7D400787921 /* User.swift */; };
+		E3BE10EA1F53C7D900787921 /* Stressor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3BE10E91F53C7D900787921 /* Stressor.swift */; };
+		E3BE10F31F53C82300787921 /* faq.html in Resources */ = {isa = PBXBuildFile; fileRef = E3BE10F01F53C82300787921 /* faq.html */; };
+		E3BE10F41F53C82300787921 /* zilliance privacy policy.html in Resources */ = {isa = PBXBuildFile; fileRef = E3BE10F11F53C82300787921 /* zilliance privacy policy.html */; };
+		E3BE10F51F53C82300787921 /* zilliance terms of service.html in Resources */ = {isa = PBXBuildFile; fileRef = E3BE10F21F53C82300787921 /* zilliance terms of service.html */; };
+		E3BE11041F53C83B00787921 /* Muli-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E3BE10F61F53C83000787921 /* Muli-Black.ttf */; };
+		E3BE11051F53C83B00787921 /* Muli-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E3BE10F71F53C83000787921 /* Muli-BlackItalic.ttf */; };
+		E3BE11061F53C83B00787921 /* Muli-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E3BE10F81F53C83000787921 /* Muli-Bold.ttf */; };
+		E3BE11071F53C83B00787921 /* Muli-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E3BE10F91F53C83000787921 /* Muli-BoldItalic.ttf */; };
+		E3BE11081F53C83B00787921 /* Muli-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E3BE10FA1F53C83000787921 /* Muli-ExtraBold.ttf */; };
+		E3BE11091F53C83B00787921 /* Muli-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E3BE10FB1F53C83000787921 /* Muli-ExtraBoldItalic.ttf */; };
+		E3BE110A1F53C83B00787921 /* Muli-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E3BE10FC1F53C83000787921 /* Muli-ExtraLight.ttf */; };
+		E3BE110B1F53C83B00787921 /* Muli-ExtraLightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E3BE10FD1F53C83000787921 /* Muli-ExtraLightItalic.ttf */; };
+		E3BE110C1F53C83B00787921 /* Muli-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E3BE10FE1F53C83000787921 /* Muli-Italic.ttf */; };
+		E3BE110D1F53C83B00787921 /* Muli-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E3BE10FF1F53C83000787921 /* Muli-Light.ttf */; };
+		E3BE110E1F53C83B00787921 /* Muli-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E3BE11001F53C83000787921 /* Muli-LightItalic.ttf */; };
+		E3BE110F1F53C83B00787921 /* Muli-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E3BE11011F53C83000787921 /* Muli-Regular.ttf */; };
+		E3BE11101F53C83B00787921 /* Muli-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E3BE11021F53C83000787921 /* Muli-SemiBold.ttf */; };
+		E3BE11111F53C83B00787921 /* Muli-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E3BE11031F53C83000787921 /* Muli-SemiBoldItalic.ttf */; };
+		E3BE11141F53C85300787921 /* OrientableNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3BE11121F53C85300787921 /* OrientableNavigationController.swift */; };
+		E3BE11151F53C85300787921 /* HairlineLayoutConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3BE11131F53C85300787921 /* HairlineLayoutConstraint.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E3BE10C61F53C6EF00787921 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E3BE10A91F53C6EF00787921 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E3BE10B01F53C6EF00787921;
+			remoteInfo = EmotionTranslator;
+		};
+		E3BE10D11F53C6EF00787921 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E3BE10A91F53C6EF00787921 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E3BE10B01F53C6EF00787921;
+			remoteInfo = EmotionTranslator;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		02003D39B067C0C7C6323C88 /* Pods-EmotionTranslator.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmotionTranslator.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EmotionTranslator/Pods-EmotionTranslator.debug.xcconfig"; sourceTree = "<group>"; };
+		13BF02E9AC3DCF433CFCC483 /* Pods-EmotionTranslatorTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmotionTranslatorTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-EmotionTranslatorTests/Pods-EmotionTranslatorTests.release.xcconfig"; sourceTree = "<group>"; };
+		23866A66E55A3B853D74F256 /* Pods-EmotionTranslatorUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmotionTranslatorUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-EmotionTranslatorUITests/Pods-EmotionTranslatorUITests.release.xcconfig"; sourceTree = "<group>"; };
+		342B6A321EC77D91CBE565A5 /* Pods_EmotionTranslatorTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EmotionTranslatorTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6DC6FC489D947818823F215C /* Pods-EmotionTranslatorTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmotionTranslatorTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EmotionTranslatorTests/Pods-EmotionTranslatorTests.debug.xcconfig"; sourceTree = "<group>"; };
+		B05445A012A0BCEF9D95A791 /* Pods-EmotionTranslatorUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmotionTranslatorUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EmotionTranslatorUITests/Pods-EmotionTranslatorUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		C2E2DD4D09C96B4AAF7211D3 /* Pods-EmotionTranslator.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmotionTranslator.release.xcconfig"; path = "Pods/Target Support Files/Pods-EmotionTranslator/Pods-EmotionTranslator.release.xcconfig"; sourceTree = "<group>"; };
+		C65FD7AAF27DCACDA7632C21 /* Pods_EmotionTranslatorUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EmotionTranslatorUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E3BE10B11F53C6EF00787921 /* EmotionTranslator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EmotionTranslator.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E3BE10B41F53C6EF00787921 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		E3BE10B61F53C6EF00787921 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E3BE10B91F53C6EF00787921 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E3BE10BB1F53C6EF00787921 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E3BE10BE1F53C6EF00787921 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		E3BE10C01F53C6EF00787921 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E3BE10C51F53C6EF00787921 /* EmotionTranslatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EmotionTranslatorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E3BE10C91F53C6EF00787921 /* EmotionTranslatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmotionTranslatorTests.swift; sourceTree = "<group>"; };
+		E3BE10CB1F53C6EF00787921 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E3BE10D01F53C6EF00787921 /* EmotionTranslatorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EmotionTranslatorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E3BE10D41F53C6EF00787921 /* EmotionTranslatorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmotionTranslatorUITests.swift; sourceTree = "<group>"; };
+		E3BE10D61F53C6EF00787921 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E3BE10E31F53C7C900787921 /* Database.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
+		E3BE10E51F53C7CF00787921 /* Notification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
+		E3BE10E71F53C7D400787921 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		E3BE10E91F53C7D900787921 /* Stressor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stressor.swift; sourceTree = "<group>"; };
+		E3BE10F01F53C82300787921 /* faq.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = faq.html; sourceTree = "<group>"; };
+		E3BE10F11F53C82300787921 /* zilliance privacy policy.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "zilliance privacy policy.html"; sourceTree = "<group>"; };
+		E3BE10F21F53C82300787921 /* zilliance terms of service.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "zilliance terms of service.html"; sourceTree = "<group>"; };
+		E3BE10F61F53C83000787921 /* Muli-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Muli-Black.ttf"; sourceTree = "<group>"; };
+		E3BE10F71F53C83000787921 /* Muli-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Muli-BlackItalic.ttf"; sourceTree = "<group>"; };
+		E3BE10F81F53C83000787921 /* Muli-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Muli-Bold.ttf"; sourceTree = "<group>"; };
+		E3BE10F91F53C83000787921 /* Muli-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Muli-BoldItalic.ttf"; sourceTree = "<group>"; };
+		E3BE10FA1F53C83000787921 /* Muli-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Muli-ExtraBold.ttf"; sourceTree = "<group>"; };
+		E3BE10FB1F53C83000787921 /* Muli-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Muli-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
+		E3BE10FC1F53C83000787921 /* Muli-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Muli-ExtraLight.ttf"; sourceTree = "<group>"; };
+		E3BE10FD1F53C83000787921 /* Muli-ExtraLightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Muli-ExtraLightItalic.ttf"; sourceTree = "<group>"; };
+		E3BE10FE1F53C83000787921 /* Muli-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Muli-Italic.ttf"; sourceTree = "<group>"; };
+		E3BE10FF1F53C83000787921 /* Muli-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Muli-Light.ttf"; sourceTree = "<group>"; };
+		E3BE11001F53C83000787921 /* Muli-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Muli-LightItalic.ttf"; sourceTree = "<group>"; };
+		E3BE11011F53C83000787921 /* Muli-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Muli-Regular.ttf"; sourceTree = "<group>"; };
+		E3BE11021F53C83000787921 /* Muli-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Muli-SemiBold.ttf"; sourceTree = "<group>"; };
+		E3BE11031F53C83000787921 /* Muli-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Muli-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
+		E3BE11121F53C85300787921 /* OrientableNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrientableNavigationController.swift; sourceTree = "<group>"; };
+		E3BE11131F53C85300787921 /* HairlineLayoutConstraint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HairlineLayoutConstraint.swift; sourceTree = "<group>"; };
+		EAA997AB957049B5551F71EB /* Pods_EmotionTranslator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EmotionTranslator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E3BE10AE1F53C6EF00787921 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				889D79537741AC722652C136 /* Pods_EmotionTranslator.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E3BE10C21F53C6EF00787921 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C0FA5645E25EC897AF28EADC /* Pods_EmotionTranslatorTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E3BE10CD1F53C6EF00787921 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7F93BEBB8175AAE788CA6307 /* Pods_EmotionTranslatorUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		445198893C3799CEF0DE66C2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EAA997AB957049B5551F71EB /* Pods_EmotionTranslator.framework */,
+				342B6A321EC77D91CBE565A5 /* Pods_EmotionTranslatorTests.framework */,
+				C65FD7AAF27DCACDA7632C21 /* Pods_EmotionTranslatorUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B4F5945C85C194C6644DC327 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				02003D39B067C0C7C6323C88 /* Pods-EmotionTranslator.debug.xcconfig */,
+				C2E2DD4D09C96B4AAF7211D3 /* Pods-EmotionTranslator.release.xcconfig */,
+				6DC6FC489D947818823F215C /* Pods-EmotionTranslatorTests.debug.xcconfig */,
+				13BF02E9AC3DCF433CFCC483 /* Pods-EmotionTranslatorTests.release.xcconfig */,
+				B05445A012A0BCEF9D95A791 /* Pods-EmotionTranslatorUITests.debug.xcconfig */,
+				23866A66E55A3B853D74F256 /* Pods-EmotionTranslatorUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		E3BE10A81F53C6EF00787921 = {
+			isa = PBXGroup;
+			children = (
+				E3BE10B31F53C6EF00787921 /* EmotionTranslator */,
+				E3BE10C81F53C6EF00787921 /* EmotionTranslatorTests */,
+				E3BE10D31F53C6EF00787921 /* EmotionTranslatorUITests */,
+				E3BE10B21F53C6EF00787921 /* Products */,
+				B4F5945C85C194C6644DC327 /* Pods */,
+				445198893C3799CEF0DE66C2 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		E3BE10B21F53C6EF00787921 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E3BE10B11F53C6EF00787921 /* EmotionTranslator.app */,
+				E3BE10C51F53C6EF00787921 /* EmotionTranslatorTests.xctest */,
+				E3BE10D01F53C6EF00787921 /* EmotionTranslatorUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E3BE10B31F53C6EF00787921 /* EmotionTranslator */ = {
+			isa = PBXGroup;
+			children = (
+				E3BE10B81F53C6EF00787921 /* Main.storyboard */,
+				E3BE10B41F53C6EF00787921 /* AppDelegate.swift */,
+				E3BE10B61F53C6EF00787921 /* ViewController.swift */,
+				E3BE10E21F53C7A500787921 /* Model */,
+				E3BE10EB1F53C7DE00787921 /* Scenes */,
+				E3BE10EC1F53C7EF00787921 /* Utilities */,
+				E3BE10ED1F53C7FB00787921 /* Extensions */,
+				E3BE10EE1F53C80300787921 /* Fonts */,
+				E3BE10EF1F53C80A00787921 /* Resources */,
+				E3BE10BB1F53C6EF00787921 /* Assets.xcassets */,
+				E3BE10BD1F53C6EF00787921 /* LaunchScreen.storyboard */,
+				E3BE10C01F53C6EF00787921 /* Info.plist */,
+			);
+			path = EmotionTranslator;
+			sourceTree = "<group>";
+		};
+		E3BE10C81F53C6EF00787921 /* EmotionTranslatorTests */ = {
+			isa = PBXGroup;
+			children = (
+				E3BE10C91F53C6EF00787921 /* EmotionTranslatorTests.swift */,
+				E3BE10CB1F53C6EF00787921 /* Info.plist */,
+			);
+			path = EmotionTranslatorTests;
+			sourceTree = "<group>";
+		};
+		E3BE10D31F53C6EF00787921 /* EmotionTranslatorUITests */ = {
+			isa = PBXGroup;
+			children = (
+				E3BE10D41F53C6EF00787921 /* EmotionTranslatorUITests.swift */,
+				E3BE10D61F53C6EF00787921 /* Info.plist */,
+			);
+			path = EmotionTranslatorUITests;
+			sourceTree = "<group>";
+		};
+		E3BE10E21F53C7A500787921 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E3BE10E31F53C7C900787921 /* Database.swift */,
+				E3BE10E51F53C7CF00787921 /* Notification.swift */,
+				E3BE10E71F53C7D400787921 /* User.swift */,
+				E3BE10E91F53C7D900787921 /* Stressor.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		E3BE10EB1F53C7DE00787921 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Scenes;
+			sourceTree = "<group>";
+		};
+		E3BE10EC1F53C7EF00787921 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Utilities;
+			sourceTree = "<group>";
+		};
+		E3BE10ED1F53C7FB00787921 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				E3BE11121F53C85300787921 /* OrientableNavigationController.swift */,
+				E3BE11131F53C85300787921 /* HairlineLayoutConstraint.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
+		E3BE10EE1F53C80300787921 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				E3BE10F61F53C83000787921 /* Muli-Black.ttf */,
+				E3BE10F71F53C83000787921 /* Muli-BlackItalic.ttf */,
+				E3BE10F81F53C83000787921 /* Muli-Bold.ttf */,
+				E3BE10F91F53C83000787921 /* Muli-BoldItalic.ttf */,
+				E3BE10FA1F53C83000787921 /* Muli-ExtraBold.ttf */,
+				E3BE10FB1F53C83000787921 /* Muli-ExtraBoldItalic.ttf */,
+				E3BE10FC1F53C83000787921 /* Muli-ExtraLight.ttf */,
+				E3BE10FD1F53C83000787921 /* Muli-ExtraLightItalic.ttf */,
+				E3BE10FE1F53C83000787921 /* Muli-Italic.ttf */,
+				E3BE10FF1F53C83000787921 /* Muli-Light.ttf */,
+				E3BE11001F53C83000787921 /* Muli-LightItalic.ttf */,
+				E3BE11011F53C83000787921 /* Muli-Regular.ttf */,
+				E3BE11021F53C83000787921 /* Muli-SemiBold.ttf */,
+				E3BE11031F53C83000787921 /* Muli-SemiBoldItalic.ttf */,
+			);
+			name = Fonts;
+			sourceTree = "<group>";
+		};
+		E3BE10EF1F53C80A00787921 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				E3BE10F01F53C82300787921 /* faq.html */,
+				E3BE10F11F53C82300787921 /* zilliance privacy policy.html */,
+				E3BE10F21F53C82300787921 /* zilliance terms of service.html */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E3BE10B01F53C6EF00787921 /* EmotionTranslator */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E3BE10D91F53C6EF00787921 /* Build configuration list for PBXNativeTarget "EmotionTranslator" */;
+			buildPhases = (
+				6E1653350601F3A787E4D363 /* [CP] Check Pods Manifest.lock */,
+				E3BE10AD1F53C6EF00787921 /* Sources */,
+				E3BE10AE1F53C6EF00787921 /* Frameworks */,
+				E3BE10AF1F53C6EF00787921 /* Resources */,
+				B522BBFA878B8AAB36278421 /* [CP] Embed Pods Frameworks */,
+				B47968CA9CCA82740275F62F /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EmotionTranslator;
+			productName = EmotionTranslator;
+			productReference = E3BE10B11F53C6EF00787921 /* EmotionTranslator.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E3BE10C41F53C6EF00787921 /* EmotionTranslatorTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E3BE10DC1F53C6EF00787921 /* Build configuration list for PBXNativeTarget "EmotionTranslatorTests" */;
+			buildPhases = (
+				D1D6DCEB863F11A5AA6E531F /* [CP] Check Pods Manifest.lock */,
+				E3BE10C11F53C6EF00787921 /* Sources */,
+				E3BE10C21F53C6EF00787921 /* Frameworks */,
+				E3BE10C31F53C6EF00787921 /* Resources */,
+				1E1F197DE26A8B1ABCE87B4D /* [CP] Embed Pods Frameworks */,
+				293D0CB9958C872BDAF5BF59 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E3BE10C71F53C6EF00787921 /* PBXTargetDependency */,
+			);
+			name = EmotionTranslatorTests;
+			productName = EmotionTranslatorTests;
+			productReference = E3BE10C51F53C6EF00787921 /* EmotionTranslatorTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		E3BE10CF1F53C6EF00787921 /* EmotionTranslatorUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E3BE10DF1F53C6EF00787921 /* Build configuration list for PBXNativeTarget "EmotionTranslatorUITests" */;
+			buildPhases = (
+				2055D4B5227A50C2C5E922B4 /* [CP] Check Pods Manifest.lock */,
+				E3BE10CC1F53C6EF00787921 /* Sources */,
+				E3BE10CD1F53C6EF00787921 /* Frameworks */,
+				E3BE10CE1F53C6EF00787921 /* Resources */,
+				F55CD284E686B8AEE77CDD50 /* [CP] Embed Pods Frameworks */,
+				44919E002C8C271DCC5800F7 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E3BE10D21F53C6EF00787921 /* PBXTargetDependency */,
+			);
+			name = EmotionTranslatorUITests;
+			productName = EmotionTranslatorUITests;
+			productReference = E3BE10D01F53C6EF00787921 /* EmotionTranslatorUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E3BE10A91F53C6EF00787921 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = Zilliance;
+				TargetAttributes = {
+					E3BE10B01F53C6EF00787921 = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = GFYH5G57YM;
+						ProvisioningStyle = Automatic;
+					};
+					E3BE10C41F53C6EF00787921 = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = GFYH5G57YM;
+						ProvisioningStyle = Automatic;
+						TestTargetID = E3BE10B01F53C6EF00787921;
+					};
+					E3BE10CF1F53C6EF00787921 = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = GFYH5G57YM;
+						ProvisioningStyle = Automatic;
+						TestTargetID = E3BE10B01F53C6EF00787921;
+					};
+				};
+			};
+			buildConfigurationList = E3BE10AC1F53C6EF00787921 /* Build configuration list for PBXProject "EmotionTranslator" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E3BE10A81F53C6EF00787921;
+			productRefGroup = E3BE10B21F53C6EF00787921 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E3BE10B01F53C6EF00787921 /* EmotionTranslator */,
+				E3BE10C41F53C6EF00787921 /* EmotionTranslatorTests */,
+				E3BE10CF1F53C6EF00787921 /* EmotionTranslatorUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E3BE10AF1F53C6EF00787921 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E3BE11071F53C83B00787921 /* Muli-BoldItalic.ttf in Resources */,
+				E3BE110B1F53C83B00787921 /* Muli-ExtraLightItalic.ttf in Resources */,
+				E3BE11061F53C83B00787921 /* Muli-Bold.ttf in Resources */,
+				E3BE11041F53C83B00787921 /* Muli-Black.ttf in Resources */,
+				E3BE11091F53C83B00787921 /* Muli-ExtraBoldItalic.ttf in Resources */,
+				E3BE110A1F53C83B00787921 /* Muli-ExtraLight.ttf in Resources */,
+				E3BE110D1F53C83B00787921 /* Muli-Light.ttf in Resources */,
+				E3BE10F41F53C82300787921 /* zilliance privacy policy.html in Resources */,
+				E3BE11101F53C83B00787921 /* Muli-SemiBold.ttf in Resources */,
+				E3BE110C1F53C83B00787921 /* Muli-Italic.ttf in Resources */,
+				E3BE11081F53C83B00787921 /* Muli-ExtraBold.ttf in Resources */,
+				E3BE10BF1F53C6EF00787921 /* LaunchScreen.storyboard in Resources */,
+				E3BE10BC1F53C6EF00787921 /* Assets.xcassets in Resources */,
+				E3BE110F1F53C83B00787921 /* Muli-Regular.ttf in Resources */,
+				E3BE110E1F53C83B00787921 /* Muli-LightItalic.ttf in Resources */,
+				E3BE10BA1F53C6EF00787921 /* Main.storyboard in Resources */,
+				E3BE11111F53C83B00787921 /* Muli-SemiBoldItalic.ttf in Resources */,
+				E3BE10F51F53C82300787921 /* zilliance terms of service.html in Resources */,
+				E3BE10F31F53C82300787921 /* faq.html in Resources */,
+				E3BE11051F53C83B00787921 /* Muli-BlackItalic.ttf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E3BE10C31F53C6EF00787921 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E3BE10CE1F53C6EF00787921 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1E1F197DE26A8B1ABCE87B4D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EmotionTranslatorTests/Pods-EmotionTranslatorTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2055D4B5227A50C2C5E922B4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		293D0CB9958C872BDAF5BF59 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EmotionTranslatorTests/Pods-EmotionTranslatorTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		44919E002C8C271DCC5800F7 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EmotionTranslatorUITests/Pods-EmotionTranslatorUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6E1653350601F3A787E4D363 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		B47968CA9CCA82740275F62F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EmotionTranslator/Pods-EmotionTranslator-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B522BBFA878B8AAB36278421 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EmotionTranslator/Pods-EmotionTranslator-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D1D6DCEB863F11A5AA6E531F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F55CD284E686B8AEE77CDD50 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EmotionTranslatorUITests/Pods-EmotionTranslatorUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E3BE10AD1F53C6EF00787921 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E3BE11151F53C85300787921 /* HairlineLayoutConstraint.swift in Sources */,
+				E3BE10E61F53C7CF00787921 /* Notification.swift in Sources */,
+				E3BE10E41F53C7C900787921 /* Database.swift in Sources */,
+				E3BE10EA1F53C7D900787921 /* Stressor.swift in Sources */,
+				E3BE10B71F53C6EF00787921 /* ViewController.swift in Sources */,
+				E3BE11141F53C85300787921 /* OrientableNavigationController.swift in Sources */,
+				E3BE10E81F53C7D400787921 /* User.swift in Sources */,
+				E3BE10B51F53C6EF00787921 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E3BE10C11F53C6EF00787921 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E3BE10CA1F53C6EF00787921 /* EmotionTranslatorTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E3BE10CC1F53C6EF00787921 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E3BE10D51F53C6EF00787921 /* EmotionTranslatorUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E3BE10C71F53C6EF00787921 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E3BE10B01F53C6EF00787921 /* EmotionTranslator */;
+			targetProxy = E3BE10C61F53C6EF00787921 /* PBXContainerItemProxy */;
+		};
+		E3BE10D21F53C6EF00787921 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E3BE10B01F53C6EF00787921 /* EmotionTranslator */;
+			targetProxy = E3BE10D11F53C6EF00787921 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		E3BE10B81F53C6EF00787921 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E3BE10B91F53C6EF00787921 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		E3BE10BD1F53C6EF00787921 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E3BE10BE1F53C6EF00787921 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E3BE10D71F53C6EF00787921 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		E3BE10D81F53C6EF00787921 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E3BE10DA1F53C6EF00787921 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 02003D39B067C0C7C6323C88 /* Pods-EmotionTranslator.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = GFYH5G57YM;
+				INFOPLIST_FILE = EmotionTranslator/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.zilliance.emotion-translator";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		E3BE10DB1F53C6EF00787921 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C2E2DD4D09C96B4AAF7211D3 /* Pods-EmotionTranslator.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = GFYH5G57YM;
+				INFOPLIST_FILE = EmotionTranslator/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.zilliance.emotion-translator";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		E3BE10DD1F53C6EF00787921 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6DC6FC489D947818823F215C /* Pods-EmotionTranslatorTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = GFYH5G57YM;
+				INFOPLIST_FILE = EmotionTranslatorTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.zilliance.EmotionTranslatorTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EmotionTranslator.app/EmotionTranslator";
+			};
+			name = Debug;
+		};
+		E3BE10DE1F53C6EF00787921 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 13BF02E9AC3DCF433CFCC483 /* Pods-EmotionTranslatorTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = GFYH5G57YM;
+				INFOPLIST_FILE = EmotionTranslatorTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.zilliance.EmotionTranslatorTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EmotionTranslator.app/EmotionTranslator";
+			};
+			name = Release;
+		};
+		E3BE10E01F53C6EF00787921 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B05445A012A0BCEF9D95A791 /* Pods-EmotionTranslatorUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = GFYH5G57YM;
+				INFOPLIST_FILE = EmotionTranslatorUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.zilliance.EmotionTranslatorUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = EmotionTranslator;
+			};
+			name = Debug;
+		};
+		E3BE10E11F53C6EF00787921 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 23866A66E55A3B853D74F256 /* Pods-EmotionTranslatorUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = GFYH5G57YM;
+				INFOPLIST_FILE = EmotionTranslatorUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.zilliance.EmotionTranslatorUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = EmotionTranslator;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E3BE10AC1F53C6EF00787921 /* Build configuration list for PBXProject "EmotionTranslator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E3BE10D71F53C6EF00787921 /* Debug */,
+				E3BE10D81F53C6EF00787921 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E3BE10D91F53C6EF00787921 /* Build configuration list for PBXNativeTarget "EmotionTranslator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E3BE10DA1F53C6EF00787921 /* Debug */,
+				E3BE10DB1F53C6EF00787921 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E3BE10DC1F53C6EF00787921 /* Build configuration list for PBXNativeTarget "EmotionTranslatorTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E3BE10DD1F53C6EF00787921 /* Debug */,
+				E3BE10DE1F53C6EF00787921 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E3BE10DF1F53C6EF00787921 /* Build configuration list for PBXNativeTarget "EmotionTranslatorUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E3BE10E01F53C6EF00787921 /* Debug */,
+				E3BE10E11F53C6EF00787921 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E3BE10A91F53C6EF00787921 /* Project object */;
+}
