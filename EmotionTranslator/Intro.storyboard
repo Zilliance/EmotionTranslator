@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="7Rv-YE-G50">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Muli-Regular.ttf">
+            <string>Muli-Regular</string>
+        </array>
+        <array key="Muli-SemiBold.ttf">
+            <string>Muli-SemiBold</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Intro View Controller-->
+        <scene sceneID="hia-Qe-b93">
+            <objects>
+                <viewController id="7Rv-YE-G50" customClass="IntroViewController" customModule="EmotionTranslator" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="uAy-Zs-gbW"/>
+                        <viewControllerLayoutGuide type="bottom" id="wdv-XO-Gso"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="RhJ-yo-4Go">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo-intro" translatesAutoresizingMaskIntoConstraints="NO" id="0MR-xF-q0c">
+                                <rect key="frame" x="45.5" y="40" width="284" height="232"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="284" id="7AV-AT-Gft"/>
+                                    <constraint firstAttribute="height" constant="232" id="Zrm-WH-gbl"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jgz-qO-O2A">
+                                <rect key="frame" x="20" y="593" width="335" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="IfX-7g-KFi"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Muli-SemiBold" family="Muli" pointSize="18"/>
+                                <state key="normal" title="CONTINUE" backgroundImage="button-background">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="continueAction:" destination="7Rv-YE-G50" eventType="touchUpInside" id="clh-9x-K1m"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" verticalCompressionResistancePriority="747" editable="NO" text="EMOTION TRANSLATOR" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="ahZ-z3-59Z">
+                                <rect key="frame" x="21" y="280" width="333" height="305"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="textColor" red="0.12156862745098039" green="0.19215686274509802" blue="0.25490196078431371" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Muli-Regular" family="Muli" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <connections>
+                                    <outlet property="delegate" destination="7Rv-YE-G50" id="NUH-uT-nab"/>
+                                </connections>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="Jgz-qO-O2A" firstAttribute="leading" secondItem="RhJ-yo-4Go" secondAttribute="leading" constant="20" id="IMx-Zo-agm"/>
+                            <constraint firstItem="0MR-xF-q0c" firstAttribute="top" secondItem="uAy-Zs-gbW" secondAttribute="bottom" constant="20" id="PjP-hV-DcS"/>
+                            <constraint firstItem="Jgz-qO-O2A" firstAttribute="top" secondItem="ahZ-z3-59Z" secondAttribute="bottom" constant="8" id="Sb2-MZ-xcm"/>
+                            <constraint firstAttribute="trailing" secondItem="Jgz-qO-O2A" secondAttribute="trailing" constant="20" id="bO5-ri-Iwb"/>
+                            <constraint firstItem="wdv-XO-Gso" firstAttribute="top" secondItem="Jgz-qO-O2A" secondAttribute="bottom" constant="30" id="cFw-A1-lNP"/>
+                            <constraint firstAttribute="trailing" secondItem="ahZ-z3-59Z" secondAttribute="trailing" constant="21" id="iGR-y5-CHc"/>
+                            <constraint firstItem="ahZ-z3-59Z" firstAttribute="leading" secondItem="RhJ-yo-4Go" secondAttribute="leading" constant="21" id="oDm-22-SAW"/>
+                            <constraint firstItem="ahZ-z3-59Z" firstAttribute="top" secondItem="0MR-xF-q0c" secondAttribute="bottom" constant="8" id="vMa-H2-01Z"/>
+                            <constraint firstItem="0MR-xF-q0c" firstAttribute="centerX" secondItem="RhJ-yo-4Go" secondAttribute="centerX" id="wm1-yC-hbF"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageHeightContraint" destination="Zrm-WH-gbl" id="1gP-M7-ks0"/>
+                        <outlet property="textView" destination="ahZ-z3-59Z" id="kWb-sW-8nJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="57i-Uh-Qee" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="229.59999999999999" y="125.4872563718141"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="button-background" width="335" height="77"/>
+        <image name="logo-intro" width="128" height="128"/>
+    </resources>
+</document>
