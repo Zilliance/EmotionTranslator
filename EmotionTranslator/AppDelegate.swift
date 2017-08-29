@@ -46,7 +46,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         //NotificationsManager.sharedInstance.realmDB = Database.shared.realm
         Analytics.initialize()
-        Analytics.sendEvent(event: EmotionTranslatorEvent.newStressor)
 
         return true
     }
