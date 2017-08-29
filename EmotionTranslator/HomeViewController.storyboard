@@ -21,7 +21,7 @@
         <scene sceneID="asY-k0-7ft">
             <objects>
                 <navigationController id="Gi1-5G-J7H" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="KdU-YH-GHq">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="KdU-YH-GHq">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -60,6 +60,9 @@
                                 <fontDescription key="fontDescription" name="Muli-Regular" family="Muli" pointSize="18"/>
                                 <inset key="imageEdgeInsets" minX="-37" minY="13" maxX="0.0" maxY="13"/>
                                 <state key="normal" title="START NEW TRANSLATOR" image="logo-round" backgroundImage="button-background"/>
+                                <connections>
+                                    <segue destination="8R4-b2-Rlv" kind="show" id="Wu1-9u-8D9"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="     My saved emotion translators" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ocx-y1-f2A">
                                 <rect key="frame" x="0.0" y="160" width="375" height="40"/>
@@ -172,6 +175,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0OS-eR-TdJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-60" y="310.79460269865069"/>
+        </scene>
+        <!--CreateStressor-->
+        <scene sceneID="umF-pi-dCo">
+            <objects>
+                <viewControllerPlaceholder storyboardName="CreateStressor" id="8R4-b2-Rlv" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tPf-rK-1iK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-42" y="766"/>
         </scene>
         <!--Home Collection View Controller-->
         <scene sceneID="mIu-WS-Drz">

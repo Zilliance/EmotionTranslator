@@ -38,6 +38,8 @@
 		8C2B14441F55CAC5002C0353 /* Tour.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C2B14411F55CAC5002C0353 /* Tour.storyboard */; };
 		8C2B14451F55CAC5002C0353 /* TourSceneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2B14421F55CAC5002C0353 /* TourSceneViewController.swift */; };
 		8C2B14461F55CAC5002C0353 /* TourPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2B14431F55CAC5002C0353 /* TourPageViewController.swift */; };
+		8C2B14491F55FA45002C0353 /* CreateStressor.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C2B14481F55FA45002C0353 /* CreateStressor.storyboard */; };
+		8C2B144B1F55FCDC002C0353 /* CreateStressorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2B144A1F55FCDC002C0353 /* CreateStressorViewController.swift */; };
 		C0FA5645E25EC897AF28EADC /* Pods_EmotionTranslatorTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 342B6A321EC77D91CBE565A5 /* Pods_EmotionTranslatorTests.framework */; };
 		E3BE10B51F53C6EF00787921 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3BE10B41F53C6EF00787921 /* AppDelegate.swift */; };
 		E3BE10BC1F53C6EF00787921 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3BE10BB1F53C6EF00787921 /* Assets.xcassets */; };
@@ -121,6 +123,8 @@
 		8C2B14411F55CAC5002C0353 /* Tour.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Tour.storyboard; sourceTree = "<group>"; };
 		8C2B14421F55CAC5002C0353 /* TourSceneViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TourSceneViewController.swift; sourceTree = "<group>"; };
 		8C2B14431F55CAC5002C0353 /* TourPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TourPageViewController.swift; sourceTree = "<group>"; };
+		8C2B14481F55FA45002C0353 /* CreateStressor.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CreateStressor.storyboard; sourceTree = "<group>"; };
+		8C2B144A1F55FCDC002C0353 /* CreateStressorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateStressorViewController.swift; sourceTree = "<group>"; };
 		B05445A012A0BCEF9D95A791 /* Pods-EmotionTranslatorUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmotionTranslatorUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EmotionTranslatorUITests/Pods-EmotionTranslatorUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		C2E2DD4D09C96B4AAF7211D3 /* Pods-EmotionTranslator.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmotionTranslator.release.xcconfig"; path = "Pods/Target Support Files/Pods-EmotionTranslator/Pods-EmotionTranslator.release.xcconfig"; sourceTree = "<group>"; };
 		C65FD7AAF27DCACDA7632C21 /* Pods_EmotionTranslatorUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EmotionTranslatorUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -252,6 +256,15 @@
 			name = Tour;
 			sourceTree = "<group>";
 		};
+		8C2B14471F55FA19002C0353 /* CreateStressor */ = {
+			isa = PBXGroup;
+			children = (
+				8C2B14481F55FA45002C0353 /* CreateStressor.storyboard */,
+				8C2B144A1F55FCDC002C0353 /* CreateStressorViewController.swift */,
+			);
+			name = CreateStressor;
+			sourceTree = "<group>";
+		};
 		B4F5945C85C194C6644DC327 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -339,6 +352,7 @@
 		E3BE10EB1F53C7DE00787921 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				8C2B14471F55FA19002C0353 /* CreateStressor */,
 				8C2B14401F55CA63002C0353 /* Tour */,
 				8C2B14331F54AB1D002C0353 /* Intro */,
 				8C2B141E1F54A75D002C0353 /* SideMenu */,
@@ -524,6 +538,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8C2B14081F547DF7002C0353 /* HomeViewController.storyboard in Resources */,
+				8C2B14491F55FA45002C0353 /* CreateStressor.storyboard in Resources */,
 				8C2B14311F54A9C9002C0353 /* VideoPlayer.storyboard in Resources */,
 				E3BE11071F53C83B00787921 /* Muli-BoldItalic.ttf in Resources */,
 				E3BE110B1F53C83B00787921 /* Muli-ExtraLightItalic.ttf in Resources */,
@@ -735,6 +750,7 @@
 				8C2B14181F54A4AD002C0353 /* Date+Extensions.swift in Sources */,
 				4F2CDCD71F55EB8A0048FA9C /* Analytics.swift in Sources */,
 				4F2CDCD91F55EC920048FA9C /* Analytics+EmotionTranslator.swift in Sources */,
+				8C2B144B1F55FCDC002C0353 /* CreateStressorViewController.swift in Sources */,
 				8C2B14321F54A9C9002C0353 /* VideoPlayerViewController.swift in Sources */,
 				E3BE10E41F53C7C900787921 /* Database.swift in Sources */,
 				8C2B140C1F548B8C002C0353 /* HomeCollectionViewController.swift in Sources */,
