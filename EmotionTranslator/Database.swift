@@ -19,10 +19,10 @@ class Database {
         do {
             
             let config = Realm.Configuration(
-                schemaVersion: 8,
+                schemaVersion: 1,
                 
                 migrationBlock: { migration, oldSchemaVersion in
-                    if (oldSchemaVersion < 4) {
+                    if (oldSchemaVersion < 1) {
                         // Nothing to do!
                         // Realm will automatically detect new properties and removed properties
                         // And will update the schema on disk automatically
