@@ -8,6 +8,11 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Muli-Regular.ttf">
+            <string>Muli-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Create Stressor View Controller-->
         <scene sceneID="mUs-pr-b9U">
@@ -48,16 +53,40 @@
                                     <constraint firstAttribute="bottom" secondItem="ZKh-gL-5vF" secondAttribute="bottom" id="zfB-CK-2ih"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NoM-6t-oPd">
+                                <rect key="frame" x="20" y="603" width="335" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="NmQ-N9-kl2"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Muli-Regular" family="Muli" pointSize="18"/>
+                                <state key="normal" title="CONTINUE" backgroundImage="stressor-button-background">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="continueAction:" destination="GpC-mK-eIc" eventType="touchUpInside" id="8cy-hT-ll6"/>
+                                </connections>
+                            </button>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tgq-NK-1nL">
+                                <rect key="frame" x="0.0" y="100" width="375" height="483"/>
+                            </containerView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="NoM-6t-oPd" firstAttribute="top" secondItem="tgq-NK-1nL" secondAttribute="bottom" constant="20" id="0Kc-1c-yU6"/>
+                            <constraint firstItem="j7X-CC-2fB" firstAttribute="top" secondItem="NoM-6t-oPd" secondAttribute="bottom" constant="20" id="5HT-uw-JQ6"/>
+                            <constraint firstItem="tgq-NK-1nL" firstAttribute="top" secondItem="URP-5S-b5h" secondAttribute="bottom" id="Bty-q2-JCS"/>
+                            <constraint firstAttribute="trailing" secondItem="tgq-NK-1nL" secondAttribute="trailing" id="ErT-Bp-R6T"/>
                             <constraint firstItem="URP-5S-b5h" firstAttribute="top" secondItem="bmw-W8-Xdl" secondAttribute="bottom" id="Pxz-rn-UUG"/>
                             <constraint firstAttribute="trailing" secondItem="URP-5S-b5h" secondAttribute="trailing" id="TQJ-SA-u4f"/>
+                            <constraint firstItem="NoM-6t-oPd" firstAttribute="leading" secondItem="NaJ-Ny-ef0" secondAttribute="leading" constant="20" id="jvV-ol-g0g"/>
+                            <constraint firstItem="tgq-NK-1nL" firstAttribute="leading" secondItem="NaJ-Ny-ef0" secondAttribute="leading" id="pvI-Kt-AYs"/>
                             <constraint firstItem="URP-5S-b5h" firstAttribute="leading" secondItem="NaJ-Ny-ef0" secondAttribute="leading" id="q3T-eJ-vxN"/>
+                            <constraint firstAttribute="trailing" secondItem="NoM-6t-oPd" secondAttribute="trailing" constant="20" id="tYj-sf-mNN"/>
                         </constraints>
                     </view>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
+                        <outlet property="pageContainerView" destination="tgq-NK-1nL" id="5r0-ov-3ci"/>
                         <outlet property="pageControl" destination="ZKh-gL-5vF" id="gO6-lZ-340"/>
                     </connections>
                 </viewController>
@@ -66,4 +95,7 @@
             <point key="canvasLocation" x="-1" y="180"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="stressor-button-background" width="336" height="44"/>
+    </resources>
 </document>
