@@ -33,6 +33,9 @@
 		8C2B14391F54ABE6002C0353 /* NSString+Ranges.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2B14381F54ABE6002C0353 /* NSString+Ranges.swift */; };
 		8C2B143D1F54BA77002C0353 /* EmotionTranslator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2B143C1F54BA77002C0353 /* EmotionTranslator.swift */; };
 		8C2B143F1F54BD69002C0353 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2B143E1F54BD69002C0353 /* AppConstants.swift */; };
+		8C2B14441F55CAC5002C0353 /* Tour.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C2B14411F55CAC5002C0353 /* Tour.storyboard */; };
+		8C2B14451F55CAC5002C0353 /* TourSceneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2B14421F55CAC5002C0353 /* TourSceneViewController.swift */; };
+		8C2B14461F55CAC5002C0353 /* TourPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2B14431F55CAC5002C0353 /* TourPageViewController.swift */; };
 		C0FA5645E25EC897AF28EADC /* Pods_EmotionTranslatorTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 342B6A321EC77D91CBE565A5 /* Pods_EmotionTranslatorTests.framework */; };
 		E3BE10B51F53C6EF00787921 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3BE10B41F53C6EF00787921 /* AppDelegate.swift */; };
 		E3BE10BC1F53C6EF00787921 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3BE10BB1F53C6EF00787921 /* Assets.xcassets */; };
@@ -111,6 +114,9 @@
 		8C2B14381F54ABE6002C0353 /* NSString+Ranges.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "NSString+Ranges.swift"; path = "Extensions/NSString+Ranges.swift"; sourceTree = "<group>"; };
 		8C2B143C1F54BA77002C0353 /* EmotionTranslator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmotionTranslator.swift; sourceTree = "<group>"; };
 		8C2B143E1F54BD69002C0353 /* AppConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
+		8C2B14411F55CAC5002C0353 /* Tour.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Tour.storyboard; sourceTree = "<group>"; };
+		8C2B14421F55CAC5002C0353 /* TourSceneViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TourSceneViewController.swift; sourceTree = "<group>"; };
+		8C2B14431F55CAC5002C0353 /* TourPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TourPageViewController.swift; sourceTree = "<group>"; };
 		B05445A012A0BCEF9D95A791 /* Pods-EmotionTranslatorUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmotionTranslatorUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EmotionTranslatorUITests/Pods-EmotionTranslatorUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		C2E2DD4D09C96B4AAF7211D3 /* Pods-EmotionTranslator.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmotionTranslator.release.xcconfig"; path = "Pods/Target Support Files/Pods-EmotionTranslator/Pods-EmotionTranslator.release.xcconfig"; sourceTree = "<group>"; };
 		C65FD7AAF27DCACDA7632C21 /* Pods_EmotionTranslatorUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EmotionTranslatorUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -223,6 +229,16 @@
 			name = Intro;
 			sourceTree = "<group>";
 		};
+		8C2B14401F55CA63002C0353 /* Tour */ = {
+			isa = PBXGroup;
+			children = (
+				8C2B14411F55CAC5002C0353 /* Tour.storyboard */,
+				8C2B14421F55CAC5002C0353 /* TourSceneViewController.swift */,
+				8C2B14431F55CAC5002C0353 /* TourPageViewController.swift */,
+			);
+			name = Tour;
+			sourceTree = "<group>";
+		};
 		B4F5945C85C194C6644DC327 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -309,6 +325,7 @@
 		E3BE10EB1F53C7DE00787921 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				8C2B14401F55CA63002C0353 /* Tour */,
 				8C2B14331F54AB1D002C0353 /* Intro */,
 				8C2B141E1F54A75D002C0353 /* SideMenu */,
 				8C2B14061F547DDF002C0353 /* Home */,
@@ -496,6 +513,7 @@
 				E3BE11071F53C83B00787921 /* Muli-BoldItalic.ttf in Resources */,
 				E3BE110B1F53C83B00787921 /* Muli-ExtraLightItalic.ttf in Resources */,
 				E3BE11061F53C83B00787921 /* Muli-Bold.ttf in Resources */,
+				8C2B14441F55CAC5002C0353 /* Tour.storyboard in Resources */,
 				E3BE11041F53C83B00787921 /* Muli-Black.ttf in Resources */,
 				E3BE11091F53C83B00787921 /* Muli-ExtraBoldItalic.ttf in Resources */,
 				E3BE110A1F53C83B00787921 /* Muli-ExtraLight.ttf in Resources */,
@@ -682,6 +700,7 @@
 				8C2B14161F54A4AD002C0353 /* String+Extensions.swift in Sources */,
 				E3BE10E61F53C7CF00787921 /* Notification.swift in Sources */,
 				8C2B14191F54A4AD002C0353 /* TimeInterval+Extensions.swift in Sources */,
+				8C2B14461F55CAC5002C0353 /* TourPageViewController.swift in Sources */,
 				8C2B141D1F54A4AD002C0353 /* UIViewController+Extensions.swift in Sources */,
 				8C2B14291F54A942002C0353 /* LeftMenuViewController.swift in Sources */,
 				8C2B14181F54A4AD002C0353 /* Date+Extensions.swift in Sources */,
@@ -699,6 +718,7 @@
 				8C2B14271F54A942002C0353 /* AboutCompanyViewController.swift in Sources */,
 				E3BE11141F53C85300787921 /* OrientableNavigationController.swift in Sources */,
 				E3BE10E81F53C7D400787921 /* User.swift in Sources */,
+				8C2B14451F55CAC5002C0353 /* TourSceneViewController.swift in Sources */,
 				8C2B14171F54A4AD002C0353 /* UIColor+CustomColors.swift in Sources */,
 				8C2B143F1F54BD69002C0353 /* AppConstants.swift in Sources */,
 				E3BE10B51F53C6EF00787921 /* AppDelegate.swift in Sources */,

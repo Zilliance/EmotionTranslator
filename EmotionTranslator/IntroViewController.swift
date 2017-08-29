@@ -114,15 +114,15 @@ class IntroViewController: UIViewController {
     }
     
     @IBAction func showTour() {
-//        guard let onboarding = UIStoryboard(name: "Tour", bundle: nil).instantiateInitialViewController() as? TourPageViewController else {
-//            assertionFailure()
-//            return
-//        }
-//        
-//        onboarding.presentationType = .fromFaq // same as from tour
-//        
-//        let navigationController = OrientableNavigationController(rootViewController: onboarding)
-//        self.present(navigationController, animated: true, completion: nil)
+        guard let onboarding = UIStoryboard(name: "Tour", bundle: nil).instantiateInitialViewController() as? TourPageViewController else {
+            assertionFailure()
+            return
+        }
+        
+        onboarding.presentationType = .fromFaq // same as from tour
+        
+        let navigationController = OrientableNavigationController(rootViewController: onboarding)
+        self.present(navigationController, animated: true, completion: nil)
     }
     
     @IBAction func showVideo() {

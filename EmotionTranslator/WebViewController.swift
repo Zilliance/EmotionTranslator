@@ -28,15 +28,15 @@ final class WebViewController: UIViewController, UIWebViewDelegate
     }
     
     private func showTour() {
-//        guard let tourViewController = UIStoryboard(name: "Tour", bundle: nil).instantiateInitialViewController() as? TourPageViewController else {
-//            assertionFailure()
-//            return
-//        }
-//        
-//        tourViewController.presentationType = .fromFaq
-//        
-//        let navigationController = UINavigationController(rootViewController: tourViewController)
-//        self.present(navigationController, animated: true, completion: nil)
+        guard let tourViewController = UIStoryboard(name: "Tour", bundle: nil).instantiateInitialViewController() as? TourPageViewController else {
+            assertionFailure()
+            return
+        }
+        
+        tourViewController.presentationType = .fromFaq
+        
+        let navigationController = UINavigationController(rootViewController: tourViewController)
+        self.present(navigationController, animated: true, completion: nil)
     }
     
     func webViewDidFinishLoad(_ webView: UIWebView) {

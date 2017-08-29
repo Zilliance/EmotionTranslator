@@ -100,13 +100,13 @@ final class LeftMenuViewController: UIViewController {
     }
     
     func showTour() {
-//        guard  let vc = UIStoryboard(name: "Tour", bundle: nil).instantiateInitialViewController() as? TourPageViewController else {
-//            assertionFailure()
-//            return
-//        }
-//        vc.presentationType = .fromMenu
-//        let nav = UINavigationController(rootViewController: vc)
-//        self.sideMenuController?.embed(centerViewController: nav)
+        guard  let vc = UIStoryboard(name: "Tour", bundle: nil).instantiateInitialViewController() as? TourPageViewController else {
+            assertionFailure()
+            return
+        }
+        vc.presentationType = .fromMenu
+        let nav = UINavigationController(rootViewController: vc)
+        self.sideMenuController?.embed(centerViewController: nav)
     }
     
     func showVideo() {
