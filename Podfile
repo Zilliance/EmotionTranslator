@@ -17,6 +17,10 @@ target 'EmotionTranslator' do
   pod 'MZFormSheetController'
   pod 'YouTubePlayer'
   pod 'PDFGenerator', '~> 2.0.1'
+  pod 'Firebase/Core', '~> 3.0'
+  pod 'Fabric'
+  pod 'Answers'
+  pod 'Amplitude-iOS', '~> 3.14.1'
 
   target 'EmotionTranslatorTests' do
     inherit! :search_paths

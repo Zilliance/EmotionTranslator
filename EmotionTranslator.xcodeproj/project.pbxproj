@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4F2CDCD71F55EB8A0048FA9C /* Analytics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F2CDCD61F55EB8A0048FA9C /* Analytics.swift */; };
+		4F2CDCD91F55EC920048FA9C /* Analytics+EmotionTranslator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F2CDCD81F55EC920048FA9C /* Analytics+EmotionTranslator.swift */; };
+		4F2CDCDC1F55FA600048FA9C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4F2CDCDB1F55FA600048FA9C /* GoogleService-Info.plist */; };
 		7F93BEBB8175AAE788CA6307 /* Pods_EmotionTranslatorUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C65FD7AAF27DCACDA7632C21 /* Pods_EmotionTranslatorUITests.framework */; };
 		889D79537741AC722652C136 /* Pods_EmotionTranslator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAA997AB957049B5551F71EB /* Pods_EmotionTranslator.framework */; };
 		8C2B14081F547DF7002C0353 /* HomeViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C2B14071F547DF7002C0353 /* HomeViewController.storyboard */; };
@@ -89,6 +92,9 @@
 		13BF02E9AC3DCF433CFCC483 /* Pods-EmotionTranslatorTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmotionTranslatorTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-EmotionTranslatorTests/Pods-EmotionTranslatorTests.release.xcconfig"; sourceTree = "<group>"; };
 		23866A66E55A3B853D74F256 /* Pods-EmotionTranslatorUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmotionTranslatorUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-EmotionTranslatorUITests/Pods-EmotionTranslatorUITests.release.xcconfig"; sourceTree = "<group>"; };
 		342B6A321EC77D91CBE565A5 /* Pods_EmotionTranslatorTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EmotionTranslatorTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4F2CDCD61F55EB8A0048FA9C /* Analytics.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Analytics.swift; sourceTree = "<group>"; };
+		4F2CDCD81F55EC920048FA9C /* Analytics+EmotionTranslator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Analytics+EmotionTranslator.swift"; sourceTree = "<group>"; };
+		4F2CDCDB1F55FA600048FA9C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		6DC6FC489D947818823F215C /* Pods-EmotionTranslatorTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmotionTranslatorTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EmotionTranslatorTests/Pods-EmotionTranslatorTests.debug.xcconfig"; sourceTree = "<group>"; };
 		8C2B14071F547DF7002C0353 /* HomeViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = HomeViewController.storyboard; sourceTree = "<group>"; };
 		8C2B14091F548B67002C0353 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -195,6 +201,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		4F2CDCD51F55EB780048FA9C /* Analytics */ = {
+			isa = PBXGroup;
+			children = (
+				4F2CDCD61F55EB8A0048FA9C /* Analytics.swift */,
+				4F2CDCD81F55EC920048FA9C /* Analytics+EmotionTranslator.swift */,
+			);
+			name = Analytics;
+			sourceTree = "<group>";
+		};
 		8C2B14061F547DDF002C0353 /* Home */ = {
 			isa = PBXGroup;
 			children = (
@@ -277,6 +292,8 @@
 		E3BE10B31F53C6EF00787921 /* EmotionTranslator */ = {
 			isa = PBXGroup;
 			children = (
+				4F2CDCDB1F55FA600048FA9C /* GoogleService-Info.plist */,
+				4F2CDCD51F55EB780048FA9C /* Analytics */,
 				8C2B143E1F54BD69002C0353 /* AppConstants.swift */,
 				E3BE10B41F53C6EF00787921 /* AppDelegate.swift */,
 				E3BE10E21F53C7A500787921 /* Model */,
@@ -402,6 +419,7 @@
 				E3BE10AF1F53C6EF00787921 /* Resources */,
 				B522BBFA878B8AAB36278421 /* [CP] Embed Pods Frameworks */,
 				B47968CA9CCA82740275F62F /* [CP] Copy Pods Resources */,
+				4F2CDCDA1F55F16A0048FA9C /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -521,6 +539,7 @@
 				E3BE10F41F53C82300787921 /* zilliance privacy policy.html in Resources */,
 				E3BE11101F53C83B00787921 /* Muli-SemiBold.ttf in Resources */,
 				8C2B14361F54AB4D002C0353 /* Intro.storyboard in Resources */,
+				4F2CDCDC1F55FA600048FA9C /* GoogleService-Info.plist in Resources */,
 				8C2B142D1F54A942002C0353 /* WebView.storyboard in Resources */,
 				E3BE110C1F53C83B00787921 /* Muli-Italic.ttf in Resources */,
 				E3BE11081F53C83B00787921 /* Muli-ExtraBold.ttf in Resources */,
@@ -613,6 +632,19 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EmotionTranslatorUITests/Pods-EmotionTranslatorUITests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		4F2CDCDA1F55F16A0048FA9C /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Fabric/run\" 6631633fac45777f880b67875f93e5e1579ebe94 aec2a948527f13b65a38d774981ab57095364ffaa7d0212f03068fa5856444d1";
+		};
 		6E1653350601F3A787E4D363 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -704,6 +736,8 @@
 				8C2B141D1F54A4AD002C0353 /* UIViewController+Extensions.swift in Sources */,
 				8C2B14291F54A942002C0353 /* LeftMenuViewController.swift in Sources */,
 				8C2B14181F54A4AD002C0353 /* Date+Extensions.swift in Sources */,
+				4F2CDCD71F55EB8A0048FA9C /* Analytics.swift in Sources */,
+				4F2CDCD91F55EC920048FA9C /* Analytics+EmotionTranslator.swift in Sources */,
 				8C2B14321F54A9C9002C0353 /* VideoPlayerViewController.swift in Sources */,
 				E3BE10E41F53C7C900787921 /* Database.swift in Sources */,
 				8C2B140C1F548B8C002C0353 /* HomeCollectionViewController.swift in Sources */,
