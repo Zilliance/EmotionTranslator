@@ -34,7 +34,6 @@
 		8C2B14361F54AB4D002C0353 /* Intro.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C2B14341F54AB4D002C0353 /* Intro.storyboard */; };
 		8C2B14371F54AB4D002C0353 /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2B14351F54AB4D002C0353 /* IntroViewController.swift */; };
 		8C2B14391F54ABE6002C0353 /* NSString+Ranges.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2B14381F54ABE6002C0353 /* NSString+Ranges.swift */; };
-		8C2B143D1F54BA77002C0353 /* EmotionTranslator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2B143C1F54BA77002C0353 /* EmotionTranslator.swift */; };
 		8C2B143F1F54BD69002C0353 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2B143E1F54BD69002C0353 /* AppConstants.swift */; };
 		8C2B14441F55CAC5002C0353 /* Tour.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C2B14411F55CAC5002C0353 /* Tour.storyboard */; };
 		8C2B14451F55CAC5002C0353 /* TourSceneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2B14421F55CAC5002C0353 /* TourSceneViewController.swift */; };
@@ -118,7 +117,6 @@
 		8C2B14341F54AB4D002C0353 /* Intro.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Intro.storyboard; sourceTree = "<group>"; };
 		8C2B14351F54AB4D002C0353 /* IntroViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntroViewController.swift; sourceTree = "<group>"; };
 		8C2B14381F54ABE6002C0353 /* NSString+Ranges.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "NSString+Ranges.swift"; path = "Extensions/NSString+Ranges.swift"; sourceTree = "<group>"; };
-		8C2B143C1F54BA77002C0353 /* EmotionTranslator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmotionTranslator.swift; sourceTree = "<group>"; };
 		8C2B143E1F54BD69002C0353 /* AppConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
 		8C2B14411F55CAC5002C0353 /* Tour.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Tour.storyboard; sourceTree = "<group>"; };
 		8C2B14421F55CAC5002C0353 /* TourSceneViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TourSceneViewController.swift; sourceTree = "<group>"; };
@@ -334,7 +332,6 @@
 				E3BE10E51F53C7CF00787921 /* Notification.swift */,
 				E3BE10E71F53C7D400787921 /* User.swift */,
 				E3BE10E91F53C7D900787921 /* Stressor.swift */,
-				8C2B143C1F54BA77002C0353 /* EmotionTranslator.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -744,7 +741,6 @@
 				8C2B14391F54ABE6002C0353 /* NSString+Ranges.swift in Sources */,
 				8C2B14281F54A942002C0353 /* CustomSideViewController.swift in Sources */,
 				E3BE10EA1F53C7D900787921 /* Stressor.swift in Sources */,
-				8C2B143D1F54BA77002C0353 /* EmotionTranslator.swift in Sources */,
 				8C2B141B1F54A4AD002C0353 /* UIFont+CustomFonts.swift in Sources */,
 				8C2B141A1F54A4AD002C0353 /* UIDevice+Extensions.swift in Sources */,
 				8C2B142E1F54A942002C0353 /* WebViewController.swift in Sources */,

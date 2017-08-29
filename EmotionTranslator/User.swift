@@ -11,9 +11,9 @@ import RealmSwift
 
 final class User: Object {
     
-    let emotionTranslators = List<EmotionTranslator>()
+    let stressors = List<Stressor>()
     
-    var incompleteStressors: [EmotionTranslator] {
-        return Array( self.emotionTranslators.filter("completed = false") )
+    var incompleteStressors: [Stressor] {
+        return Array( self.stressors.filter("completed = false") )
     }
 }

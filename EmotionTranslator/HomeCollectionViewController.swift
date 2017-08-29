@@ -53,17 +53,17 @@ class EmotionTranslatorCollectionViewCell: UICollectionViewCell {
         
     }
     
-    func setup(for emotionTranslator: EmotionTranslator) {
+    func setup(for stressor: Stressor) {
         
-        self.titleLabel.text = emotionTranslator.stressor
+        self.titleLabel.text = stressor.title
         
         self.completedLabel.layer.borderWidth = UIConstants.Appearance.borderWidth
         self.completedLabel.layer.cornerRadius = UIConstants.Appearance.cornerRadius
         
-        if emotionTranslator.completed {
+        if stressor.completed {
             self.completedLabel.backgroundColor = .navBar
             self.completedLabel.textColor = .white
-            self.completedLabel.text = EmotionTranslatorCollectionViewCell.dateFormatter.string(from: emotionTranslator.dateCreated)
+            self.completedLabel.text = EmotionTranslatorCollectionViewCell.dateFormatter.string(from: stressor.dateCreated)
             self.completedLabel.layer.borderColor = UIColor.navBar.cgColor
             
         }
@@ -83,8 +83,8 @@ class HomeCollectionViewController: UICollectionViewController, UICollectionView
     
     var isDeleting = false
     
-    fileprivate var emotionTranslators: [EmotionTranslator] {
-        return []
+    fileprivate var stressors: [Stressor] {
+        return Array(Database.shared.user.stressors)
     }
     
     
@@ -103,7 +103,7 @@ class HomeCollectionViewController: UICollectionViewController, UICollectionView
     
     func delete() {
         
-        guard self.emotionTranslators.count > 0 else {
+        guard self.stressors.count > 0 else {
             return
         }
         
@@ -122,7 +122,7 @@ class HomeCollectionViewController: UICollectionViewController, UICollectionView
                     
                     let emotionTranslators = indexes.map { [unowned self] index in
                         
-                        return self.emotionTranslators[index.row]
+                        return self.stressors[index.row]
                     }
                     
                     for emotionTranslator in emotionTranslators {
@@ -145,14 +145,14 @@ class HomeCollectionViewController: UICollectionViewController, UICollectionView
     // MARK: UICollectionViewDataSource
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return self.emotionTranslators.count
+        return self.stressors.count
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! EmotionTranslatorCollectionViewCell
         
         // Configure the cell
-        let emotionTranslator = self.emotionTranslators[indexPath.row]
+        let emotionTranslator = self.stressors[indexPath.row]
         cell.isDeleting = self.isDeleting
         cell.setup(for: emotionTranslator)
         
