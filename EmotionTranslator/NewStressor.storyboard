@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="iyF-dU-usy">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Muli-Light.ttf">
+            <string>Muli-Light</string>
+        </array>
+        <array key="Muli-LightItalic.ttf">
+            <string>Muli-LightItalic</string>
+        </array>
+        <array key="Muli-SemiBold.ttf">
+            <string>Muli-SemiBold</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--New Stressor View Controller-->
+        <scene sceneID="fWX-i5-u2j">
+            <objects>
+                <viewController id="iyF-dU-usy" customClass="NewStressorViewController" customModule="EmotionTranslator" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="FFZ-jC-2KZ"/>
+                        <viewControllerLayoutGuide type="bottom" id="oxW-8d-mG1"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="yQU-qn-bmU">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MIu-I3-bm6" customClass="TPKeyboardAvoidingScrollView">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0YM-TP-iGG" userLabel="ContentView">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What’s Your Stressor?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u3q-B1-WGn">
+                                                <rect key="frame" x="20" y="30" width="335" height="23"/>
+                                                <fontDescription key="fontDescription" name="Muli-SemiBold" family="Muli" pointSize="18"/>
+                                                <color key="textColor" red="0.12549019610000001" green="0.19215686274509802" blue="0.25490196078431371" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rA1-PS-XTz">
+                                                <rect key="frame" x="126.5" y="63" width="122" height="2"/>
+                                                <color key="backgroundColor" red="0.88235294117647056" green="0.88235294117647056" blue="0.89411764705882346" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="2" id="NE7-B9-emE"/>
+                                                    <constraint firstAttribute="width" constant="122" id="Ztl-z9-F6d"/>
+                                                </constraints>
+                                            </view>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="1yN-8j-uwG" customClass="KMPlaceholderTextView" customModule="KMPlaceholderTextView">
+                                                <rect key="frame" x="20" y="75" width="335" height="127"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="127" id="Zc2-2M-OPk"/>
+                                                </constraints>
+                                                <color key="textColor" red="0.62745098040000002" green="0.63921568630000003" blue="0.66274509800000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" name="Muli-Light" family="Muli" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Hint"/>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                                        <color key="value" red="0.62745098039215685" green="0.63921568627450975" blue="0.66274509803921566" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <outlet property="delegate" destination="iyF-dU-usy" id="ABd-RD-O40"/>
+                                                </connections>
+                                            </textView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Examples:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tf1-Rq-Ypi">
+                                                <rect key="frame" x="20" y="212" width="65.5" height="18"/>
+                                                <fontDescription key="fontDescription" name="Muli-LightItalic" family="Muli" pointSize="14"/>
+                                                <color key="textColor" red="0.62745098039215685" green="0.63921568627450975" blue="0.66274509803921566" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="rA1-PS-XTz" firstAttribute="centerX" secondItem="0YM-TP-iGG" secondAttribute="centerX" id="7qd-Tz-poG"/>
+                                            <constraint firstAttribute="bottom" secondItem="tf1-Rq-Ypi" secondAttribute="bottom" constant="437" id="O89-ej-nJk"/>
+                                            <constraint firstItem="tf1-Rq-Ypi" firstAttribute="top" secondItem="1yN-8j-uwG" secondAttribute="bottom" constant="10" id="O8s-EC-b0R"/>
+                                            <constraint firstItem="u3q-B1-WGn" firstAttribute="top" secondItem="0YM-TP-iGG" secondAttribute="top" constant="30" id="TB4-ik-xxq"/>
+                                            <constraint firstItem="rA1-PS-XTz" firstAttribute="top" secondItem="u3q-B1-WGn" secondAttribute="bottom" constant="10" id="WEB-qM-rmj"/>
+                                            <constraint firstAttribute="trailing" secondItem="u3q-B1-WGn" secondAttribute="trailing" constant="20" id="XpA-as-Gbs"/>
+                                            <constraint firstItem="u3q-B1-WGn" firstAttribute="leading" secondItem="0YM-TP-iGG" secondAttribute="leading" constant="20" id="ZqZ-j8-AlS"/>
+                                            <constraint firstItem="1yN-8j-uwG" firstAttribute="leading" secondItem="0YM-TP-iGG" secondAttribute="leading" constant="20" id="bH5-6I-ETI"/>
+                                            <constraint firstItem="tf1-Rq-Ypi" firstAttribute="leading" secondItem="0YM-TP-iGG" secondAttribute="leading" constant="20" id="bMW-nH-wqD"/>
+                                            <constraint firstItem="1yN-8j-uwG" firstAttribute="top" secondItem="rA1-PS-XTz" secondAttribute="bottom" constant="10" id="deh-J5-5a3"/>
+                                            <constraint firstAttribute="trailing" secondItem="1yN-8j-uwG" secondAttribute="trailing" constant="20" id="yhY-K0-13D"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="0YM-TP-iGG" firstAttribute="leading" secondItem="MIu-I3-bm6" secondAttribute="leading" id="4bQ-iR-cyh"/>
+                                    <constraint firstAttribute="bottom" secondItem="0YM-TP-iGG" secondAttribute="bottom" id="M6g-18-F0i"/>
+                                    <constraint firstItem="0YM-TP-iGG" firstAttribute="top" secondItem="MIu-I3-bm6" secondAttribute="top" id="Nyn-82-u8D"/>
+                                    <constraint firstAttribute="trailing" secondItem="0YM-TP-iGG" secondAttribute="trailing" id="jOq-7s-jwC"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="MIu-I3-bm6" secondAttribute="trailing" id="CvD-Ld-Gha"/>
+                            <constraint firstAttribute="bottom" secondItem="MIu-I3-bm6" secondAttribute="bottom" id="GK4-dX-5lH"/>
+                            <constraint firstItem="MIu-I3-bm6" firstAttribute="leading" secondItem="yQU-qn-bmU" secondAttribute="leading" id="QHd-Z4-Ap1"/>
+                            <constraint firstItem="MIu-I3-bm6" firstAttribute="top" secondItem="yQU-qn-bmU" secondAttribute="top" id="bjh-iN-jgX"/>
+                            <constraint firstItem="0YM-TP-iGG" firstAttribute="width" secondItem="yQU-qn-bmU" secondAttribute="width" id="cja-gp-N54"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="textView" destination="1yN-8j-uwG" id="6Qz-Xp-aiL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fWN-Rf-xcX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="80.799999999999997" y="161.46926536731635"/>
+        </scene>
+    </scenes>
+</document>
