@@ -35,17 +35,24 @@ final class Monster: Object {
         }
         
         var color: UIColor {
-            return UIColor(red: 1, green: 1, blue: 1, alpha: 1)
+            switch self {
+            case .none:     return UIColor(red: 0, green: 0, blue: 0, alpha: 0)
+            case .red:      return UIColor(red: 234.0/255.0, green: 91.0/255.0, blue: 67.0/255.0, alpha: 1)
+            case .yellow:   return UIColor(red: 255.0/255.0, green: 184.0/255.0, blue: 55.0/255.0, alpha: 1)
+            case .green:    return UIColor(red: 84.0/255.0, green: 186/255.0, blue: 42.0/255.0, alpha: 1)
+            case .blue:     return UIColor(red: 0.0/255.0, green: 184.0/255.0, blue: 231.0/255.0, alpha: 1)
+            case .purple:   return UIColor(red: 85.0/255.0, green: 95.0/255.0, blue: 193.0/255.0, alpha: 1)
+            }
         }
         
         var stringValue: String {
             switch self {
-            case .none: return "none"
-            case .red: return "red"
-            case .yellow: return "yellow"
-            case .green: return "green"
-            case .blue: return "blue"
-            case .purple: return "purple"
+            case .none:     return "none"
+            case .red:      return "red"
+            case .yellow:   return "yellow"
+            case .green:    return "green"
+            case .blue:     return "blue"
+            case .purple:   return "purple"
             }
         }
     }
@@ -76,11 +83,11 @@ final class Monster: Object {
         
         var stringValue: String {
             switch self {
-            case .none: return "none"
-            case .heart: return "heart"
-            case .oval: return "oval"
-            case .pointed: return "pointed"
-            case .square: return "square"
+            case .none:     return "none"
+            case .heart:    return "heart"
+            case .oval:     return "oval"
+            case .pointed:  return "pointed"
+            case .square:   return "square"
             case .triangle: return "triangle"
             }
         }
