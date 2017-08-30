@@ -32,6 +32,7 @@ class Database {
     
     private(set) var realm: Realm!
     fileprivate(set) var user: User!
+    private(set) var emotionsStored: Results<Emotion>!
     
     init() {
         do {
