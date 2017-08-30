@@ -40,7 +40,7 @@ class CreateStressorViewController: UIViewController {
     
     private func setupView() {
         
-        self.pageControl.numberOfPages = 6
+        self.pageControl.numberOfPages = 2
         self.pageControl.backgroundColor = .clear
         self.pageControl.pageIndicatorTintColor = .dotColor
         self.pageControl.currentPageIndicatorTintColor = .white
