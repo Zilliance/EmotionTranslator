@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="vwd-qp-ydA">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -123,7 +123,7 @@
                     </tableView>
                 </tableViewController>
             </objects>
-            <point key="canvasLocation" x="-774" y="291"/>
+            <point key="canvasLocation" x="719" y="-18"/>
         </scene>
         <!--Emotion View Controller-->
         <scene sceneID="Gg2-MD-ZDu">
@@ -198,7 +198,6 @@
                     </view>
                     <connections>
                         <outlet property="containerView" destination="ab2-Ez-mCV" id="Zlh-MA-SGi"/>
-                        <outlet property="titleLable" destination="mVP-mQ-rNn" id="pdj-qb-Or8"/>
                     </connections>
                 </viewController>
             </objects>

@@ -2,41 +2,14 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <array>
-	<dict>
-		<key>title</key>
-		<string>Anger</string>
-	</dict>
-	<dict>
-		<key>title</key>
-		<string>Anxiety</string>
-	</dict>
-	<dict>
-		<key>title</key>
-		<string>Fear</string>
-	</dict>
-	<dict>
-		<key>title</key>
-		<string>Feeling overwhelmed</string>
-	</dict>
-	<dict>
-		<key>title</key>
-		<string>Frustration</string>
-	</dict>
-	<dict>
-		<key>title</key>
-		<string>Guilt</string>
-	</dict>
-	<dict>
-		<key>title</key>
-		<string>Jealousy</string>
-	</dict>
-	<dict>
-		<key>title</key>
-		<string>Resentment</string>
-	</dict>
-	<dict>
-		<key>title</key>
-		<string>Sadness</string>
-	</dict>
+	<string>Anger</string>
+	<string>Fear</string>
+	<string>Sadness</string>
+	<string>Frustration</string>
+	<string>Feeling overwhelmed</string>
+	<string>Guilt</string>
+	<string>Jealousy</string>
+	<string>Resentment</string>
+	<string>Anxiety</string>
 </array>
 </plist>

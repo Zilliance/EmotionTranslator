@@ -40,15 +40,15 @@
 		8C2B14461F55CAC5002C0353 /* TourPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2B14431F55CAC5002C0353 /* TourPageViewController.swift */; };
 		8C2B14491F55FA45002C0353 /* CreateStressor.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C2B14481F55FA45002C0353 /* CreateStressor.storyboard */; };
 		8C2B144B1F55FCDC002C0353 /* CreateStressorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2B144A1F55FCDC002C0353 /* CreateStressorViewController.swift */; };
-		8C2B144E1F56160D002C0353 /* NewStressor.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C2B144D1F56160D002C0353 /* NewStressor.storyboard */; };
+		8C2B144E1F56160D002C0353 /* Stressor.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C2B144D1F56160D002C0353 /* Stressor.storyboard */; };
 		8C2B14501F56161C002C0353 /* NewStressorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2B144F1F56161C002C0353 /* NewStressorViewController.swift */; };
-		8C61D6821F5745AE00389FC0 /* PreloadedEmotions.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8C61D6811F5745AE00389FC0 /* PreloadedEmotions.plist */; };
 		8C61D6841F57500D00389FC0 /* Emotion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C61D6831F57500D00389FC0 /* Emotion.swift */; };
 		8C61D6871F57531D00389FC0 /* Emotion.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C61D6861F57531D00389FC0 /* Emotion.storyboard */; };
 		8C61D6891F57568B00389FC0 /* EmotionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C61D6881F57568B00389FC0 /* EmotionViewController.swift */; };
 		8C61D68D1F57586300389FC0 /* ItemsSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C61D68A1F57586300389FC0 /* ItemsSelectionViewController.swift */; };
 		8C61D68E1F57586300389FC0 /* AddItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C61D68B1F57586300389FC0 /* AddItemCell.swift */; };
 		8C61D68F1F57586300389FC0 /* StringItemSelectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C61D68C1F57586300389FC0 /* StringItemSelectionCell.swift */; };
+		8C61D6911F57727200389FC0 /* PreloadedEmotions.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8C61D6901F57727200389FC0 /* PreloadedEmotions.plist */; };
 		C0FA5645E25EC897AF28EADC /* Pods_EmotionTranslatorTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 342B6A321EC77D91CBE565A5 /* Pods_EmotionTranslatorTests.framework */; };
 		E35DB1781F5724F600C76B6B /* Monster.swift in Sources */ = {isa = PBXBuildFile; fileRef = E35DB1771F5724F600C76B6B /* Monster.swift */; };
 		E3BE10B51F53C6EF00787921 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3BE10B41F53C6EF00787921 /* AppDelegate.swift */; };
@@ -135,15 +135,15 @@
 		8C2B14431F55CAC5002C0353 /* TourPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TourPageViewController.swift; sourceTree = "<group>"; };
 		8C2B14481F55FA45002C0353 /* CreateStressor.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CreateStressor.storyboard; sourceTree = "<group>"; };
 		8C2B144A1F55FCDC002C0353 /* CreateStressorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateStressorViewController.swift; sourceTree = "<group>"; };
-		8C2B144D1F56160D002C0353 /* NewStressor.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = NewStressor.storyboard; sourceTree = "<group>"; };
+		8C2B144D1F56160D002C0353 /* Stressor.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Stressor.storyboard; sourceTree = "<group>"; };
 		8C2B144F1F56161C002C0353 /* NewStressorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewStressorViewController.swift; sourceTree = "<group>"; };
-		8C61D6811F5745AE00389FC0 /* PreloadedEmotions.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = PreloadedEmotions.plist; sourceTree = "<group>"; };
 		8C61D6831F57500D00389FC0 /* Emotion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Emotion.swift; sourceTree = "<group>"; };
 		8C61D6861F57531D00389FC0 /* Emotion.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Emotion.storyboard; sourceTree = "<group>"; };
 		8C61D6881F57568B00389FC0 /* EmotionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmotionViewController.swift; sourceTree = "<group>"; };
 		8C61D68A1F57586300389FC0 /* ItemsSelectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemsSelectionViewController.swift; sourceTree = "<group>"; };
 		8C61D68B1F57586300389FC0 /* AddItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddItemCell.swift; sourceTree = "<group>"; };
 		8C61D68C1F57586300389FC0 /* StringItemSelectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringItemSelectionCell.swift; sourceTree = "<group>"; };
+		8C61D6901F57727200389FC0 /* PreloadedEmotions.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = PreloadedEmotions.plist; sourceTree = "<group>"; };
 		B05445A012A0BCEF9D95A791 /* Pods-EmotionTranslatorUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmotionTranslatorUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EmotionTranslatorUITests/Pods-EmotionTranslatorUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		C2E2DD4D09C96B4AAF7211D3 /* Pods-EmotionTranslator.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmotionTranslator.release.xcconfig"; path = "Pods/Target Support Files/Pods-EmotionTranslator/Pods-EmotionTranslator.release.xcconfig"; sourceTree = "<group>"; };
 		C65FD7AAF27DCACDA7632C21 /* Pods_EmotionTranslatorUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EmotionTranslatorUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -288,7 +288,7 @@
 		8C2B144C1F5615F6002C0353 /* NewStressor */ = {
 			isa = PBXGroup;
 			children = (
-				8C2B144D1F56160D002C0353 /* NewStressor.storyboard */,
+				8C2B144D1F56160D002C0353 /* Stressor.storyboard */,
 				8C2B144F1F56161C002C0353 /* NewStressorViewController.swift */,
 			);
 			name = NewStressor;
@@ -388,7 +388,7 @@
 				E3BE10E91F53C7D900787921 /* Stressor.swift */,
 				E35DB1771F5724F600C76B6B /* Monster.swift */,
 				8C61D6831F57500D00389FC0 /* Emotion.swift */,
-				8C61D6811F5745AE00389FC0 /* PreloadedEmotions.plist */,
+				8C61D6901F57727200389FC0 /* PreloadedEmotions.plist */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -596,12 +596,12 @@
 				E3BE110A1F53C83B00787921 /* Muli-ExtraLight.ttf in Resources */,
 				E3BE110D1F53C83B00787921 /* Muli-Light.ttf in Resources */,
 				E3BE10F41F53C82300787921 /* zilliance privacy policy.html in Resources */,
-				8C61D6821F5745AE00389FC0 /* PreloadedEmotions.plist in Resources */,
 				E3BE11101F53C83B00787921 /* Muli-SemiBold.ttf in Resources */,
 				8C2B14361F54AB4D002C0353 /* Intro.storyboard in Resources */,
 				4F2CDCDC1F55FA600048FA9C /* GoogleService-Info.plist in Resources */,
 				8C2B142D1F54A942002C0353 /* WebView.storyboard in Resources */,
-				8C2B144E1F56160D002C0353 /* NewStressor.storyboard in Resources */,
+				8C61D6911F57727200389FC0 /* PreloadedEmotions.plist in Resources */,
+				8C2B144E1F56160D002C0353 /* Stressor.storyboard in Resources */,
 				E3BE110C1F53C83B00787921 /* Muli-Italic.ttf in Resources */,
 				E3BE11081F53C83B00787921 /* Muli-ExtraBold.ttf in Resources */,
 				8C2B142A1F54A942002C0353 /* SideMenu.storyboard in Resources */,

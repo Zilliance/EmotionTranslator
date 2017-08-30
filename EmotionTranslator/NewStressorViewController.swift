@@ -13,6 +13,8 @@ class NewStressorViewController: UIViewController {
 
     @IBOutlet weak var textView: KMPlaceholderTextView!
     
+    var currentStressor: Stressor!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setupView()
@@ -24,6 +26,27 @@ class NewStressorViewController: UIViewController {
         self.textView.layer.borderColor = UIConstants.Color.lightGray.cgColor
     }
 
+}
+
+// MARK: - CompassValidation
+
+extension NewStressorViewController: StressorValidation {
+    var error: StressorError {
+        if self.textView.text.isEmpty {
+            return .text
+        } else {
+            return .none
+        }
+    }
+}
+
+// MARK: - CompassFacetEditor
+
+extension NewStressorViewController: StressorFacetEditor {
+    func save() {
+        self.currentStressor.title = self.textView.text
+        self.currentStressor.lastEditedFacet = .stressor
+    }
 }
 
 extension NewStressorViewController: UITextViewDelegate {

@@ -14,6 +14,8 @@ class EmotionViewController: UIViewController {
     
     @IBOutlet weak var containerView: UIView!
     
+    var currentStressor: Stressor!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setupView()
@@ -67,3 +69,25 @@ class EmotionViewController: UIViewController {
     
 
 }
+
+// MARK: - CompassValidation
+
+extension EmotionViewController: StressorValidation {
+    var error: StressorError {
+        if let items = self.tableViewController?.selectedItems, items.count > 0 {
+            return .none
+        } else {
+            return .selection
+        }
+    }
+}
+
+// MARK: - CompassFacetEditor
+
+extension EmotionViewController: StressorFacetEditor {
+    func save() {
+        self.tableViewController.saveAction(self.tableViewController.selectedItems)
+        self.currentStressor.lastEditedFacet = .emotion
+    }
+}
+

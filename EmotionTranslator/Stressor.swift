@@ -12,8 +12,23 @@ import RealmSwift
 
 final class Stressor: Object {
     
+    
+    @objc enum Facet: Int32 {
+        case stressor
+        case emotion
+        
+        var pageIndex: Int {
+            
+            return Int(self.rawValue)
+        }
+        
+    }
+
+    
     dynamic var title: String?
     var completed: Bool = false
     dynamic var dateCreated: Date = Date()
     dynamic var emotion: Emotion?
+    
+    dynamic var lastEditedFacet: Facet = .stressor
 }

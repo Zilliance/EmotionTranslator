@@ -38,7 +38,7 @@ class Database {
         do {
             
             let config = Realm.Configuration(
-                schemaVersion: 1,
+                schemaVersion: 2,
                 
                 migrationBlock: { migration, oldSchemaVersion in
                     if (oldSchemaVersion < 1) {
@@ -50,6 +50,9 @@ class Database {
             
             Realm.Configuration.defaultConfiguration = config
             self.realm = try Realm()
+            
+            let sortProperties = [SortDescriptor(keyPath: "order", ascending: true), SortDescriptor(keyPath: "title", ascending: true)]
+            emotionsStored = self.realm.objects(Emotion.self).sorted(by: sortProperties)
             
             if let user = self.realm.objects(User.self).first {
                 self.user = user
