@@ -43,6 +43,7 @@
 		8C2B144E1F56160D002C0353 /* NewStressor.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C2B144D1F56160D002C0353 /* NewStressor.storyboard */; };
 		8C2B14501F56161C002C0353 /* NewStressorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2B144F1F56161C002C0353 /* NewStressorViewController.swift */; };
 		C0FA5645E25EC897AF28EADC /* Pods_EmotionTranslatorTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 342B6A321EC77D91CBE565A5 /* Pods_EmotionTranslatorTests.framework */; };
+		E35DB1781F5724F600C76B6B /* Monster.swift in Sources */ = {isa = PBXBuildFile; fileRef = E35DB1771F5724F600C76B6B /* Monster.swift */; };
 		E3BE10B51F53C6EF00787921 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3BE10B41F53C6EF00787921 /* AppDelegate.swift */; };
 		E3BE10BC1F53C6EF00787921 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3BE10BB1F53C6EF00787921 /* Assets.xcassets */; };
 		E3BE10BF1F53C6EF00787921 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3BE10BD1F53C6EF00787921 /* LaunchScreen.storyboard */; };
@@ -132,6 +133,7 @@
 		B05445A012A0BCEF9D95A791 /* Pods-EmotionTranslatorUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmotionTranslatorUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EmotionTranslatorUITests/Pods-EmotionTranslatorUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		C2E2DD4D09C96B4AAF7211D3 /* Pods-EmotionTranslator.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmotionTranslator.release.xcconfig"; path = "Pods/Target Support Files/Pods-EmotionTranslator/Pods-EmotionTranslator.release.xcconfig"; sourceTree = "<group>"; };
 		C65FD7AAF27DCACDA7632C21 /* Pods_EmotionTranslatorUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EmotionTranslatorUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E35DB1771F5724F600C76B6B /* Monster.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Monster.swift; sourceTree = "<group>"; };
 		E3BE10B11F53C6EF00787921 /* EmotionTranslator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EmotionTranslator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3BE10B41F53C6EF00787921 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E3BE10BB1F53C6EF00787921 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -358,6 +360,7 @@
 				E3BE10E51F53C7CF00787921 /* Notification.swift */,
 				E3BE10E71F53C7D400787921 /* User.swift */,
 				E3BE10E91F53C7D900787921 /* Stressor.swift */,
+				E35DB1771F5724F600C76B6B /* Monster.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -770,6 +773,7 @@
 				8C2B14321F54A9C9002C0353 /* VideoPlayerViewController.swift in Sources */,
 				E3BE10E41F53C7C900787921 /* Database.swift in Sources */,
 				8C2B140C1F548B8C002C0353 /* HomeCollectionViewController.swift in Sources */,
+				E35DB1781F5724F600C76B6B /* Monster.swift in Sources */,
 				8C2B14391F54ABE6002C0353 /* NSString+Ranges.swift in Sources */,
 				8C2B14281F54A942002C0353 /* CustomSideViewController.swift in Sources */,
 				E3BE10EA1F53C7D900787921 /* Stressor.swift in Sources */,
