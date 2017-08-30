@@ -9,6 +9,24 @@
 import Foundation
 import RealmSwift
 
+class StringItem: Object {
+    
+    dynamic var title: String?
+    dynamic var order: Int = 0
+    
+    class func createNew(title: String) -> Self {
+        
+        let newItem = self.init()
+        newItem.order = -1
+        newItem.title = title
+        
+        Database.shared.add(realmObject: newItem)
+        
+        return newItem
+    }
+    
+}
+
 class Database {
     static let shared = Database()
     
@@ -48,7 +66,7 @@ class Database {
     
     fileprivate func bootstrap() {
         self.bootstrapUser()
-        //todo: bootstrap rest of model if necessary
+        self.bootstrapEmotions()
     }
     
     fileprivate func bootstrapUser() {
@@ -61,6 +79,34 @@ class Database {
         add(realmObject: user)
         
         self.user = user
+    }
+    
+    
+    typealias StringData = [String]
+    
+    fileprivate func parseStringData(fileName: String, itemType: StringItem.Type) {
+        if let path = Bundle.main.path(forResource: fileName, ofType: "plist"), let data = NSArray(contentsOfFile: path) as? StringData {
+            
+            try! realm.write({
+                
+                data.enumerated().forEach({ offset, StringItem  in
+                    //newItemLoaded(offset, StringItem)
+                    
+                    let newStringItem = itemType.init()
+                    newStringItem.title = StringItem
+                    newStringItem.order = offset
+                    
+                    realm.add(newStringItem)
+                    
+                })
+            })
+        }
+    }
+
+    fileprivate func bootstrapEmotions() {
+        
+        parseStringData(fileName: "PreloadedEmotions", itemType: Emotion.self)
+        
     }
     
 }

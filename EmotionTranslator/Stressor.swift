@@ -15,5 +15,5 @@ final class Stressor: Object {
     dynamic var title: String?
     var completed: Bool = false
     dynamic var dateCreated: Date = Date()
-    
+    dynamic var emotion: Emotion?
 }

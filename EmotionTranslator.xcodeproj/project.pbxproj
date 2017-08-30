@@ -42,6 +42,8 @@
 		8C2B144B1F55FCDC002C0353 /* CreateStressorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2B144A1F55FCDC002C0353 /* CreateStressorViewController.swift */; };
 		8C2B144E1F56160D002C0353 /* NewStressor.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C2B144D1F56160D002C0353 /* NewStressor.storyboard */; };
 		8C2B14501F56161C002C0353 /* NewStressorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2B144F1F56161C002C0353 /* NewStressorViewController.swift */; };
+		8C61D6821F5745AE00389FC0 /* PreloadedEmotions.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8C61D6811F5745AE00389FC0 /* PreloadedEmotions.plist */; };
+		8C61D6841F57500D00389FC0 /* Emotion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C61D6831F57500D00389FC0 /* Emotion.swift */; };
 		C0FA5645E25EC897AF28EADC /* Pods_EmotionTranslatorTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 342B6A321EC77D91CBE565A5 /* Pods_EmotionTranslatorTests.framework */; };
 		E35DB1781F5724F600C76B6B /* Monster.swift in Sources */ = {isa = PBXBuildFile; fileRef = E35DB1771F5724F600C76B6B /* Monster.swift */; };
 		E3BE10B51F53C6EF00787921 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3BE10B41F53C6EF00787921 /* AppDelegate.swift */; };
@@ -130,6 +132,8 @@
 		8C2B144A1F55FCDC002C0353 /* CreateStressorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateStressorViewController.swift; sourceTree = "<group>"; };
 		8C2B144D1F56160D002C0353 /* NewStressor.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = NewStressor.storyboard; sourceTree = "<group>"; };
 		8C2B144F1F56161C002C0353 /* NewStressorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewStressorViewController.swift; sourceTree = "<group>"; };
+		8C61D6811F5745AE00389FC0 /* PreloadedEmotions.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = PreloadedEmotions.plist; sourceTree = "<group>"; };
+		8C61D6831F57500D00389FC0 /* Emotion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Emotion.swift; sourceTree = "<group>"; };
 		B05445A012A0BCEF9D95A791 /* Pods-EmotionTranslatorUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmotionTranslatorUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EmotionTranslatorUITests/Pods-EmotionTranslatorUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		C2E2DD4D09C96B4AAF7211D3 /* Pods-EmotionTranslator.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmotionTranslator.release.xcconfig"; path = "Pods/Target Support Files/Pods-EmotionTranslator/Pods-EmotionTranslator.release.xcconfig"; sourceTree = "<group>"; };
 		C65FD7AAF27DCACDA7632C21 /* Pods_EmotionTranslatorUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EmotionTranslatorUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -361,6 +365,8 @@
 				E3BE10E71F53C7D400787921 /* User.swift */,
 				E3BE10E91F53C7D900787921 /* Stressor.swift */,
 				E35DB1771F5724F600C76B6B /* Monster.swift */,
+				8C61D6831F57500D00389FC0 /* Emotion.swift */,
+				8C61D6811F5745AE00389FC0 /* PreloadedEmotions.plist */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -566,6 +572,7 @@
 				E3BE110A1F53C83B00787921 /* Muli-ExtraLight.ttf in Resources */,
 				E3BE110D1F53C83B00787921 /* Muli-Light.ttf in Resources */,
 				E3BE10F41F53C82300787921 /* zilliance privacy policy.html in Resources */,
+				8C61D6821F5745AE00389FC0 /* PreloadedEmotions.plist in Resources */,
 				E3BE11101F53C83B00787921 /* Muli-SemiBold.ttf in Resources */,
 				8C2B14361F54AB4D002C0353 /* Intro.storyboard in Resources */,
 				4F2CDCDC1F55FA600048FA9C /* GoogleService-Info.plist in Resources */,
@@ -760,6 +767,7 @@
 				8C2B14371F54AB4D002C0353 /* IntroViewController.swift in Sources */,
 				E3BE11151F53C85300787921 /* HairlineLayoutConstraint.swift in Sources */,
 				8C2B14161F54A4AD002C0353 /* String+Extensions.swift in Sources */,
+				8C61D6841F57500D00389FC0 /* Emotion.swift in Sources */,
 				E3BE10E61F53C7CF00787921 /* Notification.swift in Sources */,
 				8C2B14191F54A4AD002C0353 /* TimeInterval+Extensions.swift in Sources */,
 				8C2B14461F55CAC5002C0353 /* TourPageViewController.swift in Sources */,
