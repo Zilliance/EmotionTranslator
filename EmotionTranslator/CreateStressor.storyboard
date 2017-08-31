@@ -59,7 +59,7 @@
                                     <constraint firstAttribute="height" constant="44" id="NmQ-N9-kl2"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Muli-Regular" family="Muli" pointSize="18"/>
-                                <state key="normal" title="CONTINUE" backgroundImage="stressor-button-background">
+                                <state key="normal" title="CONTINUE" backgroundImage="button-background">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -96,6 +96,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="stressor-button-background" width="336" height="44"/>
+        <image name="button-background" width="335" height="77"/>
     </resources>
 </document>

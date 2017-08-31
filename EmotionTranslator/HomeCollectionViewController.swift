@@ -15,6 +15,7 @@ class EmotionTranslatorCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var completedLabel: UILabel!
     @IBOutlet weak var checkmarkView: UIImageView!
+    @IBOutlet weak var icon: UIImageView!
     
     var isDeleting = false
     
@@ -65,6 +66,7 @@ class EmotionTranslatorCollectionViewCell: UICollectionViewCell {
             self.completedLabel.textColor = .white
             self.completedLabel.text = EmotionTranslatorCollectionViewCell.dateFormatter.string(from: stressor.dateCreated)
             self.completedLabel.layer.borderColor = UIColor.navBar.cgColor
+            self.icon.image = #imageLiteral(resourceName: "completed-stressor")
             
         }
             
@@ -73,6 +75,7 @@ class EmotionTranslatorCollectionViewCell: UICollectionViewCell {
             self.completedLabel.textColor = .darkBlue
             self.completedLabel.text = "In progress"
             self.completedLabel.layer.borderColor = UIColor.navBar.cgColor
+            self.icon.image = #imageLiteral(resourceName: "inprogress-stressor")
             
         }
     }
@@ -162,18 +165,27 @@ class HomeCollectionViewController: UICollectionViewController, UICollectionView
     // MARK: UICollectionViewDelegate
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-//        guard !self.isDeleting else {
-//            return
-//        }
-//        
-//        let stressor = self.stressors[indexPath.row]
-//        guard let vc = UIStoryboard(name: "SummaryViewController", bundle: nil).instantiateInitialViewController() as? SummaryViewController else {
-//            assertionFailure()
-//            return
-//        }
-//        // pass stressor copy
-//        vc.stressor = Stressor(value: stressor)
-//        self.navigationController?.pushViewController(vc, animated: true)
+        guard !self.isDeleting else {
+            return
+        }
+        
+        let stressor = self.stressors[indexPath.row]
+        
+        if !stressor.completed {
+            guard let createStressorViewController = UIStoryboard(name: "CreateStressor", bundle: nil).instantiateInitialViewController() as? CreateStressorViewController else { return }
+            createStressorViewController.stressor = Stressor(value: stressor)
+            self.navigationController?.pushViewController(createStressorViewController, animated: true)
+        }
+            
+        else {
+//            guard let compassSummaryViewController = UIStoryboard(name: "CompassSummary", bundle: nil).instantiateInitialViewController() as? CompassSummaryViewController else { return assertionFailure() }
+//            
+//            compassSummaryViewController.compass = compass
+//            self.navigationController?.pushViewController(compassSummaryViewController, animated: true)
+            
+        }
+        
+
     }
     
     // MARK: UICollectionViewDelegateFlowLayout
