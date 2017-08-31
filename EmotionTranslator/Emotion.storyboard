@@ -10,6 +10,9 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <array key="Muli-Light.ttf">
+            <string>Muli-Light</string>
+        </array>
         <array key="Muli-Regular.ttf">
             <string>Muli-Regular</string>
         </array>
@@ -21,7 +24,6 @@
         <!--Items Selection View Controller-->
         <scene sceneID="AGg-B6-NL3">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Oks-oa-x22" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController storyboardIdentifier="ItemsSelectionViewController" id="Unp-l5-Wsw" customClass="ItemsSelectionViewController" customModule="EmotionTranslator" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="3ew-9W-ZME">
                         <rect key="frame" x="0.0" y="0.0" width="335" height="545"/>
@@ -49,17 +51,31 @@
                                                 <constraint firstAttribute="height" constant="1" id="uDT-hb-4qz"/>
                                             </constraints>
                                         </view>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oKX-CS-Yj6">
-                                            <rect key="frame" x="40" y="7" width="255" height="30"/>
-                                            <state key="normal" title="Tap to create a new item"/>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oKX-CS-Yj6">
+                                            <rect key="frame" x="30" y="7" width="235" height="30"/>
+                                            <fontDescription key="fontDescription" name="Muli-Light" family="Muli" pointSize="14"/>
+                                            <state key="normal" title="Other">
+                                                <color key="titleColor" red="0.0" green="0.72156862749999995" blue="0.90588235294117647" alpha="1" colorSpace="calibratedRGB"/>
+                                            </state>
                                         </button>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="checkbox-unchecked" translatesAutoresizingMaskIntoConstraints="NO" id="juf-71-Xwq">
+                                            <rect key="frame" x="296" y="10" width="24" height="24"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="24" id="ITO-JR-OVX"/>
+                                                <constraint firstAttribute="width" constant="24" id="Rgm-T1-w3V"/>
+                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="24" id="gpB-Hl-4zX"/>
+                                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="24" id="jxv-lo-l3i"/>
+                                            </constraints>
+                                        </imageView>
                                     </subviews>
                                     <constraints>
                                         <constraint firstAttribute="trailing" secondItem="yxD-IW-TDT" secondAttribute="trailing" id="3iM-1E-Ban"/>
+                                        <constraint firstAttribute="trailing" secondItem="juf-71-Xwq" secondAttribute="trailing" constant="15" id="47v-90-5dc"/>
                                         <constraint firstItem="spx-Wo-UfZ" firstAttribute="leading" secondItem="wqJ-Lc-APA" secondAttribute="leading" id="4hh-Vj-4pe"/>
                                         <constraint firstItem="yxD-IW-TDT" firstAttribute="leading" secondItem="wqJ-Lc-APA" secondAttribute="leading" id="9Ou-vQ-Dp6"/>
-                                        <constraint firstItem="oKX-CS-Yj6" firstAttribute="leading" secondItem="wqJ-Lc-APA" secondAttribute="leading" constant="40" id="LEY-u2-36W"/>
-                                        <constraint firstAttribute="trailing" secondItem="oKX-CS-Yj6" secondAttribute="trailing" constant="40" id="SeY-kx-qwb"/>
+                                        <constraint firstItem="oKX-CS-Yj6" firstAttribute="leading" secondItem="wqJ-Lc-APA" secondAttribute="leading" constant="30" id="LEY-u2-36W"/>
+                                        <constraint firstAttribute="trailing" secondItem="oKX-CS-Yj6" secondAttribute="trailing" constant="70" id="SeY-kx-qwb"/>
+                                        <constraint firstItem="juf-71-Xwq" firstAttribute="centerY" secondItem="wqJ-Lc-APA" secondAttribute="centerY" id="ULC-9V-U4L"/>
                                         <constraint firstItem="oKX-CS-Yj6" firstAttribute="centerY" secondItem="wqJ-Lc-APA" secondAttribute="centerY" id="cCu-ID-I9q"/>
                                         <constraint firstItem="spx-Wo-UfZ" firstAttribute="top" secondItem="wqJ-Lc-APA" secondAttribute="top" id="fBa-h7-NUq"/>
                                         <constraint firstAttribute="trailing" secondItem="spx-Wo-UfZ" secondAttribute="trailing" id="gqC-nB-W6l"/>
@@ -79,9 +95,9 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Social withdrawal/isolation" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NnK-kF-hbX">
-                                            <rect key="frame" x="28" y="14" width="179" height="17.5"/>
-                                            <fontDescription key="fontDescription" name="Muli-Regular" family="Muli" pointSize="15"/>
-                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.69999999999999996" colorSpace="calibratedRGB"/>
+                                            <rect key="frame" x="28" y="13" width="171.5" height="18"/>
+                                            <fontDescription key="fontDescription" name="Muli-Light" family="Muli" pointSize="14"/>
+                                            <color key="textColor" red="0.12549019607843137" green="0.19215686274509802" blue="0.25490196078431371" alpha="0.69999999999999996" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sN9-Dn-bSc">
@@ -122,13 +138,13 @@
                         </connections>
                     </tableView>
                 </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Oks-oa-x22" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="719" y="-18"/>
         </scene>
         <!--Emotion View Controller-->
         <scene sceneID="Gg2-MD-ZDu">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="tIH-Tc-UuQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="CompassStressViewController" id="vwd-qp-ydA" customClass="EmotionViewController" customModule="EmotionTranslator" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="7G1-AO-5XF"/>
@@ -200,6 +216,7 @@
                         <outlet property="containerView" destination="ab2-Ez-mCV" id="Zlh-MA-SGi"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tIH-Tc-UuQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-60" y="-18.440779610194905"/>
         </scene>
@@ -266,5 +283,6 @@
     </scenes>
     <resources>
         <image name="checkbox-checked" width="21" height="21"/>
+        <image name="checkbox-unchecked" width="24" height="24"/>
     </resources>
 </document>
