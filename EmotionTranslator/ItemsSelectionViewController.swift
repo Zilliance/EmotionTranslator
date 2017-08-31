@@ -36,7 +36,7 @@ final class ItemsSelectionViewController: UITableViewController {
         
         if (indexPath.section == 0) {
             let cell = tableView.dequeueReusableCell(withIdentifier: "AddItemCell", for: indexPath) as! AddItemCell
-            //cell.addButton.addTarget(self, action: #selector(addItemTapped), for: .touchUpInside)
+            cell.addButton.addTarget(self, action: #selector(addItemTapped), for: .touchUpInside)
             
             return cell
         }
@@ -102,4 +102,30 @@ final class ItemsSelectionViewController: UITableViewController {
     
 }
 
+extension ItemsSelectionViewController: CustomEmotionViewControllerDelegate {
+    
+    //add a new item logic
+    @objc fileprivate func addItemTapped() {
+        
+        guard let customEmotionViewController = UIStoryboard(name: "Emotion", bundle: nil).instantiateViewController(withIdentifier: "CustomEmotion") as? CustomEmotionViewController
+            else {
+                assertionFailure()
+                return
+        }
+        
+        customEmotionViewController.type = self.type
+        customEmotionViewController.delegate = self
+
+        let navController = OrientableNavigationController(rootViewController: customEmotionViewController)
+        
+        self.present(navController, animated: true, completion: nil)
+    }
+    
+    func newItemSaved(newItem: StringItem) {
+        
+        self.selectedItems.append(newItem)
+        
+    }
+    
+}
 

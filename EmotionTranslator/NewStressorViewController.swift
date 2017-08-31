@@ -12,6 +12,9 @@ import KMPlaceholderTextView
 class NewStressorViewController: UIViewController {
 
     @IBOutlet weak var textView: KMPlaceholderTextView!
+    @IBOutlet weak var counterLabel: UILabel!
+    
+    fileprivate let maxTextlenght = 48
     
     var currentStressor: Stressor!
     
@@ -20,7 +23,15 @@ class NewStressorViewController: UIViewController {
         self.setupView()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.counterLabel.isHidden = true
+    }
+    
     private func setupView() {
+        
+        self.textView.textContainerInset = UIEdgeInsetsMake(20, 20, 20, 20)
+        
         self.textView.layer.cornerRadius = UIConstants.Appearance.cornerRadius
         self.textView.layer.borderWidth = UIConstants.Appearance.borderWidth
         self.textView.layer.borderColor = UIConstants.Color.lightGray.cgColor
@@ -57,6 +68,14 @@ extension NewStressorViewController: UITextViewDelegate {
             return false
         }
         
-        return true
+        // check max character lenght
+        
+        let charCount = textView.text.characters.count + (text.characters.count - range.length)
+        
+        self.counterLabel.isHidden = charCount == 0
+        self.counterLabel.text = "\(maxTextlenght - textView.text.characters.count)"
+        
+        return charCount <= maxTextlenght
+        
     }
 }

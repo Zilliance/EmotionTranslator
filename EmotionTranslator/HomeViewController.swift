@@ -29,6 +29,11 @@ class HomeViewController: UIViewController {
         self.startButton.imageView?.contentMode = .scaleAspectFit
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.collectionViewController.collectionView?.reloadData()
+    }
+    
     
     private func toogleDeleteMode() {
         

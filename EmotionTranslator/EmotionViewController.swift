@@ -35,7 +35,7 @@ class EmotionViewController: UIViewController {
             self.tableViewController = itemsSelectionsController
             
             itemsSelectionsController.items = Array(Database.shared.emotionsStored)
-           // itemsSelectionsController.selectedItems = Array(self.currentCompass.positiveActivities)
+            itemsSelectionsController.selectedItems = Array(self.currentStressor.emotions)
             
             itemsSelectionsController.saveAction = { selectedItems in
                 
@@ -44,8 +44,8 @@ class EmotionViewController: UIViewController {
                 }
                 
                 Database.shared.save {
-                    //self.currentCompass.positiveActivities.removeAll()
-                    //self.currentCompass.positiveActivities.append(objectsIn: items)
+                    self.currentStressor.emotions.removeAll()
+                    self.currentStressor.emotions.append(objectsIn: items)
                 }
             }
             
@@ -56,9 +56,9 @@ class EmotionViewController: UIViewController {
                 }
                 
                 Database.shared.save {
-//                    if let index = self.currentCompass.positiveActivities.index(of: item) {
-//                        self.currentCompass.positiveActivities.remove(objectAtIndex: index)
-//                    }
+                    if let index = self.currentStressor.emotions.index(of: item) {
+                        self.currentStressor.emotions.remove(objectAtIndex: index)
+                    }
                 }
                 
                 Database.shared.delete(item)

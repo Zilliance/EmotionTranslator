@@ -28,7 +28,15 @@ final class Stressor: Object {
     dynamic var title: String?
     var completed: Bool = false
     dynamic var dateCreated: Date = Date()
-    dynamic var emotion: Emotion?
+    
+    let emotions = List<Emotion>()
     
     dynamic var lastEditedFacet: Facet = .stressor
+    
+    dynamic var id: String = UUID().uuidString
+    
+    override class func primaryKey() -> String? {
+        return "id"
+    }
+
 }

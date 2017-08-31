@@ -46,6 +46,8 @@ class CreateStressorViewController: UIViewController {
     @IBOutlet weak var pageControl: UIPageControl!
     @IBOutlet weak var pageContainerView: UIView!
     
+    var backcustomButton: UIButton!
+    
     var stressor: Stressor = Stressor()
     
     var previousScene: StressorScene?
@@ -85,6 +87,19 @@ class CreateStressorViewController: UIViewController {
         self.setupView()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        //override back button behaviour
+        self.navigationController?.navigationBar.addSubview(backcustomButton)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        self.backcustomButton.removeFromSuperview()
+    }
+    
     private func setupView() {
         
         self.pageControl.numberOfPages = 2
@@ -103,6 +118,10 @@ class CreateStressorViewController: UIViewController {
         
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         self.navigationController?.navigationBar.shadowImage = UIImage()
+        
+        self.backcustomButton = UIButton(frame: CGRect(x: 0, y: 0, width: 50, height: 40))
+        self.backcustomButton.backgroundColor = UIColor.clear
+        self.backcustomButton.addTarget(self, action: #selector(self.cancelAction(_:)), for: .touchUpInside)
         
     }
     
@@ -132,16 +151,66 @@ class CreateStressorViewController: UIViewController {
     }
 
     
+    @IBAction func cancelAction(_ sender: Any) {
+        
+        if (self.stressor.title != nil) {
+            self.save()
+        }
+        
+        self.navigationController?.popViewController(animated: true)
+        
+    }
+    
+    private func save() {
+        
+        if let currentItem = self.stressorItems[self.currentPageIndex].viewController as? StressorFacetEditor {
+            currentItem.save()
+        }
+        
+        let update = Database.shared.user.stressors.filter { $0.id == self.stressor.id }.count > 0
+        
+        if (update) {
+            Database.shared.add(realmObject: self.stressor, update: true)
+        }
+        else {
+            Database.shared.save {
+                Database.shared.user.stressors.append(self.stressor)
+            }
+        }
+    }
+    
     @IBAction func continueAction(_ sender: Any) {
         
         guard self.currentPageIndex < self.stressorItems.count - 1 else {
             return
         }
         
-        typealias scene = Stressor.Facet
-        
-        //add error checking
-        
+        guard self.checkError() == .none else {
+            typealias scene = Stressor.Facet
+            
+            switch self.checkError() {
+            case .selection:
+                switch self.currentPageIndex {
+                case scene.emotion.pageIndex:
+                    self.showAlert(title: "Please select one or more items", message: "")
+                default:
+                    self.showAlert(title: "Please select one or more items", message: "")
+                }
+            case .text:
+                switch self.currentPageIndex {
+                case scene.stressor.pageIndex:
+                    self.showAlert(title: "Please enter a stressor", message: "")
+                default:
+                    self.showAlert(title: "Please enter text", message: "")
+                }
+                
+            default:
+                //no error
+                break
+            }
+
+            return
+        }
         
         self.moveToPage(page: self.currentPageIndex + 1, direction: .forward)
     }

@@ -49,6 +49,7 @@
 		8C61D68E1F57586300389FC0 /* AddItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C61D68B1F57586300389FC0 /* AddItemCell.swift */; };
 		8C61D68F1F57586300389FC0 /* StringItemSelectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C61D68C1F57586300389FC0 /* StringItemSelectionCell.swift */; };
 		8C61D6911F57727200389FC0 /* PreloadedEmotions.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8C61D6901F57727200389FC0 /* PreloadedEmotions.plist */; };
+		8C61D6931F58801000389FC0 /* CustomEmotionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C61D6921F58801000389FC0 /* CustomEmotionViewController.swift */; };
 		C0FA5645E25EC897AF28EADC /* Pods_EmotionTranslatorTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 342B6A321EC77D91CBE565A5 /* Pods_EmotionTranslatorTests.framework */; };
 		E35DB1781F5724F600C76B6B /* Monster.swift in Sources */ = {isa = PBXBuildFile; fileRef = E35DB1771F5724F600C76B6B /* Monster.swift */; };
 		E3BE10B51F53C6EF00787921 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3BE10B41F53C6EF00787921 /* AppDelegate.swift */; };
@@ -144,6 +145,7 @@
 		8C61D68B1F57586300389FC0 /* AddItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddItemCell.swift; sourceTree = "<group>"; };
 		8C61D68C1F57586300389FC0 /* StringItemSelectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringItemSelectionCell.swift; sourceTree = "<group>"; };
 		8C61D6901F57727200389FC0 /* PreloadedEmotions.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = PreloadedEmotions.plist; sourceTree = "<group>"; };
+		8C61D6921F58801000389FC0 /* CustomEmotionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomEmotionViewController.swift; sourceTree = "<group>"; };
 		B05445A012A0BCEF9D95A791 /* Pods-EmotionTranslatorUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmotionTranslatorUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EmotionTranslatorUITests/Pods-EmotionTranslatorUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		C2E2DD4D09C96B4AAF7211D3 /* Pods-EmotionTranslator.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmotionTranslator.release.xcconfig"; path = "Pods/Target Support Files/Pods-EmotionTranslator/Pods-EmotionTranslator.release.xcconfig"; sourceTree = "<group>"; };
 		C65FD7AAF27DCACDA7632C21 /* Pods_EmotionTranslatorUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EmotionTranslatorUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -299,6 +301,7 @@
 			children = (
 				8C61D6861F57531D00389FC0 /* Emotion.storyboard */,
 				8C61D6881F57568B00389FC0 /* EmotionViewController.swift */,
+				8C61D6921F58801000389FC0 /* CustomEmotionViewController.swift */,
 				8C61D68A1F57586300389FC0 /* ItemsSelectionViewController.swift */,
 				8C61D68B1F57586300389FC0 /* AddItemCell.swift */,
 				8C61D68C1F57586300389FC0 /* StringItemSelectionCell.swift */,
@@ -816,6 +819,7 @@
 				8C2B141A1F54A4AD002C0353 /* UIDevice+Extensions.swift in Sources */,
 				8C2B142E1F54A942002C0353 /* WebViewController.swift in Sources */,
 				8C2B140A1F548B67002C0353 /* HomeViewController.swift in Sources */,
+				8C61D6931F58801000389FC0 /* CustomEmotionViewController.swift in Sources */,
 				8C2B14271F54A942002C0353 /* AboutCompanyViewController.swift in Sources */,
 				E3BE11141F53C85300787921 /* OrientableNavigationController.swift in Sources */,
 				E3BE10E81F53C7D400787921 /* User.swift in Sources */,
