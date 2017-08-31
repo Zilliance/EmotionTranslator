@@ -17,6 +17,12 @@ final class ItemsSelectionViewController: UITableViewController {
     var deleteAction: ((StringItem) -> ())?
     
     var type : StringItem.Type!
+    
+    private enum Sections: Int {
+        case emotions = 0
+        case other
+        case count
+    }
         
     override func viewDidLoad() {
         
@@ -25,16 +31,16 @@ final class ItemsSelectionViewController: UITableViewController {
     }
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return 2
+        return Sections.count.rawValue
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return section == 0 ? 1 : items.count
+        return section == Sections.emotions.rawValue ? self.items.count : 1
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        if (indexPath.section == 0) {
+        if (indexPath.section == Sections.other.rawValue) {
             let cell = tableView.dequeueReusableCell(withIdentifier: "AddItemCell", for: indexPath) as! AddItemCell
             cell.addButton.addTarget(self, action: #selector(addItemTapped), for: .touchUpInside)
             
@@ -54,7 +60,7 @@ final class ItemsSelectionViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        guard indexPath.section == 1 else {
+        guard indexPath.section == Sections.emotions.rawValue else {
             return
         }
         
@@ -97,7 +103,7 @@ final class ItemsSelectionViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        return indexPath.section == 1
+        return indexPath.section == Sections.emotions.rawValue
     }
     
 }

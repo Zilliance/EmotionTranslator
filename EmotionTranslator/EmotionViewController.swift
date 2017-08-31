@@ -21,6 +21,13 @@ class EmotionViewController: UIViewController {
         self.setupView()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.tableViewController.updateItems(newItems: Array(Database.shared.emotionsStored))
+        //scroll table to top
+        self.tableViewController.tableView.setContentOffset(CGPoint.zero, animated: true)
+    }
+    
     private func setupView() {
         self.containerView.layer.cornerRadius = UIConstants.Appearance.cornerRadius
         self.containerView.layer.borderWidth = UIConstants.Appearance.borderWidth
