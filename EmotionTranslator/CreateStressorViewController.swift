@@ -102,6 +102,8 @@ class CreateStressorViewController: UIViewController {
     
     private func setupView() {
         
+        self.title = self.stressor.title ?? ""
+        
         self.pageControl.numberOfPages = 2
         self.pageControl.backgroundColor = .clear
         self.pageControl.pageIndicatorTintColor = .dotColor
@@ -144,7 +146,7 @@ class CreateStressorViewController: UIViewController {
         self.pageControl.currentPage = self.currentPageIndex
         
         let item = self.stressorItems[self.currentPageIndex]
-        
+        self.title = self.stressor.title
         self.pageControlViewController.setViewControllers([item.viewController], direction: direction, animated: true, completion: nil)
         
         
