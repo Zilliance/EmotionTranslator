@@ -172,6 +172,6 @@ final class Monster: Object {
     dynamic var shape: Shape = .none
     dynamic var hair: Hair = .none
     dynamic var mouth: Mouth = .none
-    dynamic var Eyes: Eyes = .none
+    dynamic var eyes: Eyes = .none
     
 }
