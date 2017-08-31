@@ -16,6 +16,7 @@ final class Stressor: Object {
     @objc enum Facet: Int32 {
         case stressor
         case emotion
+        case monster
         
         var pageIndex: Int {
             

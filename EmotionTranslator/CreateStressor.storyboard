@@ -86,6 +86,7 @@
                     </view>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
+                        <outlet property="continueButton" destination="NoM-6t-oPd" id="hZV-u3-YGz"/>
                         <outlet property="pageContainerView" destination="tgq-NK-1nL" id="5r0-ov-3ci"/>
                         <outlet property="pageControl" destination="ZKh-gL-5vF" id="gO6-lZ-340"/>
                     </connections>

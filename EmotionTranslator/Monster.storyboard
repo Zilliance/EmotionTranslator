@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Wr1-WX-qAG">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Muli-SemiBold.ttf">
+            <string>Muli-SemiBold</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Choose Monster View Controller-->
+        <scene sceneID="fDq-DL-wSk">
+            <objects>
+                <viewController id="Wr1-WX-qAG" customClass="ChooseMonsterViewController" customModule="EmotionTranslator" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Jj2-EL-dd9"/>
+                        <viewControllerLayoutGuide type="bottom" id="Zb3-Tm-jTA"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="3Ya-UZ-80k">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aEr-Sk-aol">
+                                <rect key="frame" x="0.0" y="20" width="375" height="80"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose a character to represent your emotion, or build your own." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zSs-0R-TOt">
+                                        <rect key="frame" x="20" y="24.5" width="335" height="45.5"/>
+                                        <fontDescription key="fontDescription" name="Muli-SemiBold" family="Muli" pointSize="18"/>
+                                        <color key="textColor" red="0.12549019610000001" green="0.19215686269999999" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eD8-qH-3Oo">
+                                        <rect key="frame" x="126" y="78" width="122" height="2"/>
+                                        <color key="backgroundColor" red="0.88235294119999996" green="0.88235294119999996" blue="0.89411764709999997" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="122" id="A3v-mB-QtQ"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="2" id="MUM-Fc-bsr"/>
+                                            <constraint firstAttribute="height" constant="2" id="YHP-mC-edM"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="122" id="v3u-8L-17Z"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="Awm-JM-55y"/>
+                                    <constraint firstItem="eD8-qH-3Oo" firstAttribute="top" secondItem="zSs-0R-TOt" secondAttribute="bottom" constant="8" id="V5x-Mq-HAW"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="80" id="bUE-ac-mzf"/>
+                                    <constraint firstAttribute="bottom" secondItem="zSs-0R-TOt" secondAttribute="bottom" constant="10" id="mPg-x9-dfr"/>
+                                    <constraint firstAttribute="trailing" secondItem="zSs-0R-TOt" secondAttribute="trailing" constant="20" id="rvr-cA-PYW"/>
+                                    <constraint firstItem="eD8-qH-3Oo" firstAttribute="centerX" secondItem="aEr-Sk-aol" secondAttribute="centerX" id="t5L-xO-1EU"/>
+                                    <constraint firstItem="zSs-0R-TOt" firstAttribute="leading" secondItem="aEr-Sk-aol" secondAttribute="leading" constant="20" id="wyQ-VL-HND"/>
+                                </constraints>
+                            </view>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D1T-5k-uKe">
+                                <rect key="frame" x="0.0" y="130" width="375" height="517"/>
+                                <connections>
+                                    <segue destination="IIc-YA-hql" kind="embed" id="shs-Ae-m4L"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="D1T-5k-uKe" firstAttribute="leading" secondItem="3Ya-UZ-80k" secondAttribute="leading" id="ABQ-Tc-5Ul"/>
+                            <constraint firstItem="aEr-Sk-aol" firstAttribute="top" secondItem="Jj2-EL-dd9" secondAttribute="bottom" id="BK5-sx-Smn"/>
+                            <constraint firstAttribute="trailing" secondItem="D1T-5k-uKe" secondAttribute="trailing" id="SYP-DT-dqS"/>
+                            <constraint firstItem="D1T-5k-uKe" firstAttribute="top" secondItem="aEr-Sk-aol" secondAttribute="bottom" constant="30" id="VGE-mq-lG8"/>
+                            <constraint firstAttribute="trailing" secondItem="aEr-Sk-aol" secondAttribute="trailing" id="aDr-MR-sfw"/>
+                            <constraint firstItem="aEr-Sk-aol" firstAttribute="leading" secondItem="3Ya-UZ-80k" secondAttribute="leading" id="nZe-Jo-WhM"/>
+                            <constraint firstItem="Zb3-Tm-jTA" firstAttribute="top" secondItem="D1T-5k-uKe" secondAttribute="bottom" constant="20" id="oZi-9W-oTm"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="diu-vC-E0j" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="162" y="157"/>
+        </scene>
+        <!--Collection View Controller-->
+        <scene sceneID="QHa-MJ-1hR">
+            <objects>
+                <collectionViewController id="IIc-YA-hql" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="Vhm-Ss-EDq">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="517"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="fpN-VA-zaN">
+                            <size key="itemSize" width="50" height="50"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="M1y-Nu-i0w">
+                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </view>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="IIc-YA-hql" id="YLr-DU-lfh"/>
+                            <outlet property="delegate" destination="IIc-YA-hql" id="bRk-We-6Xm"/>
+                        </connections>
+                    </collectionView>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eqx-VO-SWh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="790" y="199"/>
+        </scene>
+    </scenes>
+</document>

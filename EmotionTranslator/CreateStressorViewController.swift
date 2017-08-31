@@ -26,6 +26,7 @@ protocol StressorFacetEditor {
 enum StressorScene: String {
     case stressor
     case emotion
+    case monster
 }
 
 class CreateStressorViewController: UIViewController {
@@ -45,12 +46,11 @@ class CreateStressorViewController: UIViewController {
 
     @IBOutlet weak var pageControl: UIPageControl!
     @IBOutlet weak var pageContainerView: UIView!
+    @IBOutlet weak var continueButton: UIButton!
     
     var backcustomButton: UIButton!
     
     var stressor: Stressor = Stressor()
-    
-    var previousScene: StressorScene?
     
     private var currentPageIndex = 0
     
@@ -59,6 +59,7 @@ class CreateStressorViewController: UIViewController {
         var items: [StressorItem] = [
             StressorItem(for: .stressor, container: self),
             StressorItem(for: .emotion, container: self),
+            StressorItem(for: .monster, container: self),
             ]
         
         return items
@@ -104,7 +105,7 @@ class CreateStressorViewController: UIViewController {
         
         self.title = self.stressor.title ?? ""
         
-        self.pageControl.numberOfPages = 2
+        self.pageControl.numberOfPages = self.stressorItems.count
         self.pageControl.backgroundColor = .clear
         self.pageControl.pageIndicatorTintColor = .dotColor
         self.pageControl.currentPageIndicatorTintColor = .white
@@ -133,6 +134,17 @@ class CreateStressorViewController: UIViewController {
         }
         return vc.error
     }
+    
+    private func setupButton(for scene:StressorScene) {
+        
+        if scene == .monster {
+            self.continueButton.setTitle("CREATE YOUR OWN", for: .normal)
+        }
+        else {
+             self.continueButton.setTitle("CONTINUE", for: .normal)
+        }
+        
+    }
 
     //MARK: -- User Actions
     
@@ -146,6 +158,7 @@ class CreateStressorViewController: UIViewController {
         self.pageControl.currentPage = self.currentPageIndex
         
         let item = self.stressorItems[self.currentPageIndex]
+        self.setupButton(for: item.scene)
         self.title = self.stressor.title
         self.pageControlViewController.setViewControllers([item.viewController], direction: direction, animated: true, completion: nil)
         
