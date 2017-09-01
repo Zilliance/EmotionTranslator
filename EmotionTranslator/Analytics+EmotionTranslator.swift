@@ -8,57 +8,52 @@
 
 import Foundation
 
-enum EmotionTranslatorPageEvent: AnalyticEvent {
+class EmotionTranslatorAnalytics: ZillianceAnalytics {
     
-    case stressorPageViewed(String)
-
-    var name: String {
-        switch self {
-        case .stressorPageViewed(_):
-            return "Paged Viewed"
+    enum EmotionTranslatorPageEvent: AnalyticEvent {
+        
+        case stressorPageViewed(Int)
+        
+        var name: String {
+            switch self {
+            case .stressorPageViewed(_):
+                return "Paged Viewed"
+            }
+        }
+        
+        var data: [String : Any]? {
+            
+            switch self {
+            case .stressorPageViewed(let page):
+                return ["Page": page]
+                
+            }
         }
     }
     
-    var data: [String : Any]? {
+    enum EmotionTranslatorEvent: String, AnalyticEvent {
         
-        switch self {
-        case .stressorPageViewed(let page):
-            return ["Page": page]
+        //sign up
+        case signUp
         
-        }
-    }
-}
-
-enum EmotionTranslatorEvent: String, AnalyticEvent {
-    
-    //sign up
-    case signUp
-    
-    // emotion translator creation events
-    case newStressor
-    case stressorCompleted
-    
-    //monster events
-    case ownMonsterCreationStarted
-    case colorChanged
-    case shapeChanged
-    case eyesChanged
-    case mouthChanged
-    case hairChanged
-    case ownMonsterCreationFinished
-    
-    //QA events
-    case questionAdded
-    case questionAnswered
+        // emotion translator creation events
+        case newStressor
+        case stressorCompleted
         
-    var name: String {
-        return self.rawValue
-    }
-    
-    var data: [String : Any]? {
+        //monster events
+        case ownMonsterCreationStarted
+        case colorChanged
+        case shapeChanged
+        case eyesChanged
+        case mouthChanged
+        case hairChanged
+        case ownMonsterCreationFinished
         
-        return nil
+        //QA events
+        case questionAdded
+        case questionAnswered
         
     }
     
 }
+

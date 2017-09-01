@@ -55,6 +55,11 @@ class HomeViewController: UIViewController {
         if let collectionViewController = segue.destination as? HomeCollectionViewController {
             self.collectionViewController = collectionViewController
         }
+        
+        if (segue.destination is CreateStressorViewController) {
+            Analytics.sendEvent(event: EmotionTranslatorAnalytics.EmotionTranslatorEvent.newStressor)
+        }
+        
     }
     
     // MARK: - User Action
