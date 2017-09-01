@@ -25,7 +25,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UINavigationBar.appearance().isTranslucent = false
         UINavigationBar.appearance().titleTextAttributes = [
             NSForegroundColorAttributeName: UIColor.white,
-            NSFontAttributeName: UIFont.muliBold(size: 16)
+            NSFontAttributeName: UIFont.muliBold(size: 18)
         ]
         
         var rootViewController: UIViewController?
