@@ -196,6 +196,13 @@ class CreateStressorViewController: UIViewController {
     
     @IBAction func continueAction(_ sender: Any) {
         
+        //just for test
+        
+        if self.currentPageIndex == 2 {
+            self.navigationController?.pushViewController(UIStoryboard(name: "CreateMonster", bundle: nil).instantiateInitialViewController()!, animated: true)
+            return
+        }
+        
         guard self.currentPageIndex < self.stressorItems.count - 1 else {
             return
         }
