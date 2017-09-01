@@ -55,8 +55,8 @@ class IntroViewController: UIViewController {
         ]
         
         let tourRange = (attrText.string as NSString).range(of: "Tour")
-        let videoRange = (attrText.string as NSString).range(of: "Think.Shift.Release. video")
-        let nameRanges = (attrText.string as NSString).ranges(of: "Think.Shift.Release.")
+        let videoRange = (attrText.string as NSString).range(of: "Tour")
+        let nameRanges = (attrText.string as NSString).ranges(of: "Tour")
         
         if tourRange.location != NSNotFound {
             attrText.addAttributes(tourAttributes, range: tourRange)

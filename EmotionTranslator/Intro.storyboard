@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="7Rv-YE-G50">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="7Rv-YE-G50">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -29,7 +29,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo-intro" translatesAutoresizingMaskIntoConstraints="NO" id="0MR-xF-q0c">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo-sidebar" translatesAutoresizingMaskIntoConstraints="NO" id="0MR-xF-q0c">
                                 <rect key="frame" x="45.5" y="40" width="284" height="232"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="284" id="7AV-AT-Gft"/>
@@ -85,6 +85,6 @@
     </scenes>
     <resources>
         <image name="button-background" width="335" height="77"/>
-        <image name="logo-intro" width="128" height="128"/>
+        <image name="logo-sidebar" width="258" height="258"/>
     </resources>
 </document>

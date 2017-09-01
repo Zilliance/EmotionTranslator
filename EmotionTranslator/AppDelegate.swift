@@ -25,7 +25,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UINavigationBar.appearance().isTranslucent = false
         UINavigationBar.appearance().titleTextAttributes = [
             NSForegroundColorAttributeName: UIColor.white,
-            NSFontAttributeName: UIFont.muliBold(size: 16)
+            NSFontAttributeName: UIFont.muliBold(size: 18)
         ]
         
         var rootViewController: UIViewController?
@@ -46,10 +46,44 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         //NotificationsManager.sharedInstance.realmDB = Database.shared.realm
         Analytics.initialize()
-
+        
         return true
     }
 
-
 }
 
+// Quickie Model Tests
+
+extension AppDelegate {
+    func checkMonsterAssets() {
+        
+        // All color images
+        let _ = Monster.Color.all.map { $0.image }
+        
+        // All mouth images
+        let _ = Monster.Mouth.all.map { $0.image }
+        
+        // All eyes images
+        let _ = Monster.Eyes.all.map { $0.image }
+        
+        // All shape images for all colors
+        let _ = Monster.Shape.all.flatMap({ (shape) in
+            return Monster.Color.all.map({ (color) in
+                return shape.image(with: color)
+            })
+        })
+        
+        // All hair images for all colors
+        let _ = Monster.Hair.all.flatMap({ (hair) in
+            return Monster.Color.all.map({ (color) in
+                return hair.image(with: color)
+            })
+        })
+        
+        // For example, get all shape images of a certain color
+        let _ = Monster.Shape.all.map { $0.image(with: .red) }
+        
+        // For example, get all hair images of a certain color
+        let _ = Monster.Hair.all.map { $0.image(with: .blue) }
+    }
+}

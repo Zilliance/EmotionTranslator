@@ -60,6 +60,9 @@
                                 <fontDescription key="fontDescription" name="Muli-Regular" family="Muli" pointSize="18"/>
                                 <inset key="imageEdgeInsets" minX="-37" minY="13" maxX="0.0" maxY="13"/>
                                 <state key="normal" title="START NEW TRANSLATOR" image="logo-round" backgroundImage="button-background"/>
+                                <connections>
+                                    <segue destination="8R4-b2-Rlv" kind="show" id="Wu1-9u-8D9"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="     My saved emotion translators" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ocx-y1-f2A">
                                 <rect key="frame" x="0.0" y="160" width="375" height="40"/>
@@ -173,6 +176,14 @@
             </objects>
             <point key="canvasLocation" x="-60" y="310.79460269865069"/>
         </scene>
+        <!--CreateStressor-->
+        <scene sceneID="umF-pi-dCo">
+            <objects>
+                <viewControllerPlaceholder storyboardName="CreateStressor" id="8R4-b2-Rlv" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tPf-rK-1iK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-42" y="766"/>
+        </scene>
         <!--Home Collection View Controller-->
         <scene sceneID="mIu-WS-Drz">
             <objects>
@@ -206,7 +217,7 @@
                                             <color key="textColor" red="0.12549019610000001" green="0.19215686269999999" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo-hex" translatesAutoresizingMaskIntoConstraints="NO" id="HBz-YD-HDc">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="HBz-YD-HDc">
                                             <rect key="frame" x="15" y="25" width="50" height="50"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="50" id="IM6-pN-zJ6"/>
@@ -229,7 +240,7 @@
                                         </label>
                                     </subviews>
                                 </view>
-                                <color key="backgroundColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="Jbj-9e-xDU" firstAttribute="top" secondItem="Ke6-CU-PRp" secondAttribute="top" constant="10" id="3mT-J7-ftV"/>
                                     <constraint firstItem="HBz-YD-HDc" firstAttribute="leading" secondItem="Ke6-CU-PRp" secondAttribute="leading" constant="15" id="8yM-Dy-Iaw"/>
@@ -243,6 +254,7 @@
                                 <connections>
                                     <outlet property="checkmarkView" destination="FII-oy-fDr" id="7Q7-ex-QhU"/>
                                     <outlet property="completedLabel" destination="Jbj-9e-xDU" id="46F-PJ-cRp"/>
+                                    <outlet property="icon" destination="HBz-YD-HDc" id="jRL-KE-OwX"/>
                                     <outlet property="titleLabel" destination="t14-wL-pm6" id="3cn-Ym-edS"/>
                                 </connections>
                             </collectionViewCell>
@@ -261,7 +273,6 @@
     </scenes>
     <resources>
         <image name="button-background" width="335" height="77"/>
-        <image name="logo-hex" width="16" height="16"/>
         <image name="logo-round" width="58" height="59"/>
         <image name="menu-icon" width="20" height="17"/>
         <image name="select-checkmark" width="20" height="20"/>
