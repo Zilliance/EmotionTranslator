@@ -59,60 +59,138 @@
                             </view>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D1T-5k-uKe">
                                 <rect key="frame" x="0.0" y="130" width="375" height="517"/>
-                                <connections>
-                                    <segue destination="IIc-YA-hql" kind="embed" id="shs-Ae-m4L"/>
-                                </connections>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </containerView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="bZC-8C-WTd">
+                                <rect key="frame" x="20" y="195" width="335" height="100"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QmZ-Pb-zT2">
+                                        <rect key="frame" x="0.0" y="0.0" width="111.5" height="100"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="character1" translatesAutoresizingMaskIntoConstraints="NO" id="a1m-PG-aHj">
+                                                <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CSK-qS-vbM">
+                                                <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <connections>
+                                                    <action selector="character1Action:" destination="Wr1-WX-qAG" eventType="touchUpInside" id="3LE-dX-zvz"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dDt-uF-4xt">
+                                        <rect key="frame" x="111.5" y="0.0" width="112" height="100"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="character5" translatesAutoresizingMaskIntoConstraints="NO" id="KbI-dN-anw">
+                                                <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5VW-uR-2cW">
+                                                <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <connections>
+                                                    <action selector="character5Action:" destination="Wr1-WX-qAG" eventType="touchUpInside" id="NLv-KO-j21"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2XQ-3t-d6y">
+                                        <rect key="frame" x="223.5" y="0.0" width="111.5" height="100"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="character3" translatesAutoresizingMaskIntoConstraints="NO" id="Kre-3q-GPR">
+                                                <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gJx-m6-lCt">
+                                                <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <connections>
+                                                    <action selector="character3Action:" destination="Wr1-WX-qAG" eventType="touchUpInside" id="oz7-6V-hEb"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="VX3-H4-hrY"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="hp6-Yj-IuI">
+                                <rect key="frame" x="80" y="295" width="215" height="100"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VGw-Kf-Dhx">
+                                        <rect key="frame" x="0.0" y="0.0" width="107.5" height="100"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="character4" translatesAutoresizingMaskIntoConstraints="NO" id="FcK-B6-cYY">
+                                                <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pq5-ah-nmN">
+                                                <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <connections>
+                                                    <action selector="character4Action:" destination="Wr1-WX-qAG" eventType="touchUpInside" id="Wk5-LN-rRW"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fey-FU-agm">
+                                        <rect key="frame" x="107.5" y="0.0" width="107.5" height="100"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="character2" translatesAutoresizingMaskIntoConstraints="NO" id="0ga-iv-Y3K">
+                                                <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="orc-Pc-Y8a">
+                                                <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <connections>
+                                                    <action selector="character2Action:" destination="Wr1-WX-qAG" eventType="touchUpInside" id="OFw-UM-Uiy"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="gg7-sq-KG7"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="bZC-8C-WTd" secondAttribute="trailing" constant="20" id="56m-us-UHd"/>
+                            <constraint firstAttribute="trailing" secondItem="hp6-Yj-IuI" secondAttribute="trailing" constant="80" id="5vf-3d-mxC"/>
+                            <constraint firstItem="bZC-8C-WTd" firstAttribute="top" secondItem="aEr-Sk-aol" secondAttribute="bottom" constant="95" id="7Nv-E4-8gg"/>
                             <constraint firstItem="D1T-5k-uKe" firstAttribute="leading" secondItem="3Ya-UZ-80k" secondAttribute="leading" id="ABQ-Tc-5Ul"/>
                             <constraint firstItem="aEr-Sk-aol" firstAttribute="top" secondItem="Jj2-EL-dd9" secondAttribute="bottom" id="BK5-sx-Smn"/>
+                            <constraint firstItem="hp6-Yj-IuI" firstAttribute="top" secondItem="bZC-8C-WTd" secondAttribute="bottom" id="Bvz-Pz-1Iu"/>
                             <constraint firstAttribute="trailing" secondItem="D1T-5k-uKe" secondAttribute="trailing" id="SYP-DT-dqS"/>
                             <constraint firstItem="D1T-5k-uKe" firstAttribute="top" secondItem="aEr-Sk-aol" secondAttribute="bottom" constant="30" id="VGE-mq-lG8"/>
                             <constraint firstAttribute="trailing" secondItem="aEr-Sk-aol" secondAttribute="trailing" id="aDr-MR-sfw"/>
+                            <constraint firstItem="hp6-Yj-IuI" firstAttribute="leading" secondItem="3Ya-UZ-80k" secondAttribute="leading" constant="80" id="mb2-oi-Vb8"/>
                             <constraint firstItem="aEr-Sk-aol" firstAttribute="leading" secondItem="3Ya-UZ-80k" secondAttribute="leading" id="nZe-Jo-WhM"/>
                             <constraint firstItem="Zb3-Tm-jTA" firstAttribute="top" secondItem="D1T-5k-uKe" secondAttribute="bottom" constant="20" id="oZi-9W-oTm"/>
+                            <constraint firstItem="bZC-8C-WTd" firstAttribute="leading" secondItem="3Ya-UZ-80k" secondAttribute="leading" constant="20" id="rvD-2X-Gi3"/>
                         </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="diu-vC-E0j" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="162" y="157"/>
-        </scene>
-        <!--Collection View Controller-->
-        <scene sceneID="QHa-MJ-1hR">
-            <objects>
-                <collectionViewController id="IIc-YA-hql" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="Vhm-Ss-EDq">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="517"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="fpN-VA-zaN">
-                            <size key="itemSize" width="50" height="50"/>
-                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                        </collectionViewFlowLayout>
-                        <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="M1y-Nu-i0w">
-                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </view>
-                            </collectionViewCell>
-                        </cells>
-                        <connections>
-                            <outlet property="dataSource" destination="IIc-YA-hql" id="YLr-DU-lfh"/>
-                            <outlet property="delegate" destination="IIc-YA-hql" id="bRk-We-6Xm"/>
-                        </connections>
-                    </collectionView>
-                </collectionViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="eqx-VO-SWh" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="790" y="199"/>
+            <point key="canvasLocation" x="160.80000000000001" y="156.97151424287858"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="character1" width="86" height="96"/>
+        <image name="character2" width="94" height="95"/>
+        <image name="character3" width="96" height="94"/>
+        <image name="character4" width="96" height="94"/>
+        <image name="character5" width="101" height="99"/>
+    </resources>
 </document>

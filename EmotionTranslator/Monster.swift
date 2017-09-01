@@ -168,6 +168,14 @@ final class Monster: Object {
         }
     }
     
+    struct Default {
+        let color: Color
+        let shape: Shape
+        let hair: Hair
+        let mouth: Mouth
+        let eyes: Eyes
+    }
+    
     dynamic var color: Color = .none
     dynamic var shape: Shape = .none
     dynamic var hair: Hair = .none
