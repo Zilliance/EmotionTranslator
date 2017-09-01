@@ -19,8 +19,59 @@ protocol AnalyticEvent {
     
 }
 
-final class Analytics {
+enum ZillianceBasePagedAnalytics: AnalyticEvent {
+
+    case tourPagedViewed(Int)
     
+    var name: String {
+        switch self {
+        case .tourPagedViewed(_):
+            return "Tour Paged Viewed"
+        }
+    }
+    
+    var data: [String : Any]? {
+        
+        switch self {
+        case .tourPagedViewed(let page):
+            return ["Page": page]
+        
+        }
+    }
+}
+
+
+enum ZillianceBaseAnalytics: String, AnalyticEvent {
+    
+    //Plan?
+    case planViewed
+    case reminderAdded
+    case repeatingReminderAdded
+    
+    // Sidebar
+    case tourVideoStarted
+    case tourVideoFinished
+    case faqViewed
+    case companyViewed
+    case privacyPolycyViewed
+    case termsViewed
+    
+    //Summary/sharing
+    case emailSent
+    case summaryViewed
+    case summaryShared
+
+    var name: String {
+        return self.rawValue
+    }
+    
+    var data: [String : Any]? {
+        return nil
+    }
+    
+}
+
+final class Analytics {
     
     static func initialize() {
         
