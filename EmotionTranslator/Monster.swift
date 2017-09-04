@@ -16,11 +16,11 @@ final class Monster: Object {
     
     @objc enum Color: Int {
         case none
-        case red
-        case yellow
-        case green
         case blue
+        case green
+        case yellow
         case purple
+        case red
         
         static var all: [Color] {
             return [.blue, .green, .yellow, .purple, .red]

@@ -14,17 +14,76 @@ class SectionCell: UICollectionViewCell {
     @IBOutlet weak var sectionLabel: UILabel!
     @IBOutlet weak var selectedLine: UIView!
     
+    override var isSelected: Bool {
+        didSet {
+            self.selectedLine.isHidden = !isSelected
+        }
+    }
+    
 }
 
 class ItemCell: UICollectionViewCell {
     
     @IBOutlet weak var itemImageView: UIImageView!
+    @IBOutlet weak var imageContainerView: UIView!
+    
+    var monsterColor: UIColor?
+    
+
+    func setup() {
+        if let color = self.monsterColor {
+            self.imageContainerView.backgroundColor = color
+        }
+        else {
+            self.imageContainerView.backgroundColor = .contentBackground
+        }
+    }
+    
+    private func addBorder() {
+        
+        self.contentView.layer.borderWidth = 2
+        self.contentView.layer.borderColor = UIColor.navBar.cgColor
+        
+        if let color = self.monsterColor {
+            self.imageContainerView.backgroundColor = color
+        }
+        else {
+            self.imageContainerView.backgroundColor = .white
+        }
+        
+    }
+    
+    private func removeBorder() {
+        
+        self.contentView.layer.borderWidth = 0
+        if let color = self.monsterColor {
+            self.imageContainerView.backgroundColor = color
+        }
+        else {
+            self.imageContainerView.backgroundColor = .contentBackground
+        }
+        
+    }
+    
+    override var isSelected: Bool {
+        didSet {
+            if isSelected {
+                self.addBorder()
+            }
+            else {
+                self.removeBorder()
+            }
+
+        }
+    }
+    
+    
 }
 
 class CreateMonsterViewController: UIViewController {
     
-    enum Section: String {
-        case color
+    enum Section: Int {
+        case color = 0
         case shape
         case eyes
         case mouth
@@ -52,7 +111,7 @@ class CreateMonsterViewController: UIViewController {
                                                SectionItem(title: "SHAPE", image: #imageLiteral(resourceName: "eyes-3")),
                                                SectionItem(title: "EYES", image: #imageLiteral(resourceName: "eyes-3")),
                                                SectionItem(title: "MOUTH", image: #imageLiteral(resourceName: "eyes-3")),
-                                               SectionItem(title: "ITEM", image: #imageLiteral(resourceName: "eyes-3")),]
+                                               SectionItem(title: "HAIR", image: #imageLiteral(resourceName: "eyes-3")),]
     
     fileprivate typealias Color = Monster.Color
     
@@ -60,9 +119,57 @@ class CreateMonsterViewController: UIViewController {
     
     fileprivate var currentColor: Color = .blue
     
+    
+    fileprivate var monster: Monster?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        // pre select first position
+        self.sectionCollectionView.selectItem(at: IndexPath(item: 0, section: 0), animated: true, scrollPosition: .centeredHorizontally)
+        self.itemCollectionView.selectItem(at: IndexPath(item: 0, section: 0), animated: true, scrollPosition: .centeredHorizontally)
+        
+        if self.monster == nil {
+            self.monster = Monster()
+            self.monster?.color = Monster.Color.blue
+            self.monster?.shape = Monster.Shape.heart
+            self.monster?.eyes = Monster.Eyes.one
+            self.monster?.mouth = Monster.Mouth.one
+            self.monster?.hair = Monster.Hair.one
+        }
+        
+        self.setupMonster()
+    }
+    
+    fileprivate func setupMonster() {
+        
+        if let monster = self.monster {
+            self.shapeImageView.image = monster.shape.image(with: monster.color)
+            self.hairImageView.image = monster.hair.image(with: monster.color)
+            self.eyesImageView.image = monster.eyes.image
+            self.mouthImageView.image = monster.mouth.image
+        }
+    }
+    
+    fileprivate func preselectItems() {
+        
+        guard let monster = self.monster else { return }
+        
+        var index = 0
+        
+        switch self.currentSection {
+        case .color:
+            index = monster.color.rawValue - 1
+        case .shape:
+            index = monster.shape.rawValue - 1
+        case .eyes:
+            index = monster.eyes.rawValue - 1
+        case .mouth:
+            index = monster.mouth.rawValue - 1
+        case .hair:
+            index = monster.hair.rawValue - 1
+        }
+        
+        self.itemCollectionView.selectItem(at: IndexPath(item: index, section: 0), animated: true, scrollPosition: .centeredHorizontally)
     }
     
     fileprivate func itemImages(for section: Section, color:Monster.Color) -> [UIImage] {
@@ -103,12 +210,51 @@ extension CreateMonsterViewController: UICollectionViewDataSource {
         else {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ItemCell", for: indexPath) as! ItemCell
             let image = self.itemImages(for: self.currentSection, color: self.currentColor)[indexPath.row]
+            
+            switch self.currentSection {
+            case .eyes, .mouth:
+                cell.monsterColor = self.currentColor.color
+            default:
+                cell.monsterColor = nil
+            }
+            
             cell.itemImageView.image = image
+            cell.setup()
+            
             return cell
         }
         
     }
     
+}
+
+extension CreateMonsterViewController: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if collectionView == self.sectionCollectionView {
+            self.currentSection = Section(rawValue: indexPath.row)!
+            self.titleLabel.text = self.sections[indexPath.row].title
+            self.itemCollectionView.reloadData()
+            self.preselectItems()
+        }
+        else {
+            
+            switch self.currentSection {
+            case .color:
+                self.currentColor = Color(rawValue: indexPath.row + 1)!
+                self.monster?.color = self.currentColor
+            case .hair:
+                self.monster?.hair = Monster.Hair(rawValue: indexPath.row + 1)!
+            case .eyes:
+                self.monster?.eyes = Monster.Eyes(rawValue: indexPath.row + 1)!
+            case .mouth:
+                self.monster?.mouth = Monster.Mouth(rawValue: indexPath.row + 1)!
+            case .shape:
+                self.monster?.shape = Monster.Shape(rawValue: indexPath.row + 1)!
+            }
+            
+            self.setupMonster()
+        }
+    }
 }
 
 extension CreateMonsterViewController: UICollectionViewDelegateFlowLayout {
