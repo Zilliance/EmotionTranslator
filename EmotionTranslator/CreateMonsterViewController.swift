@@ -28,7 +28,6 @@ class ItemCell: UICollectionViewCell {
     @IBOutlet weak var imageContainerView: UIView!
     
     var monsterColor: UIColor?
-    
 
     func setup() {
         if let color = self.monsterColor {
@@ -107,6 +106,17 @@ class CreateMonsterViewController: UIViewController {
     @IBOutlet weak var eyesImageView: UIImageView!
     @IBOutlet weak var mouthImageView: UIImageView!
     
+    @IBOutlet weak var monsterHeight: NSLayoutConstraint!
+    @IBOutlet weak var monsterWidth: NSLayoutConstraint!
+    @IBOutlet weak var hairHeight: NSLayoutConstraint!
+    @IBOutlet weak var hairWidth: NSLayoutConstraint!
+    @IBOutlet weak var eyesWidth: NSLayoutConstraint!
+    @IBOutlet weak var eyesHeight: NSLayoutConstraint!
+    @IBOutlet weak var mouthWidth: NSLayoutConstraint!
+    @IBOutlet weak var mouthHeight: NSLayoutConstraint!
+    
+    var currentStressor: Stressor!
+    
     fileprivate var sections: [SectionItem] = [SectionItem(title: "COLOR", image: #imageLiteral(resourceName: "eyes-3")),
                                                SectionItem(title: "SHAPE", image: #imageLiteral(resourceName: "eyes-3")),
                                                SectionItem(title: "EYES", image: #imageLiteral(resourceName: "eyes-3")),
@@ -124,6 +134,12 @@ class CreateMonsterViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if UIDevice.isSmallerThaniPhone6 {
+            self.scaleMonster(by: 0.7)
+ 
+        }
+        
         // pre select first position
         self.sectionCollectionView.selectItem(at: IndexPath(item: 0, section: 0), animated: true, scrollPosition: .centeredHorizontally)
         self.itemCollectionView.selectItem(at: IndexPath(item: 0, section: 0), animated: true, scrollPosition: .centeredHorizontally)
@@ -148,6 +164,17 @@ class CreateMonsterViewController: UIViewController {
             self.eyesImageView.image = monster.eyes.image
             self.mouthImageView.image = monster.mouth.image
         }
+    }
+    
+    fileprivate func scaleMonster(by factor: CGFloat) {
+        
+        for constraint in [self.monsterWidth, self.monsterHeight, self.eyesWidth, self.eyesHeight, self.mouthHeight, self.mouthWidth, self.hairWidth, self.hairHeight] {
+            
+            if let c = constraint {
+                c.constant = c.constant * factor
+            }
+        }
+        
     }
     
     fileprivate func preselectItems() {
@@ -260,12 +287,29 @@ extension CreateMonsterViewController: UICollectionViewDelegate {
 extension CreateMonsterViewController: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: collectionView.bounds.width / CGFloat(self.sections.count), height: 80)
+        return CGSize(width: UIScreen.main.bounds.width / CGFloat(self.sections.count), height: 80)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
         return 0
     }
     
+}
+
+// MARK: - CompassValidation
+
+extension CreateMonsterViewController: StressorValidation {
+    var error: StressorError {
+        return .none
+    }
+}
+
+// MARK: - CompassFacetEditor
+
+extension CreateMonsterViewController: StressorFacetEditor {
+    func save() {
+        //self.tableViewController.saveAction(self.tableViewController.selectedItems)
+        self.currentStressor.lastEditedFacet = .create
+    }
 }
 

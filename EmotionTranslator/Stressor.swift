@@ -17,6 +17,7 @@ final class Stressor: Object {
         case stressor
         case emotion
         case monster
+        case create
         
         var pageIndex: Int {
             

@@ -27,6 +27,7 @@ enum StressorScene: String {
     case stressor
     case emotion
     case monster
+    case create
 }
 
 class CreateStressorViewController: UIViewController {
@@ -60,6 +61,7 @@ class CreateStressorViewController: UIViewController {
             StressorItem(for: .stressor, container: self),
             StressorItem(for: .emotion, container: self),
             StressorItem(for: .monster, container: self),
+            StressorItem(for: .create, container: self),
             ]
         
         return items
@@ -125,6 +127,9 @@ class CreateStressorViewController: UIViewController {
         self.backcustomButton = UIButton(frame: CGRect(x: 0, y: 0, width: 50, height: 40))
         self.backcustomButton.backgroundColor = UIColor.clear
         self.backcustomButton.addTarget(self, action: #selector(self.cancelAction(_:)), for: .touchUpInside)
+        
+        let item = self.stressorItems[self.currentPageIndex]
+        self.setupButton(for: item.scene)
         
     }
     
@@ -197,11 +202,6 @@ class CreateStressorViewController: UIViewController {
     @IBAction func continueAction(_ sender: Any) {
         
         //just for test
-        
-        if self.currentPageIndex == 2 {
-            self.navigationController?.pushViewController(UIStoryboard(name: "CreateMonster", bundle: nil).instantiateInitialViewController()!, animated: true)
-            return
-        }
         
         guard self.currentPageIndex < self.stressorItems.count - 1 else {
             return
