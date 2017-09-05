@@ -32,7 +32,7 @@ class ItemCell: UICollectionViewCell {
 
     func setup() {
         if let color = self.monsterColor {
-            self.imageContainerView.backgroundColor = color
+            self.imageContainerView.backgroundColor = color.withAlphaComponent(0.6)
         }
         else {
             self.imageContainerView.backgroundColor = .contentBackground
@@ -45,7 +45,7 @@ class ItemCell: UICollectionViewCell {
         self.contentView.layer.borderColor = UIColor.navBar.cgColor
         
         if let color = self.monsterColor {
-            self.imageContainerView.backgroundColor = color
+            self.imageContainerView.backgroundColor = color.withAlphaComponent(0.6)
         }
         else {
             self.imageContainerView.backgroundColor = .white
@@ -57,7 +57,7 @@ class ItemCell: UICollectionViewCell {
         
         self.contentView.layer.borderWidth = 0
         if let color = self.monsterColor {
-            self.imageContainerView.backgroundColor = color
+            self.imageContainerView.backgroundColor = color.withAlphaComponent(0.6)
         }
         else {
             self.imageContainerView.backgroundColor = .contentBackground
