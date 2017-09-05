@@ -16,6 +16,7 @@ protocol StressorValidation {
 enum StressorError {
     case text
     case selection
+    case monster
     case none
 }
 
@@ -28,6 +29,7 @@ enum StressorScene: String {
     case emotion
     case monster
     case create
+    case name
 }
 
 class CreateStressorViewController: UIViewController {
@@ -62,6 +64,7 @@ class CreateStressorViewController: UIViewController {
             StressorItem(for: .emotion, container: self),
             StressorItem(for: .monster, container: self),
             StressorItem(for: .create, container: self),
+            StressorItem(for: .name, container: self),
             ]
         
         return items

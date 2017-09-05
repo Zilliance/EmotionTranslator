@@ -310,6 +310,7 @@ extension CreateMonsterViewController: StressorFacetEditor {
     func save() {
         //self.tableViewController.saveAction(self.tableViewController.selectedItems)
         self.currentStressor.lastEditedFacet = .create
+        self.currentStressor.monster = self.monster
     }
 }
 
