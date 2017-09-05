@@ -45,7 +45,7 @@
                                             </constraints>
                                         </view>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oKX-CS-Yj6">
-                                            <rect key="frame" x="30" y="7" width="235" height="30"/>
+                                            <rect key="frame" x="30" y="7.5" width="235" height="29"/>
                                             <fontDescription key="fontDescription" name="Muli-Light" family="Muli" pointSize="14"/>
                                             <state key="normal" title="Other">
                                                 <color key="titleColor" red="0.0" green="0.72156862749999995" blue="0.90588235294117647" alpha="1" colorSpace="calibratedRGB"/>

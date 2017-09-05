@@ -16,11 +16,11 @@ final class Monster: Object {
     
     @objc enum Color: Int {
         case none
-        case red
-        case yellow
-        case green
         case blue
+        case green
+        case yellow
         case purple
+        case red
         
         static var all: [Color] {
             return [.blue, .green, .yellow, .purple, .red]
@@ -166,6 +166,14 @@ final class Monster: Object {
                 return UIImage(named: "eyes-\(self.rawValue)")!
             }
         }
+    }
+    
+    struct Default {
+        let color: Color
+        let shape: Shape
+        let hair: Hair
+        let mouth: Mouth
+        let eyes: Eyes
     }
     
     dynamic var color: Color = .none

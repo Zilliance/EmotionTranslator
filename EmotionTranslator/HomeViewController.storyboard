@@ -58,7 +58,7 @@
                                     <constraint firstAttribute="height" constant="77" id="ScC-ER-W2O"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Muli-Regular" family="Muli" pointSize="18"/>
-                                <inset key="imageEdgeInsets" minX="-37" minY="13" maxX="0.0" maxY="13"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="13" maxX="13" maxY="13"/>
                                 <state key="normal" title="START NEW TRANSLATOR" image="logo-round" backgroundImage="button-background"/>
                                 <connections>
                                     <segue destination="8R4-b2-Rlv" kind="show" id="Wu1-9u-8D9"/>
