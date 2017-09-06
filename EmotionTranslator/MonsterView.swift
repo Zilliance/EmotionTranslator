@@ -10,7 +10,7 @@ import UIKit
 
 class MonsterView: UIView {
     
-    @IBOutlet var contentView: MonsterView!
+    @IBOutlet var contentView: UIView!
     
     //Monster
     @IBOutlet weak var shapeImageView: UIImageView!
@@ -18,6 +18,8 @@ class MonsterView: UIView {
     @IBOutlet weak var eyesImageView: UIImageView!
     @IBOutlet weak var mouthImageView: UIImageView!
     
+    @IBOutlet weak var shapeWidth: NSLayoutConstraint!
+    @IBOutlet weak var shapeHeight: NSLayoutConstraint!
     @IBOutlet weak var hairHeight: NSLayoutConstraint!
     @IBOutlet weak var hairWidth: NSLayoutConstraint!
     @IBOutlet weak var eyesWidth: NSLayoutConstraint!
@@ -41,13 +43,19 @@ class MonsterView: UIView {
     private func commonInit() {
 
         Bundle.main.loadNibNamed("MonsterView", owner: self, options: nil)
+        self.contentView.translatesAutoresizingMaskIntoConstraints = false
         self.addSubview(self.contentView)
-        self.contentView.frame = self.bounds
-        self.contentView.autoresizingMask = [.flexibleHeight, .flexibleHeight]
+    
+        NSLayoutConstraint.activate([
+            self.contentView.leadingAnchor.constraint(equalTo: self.leadingAnchor),
+            self.contentView.trailingAnchor.constraint(equalTo: self.trailingAnchor),
+            self.contentView.topAnchor.constraint(equalTo: self.topAnchor),
+            self.contentView.bottomAnchor.constraint(equalTo: self.bottomAnchor)
+            ])
         
     }
 
-    fileprivate func setupMonster() {
+    func setupMonster() {
 
         if let monster = self.monster {
             self.shapeImageView.image = monster.shape.image(with: monster.color)
@@ -57,9 +65,9 @@ class MonsterView: UIView {
         }
     }
     
-    fileprivate func scaleMonster(by factor: CGFloat) {
+   func scaleMonster(by factor: CGFloat) {
         
-        for constraint in [self.eyesWidth, self.eyesHeight, self.mouthHeight, self.mouthWidth, self.hairWidth, self.hairHeight] {
+        for constraint in [self.shapeHeight, self.shapeWidth, self.eyesWidth, self.eyesHeight, self.mouthHeight, self.mouthWidth, self.hairWidth, self.hairHeight] {
             
             if let c = constraint {
                 c.constant = c.constant * factor

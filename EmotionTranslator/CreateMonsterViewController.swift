@@ -94,26 +94,12 @@ class CreateMonsterViewController: UIViewController {
         let image: UIImage
     }
     
+    @IBOutlet weak var monsterView: MonsterView!
 
     @IBOutlet weak var titleLabel: UILabel!
     
     @IBOutlet weak var sectionCollectionView: UICollectionView!
     @IBOutlet weak var itemCollectionView: UICollectionView!
-    
-    //Monster
-    @IBOutlet weak var shapeImageView: UIImageView!
-    @IBOutlet weak var hairImageView: UIImageView!
-    @IBOutlet weak var eyesImageView: UIImageView!
-    @IBOutlet weak var mouthImageView: UIImageView!
-    
-    @IBOutlet weak var monsterHeight: NSLayoutConstraint!
-    @IBOutlet weak var monsterWidth: NSLayoutConstraint!
-    @IBOutlet weak var hairHeight: NSLayoutConstraint!
-    @IBOutlet weak var hairWidth: NSLayoutConstraint!
-    @IBOutlet weak var eyesWidth: NSLayoutConstraint!
-    @IBOutlet weak var eyesHeight: NSLayoutConstraint!
-    @IBOutlet weak var mouthWidth: NSLayoutConstraint!
-    @IBOutlet weak var mouthHeight: NSLayoutConstraint!
     
     var currentStressor: Stressor!
     
@@ -136,7 +122,7 @@ class CreateMonsterViewController: UIViewController {
         super.viewDidLoad()
         
         if UIDevice.isSmallerThaniPhone6 {
-            self.scaleMonster(by: 0.7)
+            self.monsterView.scaleMonster(by: 0.7)
  
         }
         
@@ -153,29 +139,10 @@ class CreateMonsterViewController: UIViewController {
             self.monster?.hair = Monster.Hair.one
         }
         
-        self.setupMonster()
+        self.monsterView.monster = self.monster
+        self.monsterView.setupMonster()
     }
-    
-    fileprivate func setupMonster() {
-        
-        if let monster = self.monster {
-            self.shapeImageView.image = monster.shape.image(with: monster.color)
-            self.hairImageView.image = monster.hair.image(with: monster.color)
-            self.eyesImageView.image = monster.eyes.image
-            self.mouthImageView.image = monster.mouth.image
-        }
-    }
-    
-    fileprivate func scaleMonster(by factor: CGFloat) {
-        
-        for constraint in [self.monsterWidth, self.monsterHeight, self.eyesWidth, self.eyesHeight, self.mouthHeight, self.mouthWidth, self.hairWidth, self.hairHeight] {
-            
-            if let c = constraint {
-                c.constant = c.constant * factor
-            }
-        }
-        
-    }
+
     
     fileprivate func preselectItems() {
         
@@ -279,7 +246,7 @@ extension CreateMonsterViewController: UICollectionViewDelegate {
                 self.monster?.shape = Monster.Shape(rawValue: indexPath.row + 1)!
             }
             
-            self.setupMonster()
+            self.monsterView.setupMonster()
         }
     }
 }

@@ -31,7 +31,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="COLOR" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZQI-Vj-9Mq">
-                                <rect key="frame" x="136.5" y="53" width="102" height="25"/>
+                                <rect key="frame" x="136.5" y="43" width="102" height="25"/>
                                 <color key="backgroundColor" red="0.20000000000000001" green="0.29019607843137252" blue="0.37254901960784315" alpha="0.69999999999999996" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="25" id="25b-8b-car"/>
@@ -42,57 +42,20 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m5S-pl-fL3" userLabel="Monster Container View">
-                                <rect key="frame" x="0.0" y="78" width="375" height="424"/>
+                                <rect key="frame" x="0.0" y="68" width="375" height="434"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" verticalCompressionResistancePriority="479" translatesAutoresizingMaskIntoConstraints="NO" id="at4-SG-enT">
-                                        <rect key="frame" x="87.5" y="112" width="200" height="200"/>
-                                        <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wGQ-dQ-XAb">
-                                                <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
-                                            </imageView>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" translatesAutoresizingMaskIntoConstraints="NO" id="AIu-Nq-ImG">
-                                                <rect key="frame" x="50" y="0.0" width="100" height="60"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="60" id="Adb-LT-rgs"/>
-                                                    <constraint firstAttribute="width" constant="100" id="JNf-A8-RfO"/>
-                                                </constraints>
-                                            </imageView>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" translatesAutoresizingMaskIntoConstraints="NO" id="lfT-UJ-cP8">
-                                                <rect key="frame" x="50" y="66" width="100" height="50"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="100" id="3CP-qK-2tx"/>
-                                                    <constraint firstAttribute="height" constant="50" id="r0u-fa-bD8"/>
-                                                </constraints>
-                                            </imageView>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" translatesAutoresizingMaskIntoConstraints="NO" id="unx-hb-UDi">
-                                                <rect key="frame" x="50" y="118" width="100" height="60"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="100" id="F6y-kG-smi"/>
-                                                    <constraint firstAttribute="height" constant="60" id="hbw-BL-Wd1"/>
-                                                </constraints>
-                                            </imageView>
-                                        </subviews>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    <view contentMode="scaleToFill" verticalCompressionResistancePriority="479" translatesAutoresizingMaskIntoConstraints="NO" id="at4-SG-enT" customClass="MonsterView" customModule="EmotionTranslator" customModuleProvider="target">
+                                        <rect key="frame" x="87.5" y="122" width="200" height="200"/>
                                         <constraints>
-                                            <constraint firstItem="unx-hb-UDi" firstAttribute="top" secondItem="lfT-UJ-cP8" secondAttribute="bottom" constant="2" id="4eZ-e8-Scs"/>
-                                            <constraint firstItem="wGQ-dQ-XAb" firstAttribute="top" secondItem="at4-SG-enT" secondAttribute="top" id="4hZ-0J-UqZ"/>
                                             <constraint firstAttribute="width" constant="200" id="7uc-Yg-psB"/>
                                             <constraint firstAttribute="height" constant="200" id="CI0-bS-bmC"/>
-                                            <constraint firstAttribute="trailing" secondItem="wGQ-dQ-XAb" secondAttribute="trailing" id="NzE-PP-a9y"/>
-                                            <constraint firstItem="unx-hb-UDi" firstAttribute="centerX" secondItem="at4-SG-enT" secondAttribute="centerX" id="ZQM-g6-rpf"/>
-                                            <constraint firstItem="AIu-Nq-ImG" firstAttribute="centerX" secondItem="at4-SG-enT" secondAttribute="centerX" id="dWF-5x-tg1"/>
-                                            <constraint firstAttribute="bottom" secondItem="wGQ-dQ-XAb" secondAttribute="bottom" id="knE-co-5as"/>
-                                            <constraint firstItem="AIu-Nq-ImG" firstAttribute="top" secondItem="at4-SG-enT" secondAttribute="top" id="q32-pS-Uih"/>
-                                            <constraint firstItem="lfT-UJ-cP8" firstAttribute="top" secondItem="AIu-Nq-ImG" secondAttribute="bottom" constant="6" id="qQ3-z7-BR7"/>
-                                            <constraint firstItem="lfT-UJ-cP8" firstAttribute="centerX" secondItem="at4-SG-enT" secondAttribute="centerX" id="qUW-if-6Et"/>
-                                            <constraint firstItem="wGQ-dQ-XAb" firstAttribute="leading" secondItem="at4-SG-enT" secondAttribute="leading" id="who-OJ-fco"/>
                                             <constraint firstAttribute="width" secondItem="at4-SG-enT" secondAttribute="height" multiplier="1:1" id="zAE-wd-0Ka"/>
                                         </constraints>
                                     </view>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstItem="at4-SG-enT" firstAttribute="centerY" secondItem="m5S-pl-fL3" secondAttribute="centerY" id="d0M-Ts-ngl"/>
+                                    <constraint firstItem="at4-SG-enT" firstAttribute="centerY" secondItem="m5S-pl-fL3" secondAttribute="centerY" constant="5" id="d0M-Ts-ngl"/>
                                     <constraint firstItem="at4-SG-enT" firstAttribute="centerX" secondItem="m5S-pl-fL3" secondAttribute="centerX" id="iFQ-Nk-OKc"/>
                                 </constraints>
                             </view>
@@ -237,27 +200,16 @@
                             <constraint firstItem="a04-9k-eVt" firstAttribute="leading" secondItem="Qlt-j9-9QK" secondAttribute="leading" id="POm-vk-lNo"/>
                             <constraint firstItem="a04-9k-eVt" firstAttribute="top" secondItem="ywz-Go-bKj" secondAttribute="bottom" constant="5" id="SPy-SR-6X9"/>
                             <constraint firstItem="30Y-r6-cJi" firstAttribute="top" secondItem="a04-9k-eVt" secondAttribute="bottom" id="SU8-Bl-poX"/>
-                            <constraint firstItem="ZQI-Vj-9Mq" firstAttribute="top" secondItem="trd-Ye-R0g" secondAttribute="bottom" constant="33" id="bcD-CS-uPw"/>
+                            <constraint firstItem="ZQI-Vj-9Mq" firstAttribute="top" secondItem="trd-Ye-R0g" secondAttribute="bottom" constant="23" id="bcD-CS-uPw"/>
                             <constraint firstAttribute="trailing" secondItem="a04-9k-eVt" secondAttribute="trailing" id="c62-KK-T35"/>
                             <constraint firstItem="ywz-Go-bKj" firstAttribute="leading" secondItem="Qlt-j9-9QK" secondAttribute="leading" id="fXa-fk-nCS"/>
                             <constraint firstItem="ZQI-Vj-9Mq" firstAttribute="centerX" secondItem="Qlt-j9-9QK" secondAttribute="centerX" id="wYi-XV-VFv"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="eyesHeight" destination="r0u-fa-bD8" id="Ywd-aB-kJk"/>
-                        <outlet property="eyesImageView" destination="lfT-UJ-cP8" id="kR5-1d-oU3"/>
-                        <outlet property="eyesWidth" destination="3CP-qK-2tx" id="tmd-qV-P5M"/>
-                        <outlet property="hairHeight" destination="Adb-LT-rgs" id="4EX-FO-kaX"/>
-                        <outlet property="hairImageView" destination="AIu-Nq-ImG" id="gXF-Nq-E6h"/>
-                        <outlet property="hairWidth" destination="JNf-A8-RfO" id="d5A-Bw-yP6"/>
                         <outlet property="itemCollectionView" destination="a04-9k-eVt" id="XSn-oV-IRh"/>
-                        <outlet property="monsterHeight" destination="CI0-bS-bmC" id="6Ed-54-bSr"/>
-                        <outlet property="monsterWidth" destination="7uc-Yg-psB" id="aEZ-5z-Up9"/>
-                        <outlet property="mouthHeight" destination="hbw-BL-Wd1" id="Zq6-57-Djw"/>
-                        <outlet property="mouthImageView" destination="unx-hb-UDi" id="ybS-hU-FeX"/>
-                        <outlet property="mouthWidth" destination="F6y-kG-smi" id="NyP-wI-RfT"/>
+                        <outlet property="monsterView" destination="at4-SG-enT" id="WpE-qd-TGw"/>
                         <outlet property="sectionCollectionView" destination="ywz-Go-bKj" id="JWs-97-e5U"/>
-                        <outlet property="shapeImageView" destination="wGQ-dQ-XAb" id="Z6j-kx-Xe8"/>
                         <outlet property="titleLabel" destination="ZQI-Vj-9Mq" id="t9W-Za-eYZ"/>
                     </connections>
                 </viewController>
