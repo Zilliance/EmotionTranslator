@@ -32,6 +32,7 @@ enum StressorScene: String {
     case monster
     case create
     case name
+    case introduction
 }
 
 class CreateStressorViewController: UIViewController {
@@ -71,6 +72,7 @@ class CreateStressorViewController: UIViewController {
             StressorItem(for: .monster, container: self),
             StressorItem(for: .create, container: self),
             StressorItem(for: .name, container: self),
+            StressorItem(for: .introduction, container: self),
             ]
         
         return items
@@ -151,11 +153,13 @@ class CreateStressorViewController: UIViewController {
     
     private func setupButton(for scene:StressorScene) {
         
-        if scene == .monster {
+        switch scene {
+        case .monster:
             self.continueButton.setTitle("CREATE YOUR OWN", for: .normal)
-        }
-        else {
-             self.continueButton.setTitle("CONTINUE", for: .normal)
+        case .introduction:
+            self.continueButton.setTitle("START", for: .normal)
+        default:
+            self.continueButton.setTitle("CONTINUE", for: .normal)
         }
         
     }

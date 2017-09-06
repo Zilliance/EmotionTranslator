@@ -19,6 +19,7 @@ final class Stressor: Object {
         case monster
         case create
         case name
+        case introduction
         
         var pageIndex: Int {
             
