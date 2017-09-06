@@ -9,6 +9,8 @@
 import UIKit
 
 class MonsterNameViewController: UIViewController {
+    
+    var currentStressor: Stressor!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -16,20 +18,22 @@ class MonsterNameViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+}
+
+
+// MARK: - CompassValidation
+
+extension MonsterNameViewController: StressorValidation {
+    var error: StressorError {
+        return .none
     }
-    
+}
 
-    /*
-    // MARK: - Navigation
+// MARK: - CompassFacetEditor
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+extension MonsterNameViewController: StressorFacetEditor {
+    func save() {
+        //self.tableViewController.saveAction(self.tableViewController.selectedItems)
+        self.currentStressor.lastEditedFacet = .name
     }
-    */
-
 }

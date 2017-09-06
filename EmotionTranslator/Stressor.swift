@@ -35,6 +35,7 @@ final class Stressor: Object {
     let emotions = List<Emotion>()
     
     dynamic var monster: Monster?
+    dynamic var monsterName: String?
     
     dynamic var lastEditedFacet: Facet = .stressor
     

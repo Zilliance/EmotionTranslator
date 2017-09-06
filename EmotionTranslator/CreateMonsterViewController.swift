@@ -117,11 +117,11 @@ class CreateMonsterViewController: UIViewController {
     
     var currentStressor: Stressor!
     
-    fileprivate var sections: [SectionItem] = [SectionItem(title: "COLOR", image: #imageLiteral(resourceName: "eyes-3")),
-                                               SectionItem(title: "SHAPE", image: #imageLiteral(resourceName: "eyes-3")),
-                                               SectionItem(title: "EYES", image: #imageLiteral(resourceName: "eyes-3")),
-                                               SectionItem(title: "MOUTH", image: #imageLiteral(resourceName: "eyes-3")),
-                                               SectionItem(title: "HAIR", image: #imageLiteral(resourceName: "eyes-3")),]
+    fileprivate var sections: [SectionItem] = [SectionItem(title: "COLOR", image: #imageLiteral(resourceName: "color-section")),
+                                               SectionItem(title: "SHAPE", image: #imageLiteral(resourceName: "shape-section")),
+                                               SectionItem(title: "EYES", image: #imageLiteral(resourceName: "eye-section")),
+                                               SectionItem(title: "MOUTH", image: #imageLiteral(resourceName: "mouth-section")),
+                                               SectionItem(title: "HAIR", image: #imageLiteral(resourceName: "hair-section")),]
     
     fileprivate typealias Color = Monster.Color
     
