@@ -14,6 +14,8 @@ class MonsterNameViewController: UIViewController {
     @IBOutlet weak var monsterView: MonsterView!
     
     var currentStressor: Stressor!
+    
+    var gotoMonsterName: (() -> ())? = nil
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,6 +36,7 @@ class MonsterNameViewController: UIViewController {
 // MARK: - CompassValidation
 
 extension MonsterNameViewController: StressorValidation {
+    
     var error: StressorError {
         
         if let text = self.nameTextField.text {

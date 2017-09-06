@@ -11,6 +11,8 @@ import UIKit
 protocol StressorValidation {
     var error: StressorError { get }
     var currentStressor: Stressor! { get set }
+    var gotoMonsterName: (() -> ())? { get set }
+    
 }
 
 enum StressorError {
@@ -41,6 +43,10 @@ class CreateStressorViewController: UIViewController {
         init(for scene: StressorScene, container: CreateStressorViewController) {
             var viewController = UIStoryboard(name: scene.rawValue.capitalized, bundle: nil).instantiateInitialViewController() as! StressorValidation
             viewController.currentStressor = container.stressor
+            viewController.gotoMonsterName = {
+                // go to monster name page
+                container.moveToPage(page: Stressor.Facet.name.pageIndex, direction: .forward)
+            }
             self.viewController = viewController as! UIViewController
             self.scene = scene
 

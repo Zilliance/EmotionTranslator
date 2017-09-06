@@ -15,6 +15,7 @@ class EmotionViewController: UIViewController {
     @IBOutlet weak var containerView: UIView!
     
     var currentStressor: Stressor!
+    var gotoMonsterName: (() -> ())? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -115,6 +115,8 @@ class CreateMonsterViewController: UIViewController {
     
     fileprivate var currentColor: Color = .blue
     
+    var gotoMonsterName: (() -> ())? = nil
+    
     
     fileprivate var monster: Monster?
     
