@@ -57,7 +57,7 @@ class HomeViewController: UIViewController {
         }
         
         if (segue.destination is CreateStressorViewController) {
-            Analytics.sendEvent(event: EmotionTranslatorAnalytics.EmotionTranslatorEvent.newStressor)
+            Analytics.shared.send(event: EmotionTranslatorAnalytics.EmotionTranslatorEvent.newStressor)
         }
         
     }

@@ -45,7 +45,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.makeKeyAndVisible()
         
         //NotificationsManager.sharedInstance.realmDB = Database.shared.realm
-        Analytics.initialize()
+        Analytics.shared.initialize()
         
         return true
     }

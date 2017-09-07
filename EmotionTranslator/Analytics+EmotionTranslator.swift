@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import ZillianceShared
 
 class EmotionTranslatorAnalytics: ZillianceAnalytics {
     
