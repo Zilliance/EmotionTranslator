@@ -17,6 +17,7 @@ class NewStressorViewController: UIViewController {
     fileprivate let maxTextlenght = 48
     
     var currentStressor: Stressor!
+    var gotoMonsterName: (() -> ())? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -54,6 +54,12 @@
 		8C61D6981F58BC8B00389FC0 /* ChooseMonsterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C61D6971F58BC8B00389FC0 /* ChooseMonsterViewController.swift */; };
 		8C61D69C1F59F77E00389FC0 /* Create.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C61D69B1F59F77E00389FC0 /* Create.storyboard */; };
 		8C61D69E1F59FB9D00389FC0 /* CreateMonsterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C61D69D1F59FB9D00389FC0 /* CreateMonsterViewController.swift */; };
+		8C61D6A01F5F4D9A00389FC0 /* Name.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C61D69F1F5F4D9A00389FC0 /* Name.storyboard */; };
+		8C61D6A21F5F4DB600389FC0 /* MonsterNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C61D6A11F5F4DB600389FC0 /* MonsterNameViewController.swift */; };
+		8C61D6A41F606BA600389FC0 /* MonsterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8C61D6A31F606BA600389FC0 /* MonsterView.xib */; };
+		8C61D6A61F606D3800389FC0 /* MonsterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C61D6A51F606D3800389FC0 /* MonsterView.swift */; };
+		8C61D6A91F60AA2000389FC0 /* Introduction.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C61D6A81F60AA2000389FC0 /* Introduction.storyboard */; };
+		8C61D6AB1F60B77100389FC0 /* ConversationIntroductionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C61D6AA1F60B77100389FC0 /* ConversationIntroductionTableViewController.swift */; };
 		C0FA5645E25EC897AF28EADC /* Pods_EmotionTranslatorTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 342B6A321EC77D91CBE565A5 /* Pods_EmotionTranslatorTests.framework */; };
 		E35DB1781F5724F600C76B6B /* Monster.swift in Sources */ = {isa = PBXBuildFile; fileRef = E35DB1771F5724F600C76B6B /* Monster.swift */; };
 		E3BE10B51F53C6EF00787921 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3BE10B41F53C6EF00787921 /* AppDelegate.swift */; };
@@ -154,6 +160,12 @@
 		8C61D6971F58BC8B00389FC0 /* ChooseMonsterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChooseMonsterViewController.swift; sourceTree = "<group>"; };
 		8C61D69B1F59F77E00389FC0 /* Create.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Create.storyboard; sourceTree = "<group>"; };
 		8C61D69D1F59FB9D00389FC0 /* CreateMonsterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateMonsterViewController.swift; sourceTree = "<group>"; };
+		8C61D69F1F5F4D9A00389FC0 /* Name.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Name.storyboard; sourceTree = "<group>"; };
+		8C61D6A11F5F4DB600389FC0 /* MonsterNameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonsterNameViewController.swift; sourceTree = "<group>"; };
+		8C61D6A31F606BA600389FC0 /* MonsterView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MonsterView.xib; sourceTree = "<group>"; };
+		8C61D6A51F606D3800389FC0 /* MonsterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonsterView.swift; sourceTree = "<group>"; };
+		8C61D6A81F60AA2000389FC0 /* Introduction.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Introduction.storyboard; sourceTree = "<group>"; };
+		8C61D6AA1F60B77100389FC0 /* ConversationIntroductionTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConversationIntroductionTableViewController.swift; sourceTree = "<group>"; };
 		B05445A012A0BCEF9D95A791 /* Pods-EmotionTranslatorUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmotionTranslatorUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EmotionTranslatorUITests/Pods-EmotionTranslatorUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		C2E2DD4D09C96B4AAF7211D3 /* Pods-EmotionTranslator.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmotionTranslator.release.xcconfig"; path = "Pods/Target Support Files/Pods-EmotionTranslator/Pods-EmotionTranslator.release.xcconfig"; sourceTree = "<group>"; };
 		C65FD7AAF27DCACDA7632C21 /* Pods_EmotionTranslatorUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EmotionTranslatorUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -324,8 +336,21 @@
 				8C61D6971F58BC8B00389FC0 /* ChooseMonsterViewController.swift */,
 				8C61D69B1F59F77E00389FC0 /* Create.storyboard */,
 				8C61D69D1F59FB9D00389FC0 /* CreateMonsterViewController.swift */,
+				8C61D69F1F5F4D9A00389FC0 /* Name.storyboard */,
+				8C61D6A11F5F4DB600389FC0 /* MonsterNameViewController.swift */,
+				8C61D6A31F606BA600389FC0 /* MonsterView.xib */,
+				8C61D6A51F606D3800389FC0 /* MonsterView.swift */,
 			);
 			name = Monster;
+			sourceTree = "<group>";
+		};
+		8C61D6A71F60A97F00389FC0 /* Conversation */ = {
+			isa = PBXGroup;
+			children = (
+				8C61D6A81F60AA2000389FC0 /* Introduction.storyboard */,
+				8C61D6AA1F60B77100389FC0 /* ConversationIntroductionTableViewController.swift */,
+			);
+			name = Conversation;
 			sourceTree = "<group>";
 		};
 		B4F5945C85C194C6644DC327 /* Pods */ = {
@@ -418,6 +443,7 @@
 		E3BE10EB1F53C7DE00787921 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				8C61D6A71F60A97F00389FC0 /* Conversation */,
 				8C61D6961F58BB7800389FC0 /* Monster */,
 				8C61D6851F57530800389FC0 /* Emotion */,
 				8C2B144C1F5615F6002C0353 /* NewStressor */,
@@ -616,8 +642,11 @@
 				8C2B14441F55CAC5002C0353 /* Tour.storyboard in Resources */,
 				E3BE11041F53C83B00787921 /* Muli-Black.ttf in Resources */,
 				E3BE11091F53C83B00787921 /* Muli-ExtraBoldItalic.ttf in Resources */,
+				8C61D6A91F60AA2000389FC0 /* Introduction.storyboard in Resources */,
+				8C61D6A01F5F4D9A00389FC0 /* Name.storyboard in Resources */,
 				E3BE110A1F53C83B00787921 /* Muli-ExtraLight.ttf in Resources */,
 				8C61D69C1F59F77E00389FC0 /* Create.storyboard in Resources */,
+				8C61D6A41F606BA600389FC0 /* MonsterView.xib in Resources */,
 				E3BE110D1F53C83B00787921 /* Muli-Light.ttf in Resources */,
 				E3BE10F41F53C82300787921 /* zilliance privacy policy.html in Resources */,
 				E3BE11101F53C83B00787921 /* Muli-SemiBold.ttf in Resources */,
@@ -848,7 +877,10 @@
 				E3BE11141F53C85300787921 /* OrientableNavigationController.swift in Sources */,
 				E3BE10E81F53C7D400787921 /* User.swift in Sources */,
 				8C2B14451F55CAC5002C0353 /* TourSceneViewController.swift in Sources */,
+				8C61D6AB1F60B77100389FC0 /* ConversationIntroductionTableViewController.swift in Sources */,
+				8C61D6A61F606D3800389FC0 /* MonsterView.swift in Sources */,
 				8C2B14171F54A4AD002C0353 /* UIColor+CustomColors.swift in Sources */,
+				8C61D6A21F5F4DB600389FC0 /* MonsterNameViewController.swift in Sources */,
 				8C61D68E1F57586300389FC0 /* AddItemCell.swift in Sources */,
 				8C2B143F1F54BD69002C0353 /* AppConstants.swift in Sources */,
 				E3BE10B51F53C6EF00787921 /* AppDelegate.swift in Sources */,

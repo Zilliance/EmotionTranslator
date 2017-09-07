@@ -11,11 +11,14 @@ import UIKit
 protocol StressorValidation {
     var error: StressorError { get }
     var currentStressor: Stressor! { get set }
+    var gotoMonsterName: (() -> ())? { get set }
+    
 }
 
 enum StressorError {
     case text
     case selection
+    case monster
     case none
 }
 
@@ -28,6 +31,8 @@ enum StressorScene: String {
     case emotion
     case monster
     case create
+    case name
+    case introduction
 }
 
 class CreateStressorViewController: UIViewController {
@@ -39,6 +44,10 @@ class CreateStressorViewController: UIViewController {
         init(for scene: StressorScene, container: CreateStressorViewController) {
             var viewController = UIStoryboard(name: scene.rawValue.capitalized, bundle: nil).instantiateInitialViewController() as! StressorValidation
             viewController.currentStressor = container.stressor
+            viewController.gotoMonsterName = {
+                // go to monster name page
+                container.moveToPage(page: Stressor.Facet.name.pageIndex, direction: .forward)
+            }
             self.viewController = viewController as! UIViewController
             self.scene = scene
 
@@ -62,6 +71,8 @@ class CreateStressorViewController: UIViewController {
             StressorItem(for: .emotion, container: self),
             StressorItem(for: .monster, container: self),
             StressorItem(for: .create, container: self),
+            StressorItem(for: .name, container: self),
+            StressorItem(for: .introduction, container: self),
             ]
         
         return items
@@ -142,11 +153,13 @@ class CreateStressorViewController: UIViewController {
     
     private func setupButton(for scene:StressorScene) {
         
-        if scene == .monster {
+        switch scene {
+        case .monster:
             self.continueButton.setTitle("CREATE YOUR OWN", for: .normal)
-        }
-        else {
-             self.continueButton.setTitle("CONTINUE", for: .normal)
+        case .introduction:
+            self.continueButton.setTitle("START", for: .normal)
+        default:
+            self.continueButton.setTitle("CONTINUE", for: .normal)
         }
         
     }
