@@ -180,7 +180,7 @@ class CreateStressorViewController: UIViewController {
         self.title = self.stressor.title
         self.pageControlViewController.setViewControllers([item.viewController], direction: direction, animated: true, completion: nil)
         
-        
+        Analytics.shared.send(event: EmotionTranslatorAnalytics.EmotionTranslatorPageEvent.stressorPageViewed(page))
     }
 
     

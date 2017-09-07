@@ -7,29 +7,54 @@
 //
 
 import Foundation
+import ZillianceShared
 
-enum EmotionTranslatorEvent: String, AnalyticEvent {
+class EmotionTranslatorAnalytics: ZillianceAnalytics {
     
-    case newStressor
-    case stressorCompleted
-    
-    var name: String {
+    enum EmotionTranslatorPageEvent: AnalyticEvent {
         
-        switch self {
-        case .newStressor:
-            return "New Stressor"
-        case .stressorCompleted:
-            return "Stressor Completed"
+        case stressorPageViewed(Int)
+        
+        var name: String {
+            switch self {
+            case .stressorPageViewed(_):
+                return "Paged Viewed"
+            }
+        }
+        
+        var data: [String : Any]? {
+            
+            switch self {
+            case .stressorPageViewed(let page):
+                return ["Page": page]
+                
+            }
         }
     }
     
-    var data: [String : Any]? {
+    enum EmotionTranslatorEvent: String, AnalyticEvent {
         
-        switch self {
-        default:
-            return nil
-        }
+        //sign up
+        case signUp
+        
+        // emotion translator creation events
+        case newStressor
+        case stressorCompleted
+        
+        //monster events
+        case ownMonsterCreationStarted
+        case colorChanged
+        case shapeChanged
+        case eyesChanged
+        case mouthChanged
+        case hairChanged
+        case ownMonsterCreationFinished
+        
+        //QA events
+        case questionAdded
+        case questionAnswered
         
     }
     
 }
+
