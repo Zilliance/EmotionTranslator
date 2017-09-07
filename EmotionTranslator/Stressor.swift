@@ -20,6 +20,7 @@ final class Stressor: Object {
         case create
         case name
         case introduction
+        case conversation
         
         var pageIndex: Int {
             

@@ -26,7 +26,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="QuestionCell" rowHeight="126" id="qqC-HQ-MiN" customClass="QuestionCell" customModule="EmotionTranslator" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="QuestionCell" rowHeight="126" id="qqC-HQ-MiN" customClass="QuestionCell" customModule="EmotionTranslator" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="126"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="qqC-HQ-MiN" id="oLU-sp-kb3">
@@ -103,7 +103,7 @@
                                     <outlet property="questionNumberLabel" destination="YBV-Eh-IWQ" id="ajL-gh-DkK"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ResponseCell" rowHeight="116" id="NVa-Ke-QJj" customClass="ResponseCell" customModule="EmotionTranslator" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="ResponseCell" rowHeight="116" id="NVa-Ke-QJj" customClass="ResponseCell" customModule="EmotionTranslator" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="154" width="375" height="116"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="NVa-Ke-QJj" id="EV4-lu-3HN">
@@ -171,7 +171,7 @@
                                     <outlet property="responseLabel" destination="QZZ-MF-RBw" id="4gb-fn-eDe"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ResponseEntryCell" rowHeight="132" id="fAS-tZ-som" customClass="ResponseEntryCell" customModule="EmotionTranslator" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="ResponseEntryCell" rowHeight="132" id="fAS-tZ-som" customClass="ResponseEntryCell" customModule="EmotionTranslator" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="270" width="375" height="132"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fAS-tZ-som" id="4NF-E3-ym3">
@@ -218,7 +218,6 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="entryTextView" destination="6Nl-qN-S01" id="akZ-Gt-4Yl"/>
-                                    <outlet property="nameLabel" destination="Cas-FU-f3Z" id="dCE-qD-DR9"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>

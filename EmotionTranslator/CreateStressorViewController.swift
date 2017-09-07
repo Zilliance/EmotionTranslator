@@ -33,6 +33,7 @@ enum StressorScene: String {
     case create
     case name
     case introduction
+    case conversation
 }
 
 class CreateStressorViewController: UIViewController {
@@ -73,6 +74,7 @@ class CreateStressorViewController: UIViewController {
             StressorItem(for: .create, container: self),
             StressorItem(for: .name, container: self),
             StressorItem(for: .introduction, container: self),
+            StressorItem(for: .conversation, container: self),
             ]
         
         return items
@@ -145,6 +147,8 @@ class CreateStressorViewController: UIViewController {
             self.continueButton.setTitle("CREATE YOUR OWN", for: .normal)
         case .introduction:
             self.continueButton.setTitle("START", for: .normal)
+        case .conversation:
+            self.continueButton.setTitle("REPLY", for: .normal)
         default:
             self.continueButton.setTitle("CONTINUE", for: .normal)
         }
