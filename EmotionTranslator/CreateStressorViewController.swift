@@ -186,12 +186,21 @@ class CreateStressorViewController: UIViewController {
     
     @IBAction func cancelAction(_ sender: Any) {
         
-        if (self.stressor.title != nil) {
-            self.save()
+        let item = self.stressorItems[self.currentPageIndex]
+        
+        if item.scene == .stressor {
+            
+            if (self.stressor.title != nil) {
+                self.save()
+            }
+            
+            self.navigationController?.popViewController(animated: true)
         }
-        
-        self.navigationController?.popViewController(animated: true)
-        
+            
+        else {
+            
+            self.moveToPage(page: self.currentPageIndex - 1 , direction: .reverse)
+        }
     }
     
     private func save() {

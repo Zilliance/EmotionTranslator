@@ -29,6 +29,14 @@ class MonsterNameViewController: UIViewController {
         self.monsterView.setupMonster()
 
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        if let name = self.currentStressor.monsterName {
+            self.nameTextField.text = name
+        }
+    }
 
 }
 
