@@ -12,6 +12,7 @@ protocol StressorValidation {
     var error: StressorError { get }
     var currentStressor: Stressor! { get set }
     var gotoMonsterName: (() -> ())? { get set }
+    var questionsEnded: (() -> ())? { get set }
     
 }
 
@@ -33,6 +34,7 @@ enum StressorScene: String {
     case create
     case name
     case introduction
+    case conversation
 }
 
 class CreateStressorViewController: UIViewController {
@@ -48,6 +50,11 @@ class CreateStressorViewController: UIViewController {
                 // go to monster name page
                 container.moveToPage(page: Stressor.Facet.name.pageIndex, direction: .forward)
             }
+            
+            viewController.questionsEnded = {
+                 container.continueButton.setTitle("CONTINUE", for: .normal)
+            }
+            
             self.viewController = viewController as! UIViewController
             self.scene = scene
 
@@ -73,6 +80,7 @@ class CreateStressorViewController: UIViewController {
             StressorItem(for: .create, container: self),
             StressorItem(for: .name, container: self),
             StressorItem(for: .introduction, container: self),
+            StressorItem(for: .conversation, container: self),
             ]
         
         return items
@@ -127,7 +135,7 @@ class CreateStressorViewController: UIViewController {
         self.navigationItem.leftBarButtonItem = backButton
         
         let item = self.stressorItems[self.currentPageIndex]
-        self.setupButton(for: item.scene)
+        self.setupButton(for: item)
         
     }
     
@@ -138,13 +146,18 @@ class CreateStressorViewController: UIViewController {
         return vc.error
     }
     
-    private func setupButton(for scene:StressorScene) {
+    private func setupButton(for item:StressorItem) {
         
-        switch scene {
+        switch item.scene {
         case .monster:
             self.continueButton.setTitle("CREATE YOUR OWN", for: .normal)
         case .introduction:
             self.continueButton.setTitle("START", for: .normal)
+        case .conversation:
+            if let vc = item.viewController as? ConversationTableViewController {
+                let text = vc.questionsCompleted ? "CONTINUE" : "REPLY"
+                self.continueButton.setTitle(text, for: .normal)
+            }
         default:
             self.continueButton.setTitle("CONTINUE", for: .normal)
         }
@@ -163,7 +176,7 @@ class CreateStressorViewController: UIViewController {
         self.pageControl.currentPage = self.currentPageIndex
         
         let item = self.stressorItems[self.currentPageIndex]
-        self.setupButton(for: item.scene)
+        self.setupButton(for: item)
         self.title = self.stressor.title
         self.pageControlViewController.setViewControllers([item.viewController], direction: direction, animated: true, completion: nil)
         
@@ -212,9 +225,15 @@ class CreateStressorViewController: UIViewController {
     
     @IBAction func continueAction(_ sender: Any) {
         
-        //just for test
         
         guard self.currentPageIndex < self.stressorItems.count - 1 else {
+            
+            if let currentItem = self.stressorItems[self.currentPageIndex].viewController as? ConversationTableViewController {
+                currentItem.reply()
+                
+                return
+            }
+            
             return
         }
         

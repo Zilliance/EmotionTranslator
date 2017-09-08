@@ -12,6 +12,7 @@ class ChooseMonsterViewController: UIViewController {
     
     var currentStressor: Stressor!
     var gotoMonsterName: (() -> ())? = nil
+    var questionsEnded: (() -> ())? = nil
 
     override func viewDidLoad() {
         super.viewDidLoad()

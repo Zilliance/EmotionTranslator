@@ -12,6 +12,7 @@ class ConversationIntroductionTableViewController: UITableViewController {
     
     var currentStressor: Stressor!
     var gotoMonsterName: (() -> ())? = nil
+    var questionsEnded: (() -> ())? = nil
 
     @IBOutlet weak var topLabel: UILabel!
     @IBOutlet weak var monsterLabel1: UILabel!
