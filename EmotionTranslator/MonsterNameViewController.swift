@@ -24,10 +24,18 @@ class MonsterNameViewController: UIViewController {
             self.monsterView.scaleMonster(by: 0.7)
             
         }
+
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        if let name = self.currentStressor.monsterName {
+            self.nameTextField.text = name
+        }
         
         self.monsterView.monster = self.currentStressor.monster
         self.monsterView.setupMonster()
-
     }
 
 }

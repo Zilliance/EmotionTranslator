@@ -38,6 +38,8 @@ final class Stressor: Object {
     dynamic var monster: Monster?
     dynamic var monsterName: String?
     
+    dynamic var hasCustomMonster = false
+    
     dynamic var lastEditedFacet: Facet = .stressor
     
     dynamic var id: String = UUID().uuidString

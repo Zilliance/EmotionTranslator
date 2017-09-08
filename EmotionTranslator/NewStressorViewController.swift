@@ -26,6 +26,9 @@ class NewStressorViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        if let title = self.currentStressor.title {
+            self.textView.text = title
+        }
         self.counterLabel.isHidden = true
     }
     

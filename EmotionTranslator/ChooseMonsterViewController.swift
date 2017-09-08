@@ -70,5 +70,6 @@ extension ChooseMonsterViewController: StressorFacetEditor {
     func save() {
         //self.tableViewController.saveAction(self.tableViewController.selectedItems)
         self.currentStressor.lastEditedFacet = .monster
+        self.currentStressor.hasCustomMonster = false
     }
 }

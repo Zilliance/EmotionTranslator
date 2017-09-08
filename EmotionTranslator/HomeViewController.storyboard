@@ -33,10 +33,10 @@
             </objects>
             <point key="canvasLocation" x="-887" y="311"/>
         </scene>
-        <!--Think Shift Release-->
+        <!--Emotion Translator-->
         <scene sceneID="pTH-eW-jxi">
             <objects>
-                <viewController title="Think Shift Release" id="f1G-FK-nmS" customClass="HomeViewController" customModule="EmotionTranslator" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Emotion Translator" id="f1G-FK-nmS" customClass="HomeViewController" customModule="EmotionTranslator" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="3Sz-VP-1fb"/>
                         <viewControllerLayoutGuide type="bottom" id="Frg-o6-NDH"/>
@@ -150,7 +150,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Jrd-6Z-cv3">
-                        <barButtonItem key="backBarButtonItem" title="Home" id="Vhj-RS-MYU"/>
+                        <barButtonItem key="backBarButtonItem" title="Back" id="Vhj-RS-MYU"/>
                         <barButtonItem key="leftBarButtonItem" image="menu-icon" id="40h-Fr-XAQ">
                             <connections>
                                 <action selector="menuAction:" destination="f1G-FK-nmS" id="car-MD-FhG"/>

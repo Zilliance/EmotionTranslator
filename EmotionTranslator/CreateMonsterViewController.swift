@@ -132,6 +132,8 @@ class CreateMonsterViewController: UIViewController {
         self.sectionCollectionView.selectItem(at: IndexPath(item: 0, section: 0), animated: true, scrollPosition: .centeredHorizontally)
         self.itemCollectionView.selectItem(at: IndexPath(item: 0, section: 0), animated: true, scrollPosition: .centeredHorizontally)
         
+        self.monster = self.currentStressor.monster
+        
         if self.monster == nil {
             self.monster = Monster()
             self.monster?.color = Monster.Color.blue
@@ -280,6 +282,7 @@ extension CreateMonsterViewController: StressorFacetEditor {
         //self.tableViewController.saveAction(self.tableViewController.selectedItems)
         self.currentStressor.lastEditedFacet = .create
         self.currentStressor.monster = self.monster
+        self.currentStressor.hasCustomMonster = true
     }
 }
 
