@@ -191,7 +191,7 @@
                                             <color key="textColor" red="0.45882352939999999" green="0.46666666670000001" blue="0.48627450979999998" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="6Nl-qN-S01">
+                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="6Nl-qN-S01" customClass="KMPlaceholderTextView" customModule="KMPlaceholderTextView">
                                             <rect key="frame" x="18" y="47.5" width="339" height="66"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <constraints>
@@ -216,9 +216,6 @@
                                         <constraint firstAttribute="trailing" secondItem="Cas-FU-f3Z" secondAttribute="trailing" constant="20" id="ake-T0-apm"/>
                                     </constraints>
                                 </tableViewCellContentView>
-                                <connections>
-                                    <outlet property="entryTextView" destination="6Nl-qN-S01" id="akZ-Gt-4Yl"/>
-                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>

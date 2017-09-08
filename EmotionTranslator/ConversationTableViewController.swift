@@ -19,6 +19,7 @@ class QuestionCell: UITableViewCell {
 class ResponseEntryCell: UITableViewCell {
     
     @IBOutlet weak var entryTextView: UITextView!
+    @IBOutlet weak var entryTextView: KMPlaceholderTextView!
     
     override func awakeFromNib() {
         self.entryTextView.layer.cornerRadius = UIConstants.Appearance.cornerRadius
@@ -73,6 +74,10 @@ class ConversationTableViewController: UITableViewController {
 
     }
 
+    func reply() {
+        let 
+    }
+    
     // MARK: - Table view data source
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

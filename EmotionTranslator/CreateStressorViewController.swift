@@ -216,9 +216,14 @@ class CreateStressorViewController: UIViewController {
     
     @IBAction func continueAction(_ sender: Any) {
         
-        //just for test
         
         guard self.currentPageIndex < self.stressorItems.count - 1 else {
+            
+            if let currentItem = self.stressorItems[self.currentPageIndex].viewController as? ConversationTableViewController {
+                currentItem.reply()
+                return
+            }
+            
             return
         }
         
