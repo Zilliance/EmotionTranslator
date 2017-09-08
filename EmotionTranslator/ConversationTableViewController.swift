@@ -34,7 +34,7 @@ class ResponseEntryCell: UITableViewCell {
 extension ResponseEntryCell: UITextViewDelegate {
     
     func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
-        if (text == "\n") {
+        if (text == "\n" && !textView.text.isEmpty) {
            self.reply?(textView.text)
            textView.resignFirstResponder()
         }
@@ -51,24 +51,25 @@ class ResponseCell: UITableViewCell {
 
 class ConversationTableViewController: UITableViewController {
     
-    struct QuestionAnswer {
-        let question: String
-        var answer: String
-        
-        var isCompleted: Bool {
-            return !answer.isEmpty
-        }
+    enum ItemType {
+        case question
+        case answer
+        case box
     }
     
+    struct Item {
+        var text: String
+        var type: ItemType
+    }
     
     var currentStressor: Stressor!
     var gotoMonsterName: (() -> ())? = nil
     
-    private var elements: [QuestionAnswer] = [QuestionAnswer(question: "Question 1 goes here, room for a few lines of text…more copy here…then ends with a?", answer: "")]
+    var questionsEnded: (() -> ())? = nil
     
-    private var qaNumberOfElements: Int {
-        return self.elements.filter {$0.isCompleted }.count * 2
-    }
+    var questionsCompleted = false
+    
+    private var elements: [Item] = [Item(text: "Question 1 goes here, room for a few lines of text…more copy here…then ends with a?", type: .question),Item(text: "", type: .box)]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -78,20 +79,24 @@ class ConversationTableViewController: UITableViewController {
     }
 
     func reply() {
+        
+        if elements.count > 0 {
+            self.tableView.scrollToRow(at: IndexPath(item:elements.count-1, section: 0), at: .bottom, animated: false)
+        }
+        
+        if let cell = self.tableView.cellForRow(at: IndexPath(item: elements.count-1, section: 0)) as? ResponseEntryCell {
+            cell.entryTextView.becomeFirstResponder()
+        }
+            
+        
     }
     
     // MARK: - Table view data source
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
         
+        return self.elements.count
         
-        if self.qaNumberOfElements == 0 {
-            return 2
-        }
-        else {
-            return qaNumberOfElements + 1
-        }
     }
 
     
@@ -99,40 +104,30 @@ class ConversationTableViewController: UITableViewController {
 
         // Configure the cell...
         
-        if self.qaNumberOfElements == 0 {
+        let item = self.elements[indexPath.row]
+        
+        switch item.type {
+        case .question:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "QuestionCell", for: indexPath) as! QuestionCell
+            cell.questionLabel.text = item.text
+            return cell
+        case .answer:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "ResponseCell", for: indexPath) as! ResponseCell
+            cell.responseLabel.text = item.text
+            return cell
             
-            var qa = self.elements[indexPath.row]
-            
-            if indexPath.row % 2 == 0 {
-                let cell = tableView.dequeueReusableCell(withIdentifier: "QuestionCell", for: indexPath) as! QuestionCell
-                cell.questionLabel.text = qa.question
-                cell.nameLabel.text = self.currentStressor.monsterName
-                return cell
-        }
-        else {
+        case .box:
             let cell = tableView.dequeueReusableCell(withIdentifier: "ResponseEntryCell", for: indexPath) as! ResponseEntryCell
-            cell.reply = { text in
-                qa.answer = text
-                self.tableView.reloadData()
+            cell.reply = { [unowned self] text in
+                
+                self.elements.remove(at: indexPath.row)
+                self.elements.insert(Item(text: text, type: .answer), at: indexPath.row)
+                self.questionsCompleted = true
+                self.questionsEnded?()
+                
+                tableView.reloadRows(at: [indexPath], with: .automatic)
             }
             return cell
-          }
-        }
-        else {
-            
-            let qa = self.elements[indexPath.row/2 + 1]
-            if indexPath.row % 2 == 0 {
-                let cell = tableView.dequeueReusableCell(withIdentifier: "QuestionCell", for: indexPath) as! QuestionCell
-                cell.nameLabel.text = self.currentStressor.monsterName
-                cell.questionLabel.text = qa.question
-                return cell
-            }
-            else {
-                let cell = tableView.dequeueReusableCell(withIdentifier: "ResponseCell", for: indexPath) as! ResponseCell
-                cell.responseLabel.text = qa.answer
-                return cell
-            }
-
         }
     }
 }

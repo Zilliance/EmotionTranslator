@@ -24,7 +24,7 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="150" sectionHeaderHeight="28" sectionFooterHeight="28" id="fjl-hL-N4X">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="calibratedRGB"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="QuestionCell" rowHeight="126" id="qqC-HQ-MiN" customClass="QuestionCell" customModule="EmotionTranslator" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="126"/>
@@ -97,6 +97,7 @@
                                         <constraint firstItem="sen-GR-EVE" firstAttribute="leading" secondItem="oLU-sp-kb3" secondAttribute="leading" constant="34" id="xcj-EF-0rk"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="nameLabel" destination="NEd-vt-BbH" id="Qyh-lh-JEW"/>
                                     <outlet property="questionLabel" destination="imn-bH-Eoe" id="DuN-rf-fL9"/>
@@ -165,9 +166,8 @@
                                         <constraint firstItem="QZZ-MF-RBw" firstAttribute="leading" secondItem="ae7-YQ-NmF" secondAttribute="trailing" constant="12" id="ql8-md-TJG"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <connections>
-                                    <outlet property="nameLabel" destination="hJI-Ja-zhK" id="NVk-Xe-OOh"/>
-                                    <outlet property="questionLabel" destination="QZZ-MF-RBw" id="uBu-8N-fNk"/>
                                     <outlet property="responseLabel" destination="QZZ-MF-RBw" id="4gb-fn-eDe"/>
                                 </connections>
                             </tableViewCell>
@@ -197,13 +197,18 @@
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="66" id="fvb-Zf-uNm"/>
                                             </constraints>
-                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <color key="textColor" red="0.12549019610000001" green="0.19215686269999999" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
+                                            <fontDescription key="fontDescription" name="Muli-Regular" family="Muli" pointSize="12"/>
                                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Answer"/>
+                                            </userDefinedRuntimeAttributes>
                                             <connections>
                                                 <outlet property="delegate" destination="fAS-tZ-som" id="PH3-4R-B2B"/>
                                             </connections>
                                         </textView>
                                     </subviews>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <constraints>
                                         <constraint firstItem="Cas-FU-f3Z" firstAttribute="top" secondItem="4NF-E3-ym3" secondAttribute="top" constant="12" id="4e7-Fd-K79"/>
                                         <constraint firstItem="6Nl-qN-S01" firstAttribute="top" secondItem="ixP-E3-929" secondAttribute="bottom" constant="10" id="AoS-MY-zzb"/>
@@ -216,6 +221,7 @@
                                         <constraint firstAttribute="trailing" secondItem="Cas-FU-f3Z" secondAttribute="trailing" constant="20" id="ake-T0-apm"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="entryTextView" destination="6Nl-qN-S01" id="WY0-Al-qtE"/>
                                 </connections>
