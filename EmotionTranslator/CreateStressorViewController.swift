@@ -135,7 +135,7 @@ class CreateStressorViewController: UIViewController {
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         self.navigationController?.navigationBar.shadowImage = UIImage()
         
-        self.backcustomButton = UIButton(frame: CGRect(x: 0, y: 0, width: 50, height: 40))
+        self.backcustomButton = UIButton(frame: CGRect(x: 0, y: 0, width: 70, height: 40))
         self.backcustomButton.backgroundColor = UIColor.clear
         self.backcustomButton.addTarget(self, action: #selector(self.cancelAction(_:)), for: .touchUpInside)
         
@@ -199,7 +199,9 @@ class CreateStressorViewController: UIViewController {
             
         else {
             
-            self.moveToPage(page: self.currentPageIndex - 1 , direction: .reverse)
+            let index = self.stressor.hasCustomMonster == false && item.scene == .name ? 2 : 1
+            
+            self.moveToPage(page: self.currentPageIndex - index , direction: .reverse)
         }
     }
     
