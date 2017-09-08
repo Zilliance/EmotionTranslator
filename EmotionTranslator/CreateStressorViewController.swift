@@ -101,19 +101,6 @@ class CreateStressorViewController: UIViewController {
         self.setupView()
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
-        //override back button behaviour
-        self.navigationController?.navigationBar.addSubview(backcustomButton)
-    }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        
-        self.backcustomButton.removeFromSuperview()
-    }
-    
     private func setupView() {
         
         self.title = self.stressor.title ?? ""
@@ -135,9 +122,9 @@ class CreateStressorViewController: UIViewController {
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         self.navigationController?.navigationBar.shadowImage = UIImage()
         
-        self.backcustomButton = UIButton(frame: CGRect(x: 0, y: 0, width: 70, height: 40))
-        self.backcustomButton.backgroundColor = UIColor.clear
-        self.backcustomButton.addTarget(self, action: #selector(self.cancelAction(_:)), for: .touchUpInside)
+        
+        let backButton = UIBarButtonItem(title: "Back", style: .plain, target: self, action: #selector(self.cancelAction(_:)))
+        self.navigationItem.leftBarButtonItem = backButton
         
         let item = self.stressorItems[self.currentPageIndex]
         self.setupButton(for: item.scene)
