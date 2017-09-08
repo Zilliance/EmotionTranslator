@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import KMPlaceholderTextView
 
 class QuestionCell: UITableViewCell {
     
@@ -18,8 +19,9 @@ class QuestionCell: UITableViewCell {
 
 class ResponseEntryCell: UITableViewCell {
     
-    @IBOutlet weak var entryTextView: UITextView!
     @IBOutlet weak var entryTextView: KMPlaceholderTextView!
+    
+    var reply: ((String) -> ())? = nil
     
     override func awakeFromNib() {
         self.entryTextView.layer.cornerRadius = UIConstants.Appearance.cornerRadius
@@ -33,7 +35,8 @@ extension ResponseEntryCell: UITextViewDelegate {
     
     func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
         if (text == "\n") {
-            textView.resignFirstResponder()
+           self.reply?(textView.text)
+           textView.resignFirstResponder()
         }
         return true
     }
@@ -75,7 +78,6 @@ class ConversationTableViewController: UITableViewController {
     }
 
     func reply() {
-        let 
     }
     
     // MARK: - Table view data source
@@ -98,16 +100,21 @@ class ConversationTableViewController: UITableViewController {
         // Configure the cell...
         
         if self.qaNumberOfElements == 0 {
-        
-        if indexPath.row % 2 == 0 {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "QuestionCell", for: indexPath) as! QuestionCell
-            let qa = self.elements[indexPath.row]
-            cell.questionLabel.text = qa.question
-            cell.nameLabel.text = self.currentStressor.monsterName
-            return cell
+            
+            var qa = self.elements[indexPath.row]
+            
+            if indexPath.row % 2 == 0 {
+                let cell = tableView.dequeueReusableCell(withIdentifier: "QuestionCell", for: indexPath) as! QuestionCell
+                cell.questionLabel.text = qa.question
+                cell.nameLabel.text = self.currentStressor.monsterName
+                return cell
         }
         else {
             let cell = tableView.dequeueReusableCell(withIdentifier: "ResponseEntryCell", for: indexPath) as! ResponseEntryCell
+            cell.reply = { text in
+                qa.answer = text
+                self.tableView.reloadData()
+            }
             return cell
           }
         }

@@ -216,6 +216,9 @@
                                         <constraint firstAttribute="trailing" secondItem="Cas-FU-f3Z" secondAttribute="trailing" constant="20" id="ake-T0-apm"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="entryTextView" destination="6Nl-qN-S01" id="WY0-Al-qtE"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
