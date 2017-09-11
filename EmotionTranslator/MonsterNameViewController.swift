@@ -49,7 +49,7 @@ extension MonsterNameViewController: StressorValidation {
     var error: StressorError {
         
         if let text = self.nameTextField.text {
-            if text.isEmpty {
+            if text.trimmed.isEmpty {
                 return .text
             }
             else {
