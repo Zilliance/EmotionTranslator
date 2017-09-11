@@ -65,7 +65,8 @@ class CreateStressorViewController: UIViewController {
     @IBOutlet weak var pageContainerView: UIView!
     @IBOutlet weak var continueButton: UIButton!
     
-    var backcustomButton: UIButton!
+    
+    private let backButton = UIButton()
     
     var stressor: Stressor = Stressor()
     
@@ -130,17 +131,16 @@ class CreateStressorViewController: UIViewController {
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         self.navigationController?.navigationBar.shadowImage = UIImage()
         
-        let button = UIButton()
-        button.frame = CGRect(x: 0, y: 0, width: 100, height: 20)
-        button.setImage(#imageLiteral(resourceName: "chevronBack"), for: .normal)
-        button.imageEdgeInsets = UIEdgeInsetsMake(0, -40, 0, 0)
-        button.imageView?.contentMode = .scaleAspectFit
-        button.addTarget(self, action: #selector(self.cancelAction(_:)), for: .touchUpInside)
-        button.setTitle("Back", for: .normal)
-        button.titleEdgeInsets = UIEdgeInsetsMake(0, -40, 0, 0)
-        button.titleLabel?.font = UIFont.muliRegular(size: 16.0)
+        self.backButton.frame = CGRect(x: 0, y: 0, width: 100, height: 20)
+        self.backButton.setImage(#imageLiteral(resourceName: "chevronBack"), for: .normal)
+        self.backButton.imageEdgeInsets = UIEdgeInsetsMake(0, -40, 0, 0)
+        self.backButton.imageView?.contentMode = .scaleAspectFit
+        self.backButton.addTarget(self, action: #selector(self.cancelAction(_:)), for: .touchUpInside)
+        self.backButton.setTitle("Home", for: .normal)
+        self.backButton.titleEdgeInsets = UIEdgeInsetsMake(0, -40, 0, 0)
+        self.backButton.titleLabel?.font = UIFont.muliRegular(size: 16.0)
         
-        self.navigationItem.leftBarButtonItem = UIBarButtonItem(customView: button)
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(customView: self.backButton)
         
         let item = self.stressorItems[self.currentPageIndex]
         self.setupButton(for: item)
@@ -156,7 +156,11 @@ class CreateStressorViewController: UIViewController {
     
     private func setupButton(for item:StressorItem) {
         
+        self.backButton.titleLabel?.isHidden = true
+        
         switch item.scene {
+        case .stressor:
+            self.backButton.titleLabel?.isHidden = false
         case .monster:
             self.continueButton.setTitle("CREATE YOUR OWN", for: .normal)
         case .introduction:
