@@ -18,6 +18,8 @@ class MonsterView: UIView {
     @IBOutlet weak var eyesImageView: UIImageView!
     @IBOutlet weak var mouthImageView: UIImageView!
     
+    @IBOutlet weak var monsterHeight: NSLayoutConstraint!
+    @IBOutlet weak var monsterWidth: NSLayoutConstraint!
     @IBOutlet weak var shapeWidth: NSLayoutConstraint!
     @IBOutlet weak var shapeHeight: NSLayoutConstraint!
     @IBOutlet weak var hairHeight: NSLayoutConstraint!
@@ -67,7 +69,7 @@ class MonsterView: UIView {
     
    func scaleMonster(by factor: CGFloat) {
         
-        for constraint in [self.shapeHeight, self.shapeWidth, self.eyesWidth, self.eyesHeight, self.mouthHeight, self.mouthWidth, self.hairWidth, self.hairHeight] {
+        for constraint in [self.shapeHeight, self.shapeWidth, self.eyesWidth, self.eyesHeight, self.mouthHeight, self.mouthWidth, self.hairWidth, self.hairHeight, self.monsterWidth, self.monsterHeight] {
             
             if let c = constraint {
                 c.constant = c.constant * factor
