@@ -130,9 +130,17 @@ class CreateStressorViewController: UIViewController {
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         self.navigationController?.navigationBar.shadowImage = UIImage()
         
+        let button = UIButton()
+        button.frame = CGRect(x: 0, y: 0, width: 100, height: 20)
+        button.setImage(#imageLiteral(resourceName: "chevronBack"), for: .normal)
+        button.imageEdgeInsets = UIEdgeInsetsMake(0, -40, 0, 0)
+        button.imageView?.contentMode = .scaleAspectFit
+        button.addTarget(self, action: #selector(self.cancelAction(_:)), for: .touchUpInside)
+        button.setTitle("Back", for: .normal)
+        button.titleEdgeInsets = UIEdgeInsetsMake(0, -40, 0, 0)
+        button.titleLabel?.font = UIFont.muliRegular(size: 16.0)
         
-        let backButton = UIBarButtonItem(title: "Back", style: .plain, target: self, action: #selector(self.cancelAction(_:)))
-        self.navigationItem.leftBarButtonItem = backButton
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(customView: button)
         
         let item = self.stressorItems[self.currentPageIndex]
         self.setupButton(for: item)
