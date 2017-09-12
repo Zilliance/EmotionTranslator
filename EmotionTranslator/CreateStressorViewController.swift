@@ -156,11 +156,15 @@ class CreateStressorViewController: UIViewController {
     
     private func setupButton(for item:StressorItem) {
         
-        self.backButton.titleLabel?.isHidden = true
+        UIView.animate(withDuration: 0.3) { 
+            self.backButton.titleLabel?.alpha = 0
+        }
         
         switch item.scene {
         case .stressor:
-            self.backButton.titleLabel?.isHidden = false
+            UIView.animate(withDuration: 0.3) {
+                self.backButton.titleLabel?.alpha = 1
+            }
         case .monster:
             self.continueButton.setTitle("CREATE YOUR OWN", for: .normal)
         case .introduction:
