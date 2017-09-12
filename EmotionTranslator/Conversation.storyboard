@@ -97,7 +97,7 @@
                                         <constraint firstItem="sen-GR-EVE" firstAttribute="leading" secondItem="oLU-sp-kb3" secondAttribute="leading" constant="34" id="xcj-EF-0rk"/>
                                     </constraints>
                                 </tableViewCellContentView>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <outlet property="nameLabel" destination="NEd-vt-BbH" id="Qyh-lh-JEW"/>
                                     <outlet property="questionLabel" destination="imn-bH-Eoe" id="DuN-rf-fL9"/>
@@ -166,7 +166,7 @@
                                         <constraint firstItem="QZZ-MF-RBw" firstAttribute="leading" secondItem="ae7-YQ-NmF" secondAttribute="trailing" constant="12" id="ql8-md-TJG"/>
                                     </constraints>
                                 </tableViewCellContentView>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <outlet property="responseLabel" destination="QZZ-MF-RBw" id="4gb-fn-eDe"/>
                                 </connections>
