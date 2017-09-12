@@ -65,7 +65,8 @@ class CreateStressorViewController: UIViewController {
     @IBOutlet weak var pageContainerView: UIView!
     @IBOutlet weak var continueButton: UIButton!
     
-    var backcustomButton: UIButton!
+    
+    private let backButton = UIButton()
     
     var stressor: Stressor = Stressor()
     
@@ -130,9 +131,16 @@ class CreateStressorViewController: UIViewController {
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         self.navigationController?.navigationBar.shadowImage = UIImage()
         
+        self.backButton.frame = CGRect(x: 0, y: 0, width: 100, height: 20)
+        self.backButton.setImage(#imageLiteral(resourceName: "chevronBack"), for: .normal)
+        self.backButton.imageEdgeInsets = UIEdgeInsetsMake(0, -40, 0, 0)
+        self.backButton.imageView?.contentMode = .scaleAspectFit
+        self.backButton.addTarget(self, action: #selector(self.cancelAction(_:)), for: .touchUpInside)
+        self.backButton.setTitle("Home", for: .normal)
+        self.backButton.titleEdgeInsets = UIEdgeInsetsMake(0, -40, 0, 0)
+        self.backButton.titleLabel?.font = UIFont.muliRegular(size: 16.0)
         
-        let backButton = UIBarButtonItem(title: "Back", style: .plain, target: self, action: #selector(self.cancelAction(_:)))
-        self.navigationItem.leftBarButtonItem = backButton
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(customView: self.backButton)
         
         let item = self.stressorItems[self.currentPageIndex]
         self.setupButton(for: item)
@@ -148,7 +156,15 @@ class CreateStressorViewController: UIViewController {
     
     private func setupButton(for item:StressorItem) {
         
+        UIView.animate(withDuration: 0.3) { 
+            self.backButton.titleLabel?.alpha = 0
+        }
+        
         switch item.scene {
+        case .stressor:
+            UIView.animate(withDuration: 0.3) {
+                self.backButton.titleLabel?.alpha = 1
+            }
         case .monster:
             self.continueButton.setTitle("CREATE YOUR OWN", for: .normal)
         case .introduction:
