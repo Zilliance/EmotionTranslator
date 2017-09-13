@@ -49,7 +49,7 @@ class NewStressorViewController: UIViewController {
 
 extension NewStressorViewController: StressorValidation {
     var error: StressorError {
-        if self.textView.text.isEmpty {
+        if self.textView.text.trimmed.isEmpty {
             return .text
         } else {
             return .none

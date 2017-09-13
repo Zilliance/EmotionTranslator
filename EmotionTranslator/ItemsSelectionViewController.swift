@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import ZillianceShared
 
 final class ItemsSelectionViewController: UITableViewController {
     

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import ZillianceShared
 
 fileprivate let tourURL = URL(string: "personalcompass://tour")!
 fileprivate let videoURL = URL(string: "personalcompass://video")!

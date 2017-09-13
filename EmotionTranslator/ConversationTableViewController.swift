@@ -34,7 +34,7 @@ class ResponseEntryCell: UITableViewCell {
 extension ResponseEntryCell: UITextViewDelegate {
     
     func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
-        if (text == "\n" && !textView.text.isEmpty) {
+        if (text == "\n" && !textView.text.trimmed.isEmpty) {
            self.reply?(textView.text)
            textView.resignFirstResponder()
         }

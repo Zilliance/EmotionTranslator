@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import ZillianceShared
 
 class HomeViewController: UIViewController {
 
@@ -65,13 +66,15 @@ class HomeViewController: UIViewController {
     // MARK: - User Action
     
     @IBAction func showActionPlan(_ sender: Any) {
-//        guard let planVC = UIStoryboard(name: "Plan", bundle: nil).instantiateViewController(withIdentifier: "ActionPlanViewController") as? ActionPlanViewController else{
-//            assertionFailure()
-//            return
-//        }
-//        let navigation = OrientableNavigationController(rootViewController: planVC)
-//        
-//        self.present(navigation, animated: true)
+        let bundle = ZillianceSharedBundle.resourcesBundle
+        
+        guard let planVC = UIStoryboard(name: "Plan", bundle: bundle).instantiateViewController(withIdentifier: "ActionPlanViewController") as? ActionPlanViewController else{
+            assertionFailure()
+            return
+        }
+        let navigation = OrientableNavigationController(rootViewController: planVC)
+        
+        self.present(navigation, animated: true)
     }
     
     @IBAction func menuAction(_ sender: UIBarButtonItem) {
