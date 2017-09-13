@@ -156,6 +156,7 @@ class ConversationTableViewController: UITableViewController {
         case .question:
             let cell = tableView.dequeueReusableCell(withIdentifier: "QuestionCell", for: indexPath) as! QuestionCell
             cell.questionLabel.text = item.text
+            cell.nameLabel.text = self.currentStressor.monsterName
             cell.questionNumberLabel.text = "Question \((indexPath.row + 1)/2 + 1)"
             return cell
         case .answer:
