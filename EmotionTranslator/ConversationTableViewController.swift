@@ -62,6 +62,11 @@ class ConversationTableViewController: UITableViewController {
         var type: ItemType
     }
     
+    struct Question {
+        var text: String
+        var number: Int
+    }
+    
     var currentStressor: Stressor!
     var gotoMonsterName: (() -> ())? = nil
     
@@ -69,19 +74,60 @@ class ConversationTableViewController: UITableViewController {
     
     var questionsCompleted = false
     
-    private var elements: [Item] = [Item(text: "Question 1 goes here, room for a few lines of text…more copy here…then ends with a?", type: .question),Item(text: "", type: .box)]
+    private var questions = ["Question 1 goes here, room for a few lines of text…more copy here…then ends with a?",
+                     "Question 2 goes here, room for a few lines of text…more copy here…then ends with a?",
+                     "Question 3 goes here, room for a few lines of text…more copy here…then ends with a?",
+                     "Question 4 goes here, room for a few lines of text…more copy here…then ends with a?",]
+    private var replies: [String] = []
+    
+    private var elements: [Item] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.rowHeight = UITableViewAutomaticDimension
         self.tableView.estimatedRowHeight = 80
-
+        self.prepareQuestions()
+        
+    }
+    
+    private func prepareQuestions() {
+        
+        if let question = self.questions.first {
+            self.elements.append(Item(text: question, type: .question))
+            self.elements.append(Item(text: "", type: .box))
+            self.questions.removeFirst()
+            
+            self.tableView.insertRows(at: [IndexPath(item: self.elements.count - 1, section: 0), IndexPath(item: self.elements.count - 2, section: 0)], with: .automatic)
+            
+            if elements.count > 0 {
+                self.tableView.scrollToRow(at: IndexPath(item:elements.count-1, section: 0), at: .bottom, animated: true)
+            }
+        }
+        
+        
+    }
+    
+    private func insert(reply: String, indexPath: IndexPath) {
+        
+        self.elements.remove(at: indexPath.row)
+        self.elements.insert(Item(text: reply, type: .answer), at: indexPath.row)
+        self.replies.append(reply)
+        if self.questions.count == 0 {
+            self.questionsCompleted = true
+            self.questionsEnded?()
+            self.tableView.reloadRows(at: [IndexPath(item: self.elements.count - 1, section: 0)], with: .automatic)
+        }
+            
+        else {
+             self.tableView.reloadRows(at: [IndexPath(item: self.elements.count - 1, section: 0)], with: .automatic)
+            self.prepareQuestions()
+        }
     }
 
     func reply() {
         
         if elements.count > 0 {
-            self.tableView.scrollToRow(at: IndexPath(item:elements.count-1, section: 0), at: .bottom, animated: false)
+            self.tableView.scrollToRow(at: IndexPath(item:elements.count-1, section: 0), at: .bottom, animated: true)
         }
         
         if let cell = self.tableView.cellForRow(at: IndexPath(item: elements.count-1, section: 0)) as? ResponseEntryCell {
@@ -110,6 +156,8 @@ class ConversationTableViewController: UITableViewController {
         case .question:
             let cell = tableView.dequeueReusableCell(withIdentifier: "QuestionCell", for: indexPath) as! QuestionCell
             cell.questionLabel.text = item.text
+            cell.nameLabel.text = self.currentStressor.monsterName
+            cell.questionNumberLabel.text = "Question \((indexPath.row + 1)/2 + 1)"
             return cell
         case .answer:
             let cell = tableView.dequeueReusableCell(withIdentifier: "ResponseCell", for: indexPath) as! ResponseCell
@@ -119,14 +167,10 @@ class ConversationTableViewController: UITableViewController {
         case .box:
             let cell = tableView.dequeueReusableCell(withIdentifier: "ResponseEntryCell", for: indexPath) as! ResponseEntryCell
             cell.reply = { [unowned self] text in
-                
-                self.elements.remove(at: indexPath.row)
-                self.elements.insert(Item(text: text, type: .answer), at: indexPath.row)
-                self.questionsCompleted = true
-                self.questionsEnded?()
-                
-                tableView.reloadRows(at: [indexPath], with: .automatic)
+                self.insert(reply: text, indexPath: indexPath)
+                //tableView.reloadRows(at: [indexPath], with: .automatic)
             }
+            cell.entryTextView.text = ""
             return cell
         }
     }
