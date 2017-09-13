@@ -35,6 +35,7 @@ enum StressorScene: String {
     case name
     case introduction
     case conversation
+    case takeaway
 }
 
 class CreateStressorViewController: UIViewController {
@@ -82,6 +83,7 @@ class CreateStressorViewController: UIViewController {
             StressorItem(for: .name, container: self),
             StressorItem(for: .introduction, container: self),
             StressorItem(for: .conversation, container: self),
+            StressorItem(for: .takeaway, container: self),
             ]
         
         return items
@@ -243,14 +245,17 @@ class CreateStressorViewController: UIViewController {
         
         
         guard self.currentPageIndex < self.stressorItems.count - 1 else {
+            return
+        }
+        
+        //check if conversation is completed
+        
+        if let currentItem = self.stressorItems[self.currentPageIndex].viewController as? ConversationTableViewController {
+            currentItem.reply()
             
-            if let currentItem = self.stressorItems[self.currentPageIndex].viewController as? ConversationTableViewController {
-                currentItem.reply()
-                
+            if !currentItem.questionsCompleted {
                 return
             }
-            
-            return
         }
         
         guard self.checkError() == .none else {

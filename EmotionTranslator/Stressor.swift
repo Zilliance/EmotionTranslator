@@ -21,6 +21,7 @@ final class Stressor: Object {
         case name
         case introduction
         case conversation
+        case takeaway
         
         var pageIndex: Int {
             
@@ -40,6 +41,11 @@ final class Stressor: Object {
     dynamic var monsterName: String?
     
     dynamic var hasCustomMonster = false
+    
+    dynamic var answer1: String?
+    dynamic var answer2: String?
+    dynamic var answer3: String?
+    dynamic var answer4: String?
     
     dynamic var lastEditedFacet: Facet = .stressor
     
