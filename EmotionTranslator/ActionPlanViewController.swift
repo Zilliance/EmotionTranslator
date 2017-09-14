@@ -32,8 +32,34 @@ class ActionPlanViewController: UIViewController {
             
         }
         
-        self.takeAwayLabel.text = "oisdhfo sdoifn osdf o sdfoin sdfo soidf soidfn sdfoisdfn osdif nsodfi  os ndiosdf"
-        self.actionStepLabel.text = "oisdhfo sdoifn osdf o sdfoin sdfo soidf soidfn sdfoisdfn osdif nsodfi  os ndiosdf soidfn sdfoisdfn osdi soidfn sdfoisdfn osdi soidfn sdfoisdfn osdi"
+        let takeawayTestText = "oisdhfo sdoifn osdf o sdfoin sdfo soidf soidfn sdfoisdfn osdif nsodfi  os ndiosdf"
+        let actionStepTestText = "oisdhfo sdoifn osdf o sdfoin sdfo soidf soidfn sdfoisdfn osdif nsodfi  os ndiosdf soidfn sdfoisdfn osdi soidfn sdfoisdfn osdi soidfn sdfoisdfn osdi"
+        
+        
+        let takeawayString = "Takeaway \n\n\(takeawayTestText)"
+        let actionStepString = "Action Step \n\n\(actionStepTestText)"
+        
+        
+        let style = NSMutableParagraphStyle()
+        style.alignment = .justified
+        style.firstLineHeadIndent = 10.0;
+        style.headIndent = 10.0;
+        style.tailIndent = -10.0;
+        
+        let takeAwayAttributedString = NSMutableAttributedString(string: takeawayString, attributes: [NSParagraphStyleAttributeName: style])
+        let actionStepAttributedString = NSMutableAttributedString(string: actionStepString, attributes: [NSParagraphStyleAttributeName: style])
+        
+        let takeawayRange = (takeawayString as NSString).range(of: takeawayTestText)
+        takeAwayAttributedString.addAttribute(NSFontAttributeName, value: UIFont.muliLight(size: 14), range: takeawayRange)
+        takeAwayAttributedString.addAttribute(NSForegroundColorAttributeName, value: UIColor.darkText, range: takeawayRange)
+        
+        let actionStepRange = (actionStepString as NSString).range(of: actionStepTestText)
+        actionStepAttributedString.addAttribute(NSFontAttributeName, value: UIFont.muliLight(size: 14), range: actionStepRange)
+        actionStepAttributedString.addAttribute(NSForegroundColorAttributeName, value: UIColor.darkText, range: actionStepRange)
+
+        
+        self.takeAwayLabel.attributedText = takeAwayAttributedString
+        self.actionStepLabel.attributedText = actionStepAttributedString
     }
 
 }
