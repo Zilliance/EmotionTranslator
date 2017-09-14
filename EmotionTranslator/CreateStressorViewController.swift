@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import ZillianceShared
 
 protocol StressorValidation {
     var error: StressorError { get }
@@ -194,6 +195,19 @@ class CreateStressorViewController: UIViewController {
     //MARK: -- User Actions
     
     @IBAction func remindMeAction(_ sender: Any) {
+        
+        guard let scheduler = UIStoryboard(name: "Schedule", bundle: nil).instantiateInitialViewController() as? ScheduleViewController else {
+            assertionFailure()
+            return
+        }
+
+        scheduler.title = self.stressor.title
+        //scheduler.text =
+        
+        let navigationController = OrientableNavigationController(rootViewController: scheduler)
+        
+        self.present(navigationController, animated: true, completion: nil)
+        
     }
     
     fileprivate func moveToPage(page: Int, direction: UIPageViewControllerNavigationDirection) {
