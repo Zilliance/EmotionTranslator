@@ -36,6 +36,7 @@ enum StressorScene: String {
     case introduction
     case conversation
     case takeaway
+    case actionplan
 }
 
 class CreateStressorViewController: UIViewController {
@@ -65,6 +66,7 @@ class CreateStressorViewController: UIViewController {
     @IBOutlet weak var pageControl: UIPageControl!
     @IBOutlet weak var pageContainerView: UIView!
     @IBOutlet weak var continueButton: UIButton!
+    @IBOutlet weak var remindMeButton: UIButton!
     
     
     private let backButton = UIButton()
@@ -84,6 +86,7 @@ class CreateStressorViewController: UIViewController {
             StressorItem(for: .introduction, container: self),
             StressorItem(for: .conversation, container: self),
             StressorItem(for: .takeaway, container: self),
+            StressorItem(for: .actionplan, container: self),
             ]
         
         return items
@@ -160,7 +163,9 @@ class CreateStressorViewController: UIViewController {
         
         UIView.animate(withDuration: 0.3) { 
             self.backButton.titleLabel?.alpha = 0
+            self.remindMeButton.alpha = 0
         }
+        
         
         switch item.scene {
         case .stressor:
@@ -176,6 +181,10 @@ class CreateStressorViewController: UIViewController {
                 let text = vc.questionsCompleted ? "CONTINUE" : "REPLY"
                 self.continueButton.setTitle(text, for: .normal)
             }
+        case .actionplan:
+            UIView.animate(withDuration: 0.3) {
+                self.remindMeButton.alpha = 1
+            }
         default:
             self.continueButton.setTitle("CONTINUE", for: .normal)
         }
@@ -183,6 +192,9 @@ class CreateStressorViewController: UIViewController {
     }
 
     //MARK: -- User Actions
+    
+    @IBAction func remindMeAction(_ sender: Any) {
+    }
     
     fileprivate func moveToPage(page: Int, direction: UIPageViewControllerNavigationDirection) {
         

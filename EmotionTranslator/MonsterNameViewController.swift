@@ -25,6 +25,10 @@ class MonsterNameViewController: UIViewController {
             self.monsterView.scaleMonster(by: 0.7)
             
         }
+        
+        if let name = self.currentStressor.monsterName {
+            self.nameTextField.text = name
+        }
 
     }
     

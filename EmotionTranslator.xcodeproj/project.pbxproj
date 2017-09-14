@@ -55,6 +55,8 @@
 		8C61D6AF1F61D02100389FC0 /* ConversationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C61D6AE1F61D02100389FC0 /* ConversationTableViewController.swift */; };
 		8C6EB5D81F69BB740097FB13 /* Takeaway.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C6EB5D71F69BB740097FB13 /* Takeaway.storyboard */; };
 		8C6EB5DA1F69BC920097FB13 /* TakeAwayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C6EB5D91F69BC920097FB13 /* TakeAwayViewController.swift */; };
+		8C6EB5DD1F69C2B90097FB13 /* Actionplan.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C6EB5DC1F69C2B90097FB13 /* Actionplan.storyboard */; };
+		8C6EB5DF1F69C2D10097FB13 /* ActionPlanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C6EB5DE1F69C2D10097FB13 /* ActionPlanViewController.swift */; };
 		C0FA5645E25EC897AF28EADC /* Pods_EmotionTranslatorTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 342B6A321EC77D91CBE565A5 /* Pods_EmotionTranslatorTests.framework */; };
 		E35DB1781F5724F600C76B6B /* Monster.swift in Sources */ = {isa = PBXBuildFile; fileRef = E35DB1771F5724F600C76B6B /* Monster.swift */; };
 		E3BE10B51F53C6EF00787921 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3BE10B41F53C6EF00787921 /* AppDelegate.swift */; };
@@ -154,6 +156,8 @@
 		8C61D6AE1F61D02100389FC0 /* ConversationTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConversationTableViewController.swift; sourceTree = "<group>"; };
 		8C6EB5D71F69BB740097FB13 /* Takeaway.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Takeaway.storyboard; sourceTree = "<group>"; };
 		8C6EB5D91F69BC920097FB13 /* TakeAwayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TakeAwayViewController.swift; sourceTree = "<group>"; };
+		8C6EB5DC1F69C2B90097FB13 /* Actionplan.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Actionplan.storyboard; sourceTree = "<group>"; };
+		8C6EB5DE1F69C2D10097FB13 /* ActionPlanViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActionPlanViewController.swift; sourceTree = "<group>"; };
 		B05445A012A0BCEF9D95A791 /* Pods-EmotionTranslatorUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmotionTranslatorUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EmotionTranslatorUITests/Pods-EmotionTranslatorUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		C2E2DD4D09C96B4AAF7211D3 /* Pods-EmotionTranslator.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmotionTranslator.release.xcconfig"; path = "Pods/Target Support Files/Pods-EmotionTranslator/Pods-EmotionTranslator.release.xcconfig"; sourceTree = "<group>"; };
 		C65FD7AAF27DCACDA7632C21 /* Pods_EmotionTranslatorUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EmotionTranslatorUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -350,6 +354,15 @@
 			name = TakeAction;
 			sourceTree = "<group>";
 		};
+		8C6EB5DB1F69C2A70097FB13 /* ActionPlan */ = {
+			isa = PBXGroup;
+			children = (
+				8C6EB5DC1F69C2B90097FB13 /* Actionplan.storyboard */,
+				8C6EB5DE1F69C2D10097FB13 /* ActionPlanViewController.swift */,
+			);
+			name = ActionPlan;
+			sourceTree = "<group>";
+		};
 		B4F5945C85C194C6644DC327 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -439,6 +452,7 @@
 		E3BE10EB1F53C7DE00787921 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				8C6EB5DB1F69C2A70097FB13 /* ActionPlan */,
 				8C6EB5D61F69BB420097FB13 /* TakeAction */,
 				8C61D6A71F60A97F00389FC0 /* Conversation */,
 				8C61D6961F58BB7800389FC0 /* Monster */,
@@ -620,6 +634,7 @@
 				E3BE11061F53C83B00787921 /* Muli-Bold.ttf in Resources */,
 				8C2B14441F55CAC5002C0353 /* Tour.storyboard in Resources */,
 				E3BE11041F53C83B00787921 /* Muli-Black.ttf in Resources */,
+				8C6EB5DD1F69C2B90097FB13 /* Actionplan.storyboard in Resources */,
 				8C61D6AD1F61CCCF00389FC0 /* Conversation.storyboard in Resources */,
 				E3BE11091F53C83B00787921 /* Muli-ExtraBoldItalic.ttf in Resources */,
 				8C61D6A91F60AA2000389FC0 /* Introduction.storyboard in Resources */,
@@ -862,6 +877,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8C61D6981F58BC8B00389FC0 /* ChooseMonsterViewController.swift in Sources */,
+				8C6EB5DF1F69C2D10097FB13 /* ActionPlanViewController.swift in Sources */,
 				8C61D68F1F57586300389FC0 /* StringItemSelectionCell.swift in Sources */,
 				8C61D68D1F57586300389FC0 /* ItemsSelectionViewController.swift in Sources */,
 				8C2B14371F54AB4D002C0353 /* IntroViewController.swift in Sources */,

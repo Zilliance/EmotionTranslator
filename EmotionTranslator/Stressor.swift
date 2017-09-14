@@ -22,6 +22,7 @@ final class Stressor: Object {
         case introduction
         case conversation
         case takeaway
+        case actionplan
         
         var pageIndex: Int {
             
