@@ -186,6 +186,7 @@ class CreateStressorViewController: UIViewController {
             UIView.animate(withDuration: 0.3) {
                 self.remindMeButton.alpha = 1
             }
+            self.continueButton.setTitle("I'M DONE", for: .normal)
         default:
             self.continueButton.setTitle("CONTINUE", for: .normal)
         }
@@ -271,6 +272,15 @@ class CreateStressorViewController: UIViewController {
         
         
         guard self.currentPageIndex < self.stressorItems.count - 1 else {
+            
+            //finish stressor
+            
+            if self.currentPageIndex == Stressor.Facet.actionplan.pageIndex {
+                self.stressor.completed = true
+                self.save()
+                self.navigationController?.popViewController(animated: true)
+            }
+            
             return
         }
         

@@ -33,7 +33,7 @@ final class Stressor: Object {
 
     
     dynamic var title: String?
-    var completed: Bool = false
+    dynamic var completed: Bool = false
     dynamic var dateCreated: Date = Date()
     
     let emotions = List<Emotion>()
