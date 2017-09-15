@@ -21,6 +21,8 @@ final class Stressor: Object {
         case name
         case introduction
         case conversation
+        case takeaway
+        case actionplan
         
         var pageIndex: Int {
             
@@ -31,7 +33,7 @@ final class Stressor: Object {
 
     
     dynamic var title: String?
-    var completed: Bool = false
+    dynamic var completed: Bool = false
     dynamic var dateCreated: Date = Date()
     
     let emotions = List<Emotion>()
@@ -40,6 +42,11 @@ final class Stressor: Object {
     dynamic var monsterName: String?
     
     dynamic var hasCustomMonster = false
+    
+    dynamic var answer1: String?
+    dynamic var answer2: String?
+    dynamic var answer3: String?
+    dynamic var answer4: String?
     
     dynamic var lastEditedFacet: Facet = .stressor
     

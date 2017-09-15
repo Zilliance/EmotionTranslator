@@ -53,6 +53,16 @@
 		8C61D6AB1F60B77100389FC0 /* ConversationIntroductionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C61D6AA1F60B77100389FC0 /* ConversationIntroductionTableViewController.swift */; };
 		8C61D6AD1F61CCCF00389FC0 /* Conversation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C61D6AC1F61CCCF00389FC0 /* Conversation.storyboard */; };
 		8C61D6AF1F61D02100389FC0 /* ConversationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C61D6AE1F61D02100389FC0 /* ConversationTableViewController.swift */; };
+		8C6EB5D81F69BB740097FB13 /* Takeaway.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C6EB5D71F69BB740097FB13 /* Takeaway.storyboard */; };
+		8C6EB5DA1F69BC920097FB13 /* TakeAwayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C6EB5D91F69BC920097FB13 /* TakeAwayViewController.swift */; };
+		8C6EB5DD1F69C2B90097FB13 /* Actionplan.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C6EB5DC1F69C2B90097FB13 /* Actionplan.storyboard */; };
+		8C6EB5DF1F69C2D10097FB13 /* ActionPlanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C6EB5DE1F69C2D10097FB13 /* ActionPlanViewController.swift */; };
+		8C6EB5E61F6B025F0097FB13 /* AddToCalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C6EB5E11F6B025F0097FB13 /* AddToCalendarViewController.swift */; };
+		8C6EB5E71F6B025F0097FB13 /* CustomDatePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C6EB5E21F6B025F0097FB13 /* CustomDatePickerViewController.swift */; };
+		8C6EB5E81F6B025F0097FB13 /* Schedule.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C6EB5E31F6B025F0097FB13 /* Schedule.storyboard */; };
+		8C6EB5E91F6B025F0097FB13 /* ScheduleNotificationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C6EB5E41F6B025F0097FB13 /* ScheduleNotificationTableViewController.swift */; };
+		8C6EB5EA1F6B025F0097FB13 /* ScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C6EB5E51F6B025F0097FB13 /* ScheduleViewController.swift */; };
+		8C6EB5EC1F6B02790097FB13 /* ZillianceTextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C6EB5EB1F6B02790097FB13 /* ZillianceTextViewController.swift */; };
 		C0FA5645E25EC897AF28EADC /* Pods_EmotionTranslatorTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 342B6A321EC77D91CBE565A5 /* Pods_EmotionTranslatorTests.framework */; };
 		E35DB1781F5724F600C76B6B /* Monster.swift in Sources */ = {isa = PBXBuildFile; fileRef = E35DB1771F5724F600C76B6B /* Monster.swift */; };
 		E3BE10B51F53C6EF00787921 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3BE10B41F53C6EF00787921 /* AppDelegate.swift */; };
@@ -150,6 +160,16 @@
 		8C61D6AA1F60B77100389FC0 /* ConversationIntroductionTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConversationIntroductionTableViewController.swift; sourceTree = "<group>"; };
 		8C61D6AC1F61CCCF00389FC0 /* Conversation.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Conversation.storyboard; sourceTree = "<group>"; };
 		8C61D6AE1F61D02100389FC0 /* ConversationTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConversationTableViewController.swift; sourceTree = "<group>"; };
+		8C6EB5D71F69BB740097FB13 /* Takeaway.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Takeaway.storyboard; sourceTree = "<group>"; };
+		8C6EB5D91F69BC920097FB13 /* TakeAwayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TakeAwayViewController.swift; sourceTree = "<group>"; };
+		8C6EB5DC1F69C2B90097FB13 /* Actionplan.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Actionplan.storyboard; sourceTree = "<group>"; };
+		8C6EB5DE1F69C2D10097FB13 /* ActionPlanViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActionPlanViewController.swift; sourceTree = "<group>"; };
+		8C6EB5E11F6B025F0097FB13 /* AddToCalendarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddToCalendarViewController.swift; sourceTree = "<group>"; };
+		8C6EB5E21F6B025F0097FB13 /* CustomDatePickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomDatePickerViewController.swift; sourceTree = "<group>"; };
+		8C6EB5E31F6B025F0097FB13 /* Schedule.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Schedule.storyboard; sourceTree = "<group>"; };
+		8C6EB5E41F6B025F0097FB13 /* ScheduleNotificationTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleNotificationTableViewController.swift; sourceTree = "<group>"; };
+		8C6EB5E51F6B025F0097FB13 /* ScheduleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleViewController.swift; sourceTree = "<group>"; };
+		8C6EB5EB1F6B02790097FB13 /* ZillianceTextViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZillianceTextViewController.swift; sourceTree = "<group>"; };
 		B05445A012A0BCEF9D95A791 /* Pods-EmotionTranslatorUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmotionTranslatorUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EmotionTranslatorUITests/Pods-EmotionTranslatorUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		C2E2DD4D09C96B4AAF7211D3 /* Pods-EmotionTranslator.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmotionTranslator.release.xcconfig"; path = "Pods/Target Support Files/Pods-EmotionTranslator/Pods-EmotionTranslator.release.xcconfig"; sourceTree = "<group>"; };
 		C65FD7AAF27DCACDA7632C21 /* Pods_EmotionTranslatorUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EmotionTranslatorUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -337,6 +357,37 @@
 			name = Conversation;
 			sourceTree = "<group>";
 		};
+		8C6EB5D61F69BB420097FB13 /* TakeAction */ = {
+			isa = PBXGroup;
+			children = (
+				8C6EB5D71F69BB740097FB13 /* Takeaway.storyboard */,
+				8C6EB5D91F69BC920097FB13 /* TakeAwayViewController.swift */,
+			);
+			name = TakeAction;
+			sourceTree = "<group>";
+		};
+		8C6EB5DB1F69C2A70097FB13 /* ActionPlan */ = {
+			isa = PBXGroup;
+			children = (
+				8C6EB5DC1F69C2B90097FB13 /* Actionplan.storyboard */,
+				8C6EB5DE1F69C2D10097FB13 /* ActionPlanViewController.swift */,
+			);
+			name = ActionPlan;
+			sourceTree = "<group>";
+		};
+		8C6EB5E01F6B01FA0097FB13 /* Scheduler */ = {
+			isa = PBXGroup;
+			children = (
+				8C6EB5E31F6B025F0097FB13 /* Schedule.storyboard */,
+				8C6EB5EB1F6B02790097FB13 /* ZillianceTextViewController.swift */,
+				8C6EB5E11F6B025F0097FB13 /* AddToCalendarViewController.swift */,
+				8C6EB5E21F6B025F0097FB13 /* CustomDatePickerViewController.swift */,
+				8C6EB5E41F6B025F0097FB13 /* ScheduleNotificationTableViewController.swift */,
+				8C6EB5E51F6B025F0097FB13 /* ScheduleViewController.swift */,
+			);
+			name = Scheduler;
+			sourceTree = "<group>";
+		};
 		B4F5945C85C194C6644DC327 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -426,6 +477,9 @@
 		E3BE10EB1F53C7DE00787921 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				8C6EB5E01F6B01FA0097FB13 /* Scheduler */,
+				8C6EB5DB1F69C2A70097FB13 /* ActionPlan */,
+				8C6EB5D61F69BB420097FB13 /* TakeAction */,
 				8C61D6A71F60A97F00389FC0 /* Conversation */,
 				8C61D6961F58BB7800389FC0 /* Monster */,
 				8C61D6851F57530800389FC0 /* Emotion */,
@@ -606,10 +660,13 @@
 				E3BE11061F53C83B00787921 /* Muli-Bold.ttf in Resources */,
 				8C2B14441F55CAC5002C0353 /* Tour.storyboard in Resources */,
 				E3BE11041F53C83B00787921 /* Muli-Black.ttf in Resources */,
+				8C6EB5DD1F69C2B90097FB13 /* Actionplan.storyboard in Resources */,
 				8C61D6AD1F61CCCF00389FC0 /* Conversation.storyboard in Resources */,
+				8C6EB5E81F6B025F0097FB13 /* Schedule.storyboard in Resources */,
 				E3BE11091F53C83B00787921 /* Muli-ExtraBoldItalic.ttf in Resources */,
 				8C61D6A91F60AA2000389FC0 /* Introduction.storyboard in Resources */,
 				8C61D6A01F5F4D9A00389FC0 /* Name.storyboard in Resources */,
+				8C6EB5D81F69BB740097FB13 /* Takeaway.storyboard in Resources */,
 				E3BE110A1F53C83B00787921 /* Muli-ExtraLight.ttf in Resources */,
 				8C61D69C1F59F77E00389FC0 /* Create.storyboard in Resources */,
 				8C61D6A41F606BA600389FC0 /* MonsterView.xib in Resources */,
@@ -683,7 +740,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		293D0CB9958C872BDAF5BF59 /* [CP] Copy Pods Resources */ = {
@@ -744,7 +801,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		B47968CA9CCA82740275F62F /* [CP] Copy Pods Resources */ = {
@@ -821,7 +878,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		F55CD284E686B8AEE77CDD50 /* [CP] Embed Pods Frameworks */ = {
@@ -846,15 +903,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8C6EB5EA1F6B025F0097FB13 /* ScheduleViewController.swift in Sources */,
+				8C6EB5EC1F6B02790097FB13 /* ZillianceTextViewController.swift in Sources */,
 				8C61D6981F58BC8B00389FC0 /* ChooseMonsterViewController.swift in Sources */,
+				8C6EB5DF1F69C2D10097FB13 /* ActionPlanViewController.swift in Sources */,
 				8C61D68F1F57586300389FC0 /* StringItemSelectionCell.swift in Sources */,
 				8C61D68D1F57586300389FC0 /* ItemsSelectionViewController.swift in Sources */,
+				8C6EB5E71F6B025F0097FB13 /* CustomDatePickerViewController.swift in Sources */,
 				8C2B14371F54AB4D002C0353 /* IntroViewController.swift in Sources */,
 				8C61D6841F57500D00389FC0 /* Emotion.swift in Sources */,
 				E3BE10E61F53C7CF00787921 /* Notification.swift in Sources */,
 				8C2B14461F55CAC5002C0353 /* TourPageViewController.swift in Sources */,
 				8C2B14291F54A942002C0353 /* LeftMenuViewController.swift in Sources */,
 				4F2CDCD71F55EB8A0048FA9C /* Analytics.swift in Sources */,
+				8C6EB5DA1F69BC920097FB13 /* TakeAwayViewController.swift in Sources */,
 				4F2CDCD91F55EC920048FA9C /* Analytics+EmotionTranslator.swift in Sources */,
 				8C2B14501F56161C002C0353 /* NewStressorViewController.swift in Sources */,
 				8C2B144B1F55FCDC002C0353 /* CreateStressorViewController.swift in Sources */,
@@ -862,6 +924,7 @@
 				E3BE10E41F53C7C900787921 /* Database.swift in Sources */,
 				8C2B140C1F548B8C002C0353 /* HomeCollectionViewController.swift in Sources */,
 				E35DB1781F5724F600C76B6B /* Monster.swift in Sources */,
+				8C6EB5E91F6B025F0097FB13 /* ScheduleNotificationTableViewController.swift in Sources */,
 				8C2B14281F54A942002C0353 /* CustomSideViewController.swift in Sources */,
 				E3BE10EA1F53C7D900787921 /* Stressor.swift in Sources */,
 				8C61D6891F57568B00389FC0 /* EmotionViewController.swift in Sources */,
@@ -871,6 +934,7 @@
 				8C61D6931F58801000389FC0 /* CustomEmotionViewController.swift in Sources */,
 				8C2B14271F54A942002C0353 /* AboutCompanyViewController.swift in Sources */,
 				E3BE10E81F53C7D400787921 /* User.swift in Sources */,
+				8C6EB5E61F6B025F0097FB13 /* AddToCalendarViewController.swift in Sources */,
 				8C2B14451F55CAC5002C0353 /* TourSceneViewController.swift in Sources */,
 				8C61D6AB1F60B77100389FC0 /* ConversationIntroductionTableViewController.swift in Sources */,
 				8C61D6A61F606D3800389FC0 /* MonsterView.swift in Sources */,

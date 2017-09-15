@@ -16,6 +16,7 @@ target 'EmotionTranslator' do
   pod 'TPKeyboardAvoiding'
   pod 'MZFormSheetController'
   pod 'YouTubePlayer'
+  pod 'MultiSelectSegmentedControl'
   pod 'PDFGenerator', '~> 2.0.1'
   pod 'Firebase/Core', '~> 3.0'
   pod 'Fabric'

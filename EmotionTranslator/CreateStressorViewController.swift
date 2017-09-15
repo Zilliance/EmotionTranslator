@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import ZillianceShared
 
 protocol StressorValidation {
     var error: StressorError { get }
@@ -35,6 +36,8 @@ enum StressorScene: String {
     case name
     case introduction
     case conversation
+    case takeaway
+    case actionplan
 }
 
 class CreateStressorViewController: UIViewController {
@@ -64,6 +67,7 @@ class CreateStressorViewController: UIViewController {
     @IBOutlet weak var pageControl: UIPageControl!
     @IBOutlet weak var pageContainerView: UIView!
     @IBOutlet weak var continueButton: UIButton!
+    @IBOutlet weak var remindMeButton: UIButton!
     
     
     private let backButton = UIButton()
@@ -82,6 +86,8 @@ class CreateStressorViewController: UIViewController {
             StressorItem(for: .name, container: self),
             StressorItem(for: .introduction, container: self),
             StressorItem(for: .conversation, container: self),
+            StressorItem(for: .takeaway, container: self),
+            StressorItem(for: .actionplan, container: self),
             ]
         
         return items
@@ -158,7 +164,9 @@ class CreateStressorViewController: UIViewController {
         
         UIView.animate(withDuration: 0.3) { 
             self.backButton.titleLabel?.alpha = 0
+            self.remindMeButton.alpha = 0
         }
+        
         
         switch item.scene {
         case .stressor:
@@ -174,6 +182,11 @@ class CreateStressorViewController: UIViewController {
                 let text = vc.questionsCompleted ? "CONTINUE" : "REPLY"
                 self.continueButton.setTitle(text, for: .normal)
             }
+        case .actionplan:
+            UIView.animate(withDuration: 0.3) {
+                self.remindMeButton.alpha = 1
+            }
+            self.continueButton.setTitle("I'M DONE", for: .normal)
         default:
             self.continueButton.setTitle("CONTINUE", for: .normal)
         }
@@ -181,6 +194,22 @@ class CreateStressorViewController: UIViewController {
     }
 
     //MARK: -- User Actions
+    
+    @IBAction func remindMeAction(_ sender: Any) {
+        
+        guard let scheduler = UIStoryboard(name: "Schedule", bundle: nil).instantiateInitialViewController() as? ScheduleViewController else {
+            assertionFailure()
+            return
+        }
+
+        scheduler.title = self.stressor.title
+        //scheduler.text =
+        
+        let navigationController = OrientableNavigationController(rootViewController: scheduler)
+        
+        self.present(navigationController, animated: true, completion: nil)
+        
+    }
     
     fileprivate func moveToPage(page: Int, direction: UIPageViewControllerNavigationDirection) {
         
@@ -244,13 +273,25 @@ class CreateStressorViewController: UIViewController {
         
         guard self.currentPageIndex < self.stressorItems.count - 1 else {
             
-            if let currentItem = self.stressorItems[self.currentPageIndex].viewController as? ConversationTableViewController {
-                currentItem.reply()
-                
-                return
+            //finish stressor
+            
+            if self.currentPageIndex == Stressor.Facet.actionplan.pageIndex {
+                self.stressor.completed = true
+                self.save()
+                self.navigationController?.popViewController(animated: true)
             }
             
             return
+        }
+        
+        //check if conversation is completed
+        
+        if let currentItem = self.stressorItems[self.currentPageIndex].viewController as? ConversationTableViewController {
+            currentItem.reply()
+            
+            if !currentItem.questionsCompleted {
+                return
+            }
         }
         
         guard self.checkError() == .none else {

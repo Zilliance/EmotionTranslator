@@ -133,7 +133,10 @@ class CreateMonsterViewController: UIViewController {
         self.sectionCollectionView.selectItem(at: IndexPath(item: 0, section: 0), animated: true, scrollPosition: .centeredHorizontally)
         self.itemCollectionView.selectItem(at: IndexPath(item: 0, section: 0), animated: true, scrollPosition: .centeredHorizontally)
         
-        self.monster = self.currentStressor.monster
+        if let monster = self.currentStressor.monster {
+            self.monster = Monster(value: monster as Any)
+        }
+        
         
         if self.monster == nil {
             self.monster = Monster()
