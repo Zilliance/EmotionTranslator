@@ -1,5 +1,5 @@
 //
-//  ActionPlanViewController.swift
+//  ActionViewController.swift
 //  EmotionTranslator
 //
 //  Created by ricardo hernandez  on 9/13/17.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ActionPlanViewController: UIViewController {
+class ActionViewController: UIViewController {
     
     var currentStressor: Stressor!
     var gotoMonsterName: (() -> ())? = nil
@@ -66,7 +66,7 @@ class ActionPlanViewController: UIViewController {
 
 // MARK: - CompassValidation
 
-extension ActionPlanViewController: StressorValidation {
+extension ActionViewController: StressorValidation {
     var error: StressorError {
         return .none
     }
@@ -74,7 +74,7 @@ extension ActionPlanViewController: StressorValidation {
 
 // MARK: - CompassFacetEditor
 
-extension ActionPlanViewController: StressorFacetEditor {
+extension ActionViewController: StressorFacetEditor {
     func save() {
         //self.tableViewController.saveAction(self.tableViewController.selectedItems)
         self.currentStressor.lastEditedFacet = .actionplan

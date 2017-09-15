@@ -56,7 +56,7 @@
 		8C6EB5D81F69BB740097FB13 /* Takeaway.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C6EB5D71F69BB740097FB13 /* Takeaway.storyboard */; };
 		8C6EB5DA1F69BC920097FB13 /* TakeAwayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C6EB5D91F69BC920097FB13 /* TakeAwayViewController.swift */; };
 		8C6EB5DD1F69C2B90097FB13 /* Actionplan.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C6EB5DC1F69C2B90097FB13 /* Actionplan.storyboard */; };
-		8C6EB5DF1F69C2D10097FB13 /* ActionPlanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C6EB5DE1F69C2D10097FB13 /* ActionPlanViewController.swift */; };
+		8C6EB5DF1F69C2D10097FB13 /* ActionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C6EB5DE1F69C2D10097FB13 /* ActionViewController.swift */; };
 		8C6EB5E61F6B025F0097FB13 /* AddToCalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C6EB5E11F6B025F0097FB13 /* AddToCalendarViewController.swift */; };
 		8C6EB5E71F6B025F0097FB13 /* CustomDatePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C6EB5E21F6B025F0097FB13 /* CustomDatePickerViewController.swift */; };
 		8C6EB5E81F6B025F0097FB13 /* Schedule.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C6EB5E31F6B025F0097FB13 /* Schedule.storyboard */; };
@@ -163,7 +163,7 @@
 		8C6EB5D71F69BB740097FB13 /* Takeaway.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Takeaway.storyboard; sourceTree = "<group>"; };
 		8C6EB5D91F69BC920097FB13 /* TakeAwayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TakeAwayViewController.swift; sourceTree = "<group>"; };
 		8C6EB5DC1F69C2B90097FB13 /* Actionplan.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Actionplan.storyboard; sourceTree = "<group>"; };
-		8C6EB5DE1F69C2D10097FB13 /* ActionPlanViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActionPlanViewController.swift; sourceTree = "<group>"; };
+		8C6EB5DE1F69C2D10097FB13 /* ActionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActionViewController.swift; sourceTree = "<group>"; };
 		8C6EB5E11F6B025F0097FB13 /* AddToCalendarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddToCalendarViewController.swift; sourceTree = "<group>"; };
 		8C6EB5E21F6B025F0097FB13 /* CustomDatePickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomDatePickerViewController.swift; sourceTree = "<group>"; };
 		8C6EB5E31F6B025F0097FB13 /* Schedule.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Schedule.storyboard; sourceTree = "<group>"; };
@@ -370,7 +370,7 @@
 			isa = PBXGroup;
 			children = (
 				8C6EB5DC1F69C2B90097FB13 /* Actionplan.storyboard */,
-				8C6EB5DE1F69C2D10097FB13 /* ActionPlanViewController.swift */,
+				8C6EB5DE1F69C2D10097FB13 /* ActionViewController.swift */,
 			);
 			name = ActionPlan;
 			sourceTree = "<group>";
@@ -906,7 +906,7 @@
 				8C6EB5EA1F6B025F0097FB13 /* ScheduleViewController.swift in Sources */,
 				8C6EB5EC1F6B02790097FB13 /* ZillianceTextViewController.swift in Sources */,
 				8C61D6981F58BC8B00389FC0 /* ChooseMonsterViewController.swift in Sources */,
-				8C6EB5DF1F69C2D10097FB13 /* ActionPlanViewController.swift in Sources */,
+				8C6EB5DF1F69C2D10097FB13 /* ActionViewController.swift in Sources */,
 				8C61D68F1F57586300389FC0 /* StringItemSelectionCell.swift in Sources */,
 				8C61D68D1F57586300389FC0 /* ItemsSelectionViewController.swift in Sources */,
 				8C6EB5E71F6B025F0097FB13 /* CustomDatePickerViewController.swift in Sources */,

@@ -17,10 +17,10 @@
         </array>
     </customFonts>
     <scenes>
-        <!--Action Plan View Controller-->
+        <!--Action View Controller-->
         <scene sceneID="6hH-hT-ORc">
             <objects>
-                <viewController id="gl0-7d-suq" customClass="ActionPlanViewController" customModule="EmotionTranslator" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="gl0-7d-suq" customClass="ActionViewController" customModule="EmotionTranslator" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="qzT-3L-lsg"/>
                         <viewControllerLayoutGuide type="bottom" id="llo-Yl-T0L"/>
