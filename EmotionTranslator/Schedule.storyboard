@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="PM4-6T-8G3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="PM4-6T-8G3">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -23,7 +23,7 @@
         <!--Schedule View Controller-->
         <scene sceneID="zKf-y4-Ae2">
             <objects>
-                <viewController id="PM4-6T-8G3" customClass="ScheduleViewController" customModule="Think_Shift_Release" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="PM4-6T-8G3" customClass="ScheduleViewController" customModule="EmotionTranslator" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="tHS-CN-baG"/>
                         <viewControllerLayoutGuide type="bottom" id="73E-BB-W9U"/>
@@ -36,7 +36,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="124"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Set Reminder" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2RK-Q1-izJ">
-                                        <rect key="frame" x="125.5" y="31" width="124.5" height="25.5"/>
+                                        <rect key="frame" x="126" y="31" width="124.5" height="25.5"/>
                                         <fontDescription key="fontDescription" name="Muli-Regular" family="Muli" pointSize="20"/>
                                         <color key="textColor" red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -112,7 +112,7 @@
         <!--Schedule Notification Table View Controller-->
         <scene sceneID="aiW-Yr-Wga">
             <objects>
-                <tableViewController storyboardIdentifier="notification" id="KZJ-Xa-c7P" customClass="ScheduleNotificationTableViewController" customModule="Think_Shift_Release" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="notification" id="KZJ-Xa-c7P" customClass="ScheduleNotificationTableViewController" customModule="EmotionTranslator" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="to8-U5-CpY">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -235,7 +235,7 @@
                                                     </constraints>
                                                 </switch>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recurring Weekly" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F1w-Aj-TeP">
-                                                    <rect key="frame" x="20" y="19" width="78" height="12"/>
+                                                    <rect key="frame" x="20" y="18.5" width="81.5" height="13"/>
                                                     <fontDescription key="fontDescription" name="Muli-Regular" family="Muli" pointSize="10"/>
                                                     <color key="textColor" red="0.25882352941176467" green="0.36470588235294116" blue="0.44705882352941173" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -258,13 +258,13 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0uT-TE-ZS4">
-                                                    <rect key="frame" x="20" y="19" width="22" height="12"/>
+                                                    <rect key="frame" x="20" y="18.5" width="23" height="13"/>
                                                     <fontDescription key="fontDescription" name="Muli-Regular" family="Muli" pointSize="10"/>
                                                     <color key="textColor" red="0.25882352941176467" green="0.36470588235294116" blue="0.44705882352941173" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap to set time" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dGi-8I-bW1">
-                                                    <rect key="frame" x="283" y="19" width="66" height="12"/>
+                                                    <rect key="frame" x="280.5" y="18.5" width="68.5" height="13"/>
                                                     <fontDescription key="fontDescription" name="Muli-Regular" family="Muli" pointSize="10"/>
                                                     <color key="textColor" red="0.25882352939999997" green="0.36470588240000001" blue="0.44705882349999998" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -287,7 +287,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Days" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yCi-6A-Icg">
-                                                    <rect key="frame" x="20" y="19" width="24" height="12"/>
+                                                    <rect key="frame" x="20" y="18.5" width="24" height="13"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="24" id="21D-Wl-Gk6"/>
                                                     </constraints>
@@ -343,7 +343,7 @@
         <!--Schedule It-->
         <scene sceneID="sCl-NP-dPd">
             <objects>
-                <viewController storyboardIdentifier="calendar" title="Schedule It" id="hJo-I6-T2l" customClass="AddToCalendarViewController" customModule="Think_Shift_Release" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="calendar" title="Schedule It" id="hJo-I6-T2l" customClass="AddToCalendarViewController" customModule="EmotionTranslator" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="5z0-eq-EVC"/>
                         <viewControllerLayoutGuide type="bottom" id="Qel-bl-N5n"/>
@@ -486,7 +486,7 @@
         <!--Zilliance Text View Controller-->
         <scene sceneID="Lf2-Pi-EHb">
             <objects>
-                <viewController id="EJb-C2-6D7" customClass="ZillianceTextViewController" customModule="Think_Shift_Release" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="EJb-C2-6D7" customClass="ZillianceTextViewController" customModule="EmotionTranslator" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="uxU-Mn-ZQ7"/>
                         <viewControllerLayoutGuide type="bottom" id="hnJ-vX-DUQ"/>
@@ -500,7 +500,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" name="Muli-Light" family="Muli" pointSize="11"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done"/>
                             </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -522,7 +522,7 @@
         <!--Custom Date Picker View Controller-->
         <scene sceneID="e81-ze-s5X">
             <objects>
-                <viewController storyboardIdentifier="datePicker" id="h1F-fi-g2d" customClass="CustomDatePickerViewController" customModule="Think_Shift_Release" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="datePicker" id="h1F-fi-g2d" customClass="CustomDatePickerViewController" customModule="EmotionTranslator" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="w0B-on-bTA"/>
                         <viewControllerLayoutGuide type="bottom" id="aA4-WY-aKQ"/>
@@ -601,7 +601,7 @@
         <!--Zilliance Text View Controller-->
         <scene sceneID="6rO-6T-WKc">
             <objects>
-                <viewController id="B3s-Re-taZ" customClass="ZillianceTextViewController" customModule="Think_Shift_Release" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="B3s-Re-taZ" customClass="ZillianceTextViewController" customModule="EmotionTranslator" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="NAC-bs-feL"/>
                         <viewControllerLayoutGuide type="bottom" id="A6W-W7-SgH"/>
@@ -615,7 +615,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" name="Muli-Regular" family="Muli" pointSize="11"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done"/>
                             </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
