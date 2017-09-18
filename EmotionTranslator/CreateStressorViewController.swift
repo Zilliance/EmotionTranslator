@@ -139,14 +139,13 @@ class CreateStressorViewController: UIViewController {
         
         self.backButton.frame = CGRect(x: 0, y: 0, width: 100, height: 20)
         self.backButton.setImage(#imageLiteral(resourceName: "chevronBack"), for: .normal)
-        self.backButton.imageEdgeInsets = UIEdgeInsetsMake(0, -40, 0, 0)
+        self.backButton.imageEdgeInsets = UIEdgeInsetsMake(0, -80, 0, 0)
         self.backButton.imageView?.contentMode = .scaleAspectFit
         self.backButton.addTarget(self, action: #selector(self.cancelAction(_:)), for: .touchUpInside)
-        self.backButton.setTitle("Home", for: .normal)
-        self.backButton.titleEdgeInsets = UIEdgeInsetsMake(0, -40, 0, 0)
         self.backButton.titleLabel?.font = UIFont.muliRegular(size: 16.0)
         
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(customView: self.backButton)
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Home", style: .plain, target: self, action: #selector(self.homeAction(_:)))
         
         let item = self.stressorItems[self.currentPageIndex]
         self.setupButton(for: item)
@@ -248,6 +247,16 @@ class CreateStressorViewController: UIViewController {
             
             self.moveToPage(page: self.currentPageIndex - index , direction: .reverse)
         }
+    }
+    
+     @IBAction func homeAction(_ sender: Any) {
+        
+        if (self.stressor.title != nil) {
+            self.save()
+        }
+        
+        self.navigationController?.popViewController(animated: true)
+        
     }
     
     private func save() {
