@@ -66,15 +66,16 @@ final class ItemsSelectionViewController: UITableViewController {
         }
         
         let item = items[indexPath.row]
-        let index = selectedItems.index(of: item)
-        if let index = index {
-            selectedItems.remove(at: index)
+        
+        if !self.selectedItems.contains(item) {
+            self.selectedItems.removeAll()
+            self.selectedItems.append(item)
         }
         else {
-            selectedItems.append(item)
+            self.selectedItems.removeAll()
         }
-        
-        tableView.reloadRows(at: [indexPath], with: .none)
+
+        tableView.reloadData()
     }
     
     func updateItems(newItems: [StringItem]) {
@@ -130,6 +131,7 @@ extension ItemsSelectionViewController: CustomEmotionViewControllerDelegate {
     
     func newItemSaved(newItem: StringItem) {
         
+        self.selectedItems.removeAll()
         self.selectedItems.append(newItem)
         
     }

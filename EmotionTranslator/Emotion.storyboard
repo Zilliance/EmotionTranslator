@@ -85,7 +85,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Social withdrawal/isolation" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NnK-kF-hbX">
-                                            <rect key="frame" x="28" y="13" width="171.5" height="18"/>
+                                            <rect key="frame" x="28" y="13.5" width="171.5" height="18"/>
                                             <fontDescription key="fontDescription" name="Muli-Light" family="Muli" pointSize="14"/>
                                             <color key="textColor" red="0.12549019607843137" green="0.19215686274509802" blue="0.25490196078431371" alpha="0.69999999999999996" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>

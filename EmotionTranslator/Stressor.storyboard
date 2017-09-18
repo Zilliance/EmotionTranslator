@@ -36,16 +36,16 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0YM-TP-iGG" userLabel="ContentView">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="663.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What’s Your Stressor?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u3q-B1-WGn">
-                                                <rect key="frame" x="20" y="30" width="335" height="21"/>
+                                                <rect key="frame" x="20" y="30" width="335" height="23"/>
                                                 <fontDescription key="fontDescription" name="Muli-SemiBold" family="Muli" pointSize="18"/>
                                                 <color key="textColor" red="0.12549019610000001" green="0.19215686274509802" blue="0.25490196078431371" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rA1-PS-XTz">
-                                                <rect key="frame" x="126.5" y="61" width="122" height="2"/>
+                                                <rect key="frame" x="126.5" y="63" width="122" height="2"/>
                                                 <color key="backgroundColor" red="0.88235294117647056" green="0.88235294117647056" blue="0.89411764705882346" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="2" id="NE7-B9-emE"/>
@@ -53,7 +53,7 @@
                                                 </constraints>
                                             </view>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="1yN-8j-uwG" customClass="KMPlaceholderTextView" customModule="KMPlaceholderTextView">
-                                                <rect key="frame" x="20" y="73" width="335" height="127"/>
+                                                <rect key="frame" x="20" y="75" width="335" height="127"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="127" id="Zc2-2M-OPk"/>
@@ -72,13 +72,13 @@
                                                 </connections>
                                             </textView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Examples:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tf1-Rq-Ypi">
-                                                <rect key="frame" x="20" y="210" width="65.5" height="16.5"/>
+                                                <rect key="frame" x="20" y="212" width="65.5" height="18"/>
                                                 <fontDescription key="fontDescription" name="Muli-LightItalic" family="Muli" pointSize="14"/>
                                                 <color key="textColor" red="0.62745098039215685" green="0.63921568627450975" blue="0.66274509803921566" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sbb-Ef-6sx">
-                                                <rect key="frame" x="315" y="95" width="32" height="15.5"/>
+                                                <rect key="frame" x="315" y="97" width="32" height="16.5"/>
                                                 <fontDescription key="fontDescription" name="Muli-Light" family="Muli" pointSize="13"/>
                                                 <color key="textColor" red="0.38431372549999998" green="0.42745098040000001" blue="0.83137254900000002" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
