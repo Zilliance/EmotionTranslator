@@ -310,7 +310,7 @@ class CreateStressorViewController: UIViewController {
             case .selection:
                 switch self.currentPageIndex {
                 case scene.emotion.pageIndex:
-                    self.showAlert(title: "Please select one or more items", message: "")
+                    self.showAlert(title: "Please select an emotion or add your own", message: "")
                 default:
                     self.showAlert(title: "Please select one or more items", message: "")
                 }
