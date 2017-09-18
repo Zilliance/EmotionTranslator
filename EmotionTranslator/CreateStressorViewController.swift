@@ -139,7 +139,7 @@ class CreateStressorViewController: UIViewController {
         
         self.backButton.frame = CGRect(x: 0, y: 0, width: 100, height: 20)
         self.backButton.setImage(#imageLiteral(resourceName: "chevronBack"), for: .normal)
-        self.backButton.imageEdgeInsets = UIEdgeInsetsMake(0, -60, 0, 0)
+        self.backButton.imageEdgeInsets = UIEdgeInsetsMake(0, -80, 0, 0)
         self.backButton.imageView?.contentMode = .scaleAspectFit
         self.backButton.addTarget(self, action: #selector(self.cancelAction(_:)), for: .touchUpInside)
         self.backButton.titleLabel?.font = UIFont.muliRegular(size: 16.0)
