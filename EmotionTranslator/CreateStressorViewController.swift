@@ -36,6 +36,7 @@ enum StressorScene: String {
     case name
     case introduction
     case conversation
+    case conversation2
     case takeaway
     case actionplan
 }
@@ -86,6 +87,7 @@ class CreateStressorViewController: UIViewController {
             StressorItem(for: .name, container: self),
             StressorItem(for: .introduction, container: self),
             StressorItem(for: .conversation, container: self),
+            StressorItem(for: .conversation2, container: self),
             StressorItem(for: .takeaway, container: self),
             StressorItem(for: .actionplan, container: self),
             ]

@@ -21,6 +21,7 @@ final class Stressor: Object {
         case name
         case introduction
         case conversation
+        case conversation2
         case takeaway
         case actionplan
         

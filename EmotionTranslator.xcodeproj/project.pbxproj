@@ -36,6 +36,8 @@
 		8C2B144B1F55FCDC002C0353 /* CreateStressorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2B144A1F55FCDC002C0353 /* CreateStressorViewController.swift */; };
 		8C2B144E1F56160D002C0353 /* Stressor.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C2B144D1F56160D002C0353 /* Stressor.storyboard */; };
 		8C2B14501F56161C002C0353 /* NewStressorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2B144F1F56161C002C0353 /* NewStressorViewController.swift */; };
+		8C3DDC601F7080FC00782F91 /* Conversation2.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C3DDC5F1F7080FC00782F91 /* Conversation2.storyboard */; };
+		8C3DDC621F70817000782F91 /* Conversation2TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C3DDC611F70817000782F91 /* Conversation2TableViewController.swift */; };
 		8C61D6841F57500D00389FC0 /* Emotion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C61D6831F57500D00389FC0 /* Emotion.swift */; };
 		8C61D6871F57531D00389FC0 /* Emotion.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C61D6861F57531D00389FC0 /* Emotion.storyboard */; };
 		8C61D6891F57568B00389FC0 /* EmotionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C61D6881F57568B00389FC0 /* EmotionViewController.swift */; };
@@ -146,6 +148,8 @@
 		8C2B144A1F55FCDC002C0353 /* CreateStressorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateStressorViewController.swift; sourceTree = "<group>"; };
 		8C2B144D1F56160D002C0353 /* Stressor.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Stressor.storyboard; sourceTree = "<group>"; };
 		8C2B144F1F56161C002C0353 /* NewStressorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewStressorViewController.swift; sourceTree = "<group>"; };
+		8C3DDC5F1F7080FC00782F91 /* Conversation2.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Conversation2.storyboard; sourceTree = "<group>"; };
+		8C3DDC611F70817000782F91 /* Conversation2TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Conversation2TableViewController.swift; sourceTree = "<group>"; };
 		8C61D6831F57500D00389FC0 /* Emotion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Emotion.swift; sourceTree = "<group>"; };
 		8C61D6861F57531D00389FC0 /* Emotion.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Emotion.storyboard; sourceTree = "<group>"; };
 		8C61D6881F57568B00389FC0 /* EmotionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmotionViewController.swift; sourceTree = "<group>"; };
@@ -360,6 +364,8 @@
 				8C61D6AA1F60B77100389FC0 /* ConversationIntroductionTableViewController.swift */,
 				8C61D6AC1F61CCCF00389FC0 /* Conversation.storyboard */,
 				8C61D6AE1F61D02100389FC0 /* ConversationTableViewController.swift */,
+				8C3DDC5F1F7080FC00782F91 /* Conversation2.storyboard */,
+				8C3DDC611F70817000782F91 /* Conversation2TableViewController.swift */,
 			);
 			name = Conversation;
 			sourceTree = "<group>";
@@ -680,6 +686,7 @@
 				8C61D69C1F59F77E00389FC0 /* Create.storyboard in Resources */,
 				8C61D6A41F606BA600389FC0 /* MonsterView.xib in Resources */,
 				E3BE110D1F53C83B00787921 /* Muli-Light.ttf in Resources */,
+				8C3DDC601F7080FC00782F91 /* Conversation2.storyboard in Resources */,
 				E3BE10F41F53C82300787921 /* zilliance privacy policy.html in Resources */,
 				E3BE11101F53C83B00787921 /* Muli-SemiBold.ttf in Resources */,
 				8C2B14361F54AB4D002C0353 /* Intro.storyboard in Resources */,
@@ -749,7 +756,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		293D0CB9958C872BDAF5BF59 /* [CP] Copy Pods Resources */ = {
@@ -810,7 +817,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		B47968CA9CCA82740275F62F /* [CP] Copy Pods Resources */ = {
@@ -889,7 +896,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		F55CD284E686B8AEE77CDD50 /* [CP] Embed Pods Frameworks */ = {
@@ -940,6 +947,7 @@
 				8C2B14281F54A942002C0353 /* CustomSideViewController.swift in Sources */,
 				E3BE10EA1F53C7D900787921 /* Stressor.swift in Sources */,
 				8C61D6891F57568B00389FC0 /* EmotionViewController.swift in Sources */,
+				8C3DDC621F70817000782F91 /* Conversation2TableViewController.swift in Sources */,
 				8C2B142E1F54A942002C0353 /* WebViewController.swift in Sources */,
 				8C2B140A1F548B67002C0353 /* HomeViewController.swift in Sources */,
 				8C61D69E1F59FB9D00389FC0 /* CreateMonsterViewController.swift in Sources */,
