@@ -91,28 +91,6 @@ class IntroViewController: UIViewController {
     }
    
     // MARK: -
-
-    @IBAction func continueAction(_ sender: UIButton) {
-        
-        guard let window = UIApplication.shared.keyWindow else {
-            return
-        }
-        
-        guard let rootViewController = window.rootViewController else {
-            return
-        }
-        
-        let sideMenuViewController = CustomSideViewController()
-        sideMenuViewController.setupHome()
-        
-        sideMenuViewController.view.frame = rootViewController.view.frame
-        sideMenuViewController.view.layoutIfNeeded()
-        
-        UIView.transition(with: window, duration: 0.3, options: .transitionCrossDissolve, animations: {
-            window.rootViewController = sideMenuViewController
-        }, completion: nil)
-    
-    }
     
     @IBAction func showTour() {
         guard let onboarding = UIStoryboard(name: "Tour", bundle: nil).instantiateInitialViewController() as? TourPageViewController else {

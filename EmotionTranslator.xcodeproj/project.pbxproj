@@ -10,6 +10,8 @@
 		4F2CDCD71F55EB8A0048FA9C /* Analytics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F2CDCD61F55EB8A0048FA9C /* Analytics.swift */; };
 		4F2CDCD91F55EC920048FA9C /* Analytics+EmotionTranslator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F2CDCD81F55EC920048FA9C /* Analytics+EmotionTranslator.swift */; };
 		4F2CDCDC1F55FA600048FA9C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4F2CDCDB1F55FA600048FA9C /* GoogleService-Info.plist */; };
+		4F3C6AF61F71302D0040AECD /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F3C6AF51F71302D0040AECD /* ProfileViewController.swift */; };
+		4F3C6AF81F7143370040AECD /* FileUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F3C6AF71F7143370040AECD /* FileUtils.swift */; };
 		7F93BEBB8175AAE788CA6307 /* Pods_EmotionTranslatorUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C65FD7AAF27DCACDA7632C21 /* Pods_EmotionTranslatorUITests.framework */; };
 		889D79537741AC722652C136 /* Pods_EmotionTranslator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAA997AB957049B5551F71EB /* Pods_EmotionTranslator.framework */; };
 		8C2B14081F547DF7002C0353 /* HomeViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C2B14071F547DF7002C0353 /* HomeViewController.storyboard */; };
@@ -118,6 +120,8 @@
 		4F2CDCD61F55EB8A0048FA9C /* Analytics.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Analytics.swift; sourceTree = "<group>"; };
 		4F2CDCD81F55EC920048FA9C /* Analytics+EmotionTranslator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Analytics+EmotionTranslator.swift"; sourceTree = "<group>"; };
 		4F2CDCDB1F55FA600048FA9C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		4F3C6AF51F71302D0040AECD /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		4F3C6AF71F7143370040AECD /* FileUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileUtils.swift; sourceTree = "<group>"; };
 		6DC6FC489D947818823F215C /* Pods-EmotionTranslatorTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmotionTranslatorTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EmotionTranslatorTests/Pods-EmotionTranslatorTests.debug.xcconfig"; sourceTree = "<group>"; };
 		8C2B14071F547DF7002C0353 /* HomeViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = HomeViewController.storyboard; sourceTree = "<group>"; };
 		8C2B14091F548B67002C0353 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -286,6 +290,7 @@
 			children = (
 				8C2B14341F54AB4D002C0353 /* Intro.storyboard */,
 				8C2B14351F54AB4D002C0353 /* IntroViewController.swift */,
+				4F3C6AF51F71302D0040AECD /* ProfileViewController.swift */,
 			);
 			name = Intro;
 			sourceTree = "<group>";
@@ -496,6 +501,7 @@
 		E3BE10EC1F53C7EF00787921 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				4F3C6AF71F7143370040AECD /* FileUtils.swift */,
 			);
 			name = Utilities;
 			sourceTree = "<group>";
@@ -938,9 +944,11 @@
 				E3BE10E81F53C7D400787921 /* User.swift in Sources */,
 				8C6EB5E61F6B025F0097FB13 /* AddToCalendarViewController.swift in Sources */,
 				8C2B14451F55CAC5002C0353 /* TourSceneViewController.swift in Sources */,
+				4F3C6AF81F7143370040AECD /* FileUtils.swift in Sources */,
 				8C61D6AB1F60B77100389FC0 /* ConversationIntroductionTableViewController.swift in Sources */,
 				8C61D6A61F606D3800389FC0 /* MonsterView.swift in Sources */,
 				8C61D6AF1F61D02100389FC0 /* ConversationTableViewController.swift in Sources */,
+				4F3C6AF61F71302D0040AECD /* ProfileViewController.swift in Sources */,
 				8C61D6A21F5F4DB600389FC0 /* MonsterNameViewController.swift in Sources */,
 				8C61D68E1F57586300389FC0 /* AddItemCell.swift in Sources */,
 				8C2B143F1F54BD69002C0353 /* AppConstants.swift in Sources */,
