@@ -132,6 +132,7 @@ final class ProfileViewController: UIViewController {
     
     @IBAction func continueAction(_ sender: UIButton) {
         
+        saveData()
         showHomeScreen()
         
     }
