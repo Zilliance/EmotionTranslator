@@ -36,6 +36,14 @@
 	</dict>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSAppleMusicUsageDescription</key>
+	<string>Add your favorite songs</string>
+	<key>NSCalendarsUsageDescription</key>
+	<string>Emotion Translator would like to add a reminder to your calendar</string>
+	<key>NSCameraUsageDescription</key>
+	<string>Add a profile picture</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Add your favorite videos and photos</string>
 	<key>UIAppFonts</key>
 	<array>
 		<string>Muli-Black.ttf</string>
@@ -59,12 +67,5 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
-    <key>NSAppleMusicUsageDescription</key>
-    <string>Add your favorite songs</string>
-    <key>NSCalendarsUsageDescription</key>
-    <string>Emotion Translator would like to add a reminder to your calendar</string>
-    <key>NSPhotoLibraryUsageDescription</key>
-    <string>Add your favorite videos and photos</string>
-
 </dict>
 </plist>

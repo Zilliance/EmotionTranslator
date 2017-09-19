@@ -21,7 +21,7 @@
         <scene sceneID="KXV-2M-fYY">
             <objects>
                 <navigationController navigationBarHidden="YES" id="sEP-Bn-ZgN" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="3DB-e6-koJ">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="3DB-e6-koJ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -141,7 +141,7 @@
                                         </constraints>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" name="Muli-Regular" family="Muli" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="done"/>
                                     </textField>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icProfile" translatesAutoresizingMaskIntoConstraints="NO" id="2lX-vV-EGt">
                                         <rect key="frame" x="36" y="123" width="18" height="18"/>
