@@ -43,7 +43,7 @@
 	<key>NSCameraUsageDescription</key>
 	<string>Add a profile picture</string>
 	<key>NSPhotoLibraryUsageDescription</key>
-	<string>Add your favorite videos and photos</string>
+	<string>Choose your profile picture</string>
 	<key>UIAppFonts</key>
 	<array>
 		<string>Muli-Black.ttf</string>
