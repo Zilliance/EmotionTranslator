@@ -17,8 +17,29 @@ class Conversation2TableViewController: UITableViewController {
     
     var questionsEnded: (() -> ())? = nil
     
+    
+    private var questions = ["What’s the main message you’re trying to give me?",
+                             "How have you been trying to help me?",
+                             "What do you need to feel better?",
+                             "What is an action step you wish I would take?",
+                             ]
+    
+    private var placeholders = ["My main message to you is...",
+                                 "I’m trying to help...",
+                                 "What I need to feel better is...",
+                                 "I wish you would…",
+                                 ]
+    
+    fileprivate var replies: [String] = ["" ,"" ,"" ,"" ,]
+    
+    private var elements: [Item] = []
+    
+    var questionsCompleted = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.tableView.rowHeight = UITableViewAutomaticDimension
+        self.tableView.estimatedRowHeight = 80
         
         if let monsterName = self.currentStressor.monsterName {
             
@@ -29,70 +50,68 @@ class Conversation2TableViewController: UITableViewController {
             
             self.headerLabel.attributedText = attributedString
         }
+        
+        self.prepareQuestions()
 
     }
 
+    
+    private func prepareQuestions() {
+        
+        for (question, placeholder) in zip(self.questions, self.placeholders) {
+            
+            self.elements.append(Item(text: question, type: .question))
+            self.elements.append(Item(text: placeholder, type: .box))
+        }
+    }
 
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return self.elements.count
     }
-
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
-
-        return cell
+        let item = self.elements[indexPath.row]
+        
+        switch item.type {
+        case .question:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "QuestionCell", for: indexPath) as! QuestionCell
+            cell.questionLabel.text = item.text
+            cell.questionNumberLabel.text = "Question \((indexPath.row + 1)/2 + 1)"
+            return cell
+        case .answer:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "ResponseCell", for: indexPath) as! ResponseCell
+            cell.responseLabel.text = item.text
+            return cell
+            
+        case .box:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "ResponseEntryCell", for: indexPath) as! ResponseEntryCell
+            
+            
+            let text = self.replies[(indexPath.row)/2]
+            
+            cell.nameLabel.text = self.currentStressor.monsterName
+            
+            cell.entryTextView.text = ""
+            
+            if !text.isEmpty {
+                cell.entryTextView.text = text
+            }
+            else {
+                cell.entryTextView.placeholder = item.text
+            }
+            
+            cell.reply = { [unowned self] text in
+                self.replies[indexPath.row/2] = text
+                let finished = self.replies.filter { $0.isEmpty }.count == 0
+                if finished {
+                    self.questionsEnded?()
+                }
+            }
+            return cell
+        }
     }
-    */
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
 

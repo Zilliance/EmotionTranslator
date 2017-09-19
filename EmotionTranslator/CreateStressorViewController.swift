@@ -56,7 +56,8 @@ class CreateStressorViewController: UIViewController {
             }
             
             viewController.questionsEnded = {
-                 container.continueButton.setTitle("CONTINUE", for: .normal)
+                container.continueButton.setTitle("CONTINUE", for: .normal)
+                container.continueButton.isEnabled = true
             }
             
             self.viewController = viewController as! UIViewController
@@ -182,6 +183,10 @@ class CreateStressorViewController: UIViewController {
             if let vc = item.viewController as? ConversationTableViewController {
                 let text = vc.questionsCompleted ? "CONTINUE" : "REPLY"
                 self.continueButton.setTitle(text, for: .normal)
+            }
+        case .conversation2:
+            if let vc = item.viewController as? Conversation2TableViewController {
+                self.continueButton.isEnabled = vc.questionsCompleted
             }
         case .actionplan:
             UIView.animate(withDuration: 0.3) {

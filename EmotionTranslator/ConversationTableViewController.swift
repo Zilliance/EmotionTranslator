@@ -12,7 +12,6 @@ import KMPlaceholderTextView
 class QuestionCell: UITableViewCell {
     
     @IBOutlet weak var questionLabel: UILabel!
-    @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var questionNumberLabel: UILabel!
     
 }
@@ -20,6 +19,7 @@ class QuestionCell: UITableViewCell {
 class ResponseEntryCell: UITableViewCell {
     
     @IBOutlet weak var entryTextView: KMPlaceholderTextView!
+    @IBOutlet weak var nameLabel: UILabel!
     
     var reply: ((String) -> ())? = nil
     
@@ -49,23 +49,24 @@ class ResponseCell: UITableViewCell {
     
 }
 
+enum ItemType {
+    case question
+    case answer
+    case box
+}
+
+struct Item {
+    var text: String
+    var type: ItemType
+}
+
+struct Question {
+    var text: String
+    var number: Int
+}
+
 class ConversationTableViewController: UITableViewController {
-    
-    enum ItemType {
-        case question
-        case answer
-        case box
-    }
-    
-    struct Item {
-        var text: String
-        var type: ItemType
-    }
-    
-    struct Question {
-        var text: String
-        var number: Int
-    }
+
     
     var currentStressor: Stressor!
     var gotoMonsterName: (() -> ())? = nil
@@ -156,7 +157,6 @@ class ConversationTableViewController: UITableViewController {
         case .question:
             let cell = tableView.dequeueReusableCell(withIdentifier: "QuestionCell", for: indexPath) as! QuestionCell
             cell.questionLabel.text = item.text
-            cell.nameLabel.text = self.currentStressor.monsterName
             cell.questionNumberLabel.text = "Question \((indexPath.row + 1)/2 + 1)"
             return cell
         case .answer:
@@ -166,6 +166,8 @@ class ConversationTableViewController: UITableViewController {
             
         case .box:
             let cell = tableView.dequeueReusableCell(withIdentifier: "ResponseEntryCell", for: indexPath) as! ResponseEntryCell
+            
+            cell.nameLabel.text = self.currentStressor.monsterName
             cell.reply = { [unowned self] text in
                 self.insert(reply: text, indexPath: indexPath)
                 //tableView.reloadRows(at: [indexPath], with: .automatic)
