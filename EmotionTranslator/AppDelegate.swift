@@ -30,15 +30,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         var rootViewController: UIViewController?
         
-//        if UserDefaults.standard.bool(forKey: "IntroShown") {
-//            let sideMenuViewController = CustomSideViewController()
-//            sideMenuViewController.setupHome()
-//            rootViewController = sideMenuViewController
-//        }
-//        else {
+        if UserDefaults.standard.bool(forKey: "IntroShown") {
+            let sideMenuViewController = CustomSideViewController()
+            sideMenuViewController.setupHome()
+            rootViewController = sideMenuViewController
+        }
+        else {
             UserDefaults.standard.set(true, forKey: "IntroShown")
             rootViewController = UIStoryboard(name: "Intro", bundle: nil).instantiateInitialViewController()
-//        }
+        }
         
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.rootViewController = rootViewController
