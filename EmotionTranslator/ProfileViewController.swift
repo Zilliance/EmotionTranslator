@@ -15,13 +15,13 @@ final class ProfileViewController: UIViewController {
     @IBOutlet var nameTextField: UITextField!
     @IBOutlet var avatarButton: UIButton!
     
-    var showNextButtons = true
-    
+    var presentedFromIntro = true
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        continueButton.isHidden = !showNextButtons
-        skipButton.isHidden = !showNextButtons
+        continueButton.isHidden = !self.presentedFromIntro
+        skipButton.isHidden = !self.presentedFromIntro
 
         //text inset for textfield
         nameTextField.layer.sublayerTransform = CATransform3DMakeTranslation(50, 0, 0);
@@ -30,7 +30,23 @@ final class ProfileViewController: UIViewController {
         nameTextField.layer.borderWidth = 1.0
         nameTextField.layer.borderColor = UIColor.color(forRed: 235, green: 235, blue: 235, alpha: 1).cgColor
         
+        if !self.presentedFromIntro {
+            self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "menu-icon"), style: .plain, target: self, action: #selector(showLeftMenu))
+        }
+        
         loadUserData()
+    }
+    
+    @objc private func showLeftMenu() {
+        self.sideMenuController?.toggle()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        if (!self.presentedFromIntro) {
+            self.saveData()
+        }
     }
     
     func loadUserData() {
@@ -100,8 +116,7 @@ final class ProfileViewController: UIViewController {
         
     }
     
-    @IBAction func continueAction(_ sender: UIButton) {
-        
+    fileprivate func saveData() {
         let user = Database.shared.user
         if let name = nameTextField.text?.trimmed {
             Database.shared.save {
@@ -113,6 +128,9 @@ final class ProfileViewController: UIViewController {
             let filename = FileUtils.profileImagePath
             try! data.write(to: filename)
         }
+    }
+    
+    @IBAction func continueAction(_ sender: UIButton) {
         
         showHomeScreen()
         
@@ -136,7 +154,6 @@ extension ProfileViewController: UIImagePickerControllerDelegate, UINavigationCo
         {
             self.avatarButton.setImage(image, for: .normal)
             self.avatarButton.layer.cornerRadius = self.avatarButton.frame.size.width / 2.0
-            
         }
         
         picker.dismiss(animated: true, completion: nil)

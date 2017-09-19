@@ -12,7 +12,8 @@ import SideMenuController
 
 final class LeftMenuViewController: UIViewController {
     enum Row: Int {
-        case howItWorks = 0
+        case profile = 0
+        case howItWorks
         case tour
         case videos
         case faq
@@ -109,6 +110,16 @@ final class LeftMenuViewController: UIViewController {
         self.sideMenuController?.embed(centerViewController: nav)
     }
     
+    func showProfile() {
+        guard  let vc = UIStoryboard(name: "Intro", bundle: nil).instantiateViewController(withIdentifier: "Profile") as? ProfileViewController else {
+            assertionFailure()
+            return
+        }
+        vc.presentedFromIntro = false
+        let nav = UINavigationController(rootViewController: vc)
+        self.sideMenuController?.embed(centerViewController: nav)
+    }
+    
     func showVideo() {
         guard let vc  = UIStoryboard(name: "VideoPlayer", bundle: nil).instantiateInitialViewController() else {
             assertionFailure()
@@ -152,6 +163,8 @@ extension LeftMenuViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         switch Row(rawValue: indexPath.row) {
+        case .profile?:
+            self.showProfile()
         case .tour?:
             self.showTour()
         case .videos?:

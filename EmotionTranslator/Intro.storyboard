@@ -102,7 +102,7 @@
         <!--Profile View Controller-->
         <scene sceneID="8hq-uV-8Ky">
             <objects>
-                <viewController id="yoH-GT-fhq" customClass="ProfileViewController" customModule="EmotionTranslator" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Profile" id="yoH-GT-fhq" customClass="ProfileViewController" customModule="EmotionTranslator" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="cwy-Vs-zC7"/>
                         <viewControllerLayoutGuide type="bottom" id="2OI-v0-e3t"/>
