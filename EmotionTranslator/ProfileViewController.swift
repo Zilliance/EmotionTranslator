@@ -8,7 +8,7 @@
 
 import UIKit
 
-final class ProfileViewController: UIViewController {
+final class ProfileViewController: AutoscrollableViewController {
     
     @IBOutlet var continueButton: UIButton!
     @IBOutlet var skipButton: UIButton!
@@ -16,6 +16,9 @@ final class ProfileViewController: UIViewController {
     @IBOutlet var avatarButton: UIButton!
     
     var presentedFromIntro = true
+    
+    private var hadNameSet = false
+    private var hadImageSet = false
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,6 +32,8 @@ final class ProfileViewController: UIViewController {
         nameTextField.layer.cornerRadius = 3
         nameTextField.layer.borderWidth = 1.0
         nameTextField.layer.borderColor = UIColor.color(forRed: 235, green: 235, blue: 235, alpha: 1).cgColor
+        nameTextField.delegate = self
+        nameTextField.returnKeyType = .done
         
         if !self.presentedFromIntro {
             self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "menu-icon"), style: .plain, target: self, action: #selector(showLeftMenu))
@@ -56,10 +61,12 @@ final class ProfileViewController: UIViewController {
             let image = UIImage(data: data)
             self.avatarButton.setImage(image, for: .normal)
             self.avatarButton.layer.cornerRadius = self.avatarButton.frame.size.width / 2.0
+            self.hadImageSet = true
         }
         
         if let userName = Database.shared.user.name {
             self.nameTextField.text = userName
+            self.hadNameSet = true
         }
         
     }
@@ -122,11 +129,20 @@ final class ProfileViewController: UIViewController {
             Database.shared.save {
                 user?.name = name
             }
+            
+            if (!self.hadNameSet) {
+                Analytics.shared.send(event: EmotionTranslatorAnalytics.EmotionTranslatorEvent.profileImageSet)
+            }
         }
         
         if let image = avatarButton.imageView?.image, let data = UIImagePNGRepresentation(image) {
             let filename = FileUtils.profileImagePath
-            try! data.write(to: filename)
+            try? data.write(to: filename)
+            
+            if (!self.hadImageSet) {
+                Analytics.shared.send(event: EmotionTranslatorAnalytics.EmotionTranslatorEvent.profileImageSet)
+            }
+
         }
     }
     
@@ -139,6 +155,10 @@ final class ProfileViewController: UIViewController {
     
     @IBAction func skipAction() {
         showHomeScreen()
+    }
+    
+    override var editingViewFrame: CGRect? {
+        return self.nameTextField.frame
     }
 
     
@@ -158,6 +178,14 @@ extension ProfileViewController: UIImagePickerControllerDelegate, UINavigationCo
         }
         
         picker.dismiss(animated: true, completion: nil)
+        
 
+    }
+}
+
+extension ProfileViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
     }
 }
