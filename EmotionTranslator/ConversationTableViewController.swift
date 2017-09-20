@@ -12,7 +12,6 @@ import KMPlaceholderTextView
 class QuestionCell: UITableViewCell {
     
     @IBOutlet weak var questionLabel: UILabel!
-    @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var questionNumberLabel: UILabel!
     
 }
@@ -20,23 +19,33 @@ class QuestionCell: UITableViewCell {
 class ResponseEntryCell: UITableViewCell {
     
     @IBOutlet weak var entryTextView: KMPlaceholderTextView!
+    @IBOutlet weak var nameLabel: UILabel!
     
     var reply: ((String) -> ())? = nil
+    var update: ((String) -> ())? = nil
     
     override func awakeFromNib() {
         self.entryTextView.layer.cornerRadius = UIConstants.Appearance.cornerRadius
         self.entryTextView.layer.borderWidth = UIConstants.Appearance.borderWidth
-        self.entryTextView.layer.borderColor = UIColor.lightGray.cgColor
+        self.entryTextView.layer.borderColor = UIColor.silverColor.cgColor
         
     }
 }
 
 extension ResponseEntryCell: UITextViewDelegate {
     
+    func textViewDidEndEditing(_ textView: UITextView) {
+        if !textView.text.isEmpty {
+            self.update?(textView.text)
+        }
+    }
+    
     func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
-        if (text == "\n" && !textView.text.trimmed.isEmpty) {
-           self.reply?(textView.text)
-           textView.resignFirstResponder()
+        if (text == "\n") {
+            if !textView.text.isEmpty {
+                self.reply?(textView.text)
+            }
+            textView.resignFirstResponder()
         }
         return true
     }
@@ -49,23 +58,24 @@ class ResponseCell: UITableViewCell {
     
 }
 
+enum ItemType {
+    case question
+    case answer
+    case box
+}
+
+struct Item {
+    var text: String
+    var type: ItemType
+}
+
+struct Question {
+    var text: String
+    var number: Int
+}
+
 class ConversationTableViewController: UITableViewController {
-    
-    enum ItemType {
-        case question
-        case answer
-        case box
-    }
-    
-    struct Item {
-        var text: String
-        var type: ItemType
-    }
-    
-    struct Question {
-        var text: String
-        var number: Int
-    }
+
     
     var currentStressor: Stressor!
     var gotoMonsterName: (() -> ())? = nil
@@ -156,7 +166,6 @@ class ConversationTableViewController: UITableViewController {
         case .question:
             let cell = tableView.dequeueReusableCell(withIdentifier: "QuestionCell", for: indexPath) as! QuestionCell
             cell.questionLabel.text = item.text
-            cell.nameLabel.text = self.currentStressor.monsterName
             cell.questionNumberLabel.text = "Question \((indexPath.row + 1)/2 + 1)"
             return cell
         case .answer:
@@ -166,10 +175,13 @@ class ConversationTableViewController: UITableViewController {
             
         case .box:
             let cell = tableView.dequeueReusableCell(withIdentifier: "ResponseEntryCell", for: indexPath) as! ResponseEntryCell
+            
+            cell.nameLabel.text = self.currentStressor.monsterName
             cell.reply = { [unowned self] text in
                 self.insert(reply: text, indexPath: indexPath)
                 //tableView.reloadRows(at: [indexPath], with: .automatic)
             }
+            
             cell.entryTextView.text = ""
             return cell
         }

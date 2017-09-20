@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="hvE-IK-Qbo">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="hvE-IK-Qbo">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -40,14 +40,14 @@
                                                 <constraint firstAttribute="width" constant="3" id="YoU-Rt-KTJ"/>
                                             </constraints>
                                         </view>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="completed-stressor" translatesAutoresizingMaskIntoConstraints="NO" id="ARk-F8-wME">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="user-conversation" translatesAutoresizingMaskIntoConstraints="NO" id="ARk-F8-wME">
                                             <rect key="frame" x="18" y="45.5" width="35" height="35"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="35" id="D9Z-UR-LDb"/>
                                                 <constraint firstAttribute="width" constant="35" id="E8K-QS-EpW"/>
                                             </constraints>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Angry Oswald" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NEd-vt-BbH">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Me" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NEd-vt-BbH">
                                             <rect key="frame" x="65" y="36" width="290" height="15.5"/>
                                             <fontDescription key="fontDescription" name="Muli-Regular" family="Muli" pointSize="12"/>
                                             <color key="textColor" red="0.45882352939999999" green="0.46666666670000001" blue="0.48627450979999998" alpha="1" colorSpace="calibratedRGB"/>
@@ -99,7 +99,6 @@
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
-                                    <outlet property="nameLabel" destination="NEd-vt-BbH" id="Qyh-lh-JEW"/>
                                     <outlet property="questionLabel" destination="imn-bH-Eoe" id="DuN-rf-fL9"/>
                                     <outlet property="questionNumberLabel" destination="YBV-Eh-IWQ" id="ajL-gh-DkK"/>
                                 </connections>
@@ -118,7 +117,7 @@
                                                 <constraint firstAttribute="width" constant="3" id="yHZ-K9-N11"/>
                                             </constraints>
                                         </view>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="user-conversation" translatesAutoresizingMaskIntoConstraints="NO" id="ae7-YQ-NmF">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="completed-stressor" translatesAutoresizingMaskIntoConstraints="NO" id="ae7-YQ-NmF">
                                             <rect key="frame" x="18" y="40.5" width="35" height="35"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="35" id="B0f-ia-wvf"/>
@@ -178,7 +177,15 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="132"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="user-conversation" translatesAutoresizingMaskIntoConstraints="NO" id="ixP-E3-929">
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tmb-4C-Q0n">
+                                            <rect key="frame" x="34" y="0.0" width="3" height="132"/>
+                                            <color key="backgroundColor" red="0.94117647059999998" green="0.94117647059999998" blue="0.94117647059999998" alpha="1" colorSpace="calibratedRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="3" id="Acl-vo-nnQ"/>
+                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="3" id="iMv-h8-Zjt"/>
+                                            </constraints>
+                                        </view>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="completed-stressor" translatesAutoresizingMaskIntoConstraints="NO" id="ixP-E3-929">
                                             <rect key="frame" x="18" y="2.5" width="35" height="35"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="35" id="0bW-Y9-tKA"/>
@@ -192,10 +199,10 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="6Nl-qN-S01" customClass="KMPlaceholderTextView" customModule="KMPlaceholderTextView">
-                                            <rect key="frame" x="18" y="47.5" width="339" height="66"/>
+                                            <rect key="frame" x="65" y="48" width="292" height="66"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="66" id="fvb-Zf-uNm"/>
+                                                <constraint firstAttribute="height" constant="66" id="qMY-iQ-Xge"/>
                                             </constraints>
                                             <color key="textColor" red="0.12549019610000001" green="0.19215686269999999" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
                                             <fontDescription key="fontDescription" name="Muli-Regular" family="Muli" pointSize="12"/>
@@ -208,22 +215,26 @@
                                             </connections>
                                         </textView>
                                     </subviews>
-                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="backgroundColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
                                     <constraints>
+                                        <constraint firstItem="Tmb-4C-Q0n" firstAttribute="top" secondItem="4NF-E3-ym3" secondAttribute="top" id="2zk-r1-Vbo"/>
+                                        <constraint firstItem="6Nl-qN-S01" firstAttribute="top" secondItem="Cas-FU-f3Z" secondAttribute="bottom" constant="20.5" id="31e-kZ-PTZ"/>
                                         <constraint firstItem="Cas-FU-f3Z" firstAttribute="top" secondItem="4NF-E3-ym3" secondAttribute="top" constant="12" id="4e7-Fd-K79"/>
-                                        <constraint firstItem="6Nl-qN-S01" firstAttribute="top" secondItem="ixP-E3-929" secondAttribute="bottom" constant="10" id="AoS-MY-zzb"/>
                                         <constraint firstItem="Cas-FU-f3Z" firstAttribute="leading" secondItem="ixP-E3-929" secondAttribute="trailing" constant="12" id="Dgx-gE-H30"/>
                                         <constraint firstItem="ixP-E3-929" firstAttribute="leading" secondItem="4NF-E3-ym3" secondAttribute="leading" constant="18" id="M49-Ef-CYE"/>
-                                        <constraint firstAttribute="bottom" secondItem="6Nl-qN-S01" secondAttribute="bottom" constant="18" id="R4E-3y-hK5"/>
-                                        <constraint firstItem="6Nl-qN-S01" firstAttribute="leading" secondItem="4NF-E3-ym3" secondAttribute="leading" constant="18" id="SD4-DA-rdn"/>
+                                        <constraint firstAttribute="bottom" secondItem="6Nl-qN-S01" secondAttribute="bottom" constant="18" id="P66-aw-12t"/>
                                         <constraint firstItem="ixP-E3-929" firstAttribute="top" secondItem="4NF-E3-ym3" secondAttribute="top" constant="2" id="TBz-hf-Gev"/>
-                                        <constraint firstAttribute="trailing" secondItem="6Nl-qN-S01" secondAttribute="trailing" constant="18" id="Ygx-Ua-iLI"/>
+                                        <constraint firstAttribute="bottom" secondItem="Tmb-4C-Q0n" secondAttribute="bottom" id="Z5m-v6-FP0"/>
                                         <constraint firstAttribute="trailing" secondItem="Cas-FU-f3Z" secondAttribute="trailing" constant="20" id="ake-T0-apm"/>
+                                        <constraint firstItem="Tmb-4C-Q0n" firstAttribute="leading" secondItem="4NF-E3-ym3" secondAttribute="leading" constant="34" id="bvA-Jq-sHG"/>
+                                        <constraint firstAttribute="trailing" secondItem="6Nl-qN-S01" secondAttribute="trailing" constant="18" id="uPy-aq-wtO"/>
+                                        <constraint firstItem="6Nl-qN-S01" firstAttribute="leading" secondItem="Tmb-4C-Q0n" secondAttribute="trailing" constant="28" id="wpi-8G-aew"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="entryTextView" destination="6Nl-qN-S01" id="WY0-Al-qtE"/>
+                                    <outlet property="nameLabel" destination="Cas-FU-f3Z" id="Kmu-Vw-5wr"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>

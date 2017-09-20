@@ -36,6 +36,7 @@ enum StressorScene: String {
     case name
     case introduction
     case conversation
+    case conversation2
     case takeaway
     case actionplan
 }
@@ -55,7 +56,8 @@ class CreateStressorViewController: UIViewController {
             }
             
             viewController.questionsEnded = {
-                 container.continueButton.setTitle("CONTINUE", for: .normal)
+                container.continueButton.setTitle("CONTINUE", for: .normal)
+                container.continueButton.isEnabled = true
             }
             
             self.viewController = viewController as! UIViewController
@@ -86,6 +88,7 @@ class CreateStressorViewController: UIViewController {
             StressorItem(for: .name, container: self),
             StressorItem(for: .introduction, container: self),
             StressorItem(for: .conversation, container: self),
+            StressorItem(for: .conversation2, container: self),
             StressorItem(for: .takeaway, container: self),
             StressorItem(for: .actionplan, container: self),
             ]
@@ -180,6 +183,10 @@ class CreateStressorViewController: UIViewController {
             if let vc = item.viewController as? ConversationTableViewController {
                 let text = vc.questionsCompleted ? "CONTINUE" : "REPLY"
                 self.continueButton.setTitle(text, for: .normal)
+            }
+        case .conversation2:
+            if let vc = item.viewController as? Conversation2TableViewController {
+                self.continueButton.isEnabled = vc.questionsCompleted
             }
         case .actionplan:
             UIView.animate(withDuration: 0.3) {
