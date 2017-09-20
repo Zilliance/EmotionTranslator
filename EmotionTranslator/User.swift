@@ -16,4 +16,7 @@ final class User: Object {
     var incompleteStressors: [Stressor] {
         return Array( self.stressors.filter("completed = false") )
     }
+    
+    dynamic var name: String?
+
 }

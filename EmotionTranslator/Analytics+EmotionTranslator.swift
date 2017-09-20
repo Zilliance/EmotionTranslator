@@ -54,6 +54,10 @@ class EmotionTranslatorAnalytics: ZillianceAnalytics {
         case questionAdded
         case questionAnswered
         
+        //Profile
+        case profileImageSet
+        case profileNameSet
+        
     }
     
 }
