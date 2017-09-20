@@ -44,11 +44,6 @@ final class Stressor: Object {
     
     dynamic var hasCustomMonster = false
     
-    dynamic var answer1: String?
-    dynamic var answer2: String?
-    dynamic var answer3: String?
-    dynamic var answer4: String?
-    
     dynamic var lastEditedFacet: Facet = .stressor
     
     dynamic var id: String = UUID().uuidString
@@ -56,5 +51,20 @@ final class Stressor: Object {
     override class func primaryKey() -> String? {
         return "id"
     }
+    
+    // Freeform conversation
+    
+    let conversation = List<QuestionAnswer>()
+    
+    // Four questions conversation (answers only stored)
+    
+    dynamic var answer1: String?
+    dynamic var answer2: String?
+    dynamic var answer3: String?
+    dynamic var answer4: String?
+}
 
+class QuestionAnswer: Object {
+    dynamic var question: String?
+    dynamic var answer: String?
 }
