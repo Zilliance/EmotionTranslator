@@ -44,7 +44,7 @@ final class WebViewController: UIViewController, UIWebViewDelegate
     }
     
     func webView(_ webView: UIWebView, shouldStartLoadWith request: URLRequest, navigationType: UIWebViewNavigationType) -> Bool {
-        if request.url?.absoluteString == "zilliance://thinkshiftrelease/tour" {
+        if request.url?.absoluteString == "zilliance://emotion-translator/tour" {
             self.showTour()
             return false
         }
