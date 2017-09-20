@@ -58,13 +58,21 @@ class Conversation2TableViewController: UITableViewController {
     
     private func prepareQuestions() {
         
-        for (question, placeholder) in zip(self.questions, self.placeholders) {
-            
+        if let question = self.questions.first , let placeholder = self.placeholders.first {
             self.elements.append(Item(text: question, type: .question))
             self.elements.append(Item(text: placeholder, type: .box))
+            self.questions.removeFirst()
+            self.placeholders.removeFirst()
+            
+            self.tableView.insertRows(at: [IndexPath(item: self.elements.count - 1, section: 0), IndexPath(item: self.elements.count - 2, section: 0)], with: .automatic)
+            
+            if elements.count > 0 {
+                self.tableView.scrollToRow(at: IndexPath(item:elements.count-1, section: 0), at: .bottom, animated: true)
+            }
         }
+        
+        
     }
-
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
@@ -104,11 +112,18 @@ class Conversation2TableViewController: UITableViewController {
             
             cell.reply = { [unowned self] text in
                 self.replies[indexPath.row/2] = text
+                self.prepareQuestions()
                 let finished = self.replies.filter { $0.isEmpty }.count == 0
                 if finished {
                     self.questionsEnded?()
                 }
             }
+            
+            cell.update = { [unowned self] text in
+                self.replies[indexPath.row/2] = text
+                tableView.reloadData()
+            }
+            
             return cell
         }
     }

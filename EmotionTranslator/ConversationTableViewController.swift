@@ -22,6 +22,7 @@ class ResponseEntryCell: UITableViewCell {
     @IBOutlet weak var nameLabel: UILabel!
     
     var reply: ((String) -> ())? = nil
+    var update: ((String) -> ())? = nil
     
     override func awakeFromNib() {
         self.entryTextView.layer.cornerRadius = UIConstants.Appearance.cornerRadius
@@ -33,8 +34,12 @@ class ResponseEntryCell: UITableViewCell {
 
 extension ResponseEntryCell: UITextViewDelegate {
     
+    func textViewDidEndEditing(_ textView: UITextView) {
+        self.update?(textView.text)
+    }
+    
     func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
-        if (text == "\n" && !textView.text.trimmed.isEmpty) {
+        if (text == "\n") {
            self.reply?(textView.text)
            textView.resignFirstResponder()
         }
@@ -172,6 +177,7 @@ class ConversationTableViewController: UITableViewController {
                 self.insert(reply: text, indexPath: indexPath)
                 //tableView.reloadRows(at: [indexPath], with: .automatic)
             }
+            
             cell.entryTextView.text = ""
             return cell
         }
