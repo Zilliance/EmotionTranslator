@@ -35,13 +35,17 @@ class ResponseEntryCell: UITableViewCell {
 extension ResponseEntryCell: UITextViewDelegate {
     
     func textViewDidEndEditing(_ textView: UITextView) {
-        self.update?(textView.text)
+        if !textView.text.isEmpty {
+            self.update?(textView.text)
+        }
     }
     
     func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
         if (text == "\n") {
-           self.reply?(textView.text)
-           textView.resignFirstResponder()
+            if !textView.text.isEmpty {
+                self.reply?(textView.text)
+            }
+            textView.resignFirstResponder()
         }
         return true
     }

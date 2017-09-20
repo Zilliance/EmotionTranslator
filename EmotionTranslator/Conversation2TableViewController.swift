@@ -51,10 +51,19 @@ class Conversation2TableViewController: UITableViewController {
             self.headerLabel.attributedText = attributedString
         }
         
+        self.prepareReplies()
         self.prepareQuestions()
 
     }
 
+    
+    private func prepareReplies() {
+        
+        self.replies[0] = self.currentStressor.answer1
+        self.replies[1] = self.currentStressor.answer2
+        self.replies[2] = self.currentStressor.answer3
+        self.replies[3] = self.currentStressor.answer4
+    }
     
     private func prepareQuestions() {
         
@@ -112,7 +121,11 @@ class Conversation2TableViewController: UITableViewController {
             
             cell.reply = { [unowned self] text in
                 self.replies[indexPath.row/2] = text
-                self.prepareQuestions()
+                
+                if tableView.numberOfRows(inSection: 0) == indexPath.row + 1 {
+                    self.prepareQuestions()
+                }
+                
                 let finished = self.replies.filter { $0.isEmpty }.count == 0
                 if finished {
                     self.questionsEnded?()
@@ -144,5 +157,9 @@ extension Conversation2TableViewController: StressorFacetEditor {
     func save() {
         //self.tableViewController.saveAction(self.tableViewController.selectedItems)
         self.currentStressor.lastEditedFacet = .conversation2
+        self.currentStressor.answer1 = self.replies[0]
+        self.currentStressor.answer2 = self.replies[1]
+        self.currentStressor.answer3 = self.replies[2]
+        self.currentStressor.answer4 = self.replies[3]
     }
 }
