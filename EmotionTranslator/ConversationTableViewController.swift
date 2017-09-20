@@ -26,7 +26,7 @@ class ResponseEntryCell: UITableViewCell {
     override func awakeFromNib() {
         self.entryTextView.layer.cornerRadius = UIConstants.Appearance.cornerRadius
         self.entryTextView.layer.borderWidth = UIConstants.Appearance.borderWidth
-        self.entryTextView.layer.borderColor = UIColor.lightGray.cgColor
+        self.entryTextView.layer.borderColor = UIColor.silverColor.cgColor
         
     }
 }
