@@ -48,6 +48,14 @@ class MonsterNameViewController: UIViewController {
 
 // MARK: - CompassValidation
 
+extension MonsterNameViewController: UITextFieldDelegate {
+
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+}
+
 extension MonsterNameViewController: StressorValidation {
     
     var error: StressorError {

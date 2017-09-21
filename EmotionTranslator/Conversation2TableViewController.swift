@@ -52,17 +52,36 @@ class Conversation2TableViewController: UITableViewController {
         }
         
         self.prepareReplies()
-        self.prepareQuestions()
-
+        
     }
 
-    
     private func prepareReplies() {
         
         self.replies[0] = self.currentStressor.answer1
         self.replies[1] = self.currentStressor.answer2
         self.replies[2] = self.currentStressor.answer3
         self.replies[3] = self.currentStressor.answer4
+        
+        // prefill questions - answers
+        
+        for reply in self.replies {
+            guard !reply.isEmpty else { break }
+            self.prepareQuestions()
+        }
+        
+        self.checkIfQuestionsAreFinished()
+        
+        if self.elements.isEmpty {
+            self.prepareQuestions()
+        }
+    }
+    
+    private func checkIfQuestionsAreFinished() {
+        let finished = self.replies.filter { $0.isEmpty }.count == 0
+        if finished {
+            self.questionsCompleted = true
+            self.questionsEnded?()
+        }
     }
     
     private func prepareQuestions() {
@@ -126,10 +145,7 @@ class Conversation2TableViewController: UITableViewController {
                     self.prepareQuestions()
                 }
                 
-                let finished = self.replies.filter { $0.isEmpty }.count == 0
-                if finished {
-                    self.questionsEnded?()
-                }
+              self.checkIfQuestionsAreFinished()
             }
             
             cell.update = { [unowned self] text in
