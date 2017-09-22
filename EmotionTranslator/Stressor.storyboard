@@ -83,9 +83,16 @@
                                                 <color key="textColor" red="0.38431372549999998" green="0.42745098040000001" blue="0.83137254900000002" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TBD : {waiting client instructions}" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hNm-dA-xK9">
+                                                <rect key="frame" x="20" y="238" width="210" height="18"/>
+                                                <fontDescription key="fontDescription" name="Muli-LightItalic" family="Muli" pointSize="14"/>
+                                                <color key="textColor" red="0.62745098040000002" green="0.63921568630000003" blue="0.66274509800000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
+                                            <constraint firstItem="hNm-dA-xK9" firstAttribute="top" secondItem="tf1-Rq-Ypi" secondAttribute="bottom" constant="8" id="2Rd-nG-XVE"/>
                                             <constraint firstItem="rA1-PS-XTz" firstAttribute="centerX" secondItem="0YM-TP-iGG" secondAttribute="centerX" id="7qd-Tz-poG"/>
                                             <constraint firstAttribute="bottom" secondItem="tf1-Rq-Ypi" secondAttribute="bottom" constant="437" id="O89-ej-nJk"/>
                                             <constraint firstItem="tf1-Rq-Ypi" firstAttribute="top" secondItem="1yN-8j-uwG" secondAttribute="bottom" constant="10" id="O8s-EC-b0R"/>
@@ -98,6 +105,7 @@
                                             <constraint firstItem="1yN-8j-uwG" firstAttribute="top" secondItem="rA1-PS-XTz" secondAttribute="bottom" constant="10" id="deh-J5-5a3"/>
                                             <constraint firstAttribute="trailing" secondItem="Sbb-Ef-6sx" secondAttribute="trailing" constant="28" id="eCH-rG-zvR"/>
                                             <constraint firstItem="Sbb-Ef-6sx" firstAttribute="top" secondItem="u3q-B1-WGn" secondAttribute="bottom" constant="44" id="oCS-mt-0U8"/>
+                                            <constraint firstItem="hNm-dA-xK9" firstAttribute="leading" secondItem="0YM-TP-iGG" secondAttribute="leading" constant="20" id="qXD-SN-3Zr"/>
                                             <constraint firstAttribute="trailing" secondItem="1yN-8j-uwG" secondAttribute="trailing" constant="20" id="yhY-K0-13D"/>
                                         </constraints>
                                     </view>

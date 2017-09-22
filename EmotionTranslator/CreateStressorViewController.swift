@@ -311,20 +311,26 @@ class CreateStressorViewController: UIViewController {
         }
         
         guard self.checkError() == .none else {
-            typealias scene = Stressor.Facet
+            typealias Scene = Stressor.Facet
+            
+            // PD:
+            // I think we should add a protocol to the pages that allows them to return
+            // the error message rather than hard coding on the enumeration here
             
             switch self.checkError() {
             case .selection:
-                switch self.currentPageIndex {
-                case scene.emotion.pageIndex:
+                switch Scene(rawValue: Int32(self.currentPageIndex)) {
+                case .emotion?:
                     self.showAlert(title: "Please select an emotion or add your own", message: "")
                 default:
                     self.showAlert(title: "Please select one or more items", message: "")
                 }
             case .text:
-                switch self.currentPageIndex {
-                case scene.stressor.pageIndex:
+                switch Scene(rawValue: Int32(self.currentPageIndex)) {
+                case .stressor?:
                     self.showAlert(title: "Please enter a stressor", message: "")
+                case .name?:
+                    self.showAlert(title: "Please enter a name for your emotion", message: "")
                 default:
                     self.showAlert(title: "Please enter text", message: "")
                 }
