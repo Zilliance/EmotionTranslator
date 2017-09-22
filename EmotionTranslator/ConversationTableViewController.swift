@@ -20,6 +20,7 @@ class ResponseEntryCell: UITableViewCell {
     
     @IBOutlet weak var entryTextView: KMPlaceholderTextView!
     @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var iconImageView: UIImageView!
     
     var reply: ((String) -> ())? = nil
     var update: ((String) -> ())? = nil
@@ -54,6 +55,8 @@ extension ResponseEntryCell: UITextViewDelegate {
 
 class ResponseCell: UITableViewCell {
     
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var iconImageView: UIImageView!
     @IBOutlet weak var responseLabel: UILabel!
     
 }
@@ -84,11 +87,10 @@ class ConversationTableViewController: UITableViewController {
     
     var questionsCompleted = false
     
-    private var questions = ["Question 1 goes here, room for a few lines of text…more copy here…then ends with a?",
-                     "Question 2 goes here, room for a few lines of text…more copy here…then ends with a?",
-                     "Question 3 goes here, room for a few lines of text…more copy here…then ends with a?",
-                     "Question 4 goes here, room for a few lines of text…more copy here…then ends with a?",]
+    private var questions: [String] = []
     private var replies: [String] = []
+    
+    fileprivate var questionsAnswers: [QuestionAnswer] = []
     
     private var elements: [Item] = []
 
@@ -96,8 +98,14 @@ class ConversationTableViewController: UITableViewController {
         super.viewDidLoad()
         self.tableView.rowHeight = UITableViewAutomaticDimension
         self.tableView.estimatedRowHeight = 80
-        self.prepareQuestions()
-        
+
+        self.insertReplyBox()
+        self.reply()
+    }
+    
+    private func insertReplyBox() {
+         self.elements.append(Item(text: "", type: .box))
+         self.tableView.insertRows(at: [IndexPath(item: self.elements.count - 1, section: 0)], with: .automatic)
     }
     
     private func prepareQuestions() {
@@ -118,6 +126,16 @@ class ConversationTableViewController: UITableViewController {
     }
     
     private func insert(reply: String, indexPath: IndexPath) {
+        
+        let questionAnswer = QuestionAnswer()
+        if indexPath.row % 2 == 0 {
+            questionAnswer.question = reply
+        }
+        else {
+            questionAnswer.answer = reply
+        }
+        
+        self.questionsAnswers.append(questionAnswer)
         
         self.elements.remove(at: indexPath.row)
         self.elements.insert(Item(text: reply, type: .answer), at: indexPath.row)
@@ -170,16 +188,34 @@ class ConversationTableViewController: UITableViewController {
             return cell
         case .answer:
             let cell = tableView.dequeueReusableCell(withIdentifier: "ResponseCell", for: indexPath) as! ResponseCell
+            
+            if indexPath.row % 2 == 0 {
+                cell.iconImageView.image = #imageLiteral(resourceName: "completed-stressor")
+                cell.nameLabel.text = self.currentStressor.monsterName
+            }
+            else {
+                cell.iconImageView.image = #imageLiteral(resourceName: "user-conversation")
+                cell.nameLabel.text = "Me"
+            }
+            
             cell.responseLabel.text = item.text
             return cell
             
         case .box:
             let cell = tableView.dequeueReusableCell(withIdentifier: "ResponseEntryCell", for: indexPath) as! ResponseEntryCell
             
-            cell.nameLabel.text = self.currentStressor.monsterName
+            if indexPath.row % 2 == 0 {
+                cell.iconImageView.image = #imageLiteral(resourceName: "completed-stressor")
+                cell.nameLabel.text = self.currentStressor.monsterName
+            }
+            else {
+                cell.iconImageView.image = #imageLiteral(resourceName: "user-conversation")
+                cell.nameLabel.text = "Me"
+            }
+            
             cell.reply = { [unowned self] text in
                 self.insert(reply: text, indexPath: indexPath)
-                //tableView.reloadRows(at: [indexPath], with: .automatic)
+                self.insertReplyBox()
             }
             
             cell.entryTextView.text = ""
@@ -200,7 +236,8 @@ extension ConversationTableViewController: StressorValidation {
 
 extension ConversationTableViewController: StressorFacetEditor {
     func save() {
-        //self.tableViewController.saveAction(self.tableViewController.selectedItems)
+        
         self.currentStressor.lastEditedFacet = .conversation
+        self.currentStressor.conversation.append(objectsIn: self.questionsAnswers)
     }
 }
