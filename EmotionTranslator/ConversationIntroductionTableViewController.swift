@@ -26,6 +26,10 @@ class ConversationIntroductionTableViewController: UITableViewController {
         self.tableView.rowHeight = UITableViewAutomaticDimension
         self.tableView.estimatedRowHeight = 54;
         
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         if let monsterName = self.currentStressor.monsterName {
             
             let text = "\(monsterName) and you are going to have a conversation to find out what is’s trying to tell you."
@@ -37,6 +41,7 @@ class ConversationIntroductionTableViewController: UITableViewController {
             self.monsterLabel1.text = monsterName
             self.monsterLabel2.text = monsterName
         }
+        
     }
     
     @IBAction func learnMore(_ sender: Any?) {
