@@ -76,7 +76,10 @@ class EmotionViewController: UIViewController {
         }
     }
     
-
+    @IBAction func learnMore(_ sender: Any?) {
+        LearnMoreViewController.present(from: self, text: NSLocalizedString("learn more emotions", comment: ""))
+    }
+    
 }
 
 // MARK: - CompassValidation
