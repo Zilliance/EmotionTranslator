@@ -69,6 +69,9 @@
 		8C6EB5EA1F6B025F0097FB13 /* ScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C6EB5E51F6B025F0097FB13 /* ScheduleViewController.swift */; };
 		8C6EB5EC1F6B02790097FB13 /* ZillianceTextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C6EB5EB1F6B02790097FB13 /* ZillianceTextViewController.swift */; };
 		C0FA5645E25EC897AF28EADC /* Pods_EmotionTranslatorTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 342B6A321EC77D91CBE565A5 /* Pods_EmotionTranslatorTests.framework */; };
+		E30F87551F758D3C00685AAD /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = E30F87541F758D3B00685AAD /* Localizable.strings */; };
+		E30F87561F758D9500685AAD /* LearnMoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E30F87511F758D0300685AAD /* LearnMoreViewController.swift */; };
+		E30F87571F758D9D00685AAD /* LearnMore.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E30F87521F758D0300685AAD /* LearnMore.storyboard */; };
 		E35DB1781F5724F600C76B6B /* Monster.swift in Sources */ = {isa = PBXBuildFile; fileRef = E35DB1771F5724F600C76B6B /* Monster.swift */; };
 		E3BE10B51F53C6EF00787921 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3BE10B41F53C6EF00787921 /* AppDelegate.swift */; };
 		E3BE10BC1F53C6EF00787921 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3BE10BB1F53C6EF00787921 /* Assets.xcassets */; };
@@ -183,6 +186,9 @@
 		B05445A012A0BCEF9D95A791 /* Pods-EmotionTranslatorUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmotionTranslatorUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EmotionTranslatorUITests/Pods-EmotionTranslatorUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		C2E2DD4D09C96B4AAF7211D3 /* Pods-EmotionTranslator.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmotionTranslator.release.xcconfig"; path = "Pods/Target Support Files/Pods-EmotionTranslator/Pods-EmotionTranslator.release.xcconfig"; sourceTree = "<group>"; };
 		C65FD7AAF27DCACDA7632C21 /* Pods_EmotionTranslatorUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EmotionTranslatorUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E30F87511F758D0300685AAD /* LearnMoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnMoreViewController.swift; sourceTree = "<group>"; };
+		E30F87521F758D0300685AAD /* LearnMore.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LearnMore.storyboard; sourceTree = "<group>"; };
+		E30F87541F758D3B00685AAD /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		E35DB1771F5724F600C76B6B /* Monster.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Monster.swift; sourceTree = "<group>"; };
 		E3BE10B11F53C6EF00787921 /* EmotionTranslator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EmotionTranslator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3BE10B41F53C6EF00787921 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -414,6 +420,15 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		E30F87531F758D0900685AAD /* Learn More Popup */ = {
+			isa = PBXGroup;
+			children = (
+				E30F87521F758D0300685AAD /* LearnMore.storyboard */,
+				E30F87511F758D0300685AAD /* LearnMoreViewController.swift */,
+			);
+			name = "Learn More Popup";
+			sourceTree = "<group>";
+		};
 		E3BE10A81F53C6EF00787921 = {
 			isa = PBXGroup;
 			children = (
@@ -502,6 +517,7 @@
 				8C2B14331F54AB1D002C0353 /* Intro */,
 				8C2B141E1F54A75D002C0353 /* SideMenu */,
 				8C2B14061F547DDF002C0353 /* Home */,
+				E30F87531F758D0900685AAD /* Learn More Popup */,
 			);
 			name = Scenes;
 			sourceTree = "<group>";
@@ -542,6 +558,7 @@
 				E3BE10F01F53C82300787921 /* faq.html */,
 				E3BE10F11F53C82300787921 /* zilliance privacy policy.html */,
 				E3BE10F21F53C82300787921 /* zilliance terms of service.html */,
+				E30F87541F758D3B00685AAD /* Localizable.strings */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -666,6 +683,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E30F87571F758D9D00685AAD /* LearnMore.storyboard in Resources */,
 				8C61D6871F57531D00389FC0 /* Emotion.storyboard in Resources */,
 				8C2B14081F547DF7002C0353 /* HomeViewController.storyboard in Resources */,
 				8C2B14491F55FA45002C0353 /* CreateStressor.storyboard in Resources */,
@@ -698,6 +716,7 @@
 				E3BE11081F53C83B00787921 /* Muli-ExtraBold.ttf in Resources */,
 				8C2B142A1F54A942002C0353 /* SideMenu.storyboard in Resources */,
 				E3BE10BF1F53C6EF00787921 /* LaunchScreen.storyboard in Resources */,
+				E30F87551F758D3C00685AAD /* Localizable.strings in Resources */,
 				8C61D6951F58BB7300389FC0 /* Monster.storyboard in Resources */,
 				E3BE10BC1F53C6EF00787921 /* Assets.xcassets in Resources */,
 				E3BE110F1F53C83B00787921 /* Muli-Regular.ttf in Resources */,
@@ -958,6 +977,7 @@
 				8C2B14451F55CAC5002C0353 /* TourSceneViewController.swift in Sources */,
 				4F3C6AF81F7143370040AECD /* FileUtils.swift in Sources */,
 				8C61D6AB1F60B77100389FC0 /* ConversationIntroductionTableViewController.swift in Sources */,
+				E30F87561F758D9500685AAD /* LearnMoreViewController.swift in Sources */,
 				8C61D6A61F606D3800389FC0 /* MonsterView.swift in Sources */,
 				8C61D6AF1F61D02100389FC0 /* ConversationTableViewController.swift in Sources */,
 				4F3C6AF61F71302D0040AECD /* ProfileViewController.swift in Sources */,

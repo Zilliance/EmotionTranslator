@@ -40,7 +40,7 @@ class ConversationIntroductionTableViewController: UITableViewController {
     }
     
     @IBAction func learnMore(_ sender: Any?) {
-        print("learn more")
+        LearnMoreViewController.present(from: self, text: NSLocalizedString("learn more conversation introduction", comment: ""), size: .large)
     }
 }
 
