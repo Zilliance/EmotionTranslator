@@ -120,6 +120,9 @@ class ConversationTableViewController: UITableViewController {
     private func insertReplyBox() {
          self.elements.append(Item(text: "", type: .box))
          self.tableView.insertRows(at: [IndexPath(item: self.elements.count - 1, section: 0)], with: .automatic)
+        if elements.count > 0 {
+            self.tableView.scrollToRow(at: IndexPath(item:elements.count-1, section: 0), at: .bottom, animated: true)
+        }
     }
     
     private func prepareQuestions() {
