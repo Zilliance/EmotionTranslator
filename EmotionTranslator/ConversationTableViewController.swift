@@ -99,6 +99,20 @@ class ConversationTableViewController: UITableViewController {
         self.tableView.rowHeight = UITableViewAutomaticDimension
         self.tableView.estimatedRowHeight = 80
 
+        let currentConversation = Array(self.currentStressor.conversation)
+        
+        if !currentConversation.isEmpty {
+            
+            for element in currentConversation {
+                if let question = element.question {
+                    self.elements.append(Item(text: question, type: .answer))
+                }
+                else if let answer = element.answer {
+                    self.elements.append(Item(text: answer, type: .answer))
+                }
+            }
+        }
+        
         self.insertReplyBox()
         self.reply()
     }
