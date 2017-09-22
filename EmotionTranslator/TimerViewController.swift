@@ -25,6 +25,12 @@ class TimerViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setupView()
+        
+        self.timerButton.layer.cornerRadius = UIConstants.Appearance.cornerRadius
+        self.timerButton.layer.borderWidth = UIConstants.Appearance.borderWidth
+        self.timerButton.layer.borderColor = UIColor.thinkGreen.cgColor
+        
+        self.timerButton.backgroundColor = UIColor.thinkGreen
     }
 
     private func setupView() {
@@ -44,6 +50,16 @@ class TimerViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         self.conversationViewController = segue.destination as! ConversationTableViewController
         self.conversationViewController.currentStressor = self.currentStressor
+    }
+    
+    fileprivate func changeButtonBackground(for timer:Timer) {
+        if timer.isValid {
+            self.timerButton.backgroundColor = .white
+            self.timerButton.setTitleColor(.thinkGreen, for: .normal)
+        } else {
+            self.timerButton.backgroundColor = .thinkGreen
+            self.timerButton.setTitleColor(.white, for: .normal)
+        }
     }
 
     @IBAction func timerAction(_ sender: Any) {
@@ -75,7 +91,24 @@ extension TimerViewController {
     // https://teamtreehouse.com/community/swift-countdown-timer-of-60-seconds
     
     func startTimer() {
-        self.countdownTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateTime), userInfo: nil, repeats: true)
+        
+        guard let timer = self.countdownTimer
+            else {
+                self.countdownTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateTime), userInfo: nil, repeats: true)
+                self.changeButtonBackground(for: self.countdownTimer)
+                self.updateTime()
+                return
+                
+        }
+        
+        if !timer.isValid {
+            self.countdownTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateTime), userInfo: nil, repeats: true)
+        }
+        else {
+            self.countdownTimer.invalidate()
+        }
+        
+        self.changeButtonBackground(for: self.countdownTimer)
     }
     
     func updateTime() {
