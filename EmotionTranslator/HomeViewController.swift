@@ -28,6 +28,7 @@ class HomeViewController: UIViewController {
         self.title = "Emotion Translator"
         self.editButton.title = "Edit"
         self.startButton.imageView?.contentMode = .scaleAspectFit
+        self.startButton.titleLabel?.font = UIFont.muliRegular(size: UIDevice.isSmallerThaniPhone6 ? 14 : 18)
     }
     
     override func viewWillAppear(_ animated: Bool) {
