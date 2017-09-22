@@ -189,7 +189,7 @@ class ConversationTableViewController: UITableViewController {
         case .answer:
             let cell = tableView.dequeueReusableCell(withIdentifier: "ResponseCell", for: indexPath) as! ResponseCell
             
-            if indexPath.row % 2 == 0 {
+            if indexPath.row % 2 != 0 {
                 cell.iconImageView.image = #imageLiteral(resourceName: "completed-stressor")
                 cell.nameLabel.text = self.currentStressor.monsterName
             }
@@ -204,7 +204,7 @@ class ConversationTableViewController: UITableViewController {
         case .box:
             let cell = tableView.dequeueReusableCell(withIdentifier: "ResponseEntryCell", for: indexPath) as! ResponseEntryCell
             
-            if indexPath.row % 2 == 0 {
+            if indexPath.row % 2 != 0 {
                 cell.iconImageView.image = #imageLiteral(resourceName: "completed-stressor")
                 cell.nameLabel.text = self.currentStressor.monsterName
             }
