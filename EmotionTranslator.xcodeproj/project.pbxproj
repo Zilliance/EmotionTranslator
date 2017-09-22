@@ -58,6 +58,7 @@
 		8C61D6AB1F60B77100389FC0 /* ConversationIntroductionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C61D6AA1F60B77100389FC0 /* ConversationIntroductionTableViewController.swift */; };
 		8C61D6AD1F61CCCF00389FC0 /* Conversation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C61D6AC1F61CCCF00389FC0 /* Conversation.storyboard */; };
 		8C61D6AF1F61D02100389FC0 /* ConversationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C61D6AE1F61D02100389FC0 /* ConversationTableViewController.swift */; };
+		8C6D31351F75966A0088248E /* TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C6D31341F75966A0088248E /* TimerViewController.swift */; };
 		8C6EB5D81F69BB740097FB13 /* Takeaway.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C6EB5D71F69BB740097FB13 /* Takeaway.storyboard */; };
 		8C6EB5DA1F69BC920097FB13 /* TakeAwayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C6EB5D91F69BC920097FB13 /* TakeAwayViewController.swift */; };
 		8C6EB5DD1F69C2B90097FB13 /* Actionplan.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C6EB5DC1F69C2B90097FB13 /* Actionplan.storyboard */; };
@@ -173,6 +174,7 @@
 		8C61D6AA1F60B77100389FC0 /* ConversationIntroductionTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConversationIntroductionTableViewController.swift; sourceTree = "<group>"; };
 		8C61D6AC1F61CCCF00389FC0 /* Conversation.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Conversation.storyboard; sourceTree = "<group>"; };
 		8C61D6AE1F61D02100389FC0 /* ConversationTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConversationTableViewController.swift; sourceTree = "<group>"; };
+		8C6D31341F75966A0088248E /* TimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewController.swift; sourceTree = "<group>"; };
 		8C6EB5D71F69BB740097FB13 /* Takeaway.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Takeaway.storyboard; sourceTree = "<group>"; };
 		8C6EB5D91F69BC920097FB13 /* TakeAwayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TakeAwayViewController.swift; sourceTree = "<group>"; };
 		8C6EB5DC1F69C2B90097FB13 /* Actionplan.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Actionplan.storyboard; sourceTree = "<group>"; };
@@ -369,6 +371,7 @@
 				8C61D6A81F60AA2000389FC0 /* Introduction.storyboard */,
 				8C61D6AA1F60B77100389FC0 /* ConversationIntroductionTableViewController.swift */,
 				8C61D6AC1F61CCCF00389FC0 /* Conversation.storyboard */,
+				8C6D31341F75966A0088248E /* TimerViewController.swift */,
 				8C61D6AE1F61D02100389FC0 /* ConversationTableViewController.swift */,
 				8C3DDC5F1F7080FC00782F91 /* Conversation2.storyboard */,
 				8C3DDC611F70817000782F91 /* Conversation2TableViewController.swift */,
@@ -775,7 +778,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		293D0CB9958C872BDAF5BF59 /* [CP] Copy Pods Resources */ = {
@@ -836,7 +839,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		B47968CA9CCA82740275F62F /* [CP] Copy Pods Resources */ = {
@@ -915,7 +918,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		F55CD284E686B8AEE77CDD50 /* [CP] Embed Pods Frameworks */ = {
@@ -950,6 +953,7 @@
 				8C2B14371F54AB4D002C0353 /* IntroViewController.swift in Sources */,
 				8C61D6841F57500D00389FC0 /* Emotion.swift in Sources */,
 				E3BE10E61F53C7CF00787921 /* Notification.swift in Sources */,
+				8C6D31351F75966A0088248E /* TimerViewController.swift in Sources */,
 				8C2B14461F55CAC5002C0353 /* TourPageViewController.swift in Sources */,
 				8C2B14291F54A942002C0353 /* LeftMenuViewController.swift in Sources */,
 				4F2CDCD71F55EB8A0048FA9C /* Analytics.swift in Sources */,

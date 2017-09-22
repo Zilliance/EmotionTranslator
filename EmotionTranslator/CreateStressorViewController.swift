@@ -164,6 +164,8 @@ class CreateStressorViewController: UIViewController {
     
     private func setupButton(for item:StressorItem) {
         
+        self.continueButton.isEnabled = true
+        
         UIView.animate(withDuration: 0.3) { 
             self.backButton.titleLabel?.alpha = 0
             self.remindMeButton.alpha = 0
@@ -180,11 +182,9 @@ class CreateStressorViewController: UIViewController {
         case .introduction:
             self.continueButton.setTitle("START", for: .normal)
         case .conversation:
-            if let vc = item.viewController as? ConversationTableViewController {
-                let text = vc.questionsCompleted ? "CONTINUE" : "REPLY"
-                self.continueButton.setTitle(text, for: .normal)
-            }
+            self.continueButton.setTitle("I'M DONE", for: .normal)
         case .conversation2:
+            self.continueButton.setTitle("CONTINUE", for: .normal)
             if let vc = item.viewController as? Conversation2TableViewController {
                 self.continueButton.isEnabled = vc.questionsCompleted
             }

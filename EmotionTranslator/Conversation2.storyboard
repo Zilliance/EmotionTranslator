@@ -189,6 +189,8 @@
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
+                                    <outlet property="iconImageView" destination="SkI-3Q-uor" id="kA0-3l-5x6"/>
+                                    <outlet property="nameLabel" destination="pNv-zd-hLk" id="JPV-9b-68a"/>
                                     <outlet property="responseLabel" destination="dck-IB-vPa" id="PSw-zj-pOJ"/>
                                 </connections>
                             </tableViewCell>
