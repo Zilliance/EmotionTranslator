@@ -79,6 +79,9 @@ struct Question {
 
 class ConversationTableViewController: UITableViewController {
 
+    @IBOutlet weak var timerView: UIView!
+    @IBOutlet weak var topLabel: UILabel!
+    @IBOutlet weak var timerButton: UIButton!
     
     var currentStressor: Stressor!
     var gotoMonsterName: (() -> ())? = nil
@@ -90,12 +93,35 @@ class ConversationTableViewController: UITableViewController {
     private var questions: [String] = []
     private var replies: [String] = []
     
+    var countdownTimer: Timer!
+    var totalTime = 60 * 3
+    
     fileprivate var questionsAnswers: [QuestionAnswer] = []
     
     private var elements: [Item] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.timerButton.layer.cornerRadius = UIConstants.Appearance.cornerRadius
+        self.timerButton.layer.borderWidth = UIConstants.Appearance.borderWidth
+        self.timerButton.layer.borderColor = UIColor.thinkGreen.cgColor
+        
+        self.timerButton.backgroundColor = UIColor.thinkGreen
+        
+        self.timerView.backgroundColor = UIColor.white.withAlphaComponent(0.8)
+        
+        if let monsterName = self.currentStressor.monsterName {
+            
+            let text = "\(monsterName) and you are going to have a conversation to find out what is’s trying to tell you."
+            let attributedString = NSMutableAttributedString(string: text)
+            let monsterRange = (text as NSString).range(of: monsterName)
+            attributedString.addAttribute(NSFontAttributeName, value: UIFont.muliBold(size: 16), range: monsterRange)
+            
+            self.topLabel.attributedText = attributedString
+        }
+        
+        
         self.tableView.rowHeight = UITableViewAutomaticDimension
         self.tableView.estimatedRowHeight = 80
 
@@ -115,6 +141,24 @@ class ConversationTableViewController: UITableViewController {
         
         self.insertReplyBox()
         self.reply()
+    }
+    
+    fileprivate func changeButtonBackground(for timer:Timer) {
+        if timer.isValid {
+            self.timerButton.backgroundColor = .white
+            self.timerButton.setTitleColor(.thinkGreen, for: .normal)
+        } else {
+            self.timerButton.backgroundColor = .thinkGreen
+            self.timerButton.setTitleColor(.white, for: .normal)
+        }
+    }
+    
+    @IBAction func timerAction(_ sender: Any) {
+        self.startTimer()
+    }
+    
+    override var analyticsObjectName: String {
+        return "Conversation 1"
     }
     
     private func insertReplyBox() {
@@ -264,4 +308,55 @@ extension ConversationTableViewController: StressorFacetEditor {
         self.currentStressor.lastEditedFacet = .conversation
         self.currentStressor.conversation.append(objectsIn: self.questionsAnswers)
     }
+}
+
+// MARK: - TIMER
+
+extension ConversationTableViewController {
+    
+    // https://teamtreehouse.com/community/swift-countdown-timer-of-60-seconds
+    
+    func startTimer() {
+        
+        guard let timer = self.countdownTimer
+            else {
+                self.countdownTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateTime), userInfo: nil, repeats: true)
+                self.changeButtonBackground(for: self.countdownTimer)
+                self.updateTime()
+                return
+                
+        }
+        
+        if !timer.isValid {
+            self.countdownTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateTime), userInfo: nil, repeats: true)
+        }
+        else {
+            self.countdownTimer.invalidate()
+        }
+        
+        self.changeButtonBackground(for: self.countdownTimer)
+    }
+    
+    func updateTime() {
+        
+        self.timerButton.setTitle("\(self.timeFormatted(totalTime))", for: .normal)
+        
+        if self.totalTime != 0 {
+            self.totalTime -= 1
+        } else {
+            self.endTimer()
+        }
+    }
+    
+    func endTimer() {
+        self.countdownTimer.invalidate()
+    }
+    
+    func timeFormatted(_ totalSeconds: Int) -> String {
+        let seconds: Int = totalSeconds % 60
+        let minutes: Int = (totalSeconds / 60) % 60
+        //     let hours: Int = totalSeconds / 3600
+        return String(format: "%02d:%02d", minutes, seconds)
+    }
+    
 }
