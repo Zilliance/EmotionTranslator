@@ -157,6 +157,9 @@ class ConversationTableViewController: UITableViewController {
         self.startTimer()
     }
     
+    @IBAction func exampleAction(_ sender: Any) {
+    }
+    
     override var analyticsObjectName: String {
         return "Conversation 1"
     }
