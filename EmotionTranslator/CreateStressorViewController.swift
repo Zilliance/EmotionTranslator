@@ -41,7 +41,7 @@ enum StressorScene: String {
     case actionplan
 }
 
-class CreateStressorViewController: UIViewController {
+class CreateStressorViewController: AnalyzedViewController {
     
     fileprivate struct StressorItem {
         let viewController: UIViewController
@@ -117,6 +117,12 @@ class CreateStressorViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setupView()
+        
+        if (self.stressor.title == nil) {
+            Analytics.shared.send(event: EmotionTranslatorAnalytics.EmotionTranslatorEvent.newStressor)
+        } else {
+            Analytics.shared.send(event: EmotionTranslatorAnalytics.EmotionTranslatorEvent.stressorResumed)
+        }
     }
     
     private func setupView() {
@@ -231,7 +237,8 @@ class CreateStressorViewController: UIViewController {
         self.title = self.stressor.title
         self.pageControlViewController.setViewControllers([item.viewController], direction: direction, animated: true, completion: nil)
         
-        Analytics.shared.send(event: EmotionTranslatorAnalytics.EmotionTranslatorPageEvent.stressorPageViewed(page))
+        Analytics.shared.send(event: ZillianceAnalytics.DetailedEvents.viewControllerShown(item.viewController.analyticsObjectName))
+
     }
 
     
@@ -295,6 +302,8 @@ class CreateStressorViewController: UIViewController {
                 self.stressor.completed = true
                 self.save()
                 self.navigationController?.popViewController(animated: true)
+                Analytics.shared.send(event: EmotionTranslatorAnalytics.EmotionTranslatorEvent.stressorCompleted)
+
             }
             
             return

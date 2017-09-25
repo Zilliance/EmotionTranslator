@@ -147,9 +147,15 @@ class ConversationTableViewController: UITableViewController {
         let questionAnswer = QuestionAnswer()
         if indexPath.row % 2 == 0 {
             questionAnswer.question = reply
+            
+            Analytics.shared.send(event: EmotionTranslatorAnalytics.EmotionTranslatorEvent.questionAdded)
+            
         }
         else {
             questionAnswer.answer = reply
+            
+            Analytics.shared.send(event: EmotionTranslatorAnalytics.EmotionTranslatorEvent.questionAnswered)
+
         }
         
         self.questionsAnswers.append(questionAnswer)
@@ -168,6 +174,7 @@ class ConversationTableViewController: UITableViewController {
             self.prepareQuestions()
         }
     }
+    
 
     func reply() {
         

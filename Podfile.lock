@@ -67,7 +67,7 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   ZillianceShared:
-    :commit: f2afe1f9c2cf0978d234108ce105848ec4a507a1
+    :commit: e7e6370268f5b0d466f9c9f74103b803c2eb9834
     :git: https://github.com/ScalablePath/ZillianceShared.git
 
 SPEC CHECKSUMS:

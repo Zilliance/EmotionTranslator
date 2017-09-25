@@ -118,7 +118,6 @@ class CreateMonsterViewController: UIViewController {
     var gotoMonsterName: (() -> ())? = nil
     var questionsEnded: (() -> ())? = nil
     
-    
     fileprivate var monster: Monster?
     
     override func viewDidLoad() {
@@ -145,10 +144,12 @@ class CreateMonsterViewController: UIViewController {
             self.monster?.eyes = Monster.Eyes.one
             self.monster?.mouth = Monster.Mouth.one
             self.monster?.hair = Monster.Hair.one
+            Analytics.shared.send(event: EmotionTranslatorAnalytics.EmotionTranslatorEvent.ownMonsterCreationStarted)
         }
         
         self.monsterView.monster = self.monster
         self.monsterView.setupMonster()
+        
     }
 
     
@@ -244,14 +245,19 @@ extension CreateMonsterViewController: UICollectionViewDelegate {
             case .color:
                 self.currentColor = Color(rawValue: indexPath.row + 1)!
                 self.monster?.color = self.currentColor
+                Analytics.shared.send(event: EmotionTranslatorAnalytics.EmotionTranslatorEvent.colorChanged)
             case .hair:
                 self.monster?.hair = Monster.Hair(rawValue: indexPath.row + 1)!
+                Analytics.shared.send(event: EmotionTranslatorAnalytics.EmotionTranslatorEvent.hairChanged)
             case .eyes:
                 self.monster?.eyes = Monster.Eyes(rawValue: indexPath.row + 1)!
+                Analytics.shared.send(event: EmotionTranslatorAnalytics.EmotionTranslatorEvent.eyesChanged)
             case .mouth:
                 self.monster?.mouth = Monster.Mouth(rawValue: indexPath.row + 1)!
+                Analytics.shared.send(event: EmotionTranslatorAnalytics.EmotionTranslatorEvent.mouthChanged)
             case .shape:
                 self.monster?.shape = Monster.Shape(rawValue: indexPath.row + 1)!
+                Analytics.shared.send(event: EmotionTranslatorAnalytics.EmotionTranslatorEvent.shapeChanged)
             }
             
             self.monsterView.setupMonster()
@@ -287,6 +293,7 @@ extension CreateMonsterViewController: StressorFacetEditor {
         self.currentStressor.lastEditedFacet = .create
         self.currentStressor.monster = self.monster
         self.currentStressor.hasCustomMonster = true
+        Analytics.shared.send(event: EmotionTranslatorAnalytics.EmotionTranslatorEvent.ownMonsterCreationFinished)
     }
 }
 

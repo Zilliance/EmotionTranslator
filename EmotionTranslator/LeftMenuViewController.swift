@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 import SideMenuController
+import ZillianceShared
 
 final class LeftMenuViewController: UIViewController {
     enum Row: Int {
@@ -88,16 +89,19 @@ final class LeftMenuViewController: UIViewController {
     
     @IBAction func privacyPolicyTapped(_ sender: Any) {
         self.showHTMLView(htmlFile: "zilliance privacy policy", title: "Privacy Policy")
+        Analytics.shared.send(event: ZillianceAnalytics.BaseEvents.privacyPolycyViewed)
     }
     
     @IBAction func termsOfServicesTapped(_ sender: Any) {
         self.showHTMLView(htmlFile: "zilliance terms of service", title: "Terms Of Service")
+        Analytics.shared.send(event: ZillianceAnalytics.BaseEvents.termsOfServicesViewed)
     }
     
     func showAboutCompany() {
         let vc = UIStoryboard(name: "SideMenu", bundle: nil).instantiateViewController(withIdentifier: "AboutCompany")
         let nav = UINavigationController(rootViewController: vc)
         self.sideMenuController?.embed(centerViewController: nav)
+        Analytics.shared.send(event: ZillianceAnalytics.BaseEvents.companyViewed)
     }
     
     func showTour() {
@@ -130,6 +134,7 @@ final class LeftMenuViewController: UIViewController {
     
     func showFaq() {
         self.showHTMLView(htmlFile: "faq", title: "FAQ")
+        Analytics.shared.send(event: ZillianceAnalytics.BaseEvents.faqViewed)
     }
 }
 

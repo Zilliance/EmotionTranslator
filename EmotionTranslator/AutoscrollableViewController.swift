@@ -7,10 +7,10 @@
 //
 
 import Foundation
-
+import ZillianceShared
 import UIKit
 
-class AutoscrollableViewController: UIViewController {
+class AutoscrollableViewController: AnalyzedViewController {
     
     private var keyboardOffset: CGFloat = 0
     

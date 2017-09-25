@@ -131,7 +131,7 @@ final class ProfileViewController: AutoscrollableViewController {
             }
             
             if (!self.hadNameSet) {
-                Analytics.shared.send(event: EmotionTranslatorAnalytics.EmotionTranslatorEvent.profileImageSet)
+                Analytics.shared.send(event: EmotionTranslatorAnalytics.EmotionTranslatorEvent.profileNameSet)
             }
         }
         
