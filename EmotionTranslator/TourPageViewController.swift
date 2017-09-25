@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import ZillianceShared
 
 class TourPageViewController: UIPageViewController {
     
@@ -77,9 +78,13 @@ class TourPageViewController: UIPageViewController {
         self.view.backgroundColor = .contentBackground
         
         self.dataSource = self
-        
+        self.delegate = self
+
         if let firstViewController = self.introViewControllers.first {
             self.setViewControllers([firstViewController], direction: .forward, animated: true, completion: nil)
+            
+            Analytics.shared.send(event: ZillianceAnalytics.DetailedEvents.tourPageViewed(0))
+
         }
     }
 
@@ -91,6 +96,16 @@ class TourPageViewController: UIPageViewController {
     
     @IBAction func closeView(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        guard let currentVC = self.viewControllers?.first, let index = self.introViewControllers.index(of: currentVC) else {
+            return
+        }
+        
+        Analytics.shared.send(event: ZillianceAnalytics.DetailedEvents.tourClosed(index))
     }
     
     @IBAction func backTapped() {
@@ -157,5 +172,16 @@ extension UIPageViewController {
             }
         }
         return nil
+    }
+}
+
+extension TourPageViewController: UIPageViewControllerDelegate {
+    public func pageViewController(_ pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) {
+        
+        guard let currentVC = pageViewController.viewControllers?.first, let index = self.introViewControllers.index(of: currentVC) else {
+            return
+        }
+        
+        Analytics.shared.send(event: ZillianceAnalytics.DetailedEvents.tourPageViewed(index))
     }
 }

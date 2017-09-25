@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import ZillianceShared
 
 class ActionViewController: UIViewController {
     
@@ -20,6 +21,9 @@ class ActionViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setupView()
+        
+        Analytics.shared.send(event: ZillianceAnalytics.BaseEvents.planViewed)
+
     }
 
     private func setupView() {

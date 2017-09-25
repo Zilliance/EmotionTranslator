@@ -65,6 +65,10 @@ class TimerViewController: UIViewController {
     @IBAction func timerAction(_ sender: Any) {
         self.startTimer()
     }
+    
+    override var analyticsObjectName: String {
+        return "Conversation 1"
+    }
 }
 
 // MARK: - CompassValidation
