@@ -92,7 +92,7 @@ class TakeAwayViewController: UITableViewController {
             
         case (0, let row):
             let cell = tableView.dequeueReusableCell(withIdentifier: "response", for: indexPath) as! TakeAwayResponseViewCell
-            cell.titleLabel.text = self.currentStressor.monsterName
+            cell.titleLabel.text = self.currentStressor.monster?.name
             
             switch row {
             case 1: cell.answerLabel.text = self.currentStressor.answer1
