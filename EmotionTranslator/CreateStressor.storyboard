@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="GpC-mK-eIc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="GpC-mK-eIc">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -53,6 +53,10 @@
                                     <constraint firstAttribute="bottom" secondItem="ZKh-gL-5vF" secondAttribute="bottom" id="zfB-CK-2ih"/>
                                 </constraints>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fxY-4a-KVT">
+                                <rect key="frame" x="0.0" y="100" width="375" height="567"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NoM-6t-oPd">
                                 <rect key="frame" x="20" y="603" width="335" height="44"/>
                                 <constraints>
@@ -68,6 +72,7 @@
                             </button>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tgq-NK-1nL">
                                 <rect key="frame" x="0.0" y="100" width="375" height="483"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </containerView>
                             <button opaque="NO" alpha="0.0" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yiw-WR-6wh">
                                 <rect key="frame" x="20" y="549" width="335" height="44"/>
@@ -86,14 +91,18 @@
                         <color key="backgroundColor" red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="NoM-6t-oPd" firstAttribute="top" secondItem="tgq-NK-1nL" secondAttribute="bottom" constant="20" id="0Kc-1c-yU6"/>
+                            <constraint firstAttribute="trailing" secondItem="fxY-4a-KVT" secondAttribute="trailing" id="3hy-SJ-Tgy"/>
                             <constraint firstItem="j7X-CC-2fB" firstAttribute="top" secondItem="NoM-6t-oPd" secondAttribute="bottom" constant="20" id="5HT-uw-JQ6"/>
                             <constraint firstItem="tgq-NK-1nL" firstAttribute="top" secondItem="URP-5S-b5h" secondAttribute="bottom" id="Bty-q2-JCS"/>
                             <constraint firstItem="yiw-WR-6wh" firstAttribute="leading" secondItem="NaJ-Ny-ef0" secondAttribute="leading" constant="20" id="DRh-sP-9D0"/>
                             <constraint firstAttribute="trailing" secondItem="tgq-NK-1nL" secondAttribute="trailing" id="ErT-Bp-R6T"/>
+                            <constraint firstItem="j7X-CC-2fB" firstAttribute="top" secondItem="fxY-4a-KVT" secondAttribute="bottom" id="GTP-Ur-BFJ"/>
                             <constraint firstItem="URP-5S-b5h" firstAttribute="top" secondItem="bmw-W8-Xdl" secondAttribute="bottom" id="Pxz-rn-UUG"/>
                             <constraint firstAttribute="trailing" secondItem="yiw-WR-6wh" secondAttribute="trailing" constant="20" id="SLG-rk-Q4y"/>
                             <constraint firstAttribute="trailing" secondItem="URP-5S-b5h" secondAttribute="trailing" id="TQJ-SA-u4f"/>
+                            <constraint firstItem="fxY-4a-KVT" firstAttribute="leading" secondItem="NaJ-Ny-ef0" secondAttribute="leading" id="a1l-5a-KBM"/>
                             <constraint firstItem="NoM-6t-oPd" firstAttribute="top" secondItem="yiw-WR-6wh" secondAttribute="bottom" constant="10" id="g7L-CZ-mA1"/>
+                            <constraint firstItem="fxY-4a-KVT" firstAttribute="top" secondItem="URP-5S-b5h" secondAttribute="bottom" id="hrk-UH-lW9"/>
                             <constraint firstItem="NoM-6t-oPd" firstAttribute="leading" secondItem="NaJ-Ny-ef0" secondAttribute="leading" constant="20" id="jvV-ol-g0g"/>
                             <constraint firstItem="tgq-NK-1nL" firstAttribute="leading" secondItem="NaJ-Ny-ef0" secondAttribute="leading" id="pvI-Kt-AYs"/>
                             <constraint firstItem="URP-5S-b5h" firstAttribute="leading" secondItem="NaJ-Ny-ef0" secondAttribute="leading" id="q3T-eJ-vxN"/>
@@ -102,6 +111,7 @@
                     </view>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
+                        <outlet property="backgroundContentView" destination="fxY-4a-KVT" id="V8r-NC-Q6g"/>
                         <outlet property="continueButton" destination="NoM-6t-oPd" id="hZV-u3-YGz"/>
                         <outlet property="pageContainerView" destination="tgq-NK-1nL" id="5r0-ov-3ci"/>
                         <outlet property="pageControl" destination="ZKh-gL-5vF" id="gO6-lZ-340"/>

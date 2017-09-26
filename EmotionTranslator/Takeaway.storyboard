@@ -31,7 +31,7 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="idG-Wg-IQk">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="calibratedRGB"/>
                         <view key="tableHeaderView" contentMode="scaleToFill" id="sdl-pq-5O1">
                             <rect key="frame" x="0.0" y="0.0" width="375" height="115"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -74,6 +74,7 @@
                                             </constraints>
                                         </view>
                                     </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     <constraints>
                                         <constraint firstItem="chw-Ke-eQ5" firstAttribute="top" secondItem="c7G-Xq-doa" secondAttribute="bottom" constant="6.5" id="M8y-2m-mhk"/>
                                         <constraint firstItem="chw-Ke-eQ5" firstAttribute="leading" secondItem="c7G-Xq-doa" secondAttribute="leading" id="SAC-hV-KXc"/>
@@ -113,6 +114,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     <constraints>
                                         <constraint firstItem="sFm-c9-2MN" firstAttribute="top" secondItem="d3N-iy-VQN" secondAttribute="top" constant="6" id="HPH-0w-9gW"/>
                                         <constraint firstItem="sFm-c9-2MN" firstAttribute="leading" secondItem="d3N-iy-VQN" secondAttribute="leading" constant="20" id="IFx-ia-b8q"/>
@@ -151,6 +153,7 @@
                                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                         </textView>
                                     </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     <constraints>
                                         <constraint firstItem="zKN-Uw-jep" firstAttribute="top" secondItem="fIJ-Co-lUh" secondAttribute="top" constant="20" id="24o-VK-PTr"/>
                                         <constraint firstItem="tkI-pH-aN0" firstAttribute="leading" secondItem="zKN-Uw-jep" secondAttribute="leading" id="4z1-2M-anT"/>

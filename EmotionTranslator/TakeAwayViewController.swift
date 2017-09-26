@@ -11,11 +11,27 @@ import KMPlaceholderTextView
 
 final class TakeAwayHeaderViewCell: UITableViewCell {
     @IBOutlet var label: UILabel!
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        
+        self.backgroundColor = UIColor.white.withAlphaComponent(0.73)
+        self.selectionStyle = .none
+
+    }
 }
 
 final class TakeAwayResponseViewCell: UITableViewCell {
     @IBOutlet var titleLabel: UILabel!
     @IBOutlet var answerLabel: UILabel!
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        
+        self.backgroundColor = UIColor.white.withAlphaComponent(0.73)
+        self.selectionStyle = .none
+
+    }
 }
 
 final class TakeAwayQuestionViewCell: UITableViewCell {
@@ -29,6 +45,9 @@ final class TakeAwayQuestionViewCell: UITableViewCell {
         self.textView.layer.borderWidth = UIConstants.Appearance.borderWidth
         self.textView.layer.borderColor = UIColor.lightGray.cgColor
 
+        self.backgroundColor = UIColor.white.withAlphaComponent(0.73)
+        self.selectionStyle = .none
+
     }
     
 }
@@ -40,12 +59,18 @@ class TakeAwayViewController: UITableViewController {
     var gotoMonsterName: (() -> ())? = nil
     var questionsEnded: (() -> ())? = nil
     
+    var backgroundView: UIView!
+    
+    var takeAwayTextView: KMPlaceholderTextView?
+    var takeAwayActionsTextView: KMPlaceholderTextView?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         self.tableView.rowHeight = UITableViewAutomaticDimension
         self.tableView.estimatedRowHeight = 70
+                
     }
 
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -90,8 +115,8 @@ class TakeAwayViewController: UITableViewController {
                     cell.textView.text = self.currentStressor.takeAwayText
                 }
                 cell.textView.delegate = self
-
                 cell.textView.placeholder = "My biggest takeaway is… example 1, example 2 "
+                takeAwayTextView = cell.textView
             case 2:
                 cell.titleLabel.text = "What action step does your takeaway inspire you to take?"
                 
@@ -100,11 +125,14 @@ class TakeAwayViewController: UITableViewController {
                 }
                 
                 cell.textView.delegate = self
-                
                 cell.textView.placeholder = "I am inspired to… example 1, example 2 (hint text TBD)"
+                takeAwayActionsTextView = cell.textView
+
             default:
                 break
             }
+            
+            cell.contentView.backgroundColor = UIColor.clear
             
             returnCell = cell
             
@@ -114,19 +142,6 @@ class TakeAwayViewController: UITableViewController {
         
         return returnCell
     }
-    
-    var takeAwayText: String? {
-        let qaIndex = IndexPath(row: 1, section: 1)
-        let qaCell = self.tableView.cellForRow(at: qaIndex) as! TakeAwayQuestionViewCell
-        return qaCell.textView.text.count > 0 ? qaCell.textView.text : nil
-    }
-    
-    var takeAwayActions: String? {
-        let qaIndex = IndexPath(row: 2, section: 1)
-        let qaCell = self.tableView.cellForRow(at: qaIndex) as! TakeAwayQuestionViewCell
-        return qaCell.textView.text.count > 0 ? qaCell.textView.text : nil
-    }
-
 
 }
 
@@ -134,7 +149,7 @@ class TakeAwayViewController: UITableViewController {
 
 extension TakeAwayViewController: StressorValidation {
     var error: StressorError {
-        return (takeAwayText?.trimmed.count ?? 0 > 0 && takeAwayActions?.trimmed.count ?? 0 > 0) ? .none : .text
+        return (takeAwayTextView?.text.trimmed.count ?? 0 > 0 && takeAwayActionsTextView?.text.trimmed.count ?? 0 > 0) ? .none : .text
     }
 }
 
@@ -144,8 +159,8 @@ extension TakeAwayViewController: StressorFacetEditor {
     func save() {
         //self.tableViewController.saveAction(self.tableViewController.selectedItems)
         self.currentStressor.lastEditedFacet = .takeaway
-        self.currentStressor.takeAwayText = takeAwayText
-        self.currentStressor.takeAwayActions = takeAwayActions
+        self.currentStressor.takeAwayText = takeAwayTextView?.text
+        self.currentStressor.takeAwayActions = takeAwayActionsTextView?.text
     }
 }
 
