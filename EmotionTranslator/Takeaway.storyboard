@@ -1,40 +1,190 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="a4X-h8-w5w">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="zkB-5M-Unq">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Muli-Bold.ttf">
+            <string>Muli-Bold</string>
+        </array>
+        <array key="Muli-Light.ttf">
+            <string>Muli-Light</string>
+        </array>
+        <array key="Muli-Regular.ttf">
+            <string>Muli-Regular</string>
+        </array>
+        <array key="Muli-SemiBold.ttf">
+            <string>Muli-SemiBold</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Take Away View Controller-->
-        <scene sceneID="b53-8E-0w1">
+        <scene sceneID="2zY-xK-i6z">
             <objects>
-                <viewController id="a4X-h8-w5w" customClass="TakeAwayViewController" customModule="EmotionTranslator" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="U4h-fZ-cBa"/>
-                        <viewControllerLayoutGuide type="bottom" id="kvY-sI-u3M"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="c8u-pi-xEt">
+                <tableViewController id="zkB-5M-Unq" customClass="TakeAwayViewController" customModule="EmotionTranslator" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="idG-Wg-IQk">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Take Away" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vPK-Zu-QEF">
-                                <rect key="frame" x="135" y="28" width="104" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="hlK-gb-Y9K" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="calibratedRGB"/>
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="sdl-pq-5O1">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="115"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Take a moment to reflect back on your conversation. Then, complete the Take Action questions." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MMO-P8-voZ">
+                                    <rect key="frame" x="20" y="30" width="335" height="70"/>
+                                    <fontDescription key="fontDescription" name="Muli-SemiBold" family="Muli" pointSize="18"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstItem="MMO-P8-voZ" firstAttribute="top" secondItem="sdl-pq-5O1" secondAttribute="top" constant="30" id="Alj-2b-eeQ"/>
+                                <constraint firstAttribute="trailing" secondItem="MMO-P8-voZ" secondAttribute="trailing" constant="20" id="Cg9-5R-bEe"/>
+                                <constraint firstItem="MMO-P8-voZ" firstAttribute="leading" secondItem="sdl-pq-5O1" secondAttribute="leading" constant="20" id="W7P-wR-fKd"/>
+                                <constraint firstAttribute="bottom" secondItem="MMO-P8-voZ" secondAttribute="bottom" constant="15" id="h95-fc-4Dt"/>
+                            </constraints>
+                        </view>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="header" rowHeight="64" id="ttR-mU-i8R" customClass="TakeAwayHeaderViewCell" customModule="EmotionTranslator" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="143" width="375" height="64"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ttR-mU-i8R" id="Iku-QX-yGA">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Conversation" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c7G-Xq-doa">
+                                            <rect key="frame" x="20" y="30" width="107" height="17.5"/>
+                                            <fontDescription key="fontDescription" name="Muli-Regular" family="Muli" pointSize="18"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="chw-Ke-eQ5">
+                                            <rect key="frame" x="20" y="54" width="122" height="2"/>
+                                            <color key="backgroundColor" red="0.88235294117647056" green="0.88235294117647056" blue="0.89411764705882346" alpha="1" colorSpace="calibratedRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="2" id="ODI-qk-TjN"/>
+                                                <constraint firstAttribute="width" constant="122" id="eVy-K2-VjX"/>
+                                            </constraints>
+                                        </view>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    <constraints>
+                                        <constraint firstItem="chw-Ke-eQ5" firstAttribute="top" secondItem="c7G-Xq-doa" secondAttribute="bottom" constant="6.5" id="M8y-2m-mhk"/>
+                                        <constraint firstItem="chw-Ke-eQ5" firstAttribute="leading" secondItem="c7G-Xq-doa" secondAttribute="leading" id="SAC-hV-KXc"/>
+                                        <constraint firstItem="c7G-Xq-doa" firstAttribute="leading" secondItem="Iku-QX-yGA" secondAttribute="leading" constant="20" id="qI2-Sb-uQO"/>
+                                        <constraint firstItem="c7G-Xq-doa" firstAttribute="top" secondItem="Iku-QX-yGA" secondAttribute="top" constant="30" id="suD-sV-YRX"/>
+                                        <constraint firstAttribute="bottom" secondItem="chw-Ke-eQ5" secondAttribute="bottom" constant="8" id="y5C-aB-pJv"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="label" destination="c7G-Xq-doa" id="flM-aU-Laq"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="response" rowHeight="72" id="TCX-xN-YXK" customClass="TakeAwayResponseViewCell" customModule="EmotionTranslator" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="207" width="375" height="72"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="TCX-xN-YXK" id="d3N-iy-VQN">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="72"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="takeAwayMonster" translatesAutoresizingMaskIntoConstraints="NO" id="sFm-c9-2MN">
+                                            <rect key="frame" x="20" y="6" width="45" height="60"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="45" id="KUA-xp-rNY"/>
+                                                <constraint firstAttribute="height" constant="60" id="mEe-S1-VhJ"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Angry Al" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IS0-1i-jM4">
+                                            <rect key="frame" x="85" y="14" width="56.5" height="19"/>
+                                            <fontDescription key="fontDescription" name="Muli-Bold" family="Muli" pointSize="15"/>
+                                            <color key="textColor" red="0.62745098039215685" green="0.63921568627450975" blue="0.66274509803921566" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Response to Question 1" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cZ6-3n-u65">
+                                            <rect key="frame" x="85" y="39" width="151" height="18"/>
+                                            <fontDescription key="fontDescription" name="Muli-Light" family="Muli" pointSize="14"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    <constraints>
+                                        <constraint firstItem="sFm-c9-2MN" firstAttribute="top" secondItem="d3N-iy-VQN" secondAttribute="top" constant="6" id="HPH-0w-9gW"/>
+                                        <constraint firstItem="sFm-c9-2MN" firstAttribute="leading" secondItem="d3N-iy-VQN" secondAttribute="leading" constant="20" id="IFx-ia-b8q"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="cZ6-3n-u65" secondAttribute="bottom" constant="6.5" id="LU4-9M-3Nn"/>
+                                        <constraint firstItem="cZ6-3n-u65" firstAttribute="top" secondItem="IS0-1i-jM4" secondAttribute="bottom" constant="6" id="XWe-Bc-phz"/>
+                                        <constraint firstItem="IS0-1i-jM4" firstAttribute="top" secondItem="d3N-iy-VQN" secondAttribute="topMargin" constant="6" id="g5h-QY-5y5"/>
+                                        <constraint firstItem="cZ6-3n-u65" firstAttribute="leading" secondItem="IS0-1i-jM4" secondAttribute="leading" id="jyg-Bn-yzQ"/>
+                                        <constraint firstItem="IS0-1i-jM4" firstAttribute="leading" secondItem="sFm-c9-2MN" secondAttribute="trailing" constant="20" id="xl7-PX-6f0"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="answerLabel" destination="cZ6-3n-u65" id="cnS-wd-F5u"/>
+                                    <outlet property="titleLabel" destination="IS0-1i-jM4" id="XgC-t7-XC9"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="question" rowHeight="157" id="TCx-Vx-jep" customClass="TakeAwayQuestionViewCell" customModule="EmotionTranslator" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="279" width="375" height="157"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="TCx-Vx-jep" id="fIJ-Co-lUh">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="157"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Based on the convo you just had, what’s your biggest takeaway from this experience?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zKN-Uw-jep">
+                                            <rect key="frame" x="20" y="20" width="335" height="43.5"/>
+                                            <fontDescription key="fontDescription" name="Muli-Regular" family="Muli" pointSize="14"/>
+                                            <color key="textColor" red="0.12549019607843137" green="0.19215686274509802" blue="0.25490196078431371" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="tkI-pH-aN0" customClass="KMPlaceholderTextView" customModule="KMPlaceholderTextView">
+                                            <rect key="frame" x="20" y="74.5" width="335" height="67"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="67" id="lrR-j0-ac1"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="Muli-Regular" family="Muli" pointSize="12"/>
+                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        </textView>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    <constraints>
+                                        <constraint firstItem="zKN-Uw-jep" firstAttribute="top" secondItem="fIJ-Co-lUh" secondAttribute="top" constant="20" id="24o-VK-PTr"/>
+                                        <constraint firstItem="tkI-pH-aN0" firstAttribute="leading" secondItem="zKN-Uw-jep" secondAttribute="leading" id="4z1-2M-anT"/>
+                                        <constraint firstItem="tkI-pH-aN0" firstAttribute="trailing" secondItem="zKN-Uw-jep" secondAttribute="trailing" id="DVx-E1-8Zx"/>
+                                        <constraint firstAttribute="bottom" secondItem="tkI-pH-aN0" secondAttribute="bottom" constant="15.5" id="Ld0-ke-vao"/>
+                                        <constraint firstItem="zKN-Uw-jep" firstAttribute="leading" secondItem="fIJ-Co-lUh" secondAttribute="leading" constant="20" id="e2x-Nk-wbg"/>
+                                        <constraint firstItem="tkI-pH-aN0" firstAttribute="top" secondItem="zKN-Uw-jep" secondAttribute="bottom" constant="11" id="lrZ-6V-sti"/>
+                                        <constraint firstAttribute="trailing" secondItem="zKN-Uw-jep" secondAttribute="trailing" constant="20" id="p2M-d9-Mmg"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="textView" destination="tkI-pH-aN0" id="uxK-Fn-uQv"/>
+                                    <outlet property="titleLabel" destination="zKN-Uw-jep" id="0rd-ef-Shh"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="zkB-5M-Unq" id="YD7-le-LHB"/>
+                            <outlet property="delegate" destination="zkB-5M-Unq" id="ivO-Mq-oMU"/>
+                        </connections>
+                    </tableView>
+                    <connections>
+                        <outlet property="titleLabel" destination="MMO-P8-voZ" id="fHT-R2-CoK"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vhd-I8-NXP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="152.80000000000001" y="129.98500749625188"/>
+            <point key="canvasLocation" x="154.40000000000001" y="158.77061469265368"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="takeAwayMonster" width="150" height="200"/>
+    </resources>
 </document>

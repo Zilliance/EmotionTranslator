@@ -71,7 +71,8 @@ class CreateStressorViewController: AnalyzedViewController {
     @IBOutlet weak var continueButton: UIButton!
     @IBOutlet weak var remindMeButton: UIButton!
     
-    
+    @IBOutlet weak var backgroundContentView: UIView!
+
     private let backButton = UIButton()
     
     var stressor: Stressor = Stressor()
@@ -159,6 +160,16 @@ class CreateStressorViewController: AnalyzedViewController {
         let item = self.stressorItems[self.currentPageIndex]
         self.setupButton(for: item)
         
+        self.backgroundContentView.layer.contents = UIImage(named: "takeAwayBackground")?.cgImage
+        self.backgroundContentView.layer.contentsGravity = kCAGravityResizeAspectFill
+        self.backgroundContentView.isHidden = true
+        
+        if let _ = item.viewController as? TakeAwayViewController {
+            self.backgroundContentView.isHidden = false
+        } else {
+            self.backgroundContentView.isHidden = true
+        }
+
     }
     
     private func checkError() -> StressorError {
@@ -236,6 +247,12 @@ class CreateStressorViewController: AnalyzedViewController {
         self.setupButton(for: item)
         self.title = self.stressor.title
         self.pageControlViewController.setViewControllers([item.viewController], direction: direction, animated: true, completion: nil)
+        
+        if let _ = item.viewController as? TakeAwayViewController {
+            self.backgroundContentView.isHidden = false
+        } else {
+            self.backgroundContentView.isHidden = true
+        }
         
         Analytics.shared.send(event: ZillianceAnalytics.DetailedEvents.viewControllerShown(item.viewController.analyticsObjectName))
 

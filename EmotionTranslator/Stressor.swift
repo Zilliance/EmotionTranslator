@@ -30,7 +30,6 @@ final class Stressor: Object {
         }
         
     }
-
     
     dynamic var title: String?
     dynamic var completed: Bool = false
@@ -71,6 +70,9 @@ final class Stressor: Object {
     dynamic var answer2 = ""
     dynamic var answer3 = ""
     dynamic var answer4 = ""
+    
+    dynamic var takeAwayText: String?
+    dynamic var takeAwayActions: String?
 }
 
 class QuestionAnswer: Object {
