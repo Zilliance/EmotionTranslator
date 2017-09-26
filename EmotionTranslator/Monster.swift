@@ -113,7 +113,8 @@ final class Monster: Object {
             if self == .none {
                 return UIImage(named: "hair-none")!
             } else {
-                return UIImage(named: "hair-\(color.stringValue)-\(self.rawValue)")!
+                // return UIImage(named: "hair-\(color.stringValue)-\(self.rawValue)")!
+                return UIImage(named: "hair-\(self.rawValue)")!
             }
         }
     }

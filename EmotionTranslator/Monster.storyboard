@@ -227,10 +227,10 @@
         </scene>
     </scenes>
     <resources>
-        <image name="character1" width="86" height="96"/>
-        <image name="character2" width="94" height="95"/>
-        <image name="character3" width="96" height="94"/>
-        <image name="character4" width="96" height="94"/>
-        <image name="character5" width="101" height="99"/>
+        <image name="character1" width="150" height="200"/>
+        <image name="character2" width="150" height="200"/>
+        <image name="character3" width="150" height="200"/>
+        <image name="character4" width="150" height="200"/>
+        <image name="character5" width="150" height="200"/>
     </resources>
 </document>
