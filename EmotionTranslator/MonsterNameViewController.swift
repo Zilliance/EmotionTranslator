@@ -26,7 +26,7 @@ class MonsterNameViewController: UIViewController {
             
         }
         
-        if let name = self.currentStressor.monsterName {
+        if let name = self.currentStressor.monster?.name {
             self.nameTextField.text = name
         }
 
@@ -35,7 +35,7 @@ class MonsterNameViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        if let name = self.currentStressor.monsterName {
+        if let name = self.currentStressor.monster?.name {
             self.nameTextField.text = name
         }
         
@@ -78,6 +78,6 @@ extension MonsterNameViewController: StressorFacetEditor {
     func save() {
         //self.tableViewController.saveAction(self.tableViewController.selectedItems)
         self.currentStressor.lastEditedFacet = .name
-        self.currentStressor.monsterName = self.nameTextField.text
+        self.currentStressor.monster?.name = self.nameTextField.text
     }
 }

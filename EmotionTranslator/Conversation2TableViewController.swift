@@ -41,7 +41,7 @@ class Conversation2TableViewController: UITableViewController {
         self.tableView.rowHeight = UITableViewAutomaticDimension
         self.tableView.estimatedRowHeight = 80
         
-        if let monsterName = self.currentStressor.monsterName {
+        if let monsterName = self.currentStressor.monster?.name {
             
             let text = "Before you finish, take one more minute to ask \(monsterName) the following 4 questions:"
             let attributedString = NSMutableAttributedString(string: text)
@@ -127,7 +127,7 @@ class Conversation2TableViewController: UITableViewController {
             
             let text = self.replies[(indexPath.row)/2]
             
-            cell.nameLabel.text = self.currentStressor.monsterName
+            cell.nameLabel.text = self.currentStressor.monster?.name
             
             cell.entryTextView.text = ""
             

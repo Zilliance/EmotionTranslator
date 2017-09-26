@@ -41,14 +41,14 @@ final class Stressor: Object {
     
     /// Convenience method for accessing the monster name off the stressor object
     
-    var monsterName: String? {
-        get {
-            return self.monster?.name
-        }
-        set {
-            self.monster?.name = newValue
-        }
-    }
+//    var monsterName: String? {
+//        get {
+//            return self.monster?.name
+//        }
+//        set {
+//            self.monster?.name = newValue
+//        }
+//    }
     
     dynamic var hasCustomMonster = false
     

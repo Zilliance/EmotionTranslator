@@ -215,7 +215,7 @@ class ConversationTableViewController: UITableViewController {
             
             if indexPath.row % 2 != 0 {
                 cell.iconImageView.image = #imageLiteral(resourceName: "completed-stressor")
-                cell.nameLabel.text = self.currentStressor.monsterName
+                cell.nameLabel.text = self.currentStressor.monster?.name
             }
             else {
                 cell.iconImageView.image = #imageLiteral(resourceName: "user-conversation")
@@ -230,7 +230,7 @@ class ConversationTableViewController: UITableViewController {
             
             if indexPath.row % 2 != 0 {
                 cell.iconImageView.image = #imageLiteral(resourceName: "completed-stressor")
-                cell.nameLabel.text = self.currentStressor.monsterName
+                cell.nameLabel.text = self.currentStressor.monster?.name
             }
             else {
                 cell.iconImageView.image = #imageLiteral(resourceName: "user-conversation")
