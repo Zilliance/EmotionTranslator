@@ -134,7 +134,7 @@ class TakeAwayViewController: UITableViewController {
 
 extension TakeAwayViewController: StressorValidation {
     var error: StressorError {
-        return (takeAwayText != nil && takeAwayActions != nil) ? .none : .text
+        return (takeAwayText?.trimmed.count ?? 0 > 0 && takeAwayActions?.trimmed.count ?? 0 > 0) ? .none : .text
     }
 }
 
