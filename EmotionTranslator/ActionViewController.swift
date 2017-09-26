@@ -12,7 +12,7 @@ import ZillianceShared
 class ActionViewController: UIViewController {
     
     var currentStressor: Stressor!
-    var gotoMonsterName: (() -> ())? = nil
+    var gotoIntroduction: (() -> ())? = nil
     var questionsEnded: (() -> ())? = nil
 
     @IBOutlet weak var takeAwayLabel: UILabel!
