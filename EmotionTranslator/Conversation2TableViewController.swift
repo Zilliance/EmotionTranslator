@@ -13,7 +13,7 @@ class Conversation2TableViewController: UITableViewController {
     @IBOutlet weak var headerLabel: UILabel!
     
     var currentStressor: Stressor!
-    var gotoMonsterName: (() -> ())? = nil
+    var gotoIntroduction: (() -> ())? = nil
     
     var questionsEnded: (() -> ())? = nil
     

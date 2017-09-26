@@ -85,7 +85,7 @@ class ConversationTableViewController: UITableViewController {
     @IBOutlet weak var timerButton: UIButton!
     
     var currentStressor: Stressor!
-    var gotoMonsterName: (() -> ())? = nil
+    var gotoIntroduction: (() -> ())? = nil
     
     var questionsEnded: (() -> ())? = nil
     

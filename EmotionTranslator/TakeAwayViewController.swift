@@ -58,7 +58,7 @@ final class TakeAwayQuestionViewCell: UITableViewCell {
 class TakeAwayViewController: UITableViewController {
     
     var currentStressor: Stressor!
-    var gotoMonsterName: (() -> ())? = nil
+    var gotoIntroduction: (() -> ())? = nil
     var questionsEnded: (() -> ())? = nil
     
     var backgroundView: UIView!
