@@ -36,7 +36,7 @@ class TimerViewController: UIViewController {
     private func setupView() {
         self.timerView.backgroundColor = UIColor.white.withAlphaComponent(0.8)
         
-        if let monsterName = self.currentStressor.monsterName {
+        if let monsterName = self.currentStressor.monster?.name {
             
             let text = "\(monsterName) and you are going to have a conversation to find out what is’s trying to tell you."
             let attributedString = NSMutableAttributedString(string: text)
