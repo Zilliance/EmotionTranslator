@@ -38,18 +38,6 @@ final class Stressor: Object {
     let emotions = List<Emotion>()
     
     dynamic var monster: Monster?
-    
-    /// Convenience method for accessing the monster name off the stressor object
-    
-//    var monsterName: String? {
-//        get {
-//            return self.monster?.name
-//        }
-//        set {
-//            self.monster?.name = newValue
-//        }
-//    }
-    
     dynamic var hasCustomMonster = false
     
     dynamic var lastEditedFacet: Facet = .stressor
