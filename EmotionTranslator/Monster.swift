@@ -113,7 +113,8 @@ final class Monster: Object {
             if self == .none {
                 return UIImage(named: "hair-none")!
             } else {
-                return UIImage(named: "hair-\(color.stringValue)-\(self.rawValue)")!
+                // return UIImage(named: "hair-\(color.stringValue)-\(self.rawValue)")!
+                return UIImage(named: "hair-\(self.rawValue)")!
             }
         }
     }
@@ -169,6 +170,7 @@ final class Monster: Object {
     }
     
     struct Default {
+        let name: String
         let color: Color
         let shape: Shape
         let hair: Hair
@@ -176,6 +178,7 @@ final class Monster: Object {
         let eyes: Eyes
     }
     
+    dynamic var name: String?
     dynamic var color: Color = .none
     dynamic var shape: Shape = .none
     dynamic var hair: Hair = .none

@@ -2,17 +2,17 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "character2.png",
+      "filename" : "overwhelmedOliver.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "character2@2x.png",
+      "filename" : "overwhelmedOliver@2x.png",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
-      "filename" : "character2@3x.png",
+      "filename" : "overwhelmedOliver@3x.png",
       "scale" : "3x"
     }
   ],

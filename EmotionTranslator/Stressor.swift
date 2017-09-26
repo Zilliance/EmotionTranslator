@@ -12,7 +12,6 @@ import RealmSwift
 
 final class Stressor: Object {
     
-    
     @objc enum Facet: Int32 {
         case stressor
         case emotion
@@ -39,7 +38,17 @@ final class Stressor: Object {
     let emotions = List<Emotion>()
     
     dynamic var monster: Monster?
-    dynamic var monsterName: String?
+    
+    /// Convenience method for accessing the monster name off the stressor object
+    
+    var monsterName: String? {
+        get {
+            return self.monster?.name
+        }
+        set {
+            self.monster?.name = newValue
+        }
+    }
     
     dynamic var hasCustomMonster = false
     
