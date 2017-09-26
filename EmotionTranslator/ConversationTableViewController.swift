@@ -8,6 +8,7 @@
 
 import UIKit
 import KMPlaceholderTextView
+import MZFormSheetController
 
 class QuestionCell: UITableViewCell {
     
@@ -158,6 +159,19 @@ class ConversationTableViewController: UITableViewController {
     }
     
     @IBAction func exampleAction(_ sender: Any) {
+        
+        guard let exampleViewController = UIStoryboard(name: "Conversation", bundle: nil).instantiateViewController(withIdentifier: "Example") as? ConversationExampleTableViewController else {
+            assertionFailure()
+            return
+        }
+        
+        let formSheet = MZFormSheetController(viewController: exampleViewController)
+        formSheet.shouldDismissOnBackgroundViewTap = true
+        formSheet.presentedFormSheetSize = CGSize(width: self.view.bounds.width - 20, height: self.view.bounds.height + 25)
+        formSheet.shouldCenterVertically = true
+        formSheet.transitionStyle = .slideFromBottom
+        
+        self.mz_present(formSheet, animated: true, completionHandler: nil)
     }
     
     override var analyticsObjectName: String {

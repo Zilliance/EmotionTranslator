@@ -38,6 +38,7 @@
 		8C2B14501F56161C002C0353 /* NewStressorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2B144F1F56161C002C0353 /* NewStressorViewController.swift */; };
 		8C3DDC601F7080FC00782F91 /* Conversation2.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C3DDC5F1F7080FC00782F91 /* Conversation2.storyboard */; };
 		8C3DDC621F70817000782F91 /* Conversation2TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C3DDC611F70817000782F91 /* Conversation2TableViewController.swift */; };
+		8C4F11DA1F7AB4830094FD6C /* ConversationExampleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4F11D91F7AB4830094FD6C /* ConversationExampleTableViewController.swift */; };
 		8C61D6841F57500D00389FC0 /* Emotion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C61D6831F57500D00389FC0 /* Emotion.swift */; };
 		8C61D6871F57531D00389FC0 /* Emotion.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C61D6861F57531D00389FC0 /* Emotion.storyboard */; };
 		8C61D6891F57568B00389FC0 /* EmotionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C61D6881F57568B00389FC0 /* EmotionViewController.swift */; };
@@ -153,6 +154,7 @@
 		8C2B144F1F56161C002C0353 /* NewStressorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewStressorViewController.swift; sourceTree = "<group>"; };
 		8C3DDC5F1F7080FC00782F91 /* Conversation2.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Conversation2.storyboard; sourceTree = "<group>"; };
 		8C3DDC611F70817000782F91 /* Conversation2TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Conversation2TableViewController.swift; sourceTree = "<group>"; };
+		8C4F11D91F7AB4830094FD6C /* ConversationExampleTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationExampleTableViewController.swift; sourceTree = "<group>"; };
 		8C61D6831F57500D00389FC0 /* Emotion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Emotion.swift; sourceTree = "<group>"; };
 		8C61D6861F57531D00389FC0 /* Emotion.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Emotion.storyboard; sourceTree = "<group>"; };
 		8C61D6881F57568B00389FC0 /* EmotionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmotionViewController.swift; sourceTree = "<group>"; };
@@ -370,6 +372,7 @@
 				8C61D6AA1F60B77100389FC0 /* ConversationIntroductionTableViewController.swift */,
 				8C61D6AC1F61CCCF00389FC0 /* Conversation.storyboard */,
 				8C61D6AE1F61D02100389FC0 /* ConversationTableViewController.swift */,
+				8C4F11D91F7AB4830094FD6C /* ConversationExampleTableViewController.swift */,
 				8C3DDC5F1F7080FC00782F91 /* Conversation2.storyboard */,
 				8C3DDC611F70817000782F91 /* Conversation2TableViewController.swift */,
 			);
@@ -985,6 +988,7 @@
 				8C61D68E1F57586300389FC0 /* AddItemCell.swift in Sources */,
 				8C2B143F1F54BD69002C0353 /* AppConstants.swift in Sources */,
 				E3BE10B51F53C6EF00787921 /* AppDelegate.swift in Sources */,
+				8C4F11DA1F7AB4830094FD6C /* ConversationExampleTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
