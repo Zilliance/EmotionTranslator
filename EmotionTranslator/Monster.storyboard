@@ -89,7 +89,7 @@ Al</string>
                                                 <color key="shadowColor" red="0.92156862745098034" green="0.92156862745098034" blue="0.92156862745098034" alpha="1" colorSpace="calibratedRGB"/>
                                             </label>
                                         </subviews>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstItem="CSK-qS-vbM" firstAttribute="top" secondItem="QmZ-Pb-zT2" secondAttribute="top" id="1Q4-G2-hTe"/>
                                             <constraint firstAttribute="bottom" secondItem="CSK-qS-vbM" secondAttribute="bottom" id="20h-2D-UDQ"/>
@@ -129,7 +129,7 @@ Fran</string>
                                                 <color key="shadowColor" red="0.92156862750000001" green="0.92156862750000001" blue="0.92156862750000001" alpha="1" colorSpace="calibratedRGB"/>
                                             </label>
                                         </subviews>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="5VW-uR-2cW" secondAttribute="trailing" id="3Mp-Zp-YLM"/>
                                             <constraint firstItem="KbI-dN-anw" firstAttribute="leading" secondItem="dDt-uF-4xt" secondAttribute="leading" id="CrH-7H-LIE"/>
@@ -169,7 +169,7 @@ Sally</string>
                                                 <color key="shadowColor" red="0.92156862750000001" green="0.92156862750000001" blue="0.92156862750000001" alpha="1" colorSpace="calibratedRGB"/>
                                             </label>
                                         </subviews>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="cHf-f9-Pxn" secondAttribute="trailing" id="3Rj-NW-i1j"/>
                                             <constraint firstItem="Kre-3q-GPR" firstAttribute="leading" secondItem="2XQ-3t-d6y" secondAttribute="leading" id="CH2-3b-FOg"/>
@@ -190,7 +190,7 @@ Sally</string>
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="hp6-Yj-IuI">
-                                <rect key="frame" x="80" y="330" width="215" height="190"/>
+                                <rect key="frame" x="80" y="250" width="215" height="190"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VGw-Kf-Dhx">
                                         <rect key="frame" x="0.0" y="0.0" width="107.5" height="190"/>
@@ -217,7 +217,7 @@ Frank</string>
                                                 <color key="shadowColor" red="0.92156862750000001" green="0.92156862750000001" blue="0.92156862750000001" alpha="1" colorSpace="calibratedRGB"/>
                                             </label>
                                         </subviews>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="FcK-B6-cYY" secondAttribute="trailing" id="2eo-qp-GRT"/>
                                             <constraint firstAttribute="trailing" secondItem="1a8-gu-xce" secondAttribute="trailing" id="Cmr-cQ-sj8"/>
@@ -257,7 +257,7 @@ Oliver</string>
                                                 <color key="shadowColor" red="0.92156862750000001" green="0.92156862750000001" blue="0.92156862750000001" alpha="1" colorSpace="calibratedRGB"/>
                                             </label>
                                         </subviews>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="bottom" secondItem="orc-Pc-Y8a" secondAttribute="bottom" id="5sH-ZT-0Ju"/>
                                             <constraint firstAttribute="trailing" secondItem="iHU-BR-cel" secondAttribute="trailing" id="884-Tc-cJD"/>
@@ -284,7 +284,7 @@ Oliver</string>
                             <constraint firstAttribute="trailing" secondItem="hp6-Yj-IuI" secondAttribute="trailing" constant="80" id="5vf-3d-mxC"/>
                             <constraint firstItem="D1T-5k-uKe" firstAttribute="leading" secondItem="3Ya-UZ-80k" secondAttribute="leading" id="ABQ-Tc-5Ul"/>
                             <constraint firstItem="aEr-Sk-aol" firstAttribute="top" secondItem="Jj2-EL-dd9" secondAttribute="bottom" id="BK5-sx-Smn"/>
-                            <constraint firstItem="hp6-Yj-IuI" firstAttribute="top" secondItem="bZC-8C-WTd" secondAttribute="bottom" id="Bvz-Pz-1Iu"/>
+                            <constraint firstItem="hp6-Yj-IuI" firstAttribute="top" secondItem="bZC-8C-WTd" secondAttribute="bottom" constant="-80" id="Bvz-Pz-1Iu"/>
                             <constraint firstAttribute="trailing" secondItem="D1T-5k-uKe" secondAttribute="trailing" id="SYP-DT-dqS"/>
                             <constraint firstItem="D1T-5k-uKe" firstAttribute="top" secondItem="aEr-Sk-aol" secondAttribute="bottom" constant="30" id="VGE-mq-lG8"/>
                             <constraint firstAttribute="trailing" secondItem="aEr-Sk-aol" secondAttribute="trailing" id="aDr-MR-sfw"/>
