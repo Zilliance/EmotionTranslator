@@ -38,10 +38,10 @@ final class Monster: Object {
             switch self {
             case .none:     return UIColor(red: 0, green: 0, blue: 0, alpha: 0)
             case .red:      return UIColor(red: 234.0/255.0, green: 91.0/255.0, blue: 67.0/255.0, alpha: 1)
-            case .yellow:   return UIColor(red: 255.0/255.0, green: 184.0/255.0, blue: 55.0/255.0, alpha: 1)
-            case .green:    return UIColor(red: 84.0/255.0, green: 186/255.0, blue: 42.0/255.0, alpha: 1)
-            case .blue:     return UIColor(red: 0.0/255.0, green: 184.0/255.0, blue: 231.0/255.0, alpha: 1)
-            case .purple:   return UIColor(red: 85.0/255.0, green: 95.0/255.0, blue: 193.0/255.0, alpha: 1)
+            case .yellow:   return UIColor(red: 255.0/255.0, green: 157.0/255.0, blue: 63.0/255.0, alpha: 1)
+            case .green:    return UIColor(red: 68.0/255.0, green: 176.0/255.0, blue: 85.0/255.0, alpha: 1)
+            case .blue:     return UIColor(red: 195.0/255.0, green: 195.0/255.0, blue: 195.0/255.0, alpha: 1)
+            case .purple:   return UIColor(red: 167.0/255.0, green: 105.0/255.0, blue: 159.0/255.0, alpha: 1)
             }
         }
         
