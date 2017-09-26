@@ -215,7 +215,7 @@ extension CreateMonsterViewController: UICollectionViewDataSource {
             let image = self.itemImages(for: self.currentSection, color: self.currentColor)[indexPath.row]
             
             switch self.currentSection {
-            case .eyes, .mouth:
+            case .eyes, .mouth, .hair:
                 cell.monsterColor = self.currentColor.color
             default:
                 cell.monsterColor = nil
