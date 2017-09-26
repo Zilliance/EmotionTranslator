@@ -43,10 +43,12 @@ final class TakeAwayQuestionViewCell: UITableViewCell {
         
         self.textView.layer.cornerRadius = UIConstants.Appearance.cornerRadius
         self.textView.layer.borderWidth = UIConstants.Appearance.borderWidth
-        self.textView.layer.borderColor = UIColor.lightGray.cgColor
+        self.textView.layer.borderColor = UIColor.color(forRed: 235, green: 235, blue: 235, alpha: 1).cgColor
 
         self.backgroundColor = UIColor.white.withAlphaComponent(0.73)
         self.selectionStyle = .none
+        
+        self.textView.placeholderFont = UIFont.muliLight(size: 14)
 
     }
     
@@ -81,9 +83,11 @@ class TakeAwayViewController: UITableViewController {
         
         if (!self.headerResized) {
             self.headerResized = true
-            self.tableView?.tableHeaderView?.setNeedsLayout()
-            self.tableView?.tableHeaderView?.layoutIfNeeded()
-            self.tableView?.tableHeaderView?.frame.size = (self.tableView?.tableHeaderView?.systemLayoutSizeFitting(UILayoutFittingCompressedSize)) ?? CGSize(width: 0, height: 0)
+            let headerView = self.tableView.tableHeaderView
+            headerView?.setNeedsLayout()
+            headerView?.layoutIfNeeded()
+            headerView?.frame.size = (self.tableView?.tableHeaderView?.systemLayoutSizeFitting(UILayoutFittingCompressedSize)) ?? CGSize(width: 0, height: 0)
+            self.tableView.tableHeaderView = headerView
             
         }
         
