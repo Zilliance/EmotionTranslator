@@ -63,6 +63,9 @@ class TakeAwayViewController: UITableViewController {
     
     var takeAwayTextView: KMPlaceholderTextView?
     var takeAwayActionsTextView: KMPlaceholderTextView?
+    var headerResized: Bool = false
+    
+    @IBOutlet var titleLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -71,6 +74,19 @@ class TakeAwayViewController: UITableViewController {
         self.tableView.rowHeight = UITableViewAutomaticDimension
         self.tableView.estimatedRowHeight = 70
                 
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+        if (!self.headerResized) {
+            self.headerResized = true
+            self.tableView?.tableHeaderView?.setNeedsLayout()
+            self.tableView?.tableHeaderView?.layoutIfNeeded()
+            self.tableView?.tableHeaderView?.frame.size = (self.tableView?.tableHeaderView?.systemLayoutSizeFitting(UILayoutFittingCompressedSize)) ?? CGSize(width: 0, height: 0)
+            
+        }
+        
     }
 
     override func numberOfSections(in tableView: UITableView) -> Int {

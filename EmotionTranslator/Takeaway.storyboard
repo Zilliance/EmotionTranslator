@@ -175,6 +175,9 @@
                             <outlet property="delegate" destination="zkB-5M-Unq" id="ivO-Mq-oMU"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <outlet property="titleLabel" destination="MMO-P8-voZ" id="fHT-R2-CoK"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vhd-I8-NXP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
