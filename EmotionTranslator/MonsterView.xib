@@ -33,21 +33,21 @@
                             <rect key="frame" x="0.0" y="0.0" width="150" height="200"/>
                         </imageView>
                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" translatesAutoresizingMaskIntoConstraints="NO" id="Bw6-n6-prv">
-                            <rect key="frame" x="30.5" y="0.0" width="75" height="75"/>
+                            <rect key="frame" x="29.5" y="0.0" width="75" height="75"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="75" id="28Q-Nf-C2P"/>
                                 <constraint firstAttribute="height" constant="75" id="K7g-6u-42G"/>
                             </constraints>
                         </imageView>
                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" translatesAutoresizingMaskIntoConstraints="NO" id="RMU-wq-Gv8">
-                            <rect key="frame" x="30.5" y="33" width="75" height="30"/>
+                            <rect key="frame" x="29.5" y="33" width="75" height="30"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="75" id="Lx4-ds-vXZ"/>
                                 <constraint firstAttribute="height" constant="30" id="suk-ex-Fv3"/>
                             </constraints>
                         </imageView>
                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" translatesAutoresizingMaskIntoConstraints="NO" id="u7N-c8-VyF">
-                            <rect key="frame" x="30.5" y="63" width="75" height="30"/>
+                            <rect key="frame" x="29.5" y="63" width="75" height="30"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="75" id="E3b-jv-YmZ"/>
                                 <constraint firstAttribute="height" constant="30" id="sRo-0T-HXI"/>
@@ -60,13 +60,13 @@
                         <constraint firstItem="RMU-wq-Gv8" firstAttribute="top" secondItem="Bw6-n6-prv" secondAttribute="bottom" constant="-42" id="45V-2d-bTN"/>
                         <constraint firstAttribute="width" constant="150" id="IO1-3H-aO6"/>
                         <constraint firstAttribute="trailing" secondItem="g6J-FR-rIp" secondAttribute="trailing" id="JO1-X4-TsW"/>
-                        <constraint firstItem="Bw6-n6-prv" firstAttribute="centerX" secondItem="ypM-vu-HSr" secondAttribute="centerX" constant="-7" id="L2F-Ts-b7F"/>
-                        <constraint firstItem="RMU-wq-Gv8" firstAttribute="centerX" secondItem="ypM-vu-HSr" secondAttribute="centerX" constant="-7" id="PUg-ds-kcD"/>
+                        <constraint firstItem="Bw6-n6-prv" firstAttribute="centerX" secondItem="ypM-vu-HSr" secondAttribute="centerX" constant="-8" id="L2F-Ts-b7F"/>
+                        <constraint firstItem="RMU-wq-Gv8" firstAttribute="centerX" secondItem="ypM-vu-HSr" secondAttribute="centerX" constant="-8" id="PUg-ds-kcD"/>
                         <constraint firstItem="u7N-c8-VyF" firstAttribute="top" secondItem="RMU-wq-Gv8" secondAttribute="bottom" id="UYu-cN-06n"/>
                         <constraint firstAttribute="height" constant="200" id="UvS-DU-lc3"/>
                         <constraint firstItem="Bw6-n6-prv" firstAttribute="top" secondItem="ypM-vu-HSr" secondAttribute="top" id="d8s-69-Wrh"/>
                         <constraint firstAttribute="bottom" secondItem="g6J-FR-rIp" secondAttribute="bottom" id="lAc-ec-0UM"/>
-                        <constraint firstItem="u7N-c8-VyF" firstAttribute="centerX" secondItem="ypM-vu-HSr" secondAttribute="centerX" constant="-7" id="m2c-j0-gUj"/>
+                        <constraint firstItem="u7N-c8-VyF" firstAttribute="centerX" secondItem="ypM-vu-HSr" secondAttribute="centerX" constant="-8" id="m2c-j0-gUj"/>
                         <constraint firstItem="g6J-FR-rIp" firstAttribute="leading" secondItem="ypM-vu-HSr" secondAttribute="leading" id="qxr-Ih-oMG"/>
                     </constraints>
                 </view>
