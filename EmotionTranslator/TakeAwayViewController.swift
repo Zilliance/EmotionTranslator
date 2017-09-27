@@ -11,7 +11,7 @@ import KMPlaceholderTextView
 
 final class TakeAwayHeaderViewCell: UITableViewCell {
     @IBOutlet var label: UILabel!
-    
+
     override func awakeFromNib() {
         super.awakeFromNib()
         
@@ -24,7 +24,8 @@ final class TakeAwayHeaderViewCell: UITableViewCell {
 final class TakeAwayResponseViewCell: UITableViewCell {
     @IBOutlet var titleLabel: UILabel!
     @IBOutlet var answerLabel: UILabel!
-    
+    @IBOutlet weak var monsterIcon: UIImageView!
+
     override func awakeFromNib() {
         super.awakeFromNib()
         
@@ -113,12 +114,25 @@ class TakeAwayViewController: UITableViewController {
         case (0, let row):
             let cell = tableView.dequeueReusableCell(withIdentifier: "response", for: indexPath) as! TakeAwayResponseViewCell
             cell.titleLabel.text = self.currentStressor.monster?.name
+            guard let monster = self.currentStressor.monster else {
+                return cell
+            }
+            
+            let monsterImage = monster.shape.image(with: monster.color)
             
             switch row {
-            case 1: cell.answerLabel.text = self.currentStressor.answer1
-            case 2: cell.answerLabel.text = self.currentStressor.answer2
-            case 3: cell.answerLabel.text = self.currentStressor.answer3
-            case 4: cell.answerLabel.text = self.currentStressor.answer4
+            case 1:
+                cell.answerLabel.text = self.currentStressor.answer1
+                cell.monsterIcon.image = monsterImage
+            case 2:
+                cell.answerLabel.text = self.currentStressor.answer2
+                cell.monsterIcon.image = monsterImage
+            case 3:
+                cell.answerLabel.text = self.currentStressor.answer3
+                cell.monsterIcon.image = monsterImage
+            case 4:
+                cell.answerLabel.text = self.currentStressor.answer4
+                cell.monsterIcon.image = monsterImage
             default:
                 break
             }

@@ -127,6 +127,7 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="answerLabel" destination="cZ6-3n-u65" id="cnS-wd-F5u"/>
+                                    <outlet property="monsterIcon" destination="sFm-c9-2MN" id="5hk-YZ-dFy"/>
                                     <outlet property="titleLabel" destination="IS0-1i-jM4" id="XgC-t7-XC9"/>
                                 </connections>
                             </tableViewCell>
