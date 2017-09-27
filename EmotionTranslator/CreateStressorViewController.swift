@@ -159,11 +159,7 @@ class CreateStressorViewController: AnalyzedViewController {
         
         let item = self.stressorItems[self.currentPageIndex]
         self.setupButton(for: item)
-        
-        self.backgroundContentView.layer.contents = UIImage(named: "takeAwayBackground")?.cgImage
-        self.backgroundContentView.layer.contentsGravity = kCAGravityResizeAspectFill
-        self.backgroundContentView.isHidden = true
-        
+                
         self.setupBackground(for: item)
 
     }
@@ -256,11 +252,13 @@ class CreateStressorViewController: AnalyzedViewController {
         case .takeaway:
             self.backgroundContentView.layer.contents = UIImage(named: "takeAwayBackground")?.cgImage
             self.backgroundContentView.isHidden = false
+        case .monster:
+            self.backgroundContentView.layer.contents = UIImage(named: "backgroundCharactersScreenLong")?.cgImage
+            self.backgroundContentView.isHidden = false
         case .actionplan:
             self.backgroundContentView.layer.contents = #imageLiteral(resourceName: "backgroundActionPlan").cgImage
             self.backgroundContentView.isHidden = false
         default:
-            self.backgroundContentView.layer.contents = UIImage(named: "takeAwayBackground")?.cgImage
             self.backgroundContentView.isHidden = true
         }
         
