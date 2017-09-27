@@ -61,12 +61,14 @@ class EmotionTranslatorCollectionViewCell: UICollectionViewCell {
         self.completedLabel.layer.borderWidth = UIConstants.Appearance.borderWidth
         self.completedLabel.layer.cornerRadius = UIConstants.Appearance.cornerRadius
         
+        guard let monster = stressor.monster else { return }
+        
         if stressor.completed {
-            self.completedLabel.backgroundColor = .navBar
+            self.completedLabel.backgroundColor = monster.color.color
             self.completedLabel.textColor = .white
             self.completedLabel.text = EmotionTranslatorCollectionViewCell.dateFormatter.string(from: stressor.dateCreated)
-            self.completedLabel.layer.borderColor = UIColor.navBar.cgColor
-            self.icon.image = #imageLiteral(resourceName: "completed-stressor")
+            self.completedLabel.layer.borderColor = UIColor.clear.cgColor
+            self.icon.image = monster.shape.image(with: monster.color)
             
         }
             
@@ -75,9 +77,10 @@ class EmotionTranslatorCollectionViewCell: UICollectionViewCell {
             self.completedLabel.textColor = .darkBlue
             self.completedLabel.text = "In progress"
             self.completedLabel.layer.borderColor = UIColor.navBar.cgColor
-            self.icon.image = #imageLiteral(resourceName: "inprogress-stressor")
+            self.icon.image = monster.shape.image(with: monster.color)
             
         }
+        
     }
     
 }
