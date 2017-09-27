@@ -26,6 +26,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fxY-4a-KVT">
+                                <rect key="frame" x="0.0" y="100" width="375" height="567"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="URP-5S-b5h" userLabel="TopView">
                                 <rect key="frame" x="0.0" y="64" width="375" height="36"/>
                                 <subviews>
@@ -52,10 +56,6 @@
                                     <constraint firstAttribute="trailing" secondItem="ZKh-gL-5vF" secondAttribute="trailing" id="uRl-ZU-5tQ"/>
                                     <constraint firstAttribute="bottom" secondItem="ZKh-gL-5vF" secondAttribute="bottom" id="zfB-CK-2ih"/>
                                 </constraints>
-                            </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fxY-4a-KVT">
-                                <rect key="frame" x="0.0" y="100" width="375" height="567"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NoM-6t-oPd">
                                 <rect key="frame" x="20" y="603" width="335" height="44"/>
