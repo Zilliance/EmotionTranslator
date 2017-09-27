@@ -164,11 +164,7 @@ class CreateStressorViewController: AnalyzedViewController {
         self.backgroundContentView.layer.contentsGravity = kCAGravityResizeAspectFill
         self.backgroundContentView.isHidden = true
         
-        if let _ = item.viewController as? TakeAwayViewController {
-            self.backgroundContentView.isHidden = false
-        } else {
-            self.backgroundContentView.isHidden = true
-        }
+        self.setupBackground(for: item)
 
     }
     
@@ -248,14 +244,26 @@ class CreateStressorViewController: AnalyzedViewController {
         self.title = self.stressor.title
         self.pageControlViewController.setViewControllers([item.viewController], direction: direction, animated: true, completion: nil)
         
-        if let _ = item.viewController as? TakeAwayViewController {
-            self.backgroundContentView.isHidden = false
-        } else {
-            self.backgroundContentView.isHidden = true
-        }
+        self.setupBackground(for: item)
         
         Analytics.shared.send(event: ZillianceAnalytics.DetailedEvents.viewControllerShown(item.viewController.analyticsObjectName))
 
+    }
+    
+    private func setupBackground(for item: StressorItem) {
+        
+        switch item.scene {
+        case .takeaway:
+            self.backgroundContentView.layer.contents = UIImage(named: "takeAwayBackground")?.cgImage
+            self.backgroundContentView.isHidden = false
+        case .actionplan:
+            self.backgroundContentView.layer.contents = #imageLiteral(resourceName: "backgroundActionPlan").cgImage
+            self.backgroundContentView.isHidden = false
+        default:
+            self.backgroundContentView.layer.contents = UIImage(named: "takeAwayBackground")?.cgImage
+            self.backgroundContentView.isHidden = true
+        }
+        
     }
 
     
