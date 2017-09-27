@@ -17,9 +17,11 @@ class ActionViewController: UIViewController {
 
     @IBOutlet weak var takeAwayLabel: UILabel!
     @IBOutlet weak var actionStepLabel: UILabel!
+    @IBOutlet weak var contentView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.contentView.backgroundColor = UIColor.white.withAlphaComponent(0.5)
         self.setupView()
         
         Analytics.shared.send(event: ZillianceAnalytics.BaseEvents.planViewed)
@@ -28,20 +30,11 @@ class ActionViewController: UIViewController {
 
     private func setupView() {
         
-        for label in [self.takeAwayLabel, self.actionStepLabel] as [UILabel] {
-            
-            label.layer.cornerRadius = UIConstants.Appearance.cornerRadius
-            label.layer.borderWidth = UIConstants.Appearance.borderWidth
-            label.layer.borderColor = UIColor.lightGray.cgColor
-            
-        }
-        
-        let takeawayTestText = "oisdhfo sdoifn osdf o sdfoin sdfo soidf soidfn sdfoisdfn osdif nsodfi  os ndiosdf"
-        let actionStepTestText = "oisdhfo sdoifn osdf o sdfoin sdfo soidf soidfn sdfoisdfn osdif nsodfi  os ndiosdf soidfn sdfoisdfn osdi soidfn sdfoisdfn osdi soidfn sdfoisdfn osdi"
+        guard let takeAwayText = self.currentStressor.takeAwayText, let actionStepText = self.currentStressor.takeAwayActions else { return }
         
         
-        let takeawayString = "Takeaway \n\n\(takeawayTestText)"
-        let actionStepString = "Action Step \n\n\(actionStepTestText)"
+        let takeawayString = "Takeaway \n\n\(takeAwayText)"
+        let actionStepString = "Action Step \n\n\(actionStepText)"
         
         
         let style = NSMutableParagraphStyle()
@@ -53,11 +46,11 @@ class ActionViewController: UIViewController {
         let takeAwayAttributedString = NSMutableAttributedString(string: takeawayString, attributes: [NSParagraphStyleAttributeName: style])
         let actionStepAttributedString = NSMutableAttributedString(string: actionStepString, attributes: [NSParagraphStyleAttributeName: style])
         
-        let takeawayRange = (takeawayString as NSString).range(of: takeawayTestText)
+        let takeawayRange = (takeawayString as NSString).range(of: takeAwayText)
         takeAwayAttributedString.addAttribute(NSFontAttributeName, value: UIFont.muliLight(size: 14), range: takeawayRange)
         takeAwayAttributedString.addAttribute(NSForegroundColorAttributeName, value: UIColor.darkText, range: takeawayRange)
         
-        let actionStepRange = (actionStepString as NSString).range(of: actionStepTestText)
+        let actionStepRange = (actionStepString as NSString).range(of: actionStepText)
         actionStepAttributedString.addAttribute(NSFontAttributeName, value: UIFont.muliLight(size: 14), range: actionStepRange)
         actionStepAttributedString.addAttribute(NSForegroundColorAttributeName, value: UIColor.darkText, range: actionStepRange)
 
