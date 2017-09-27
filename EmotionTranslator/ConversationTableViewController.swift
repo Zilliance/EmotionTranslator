@@ -114,7 +114,7 @@ class ConversationTableViewController: UITableViewController {
         
         if let monsterName = self.currentStressor.monster?.name {
             
-            let text = "\(monsterName) and you are going to have a conversation to find out what is’s trying to tell you."
+            let text = "\(monsterName) and you are going to have a conversation to find out what it’s trying to tell you."
             let attributedString = NSMutableAttributedString(string: text)
             let monsterRange = (text as NSString).range(of: monsterName)
             attributedString.addAttribute(NSFontAttributeName, value: UIFont.muliBold(size: 12), range: monsterRange)
