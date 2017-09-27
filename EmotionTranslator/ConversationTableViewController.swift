@@ -56,7 +56,6 @@ extension ResponseEntryCell: UITextViewDelegate {
 
 class ResponseCell: UITableViewCell {
     
-    @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var iconImageView: UIImageView!
     @IBOutlet weak var responseLabel: UILabel!
     
@@ -89,7 +88,7 @@ class ConversationTableViewController: UITableViewController {
     
     var questionsEnded: (() -> ())? = nil
     
-    var questionsCompleted = false
+    var questionsCompleted = true
     
     private var questions: [String] = []
     private var replies: [String] = []
@@ -276,12 +275,14 @@ class ConversationTableViewController: UITableViewController {
             let cell = tableView.dequeueReusableCell(withIdentifier: "ResponseCell", for: indexPath) as! ResponseCell
             
             if indexPath.row % 2 != 0 {
-                cell.iconImageView.image = #imageLiteral(resourceName: "completed-stressor")
-                cell.nameLabel.text = self.currentStressor.monster?.name
+                
+                if let monster = self.currentStressor.monster {
+                    cell.iconImageView.image = monster.shape.image(with: monster.color)
+                }
+                
             }
             else {
                 cell.iconImageView.image = #imageLiteral(resourceName: "user-conversation")
-                cell.nameLabel.text = "Me"
             }
             
             cell.responseLabel.text = item.text
@@ -291,8 +292,10 @@ class ConversationTableViewController: UITableViewController {
             let cell = tableView.dequeueReusableCell(withIdentifier: "ResponseEntryCell", for: indexPath) as! ResponseEntryCell
             
             if indexPath.row % 2 != 0 {
-                cell.iconImageView.image = #imageLiteral(resourceName: "completed-stressor")
-                cell.nameLabel.text = self.currentStressor.monster?.name
+                if let monster = self.currentStressor.monster {
+                    cell.iconImageView.image = monster.shape.image(with: monster.color)
+                    cell.nameLabel.text = monster.name
+                }
             }
             else {
                 cell.iconImageView.image = #imageLiteral(resourceName: "user-conversation")
