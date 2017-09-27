@@ -274,7 +274,7 @@ Fran</string>
                                 </constraints>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="bZC-8C-WTd" firstAttribute="leading" secondItem="3Ya-UZ-80k" secondAttribute="leading" constant="80" id="0p1-BJ-vrM"/>
                             <constraint firstItem="bZC-8C-WTd" firstAttribute="top" secondItem="hp6-Yj-IuI" secondAttribute="bottom" constant="-70" id="1dX-t7-3Zn"/>
