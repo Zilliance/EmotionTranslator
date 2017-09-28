@@ -116,6 +116,7 @@
                         <outlet property="actionStepLabel" destination="ucb-Kt-lOF" id="8uL-6I-qcE"/>
                         <outlet property="contentView" destination="Cqc-AZ-jlQ" id="VXy-FY-6I6"/>
                         <outlet property="takeAwayLabel" destination="790-nz-dPC" id="fHa-K2-X25"/>
+                        <outlet property="topView" destination="jJC-UF-Qen" id="fhh-9l-bOr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XWz-PY-lph" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -182,10 +182,12 @@ class HomeCollectionViewController: UICollectionViewController, UICollectionView
         }
             
         else {
-//            guard let compassSummaryViewController = UIStoryboard(name: "CompassSummary", bundle: nil).instantiateInitialViewController() as? CompassSummaryViewController else { return assertionFailure() }
-//            
-//            compassSummaryViewController.compass = compass
-//            self.navigationController?.pushViewController(compassSummaryViewController, animated: true)
+            guard let actionPlanViewController = UIStoryboard(name: "Actionplan", bundle: nil).instantiateInitialViewController() as? ActionViewController else { return assertionFailure() }
+            
+            actionPlanViewController.currentStressor = stressor
+            actionPlanViewController.view.layer.contents = #imageLiteral(resourceName: "backgroundActionPlan").cgImage
+            actionPlanViewController.view.layer.contentsGravity = kCAGravityResizeAspectFill
+            self.navigationController?.pushViewController(actionPlanViewController, animated: true)
             
         }
         

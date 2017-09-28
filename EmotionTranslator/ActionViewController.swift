@@ -19,10 +19,12 @@ class ActionViewController: UIViewController {
     @IBOutlet weak var takeAwayLabel: UILabel!
     @IBOutlet weak var actionStepLabel: UILabel!
     @IBOutlet weak var contentView: UIView!
+    @IBOutlet weak var topView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.contentView.backgroundColor = UIColor.white.withAlphaComponent(0.5)
+        self.contentView.backgroundColor = UIColor.white.withAlphaComponent(0.8)
+        self.topView.backgroundColor = UIColor.white.withAlphaComponent(0.8)
         self.setupView()
         
         Analytics.shared.send(event: ZillianceAnalytics.BaseEvents.planViewed)
