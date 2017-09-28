@@ -113,7 +113,7 @@ class TakeAwayViewController: UITableViewController {
             
         case (0, let row):
             let cell = tableView.dequeueReusableCell(withIdentifier: "response", for: indexPath) as! TakeAwayResponseViewCell
-            cell.titleLabel.text = self.currentStressor.monster?.name
+            
             guard let monster = self.currentStressor.monster else {
                 return cell
             }
@@ -122,15 +122,19 @@ class TakeAwayViewController: UITableViewController {
             
             switch row {
             case 1:
+                cell.titleLabel.text = "My message to you is"
                 cell.answerLabel.text = self.currentStressor.answer1
                 cell.monsterIcon.image = monsterImage
             case 2:
+                cell.titleLabel.text = "I’m trying to help you"
                 cell.answerLabel.text = self.currentStressor.answer2
                 cell.monsterIcon.image = monsterImage
             case 3:
+                cell.titleLabel.text = "What I need to feel better is"
                 cell.answerLabel.text = self.currentStressor.answer3
                 cell.monsterIcon.image = monsterImage
             case 4:
+                cell.titleLabel.text = "I wish you would"
                 cell.answerLabel.text = self.currentStressor.answer4
                 cell.monsterIcon.image = monsterImage
             default:
