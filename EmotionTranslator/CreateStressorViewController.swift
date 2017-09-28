@@ -12,7 +12,7 @@ import ZillianceShared
 protocol StressorValidation {
     var error: StressorError { get }
     var currentStressor: Stressor! { get set }
-    var gotoIntroduction: (() -> ())? { get set }
+    var gotoMonsterName: (() -> ())? { get set }
     var questionsEnded: (() -> ())? { get set }
     
 }
@@ -50,9 +50,9 @@ class CreateStressorViewController: AnalyzedViewController {
         init(for scene: StressorScene, container: CreateStressorViewController) {
             var viewController = UIStoryboard(name: scene.rawValue.capitalized, bundle: nil).instantiateInitialViewController() as! StressorValidation
             viewController.currentStressor = container.stressor
-            viewController.gotoIntroduction = {
+            viewController.gotoMonsterName = {
                 // go to introduction name page
-                container.moveToPage(page: Stressor.Facet.introduction.pageIndex, direction: .forward)
+                container.moveToPage(page: Stressor.Facet.name.pageIndex, direction: .forward)
             }
             
             viewController.questionsEnded = {
@@ -296,11 +296,8 @@ class CreateStressorViewController: AnalyzedViewController {
         else {
             
             var index = 1
-            
-            if item.scene == .introduction && !self.stressor.hasCustomMonster {
-                index = 3
-            }
-            else if item.scene == .name && !self.stressor.hasCustomMonster {
+         
+            if item.scene == .name && !self.stressor.hasCustomMonster {
                 index = 2
             }
            

@@ -11,7 +11,7 @@ import UIKit
 class ChooseMonsterViewController: UIViewController {
     
     var currentStressor: Stressor!
-    var gotoIntroduction: (() -> ())? = nil
+    var gotoMonsterName: (() -> ())? = nil
     var questionsEnded: (() -> ())? = nil
 
     override func viewDidLoad() {
@@ -52,7 +52,7 @@ class ChooseMonsterViewController: UIViewController {
         monster.eyes = monsterDefault.eyes
         
         self.currentStressor.monster = monster
-        self.gotoIntroduction?()
+        self.gotoMonsterName?()
     }
     
 }

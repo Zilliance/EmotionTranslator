@@ -171,6 +171,7 @@
                     <connections>
                         <outlet property="monsterView" destination="c4x-s0-Fxz" id="i6j-X8-8UJ"/>
                         <outlet property="nameTextField" destination="BS3-3u-9aP" id="Xc3-9x-dKo"/>
+                        <outlet property="titleLabel" destination="faR-Uk-VTb" id="Ev1-tu-Tzp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Zm-Gd-94x" userLabel="First Responder" sceneMemberID="firstResponder"/>
