@@ -130,6 +130,9 @@ class CreateStressorViewController: AnalyzedViewController {
         
         self.title = self.stressor.title ?? ""
         
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(customView: self.backButton)
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Home", style: .plain, target: self, action: #selector(self.homeAction(_:)))
+        
         self.pageControl.numberOfPages = self.stressorItems.count
         self.pageControl.backgroundColor = .clear
         self.pageControl.pageIndicatorTintColor = .dotColor
@@ -154,13 +157,11 @@ class CreateStressorViewController: AnalyzedViewController {
         self.backButton.addTarget(self, action: #selector(self.cancelAction(_:)), for: .touchUpInside)
         self.backButton.titleLabel?.font = UIFont.muliRegular(size: 16.0)
         
-        self.navigationItem.leftBarButtonItem = UIBarButtonItem(customView: self.backButton)
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Home", style: .plain, target: self, action: #selector(self.homeAction(_:)))
-        
         let item = self.stressorItems[self.currentPageIndex]
         self.setupButton(for: item)
                 
         self.setupBackground(for: item)
+        self.setupNavItem(for: item)
 
     }
     
@@ -179,7 +180,6 @@ class CreateStressorViewController: AnalyzedViewController {
             self.backButton.titleLabel?.alpha = 0
             self.remindMeButton.alpha = 0
         }
-        
         
         switch item.scene {
         case .stressor:
@@ -241,7 +241,8 @@ class CreateStressorViewController: AnalyzedViewController {
         self.pageControlViewController.setViewControllers([item.viewController], direction: direction, animated: true, completion: nil)
         
         self.setupBackground(for: item)
-        
+        self.setupNavItem(for: item)
+
         Analytics.shared.send(event: ZillianceAnalytics.DetailedEvents.viewControllerShown(item.viewController.analyticsObjectName))
 
     }
@@ -260,6 +261,20 @@ class CreateStressorViewController: AnalyzedViewController {
             self.backgroundContentView.isHidden = false
         default:
             self.backgroundContentView.isHidden = true
+        }
+        
+    }
+    
+    private func setupNavItem(for item: StressorItem) {
+        
+        if let actionVC = item.viewController as? ActionViewController {
+
+            self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .action, target: actionVC, action: #selector(actionVC.shareTapped))
+            
+        } else {
+
+            self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Home", style: .plain, target: self, action: #selector(self.homeAction(_:)))
+
         }
         
     }
