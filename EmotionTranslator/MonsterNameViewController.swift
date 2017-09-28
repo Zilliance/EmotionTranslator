@@ -12,10 +12,11 @@ class MonsterNameViewController: UIViewController {
     
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var monsterView: MonsterView!
+    @IBOutlet weak var titleLabel: UILabel!
     
     var currentStressor: Stressor!
     
-    var gotoIntroduction: (() -> ())? = nil
+    var gotoMonsterName: (() -> ())? = nil
     var questionsEnded: (() -> ())? = nil
 
     override func viewDidLoad() {
@@ -29,15 +30,22 @@ class MonsterNameViewController: UIViewController {
         if let name = self.currentStressor.monster?.name {
             self.nameTextField.text = name
         }
-
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
         if let name = self.currentStressor.monster?.name {
-            self.nameTextField.text = name
+            if !self.currentStressor.hasCustomMonster {
+                self.nameTextField.text = name
+            }
+            else {
+                self.nameTextField.text = nil
+            }
         }
+        
+        self.titleLabel.text = self.currentStressor.hasCustomMonster ?  "Now let's give it a name" : "Give your character a name"
         
         self.monsterView.monster = self.currentStressor.monster
         self.monsterView.setupMonster()

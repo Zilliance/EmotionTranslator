@@ -17,7 +17,7 @@ class NewStressorViewController: UIViewController {
     fileprivate let maxTextlenght = 48
     
     var currentStressor: Stressor!
-    var gotoIntroduction: (() -> ())? = nil
+    var gotoMonsterName: (() -> ())? = nil
     var questionsEnded: (() -> ())? = nil
     
     

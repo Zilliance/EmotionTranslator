@@ -11,7 +11,7 @@ import UIKit
 class ConversationIntroductionTableViewController: UITableViewController {
     
     var currentStressor: Stressor!
-    var gotoIntroduction: (() -> ())? = nil
+    var gotoMonsterName: (() -> ())? = nil
     var questionsEnded: (() -> ())? = nil
 
     @IBOutlet weak var topLabel: UILabel!

@@ -13,7 +13,7 @@ import PDFGenerator
 class ActionViewController: UIViewController {
     
     var currentStressor: Stressor!
-    var gotoIntroduction: (() -> ())? = nil
+    var gotoMonsterName: (() -> ())? = nil
     var questionsEnded: (() -> ())? = nil
     
     var isStressorCompleted = false
