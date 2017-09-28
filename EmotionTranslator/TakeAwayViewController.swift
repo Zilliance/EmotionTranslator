@@ -108,7 +108,7 @@ class TakeAwayViewController: UITableViewController {
         switch (indexPath.section, indexPath.row) {
         case (let section, 0):
             let cell = tableView.dequeueReusableCell(withIdentifier: "header", for: indexPath) as! TakeAwayHeaderViewCell
-            cell.label.text = section == 0 ? "Takeaway" : "Action Step"
+            cell.label.text = section == 0 ? "Conversation" : "Action Step"
             returnCell = cell
             
         case (0, let row):
