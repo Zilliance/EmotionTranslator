@@ -22,6 +22,7 @@ class ResponseEntryCell: UITableViewCell {
     @IBOutlet weak var entryTextView: KMPlaceholderTextView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var iconImageView: UIImageView!
+    @IBOutlet weak var skipButton: UIButton!
     
     var reply: ((String) -> ())? = nil
     var update: ((String) -> ())? = nil
@@ -31,6 +32,9 @@ class ResponseEntryCell: UITableViewCell {
         self.entryTextView.layer.borderWidth = UIConstants.Appearance.borderWidth
         self.entryTextView.layer.borderColor = UIColor.silverColor.cgColor
         
+    }
+    @IBAction func skipAction(_ sender: Any) {
+        self.reply?("")
     }
 }
 

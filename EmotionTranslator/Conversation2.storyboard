@@ -33,7 +33,7 @@
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Take a moment to reflect back on what the emotion just shared with you, then complete the following questions." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vM6-Q0-Okg">
-                                    <rect key="frame" x="20" y="16" width="335" height="68"/>
+                                    <rect key="frame" x="20" y="18.5" width="335" height="63"/>
                                     <fontDescription key="fontDescription" name="Muli-SemiBold" family="Muli" pointSize="18"/>
                                     <color key="textColor" red="0.12549019607843137" green="0.19215686274509802" blue="0.25490196078431371" alpha="1" colorSpace="calibratedRGB"/>
                                     <nil key="highlightedColor"/>
@@ -69,13 +69,13 @@
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Me" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Agi-5M-Ht5">
-                                            <rect key="frame" x="65" y="36" width="290" height="15.5"/>
+                                            <rect key="frame" x="65" y="34.5" width="290" height="14"/>
                                             <fontDescription key="fontDescription" name="Muli-Regular" family="Muli" pointSize="12"/>
                                             <color key="textColor" red="0.45882352939999999" green="0.46666666670000001" blue="0.48627450979999998" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What’s the main message you’re trying to give me?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cSz-8M-Ufb">
-                                            <rect key="frame" x="65" y="53.5" width="290" height="52.5"/>
+                                            <rect key="frame" x="65" y="50.5" width="290" height="55.5"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="35.5" id="eiP-Jr-O9n"/>
                                             </constraints>
@@ -84,13 +84,13 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Question 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hba-17-2No">
-                                            <rect key="frame" x="65" y="8" width="290" height="18"/>
+                                            <rect key="frame" x="65" y="8" width="290" height="16.5"/>
                                             <fontDescription key="fontDescription" name="Muli-Bold" family="Muli" pointSize="14"/>
                                             <color key="textColor" red="0.12549019610000001" green="0.19215686269999999" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dmu-9H-vsh">
-                                            <rect key="frame" x="65" y="28" width="72" height="2"/>
+                                            <rect key="frame" x="65" y="26.5" width="72" height="2"/>
                                             <color key="backgroundColor" red="0.88235294119999996" green="0.88235294119999996" blue="0.89411764709999997" alpha="1" colorSpace="calibratedRGB"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="2" id="Q1K-bc-m5f"/>
@@ -146,13 +146,13 @@
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Me" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pNv-zd-hLk">
-                                            <rect key="frame" x="65" y="0.0" width="290" height="15.5"/>
+                                            <rect key="frame" x="65" y="0.0" width="290" height="14"/>
                                             <fontDescription key="fontDescription" name="Muli-Regular" family="Muli" pointSize="12"/>
                                             <color key="textColor" red="0.45882352939999999" green="0.46666666670000001" blue="0.48627450979999998" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What’s the main message you’re trying to give me?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dck-IB-vPa">
-                                            <rect key="frame" x="65" y="17.5" width="290" height="56.5"/>
+                                            <rect key="frame" x="65" y="16" width="290" height="58"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="35.5" id="NsL-ZZ-lrJ"/>
                                             </constraints>
@@ -237,9 +237,24 @@
                                                 <outlet property="delegate" destination="RmB-dF-1VR" id="Vtb-La-khe"/>
                                             </connections>
                                         </textView>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pvo-Tb-p1h">
+                                            <rect key="frame" x="287" y="5" width="68" height="30"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="68" id="1MI-ae-4km"/>
+                                                <constraint firstAttribute="height" constant="30" id="x3y-W1-JCX"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="Muli-Regular" family="Muli" pointSize="12"/>
+                                            <state key="normal" title="Or Skip">
+                                                <color key="titleColor" red="0.0" green="0.72156862749999995" blue="0.90588235289999997" alpha="1" colorSpace="calibratedRGB"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="skipAction:" destination="RmB-dF-1VR" eventType="touchUpInside" id="yby-eQ-lpU"/>
+                                            </connections>
+                                        </button>
                                     </subviews>
                                     <color key="backgroundColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
                                     <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="pvo-Tb-p1h" secondAttribute="trailing" constant="20" id="10m-JM-ZP6"/>
                                         <constraint firstItem="wIh-Rf-8Qu" firstAttribute="top" secondItem="fZF-Jl-iLb" secondAttribute="top" id="1Ok-vc-h0b"/>
                                         <constraint firstAttribute="trailing" secondItem="Yv8-fN-Jb0" secondAttribute="trailing" constant="18" id="3J6-Mj-EkF"/>
                                         <constraint firstItem="wIh-Rf-8Qu" firstAttribute="leading" secondItem="fZF-Jl-iLb" secondAttribute="leading" constant="34" id="EKR-FB-yBV"/>
@@ -247,6 +262,7 @@
                                         <constraint firstItem="gb5-LJ-9Wo" firstAttribute="top" secondItem="fZF-Jl-iLb" secondAttribute="top" constant="2" id="SEf-uL-YUd"/>
                                         <constraint firstItem="oKc-6K-TQ4" firstAttribute="leading" secondItem="gb5-LJ-9Wo" secondAttribute="trailing" constant="12" id="XFE-ev-M3Q"/>
                                         <constraint firstAttribute="bottom" secondItem="wIh-Rf-8Qu" secondAttribute="bottom" id="XfM-Os-ocB"/>
+                                        <constraint firstItem="pvo-Tb-p1h" firstAttribute="top" secondItem="fZF-Jl-iLb" secondAttribute="top" constant="5" id="cOX-Wx-WEF"/>
                                         <constraint firstAttribute="bottom" secondItem="Yv8-fN-Jb0" secondAttribute="bottom" constant="18" id="dM2-EO-ofq"/>
                                         <constraint firstItem="oKc-6K-TQ4" firstAttribute="top" secondItem="fZF-Jl-iLb" secondAttribute="top" constant="12" id="fk2-fd-NPg"/>
                                         <constraint firstAttribute="trailing" secondItem="oKc-6K-TQ4" secondAttribute="trailing" constant="20" id="rJe-MY-a7I"/>
@@ -258,6 +274,7 @@
                                 <connections>
                                     <outlet property="entryTextView" destination="Yv8-fN-Jb0" id="tbO-Yq-dn2"/>
                                     <outlet property="nameLabel" destination="oKc-6K-TQ4" id="n0L-Fv-sRm"/>
+                                    <outlet property="skipButton" destination="pvo-Tb-p1h" id="3Ur-o5-jD6"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>

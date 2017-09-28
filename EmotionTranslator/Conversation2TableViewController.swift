@@ -30,7 +30,7 @@ class Conversation2TableViewController: UITableViewController {
                                  "I wish you would…",
                                  ]
     
-    fileprivate var replies: [String] = ["" ,"" ,"" ,"" ,]
+    fileprivate var replies: [String?] = [nil ,nil ,nil ,nil ,]
     
     private var elements: [Item] = []
     
@@ -53,7 +53,8 @@ class Conversation2TableViewController: UITableViewController {
         // prefill questions - answers
         
         for reply in self.replies {
-            guard !reply.isEmpty else { break }
+            
+            guard let _ = reply else { break }
             self.prepareQuestions()
         }
         
@@ -65,7 +66,7 @@ class Conversation2TableViewController: UITableViewController {
     }
     
     private func checkIfQuestionsAreFinished() {
-        let finished = self.replies.filter { $0.isEmpty }.count == 0
+        let finished = self.replies.flatMap { $0 }.count != 0
         if finished {
             self.questionsCompleted = true
             self.questionsEnded?()
@@ -119,11 +120,13 @@ class Conversation2TableViewController: UITableViewController {
             
             cell.entryTextView.text = ""
             
-            if !text.isEmpty {
+            if let text = text {
                 cell.entryTextView.text = text
+                cell.skipButton.isHidden = true
             }
             else {
                 cell.entryTextView.placeholder = item.text
+                cell.skipButton.isHidden = false
             }
             
             cell.reply = { [unowned self] text in
