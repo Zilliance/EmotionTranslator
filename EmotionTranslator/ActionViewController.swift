@@ -15,17 +15,23 @@ class ActionViewController: UIViewController {
     var currentStressor: Stressor!
     var gotoIntroduction: (() -> ())? = nil
     var questionsEnded: (() -> ())? = nil
+    
+    var isStressorCompleted = false
 
     @IBOutlet weak var takeAwayLabel: UILabel!
     @IBOutlet weak var actionStepLabel: UILabel!
     @IBOutlet weak var contentView: UIView!
-    @IBOutlet weak var topView: UIView!
+    @IBOutlet weak var remindMeButton: UIButton!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.contentView.backgroundColor = UIColor.white.withAlphaComponent(0.8)
-        self.topView.backgroundColor = UIColor.white.withAlphaComponent(0.8)
         self.setupView()
+        
+        if self.isStressorCompleted {
+            self.setupForCompletedStressor()
+        }
         
         Analytics.shared.send(event: ZillianceAnalytics.BaseEvents.planViewed)
 
@@ -99,7 +105,25 @@ class ActionViewController: UIViewController {
             completion(nil, error)
         }
     }
+    
+    private func setupForCompletedStressor() {
+        self.remindMeButton.alpha = 1
+    }
 
+    @IBAction func remindMeAction(_ sender: Any) {
+        
+        guard let scheduler = UIStoryboard(name: "Schedule", bundle: nil).instantiateInitialViewController() as? ScheduleViewController else {
+            assertionFailure()
+            return
+        }
+        
+        scheduler.title = self.currentStressor.title
+        
+        let navigationController = OrientableNavigationController(rootViewController: scheduler)
+        
+        self.present(navigationController, animated: true, completion: nil)
+        
+    }
 }
 
 // MARK: - CompassValidation

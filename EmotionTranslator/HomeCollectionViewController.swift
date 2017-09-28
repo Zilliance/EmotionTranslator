@@ -185,6 +185,7 @@ class HomeCollectionViewController: UICollectionViewController, UICollectionView
             guard let actionPlanViewController = UIStoryboard(name: "Actionplan", bundle: nil).instantiateInitialViewController() as? ActionViewController else { return assertionFailure() }
             
             actionPlanViewController.currentStressor = stressor
+            actionPlanViewController.isStressorCompleted = true
             actionPlanViewController.view.layer.contents = #imageLiteral(resourceName: "backgroundActionPlan").cgImage
             actionPlanViewController.view.layer.contentsGravity = kCAGravityResizeAspectFill
             self.navigationController?.pushViewController(actionPlanViewController, animated: true)
