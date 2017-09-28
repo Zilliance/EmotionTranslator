@@ -176,7 +176,7 @@ class HomeCollectionViewController: UICollectionViewController, UICollectionView
         
         if !stressor.completed {
             guard let createStressorViewController = UIStoryboard(name: "CreateStressor", bundle: nil).instantiateInitialViewController() as? CreateStressorViewController else { return }
-            createStressorViewController.stressor = Stressor(value: stressor)
+            createStressorViewController.stressor = stressor.detached()
             self.navigationController?.pushViewController(createStressorViewController, animated: true)
             
         }
