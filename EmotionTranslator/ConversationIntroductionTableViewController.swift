@@ -18,6 +18,8 @@ class ConversationIntroductionTableViewController: UITableViewController {
     @IBOutlet weak var topLabelContainerView: UIView!
     @IBOutlet weak var monsterLabel1: UILabel!
     @IBOutlet weak var monsterLabel2: UILabel!
+    @IBOutlet weak var userLabel1: UILabel!
+    @IBOutlet weak var userLabel2: UILabel!
     
     @IBOutlet weak var userIcon1: UIImageView!
     @IBOutlet weak var userIcon2: UIImageView!
@@ -38,6 +40,21 @@ class ConversationIntroductionTableViewController: UITableViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        
+        let filename = FileUtils.profileImagePath
+        
+        if let data = try? Data(contentsOf: filename) {
+            let image = UIImage(data: data)
+            self.userIcon1.setRound(image: image)
+            self.userIcon2.setRound(image: image)
+        }
+        
+        if let userName = Database.shared.user.name {
+            if !userName.isEmpty {
+                self.userLabel1.text = userName
+                self.userLabel2.text = userName
+            }
+        }
         
         guard let monster = self.currentStressor.monster else { return }
         
