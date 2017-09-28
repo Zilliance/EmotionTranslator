@@ -15,8 +15,14 @@ class ConversationIntroductionTableViewController: UITableViewController {
     var questionsEnded: (() -> ())? = nil
 
     @IBOutlet weak var topLabel: UILabel!
+    @IBOutlet weak var topLabelContainerView: UIView!
     @IBOutlet weak var monsterLabel1: UILabel!
     @IBOutlet weak var monsterLabel2: UILabel!
+    
+    @IBOutlet weak var userIcon1: UIImageView!
+    @IBOutlet weak var userIcon2: UIImageView!
+    @IBOutlet weak var monsterIcon1: UIImageView!
+    @IBOutlet weak var monsterIcon2: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,22 +31,31 @@ class ConversationIntroductionTableViewController: UITableViewController {
         
         self.tableView.rowHeight = UITableViewAutomaticDimension
         self.tableView.estimatedRowHeight = 54;
-        
+
+        self.topLabelContainerView.backgroundColor = UIColor.silverColor.withAlphaComponent(0.8)
+        self.topLabelContainerView.layer.cornerRadius = UIConstants.Appearance.cornerRadius
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        if let monsterName = self.currentStressor.monster?.name {
+        
+        guard let monster = self.currentStressor.monster else { return }
+        
+        if let monsterName = monster.name {
             
             let text = "\(monsterName) and you are going to have a conversation to find out what is’s trying to tell you."
             let attributedString = NSMutableAttributedString(string: text)
             let monsterRange = (text as NSString).range(of: monsterName)
-            attributedString.addAttribute(NSUnderlineStyleAttributeName, value: NSUnderlineStyle.styleSingle.rawValue, range: monsterRange)
+            attributedString.addAttribute(NSFontAttributeName, value: UIFont.muliBold(size: 12), range: monsterRange)
             
             self.topLabel.attributedText = attributedString
             self.monsterLabel1.text = monsterName
             self.monsterLabel2.text = monsterName
+            
+            self.monsterIcon1.image = monster.shape.image(with: monster.color)
+            self.monsterIcon2.image = monster.shape.image(with: monster.color)
         }
+        
         
     }
     

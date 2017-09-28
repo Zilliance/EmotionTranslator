@@ -259,6 +259,9 @@ class CreateStressorViewController: AnalyzedViewController {
         case .actionplan:
             self.backgroundContentView.layer.contents = #imageLiteral(resourceName: "backgroundActionPlan").cgImage
             self.backgroundContentView.isHidden = false
+        case .introduction:
+            self.backgroundContentView.layer.contents = #imageLiteral(resourceName: "backgroundIntroduction").cgImage
+            self.backgroundContentView.isHidden = false
         default:
             self.backgroundContentView.isHidden = true
         }
