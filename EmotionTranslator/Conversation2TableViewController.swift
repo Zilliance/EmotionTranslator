@@ -40,19 +40,7 @@ class Conversation2TableViewController: UITableViewController {
         super.viewDidLoad()
         self.tableView.rowHeight = UITableViewAutomaticDimension
         self.tableView.estimatedRowHeight = 80
-        
-        if let monsterName = self.currentStressor.monster?.name {
-            
-            let text = "Before you finish, take one more minute to ask \(monsterName) the following 4 questions:"
-            let attributedString = NSMutableAttributedString(string: text)
-            let monsterRange = (text as NSString).range(of: monsterName)
-            attributedString.addAttribute(NSUnderlineStyleAttributeName, value: NSUnderlineStyle.styleSingle.rawValue, range: monsterRange)
-            
-            self.headerLabel.attributedText = attributedString
-        }
-        
         self.prepareReplies()
-        
     }
 
     private func prepareReplies() {
