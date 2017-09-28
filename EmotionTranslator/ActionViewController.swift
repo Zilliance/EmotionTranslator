@@ -8,6 +8,7 @@
 
 import UIKit
 import ZillianceShared
+import PDFGenerator
 
 class ActionViewController: UIViewController {
     
@@ -57,6 +58,44 @@ class ActionViewController: UIViewController {
         
         self.takeAwayLabel.attributedText = takeAwayAttributedString
         self.actionStepLabel.attributedText = actionStepAttributedString
+        
+    }
+    
+    @objc func shareTapped() {
+        self.generatePDF { [unowned self] (destinationURL,error) in
+            
+            if let destinationURL = destinationURL {
+                
+                let activityViewController = UIActivityViewController(activityItems: [destinationURL] , applicationActivities: nil)
+                
+                self.present(activityViewController,
+                             animated: true,
+                             completion: nil)
+            }
+            else {
+                
+                //todo handle errors?
+                
+            }
+            
+        }
+    }
+    
+    private func generatePDF(completion: (URL?, Error?) -> ()) {
+        
+        let dst = URL(fileURLWithPath: NSTemporaryDirectory().appending(("ActionPlan") + ".pdf"))
+        
+        // writes to Disk directly.
+        do {
+            try PDFGenerator.generate([self.view], to: dst)
+            
+            print("PDF sample saved in: " + dst.absoluteString)
+            completion(dst, nil)
+            
+        } catch (let error) {
+            print(error)
+            completion(nil, error)
+        }
     }
 
 }
