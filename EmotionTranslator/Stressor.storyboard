@@ -62,7 +62,7 @@
                                                 <fontDescription key="fontDescription" name="Muli-Light" family="Muli" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done"/>
                                                 <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Identify what is upsetting you now, or something you’ve been upset about in the last few days."/>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="In one or two words identify what is upsetting you now, or something you’ve been upset about in the last few days."/>
                                                     <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
                                                         <color key="value" red="0.62745098039215685" green="0.63921568627450975" blue="0.66274509803921566" alpha="1" colorSpace="calibratedRGB"/>
                                                     </userDefinedRuntimeAttribute>
@@ -83,8 +83,8 @@
                                                 <color key="textColor" red="0.38431372549999998" green="0.42745098040000001" blue="0.83137254900000002" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TBD : {waiting client instructions}" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hNm-dA-xK9">
-                                                <rect key="frame" x="20" y="238" width="210" height="18"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My relationship, work, money" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hNm-dA-xK9">
+                                                <rect key="frame" x="20" y="238" width="185" height="18"/>
                                                 <fontDescription key="fontDescription" name="Muli-LightItalic" family="Muli" pointSize="14"/>
                                                 <color key="textColor" red="0.62745098040000002" green="0.63921568630000003" blue="0.66274509800000003" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
