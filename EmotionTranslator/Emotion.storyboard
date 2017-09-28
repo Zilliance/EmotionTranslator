@@ -85,7 +85,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Social withdrawal/isolation" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NnK-kF-hbX">
-                                            <rect key="frame" x="28" y="13" width="171.5" height="18"/>
+                                            <rect key="frame" x="28" y="13.5" width="171.5" height="18"/>
                                             <fontDescription key="fontDescription" name="Muli-Light" family="Muli" pointSize="14"/>
                                             <color key="textColor" red="0.12549019607843137" green="0.19215686274509802" blue="0.25490196078431371" alpha="0.69999999999999996" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
@@ -144,34 +144,25 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <containerView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" translatesAutoresizingMaskIntoConstraints="NO" id="ab2-Ez-mCV">
-                                <rect key="frame" x="20" y="90" width="335" height="545"/>
-                                <color key="backgroundColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
-                                <connections>
-                                    <segue destination="Unp-l5-Wsw" kind="embed" id="KeF-a3-pIm"/>
-                                </connections>
-                            </containerView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nz0-G3-3vJ">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What emotion is triggered by it?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mVP-mQ-rNn">
-                                        <rect key="frame" x="20" y="47" width="335" height="23"/>
+                                        <rect key="frame" x="20" y="20" width="335" height="23"/>
                                         <fontDescription key="fontDescription" name="Muli-SemiBold" family="Muli" pointSize="18"/>
                                         <color key="textColor" red="0.12549019610000001" green="0.19215686269999999" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a4x-Ou-Bh4">
-                                        <rect key="frame" x="126" y="78" width="122" height="2"/>
+                                        <rect key="frame" x="126" y="76" width="122" height="2"/>
                                         <color key="backgroundColor" red="0.88235294119999996" green="0.88235294119999996" blue="0.89411764709999997" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="2" id="AGL-rL-dRo"/>
                                             <constraint firstAttribute="width" constant="122" id="Gde-9o-3cs"/>
-                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="122" id="LTE-IA-BH6"/>
                                             <constraint firstAttribute="height" constant="2" id="gap-Vg-szF"/>
                                         </constraints>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Xp-eN-NbA">
-                                        <rect key="frame" x="292" y="12" width="63" height="28"/>
+                                        <rect key="frame" x="156" y="43" width="63" height="28"/>
                                         <fontDescription key="fontDescription" name="Muli-Regular" family="Muli" pointSize="12"/>
                                         <state key="normal" title="Learn More">
                                             <color key="titleColor" red="0.0039215686269999999" green="0.73725490199999999" blue="0.83529411760000005" alpha="1" colorSpace="calibratedRGB"/>
@@ -183,17 +174,24 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="mVP-mQ-rNn" secondAttribute="bottom" constant="10" id="3SC-PR-h2K"/>
+                                    <constraint firstItem="a4x-Ou-Bh4" firstAttribute="top" secondItem="4Xp-eN-NbA" secondAttribute="bottom" constant="5" id="QMk-JE-KXk"/>
                                     <constraint firstAttribute="trailing" secondItem="mVP-mQ-rNn" secondAttribute="trailing" constant="20" id="RjE-cz-8Bu"/>
+                                    <constraint firstItem="4Xp-eN-NbA" firstAttribute="centerX" secondItem="Nz0-G3-3vJ" secondAttribute="centerX" id="TCG-ju-UsS"/>
                                     <constraint firstAttribute="height" constant="80" id="VeH-lL-auB"/>
-                                    <constraint firstItem="4Xp-eN-NbA" firstAttribute="top" secondItem="Nz0-G3-3vJ" secondAttribute="top" constant="12" id="XUP-Wu-xBW"/>
                                     <constraint firstItem="a4x-Ou-Bh4" firstAttribute="centerX" secondItem="Nz0-G3-3vJ" secondAttribute="centerX" id="YnZ-HN-q0i"/>
+                                    <constraint firstItem="mVP-mQ-rNn" firstAttribute="top" secondItem="Nz0-G3-3vJ" secondAttribute="top" constant="20" id="gKb-6q-dhj"/>
+                                    <constraint firstItem="4Xp-eN-NbA" firstAttribute="top" secondItem="mVP-mQ-rNn" secondAttribute="bottom" id="gUH-b1-fEK"/>
                                     <constraint firstItem="mVP-mQ-rNn" firstAttribute="leading" secondItem="Nz0-G3-3vJ" secondAttribute="leading" constant="20" id="p9K-KX-5ax"/>
-                                    <constraint firstAttribute="trailing" secondItem="4Xp-eN-NbA" secondAttribute="trailing" constant="20" id="r9R-u8-a7z"/>
-                                    <constraint firstItem="a4x-Ou-Bh4" firstAttribute="top" secondItem="mVP-mQ-rNn" secondAttribute="bottom" constant="8" id="uXP-yq-ZZm"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Let’s give it a face!" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QJM-Nx-Kay">
+                            <containerView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" translatesAutoresizingMaskIntoConstraints="NO" id="ab2-Ez-mCV">
+                                <rect key="frame" x="20" y="90" width="335" height="545"/>
+                                <color key="backgroundColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <segue destination="Unp-l5-Wsw" kind="embed" id="KeF-a3-pIm"/>
+                                </connections>
+                            </containerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Let’s make it a character!" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QJM-Nx-Kay">
                                 <rect key="frame" x="20" y="645" width="335" height="21.5"/>
                                 <fontDescription key="fontDescription" name="Muli-SemiBold" family="Muli" pointSize="17"/>
                                 <color key="textColor" red="0.12549019610000001" green="0.19215686269999999" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
