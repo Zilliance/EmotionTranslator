@@ -112,17 +112,6 @@ class ConversationTableViewController: UITableViewController {
         self.timerView.backgroundColor = UIColor.white.withAlphaComponent(0.8)
         self.timerView.layer.cornerRadius = UIConstants.Appearance.cornerRadius
         
-        if let monsterName = self.currentStressor.monster?.name {
-            
-            let text = "\(monsterName) and you are going to have a conversation to find out what it’s trying to tell you."
-            let attributedString = NSMutableAttributedString(string: text)
-            let monsterRange = (text as NSString).range(of: monsterName)
-            attributedString.addAttribute(NSFontAttributeName, value: UIFont.muliBold(size: 12), range: monsterRange)
-            
-            self.topLabel.attributedText = attributedString
-        }
-        
-        
         self.tableView.rowHeight = UITableViewAutomaticDimension
         self.tableView.estimatedRowHeight = 80
 
