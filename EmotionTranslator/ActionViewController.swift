@@ -15,15 +15,23 @@ class ActionViewController: UIViewController {
     var currentStressor: Stressor!
     var gotoIntroduction: (() -> ())? = nil
     var questionsEnded: (() -> ())? = nil
+    
+    var isStressorCompleted = false
 
     @IBOutlet weak var takeAwayLabel: UILabel!
     @IBOutlet weak var actionStepLabel: UILabel!
     @IBOutlet weak var contentView: UIView!
+    @IBOutlet weak var remindMeButton: UIButton!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.contentView.backgroundColor = UIColor.white.withAlphaComponent(0.5)
+        self.contentView.backgroundColor = UIColor.white.withAlphaComponent(0.8)
         self.setupView()
+        
+        if self.isStressorCompleted {
+            self.setupForCompletedStressor()
+        }
         
         Analytics.shared.send(event: ZillianceAnalytics.BaseEvents.planViewed)
 
@@ -62,6 +70,7 @@ class ActionViewController: UIViewController {
     }
     
     @objc func shareTapped() {
+        
         self.generatePDF { [unowned self] (destinationURL,error) in
             
             if let destinationURL = destinationURL {
@@ -87,7 +96,14 @@ class ActionViewController: UIViewController {
         
         // writes to Disk directly.
         do {
+            
+            //hide remind me button temporally
+            
+            self.remindMeButton.isHidden = true
+            
             try PDFGenerator.generate([self.view], to: dst)
+            
+            self.remindMeButton.isHidden = false
             
             print("PDF sample saved in: " + dst.absoluteString)
             completion(dst, nil)
@@ -97,7 +113,26 @@ class ActionViewController: UIViewController {
             completion(nil, error)
         }
     }
+    
+    private func setupForCompletedStressor() {
+        self.remindMeButton.alpha = 1
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .action, target: self, action: #selector(self.shareTapped))
+    }
 
+    @IBAction func remindMeAction(_ sender: Any) {
+        
+        guard let scheduler = UIStoryboard(name: "Schedule", bundle: nil).instantiateInitialViewController() as? ScheduleViewController else {
+            assertionFailure()
+            return
+        }
+        
+        scheduler.title = self.currentStressor.title
+        
+        let navigationController = OrientableNavigationController(rootViewController: scheduler)
+        
+        self.present(navigationController, animated: true, completion: nil)
+        
+    }
 }
 
 // MARK: - CompassValidation

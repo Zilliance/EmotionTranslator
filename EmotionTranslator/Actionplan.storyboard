@@ -12,6 +12,9 @@
         <array key="Muli-Bold.ttf">
             <string>Muli-Bold</string>
         </array>
+        <array key="Muli-Regular.ttf">
+            <string>Muli-Regular</string>
+        </array>
         <array key="Muli-SemiBold.ttf">
             <string>Muli-SemiBold</string>
         </array>
@@ -33,13 +36,13 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cqc-AZ-jlQ" userLabel="ContentView">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="245"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="242"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jJC-UF-Qen">
                                                 <rect key="frame" x="20" y="0.0" width="335" height="70"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Action Plan" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aRS-Zo-azr">
-                                                        <rect key="frame" x="20" y="37" width="295" height="23"/>
+                                                        <rect key="frame" x="20" y="39" width="295" height="21"/>
                                                         <fontDescription key="fontDescription" name="Muli-SemiBold" family="Muli" pointSize="18"/>
                                                         <color key="textColor" red="0.12549019610000001" green="0.19215686269999999" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
@@ -66,14 +69,14 @@
                                                 </constraints>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="790-nz-dPC">
-                                                <rect key="frame" x="20" y="114" width="325" height="19"/>
+                                                <rect key="frame" x="20" y="114" width="325" height="17.5"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" name="Muli-Bold" family="Muli" pointSize="15"/>
                                                 <color key="textColor" red="0.62745098039215685" green="0.63921568627450975" blue="0.66274509803921566" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ucb-Kt-lOF">
-                                                <rect key="frame" x="20" y="146" width="325" height="19"/>
+                                                <rect key="frame" x="20" y="144.5" width="325" height="17.5"/>
                                                 <fontDescription key="fontDescription" name="Muli-Bold" family="Muli" pointSize="15"/>
                                                 <color key="textColor" red="0.62745098040000002" green="0.63921568630000003" blue="0.66274509800000003" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -102,19 +105,37 @@
                                     <constraint firstItem="Cqc-AZ-jlQ" firstAttribute="leading" secondItem="8sx-kg-ohU" secondAttribute="leading" id="s0a-7Z-Lfq"/>
                                 </constraints>
                             </scrollView>
+                            <button opaque="NO" alpha="0.0" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oKs-M1-83U">
+                                <rect key="frame" x="20" y="603" width="335" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="Oh5-u9-zfc"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="44" id="Ykj-dC-IFS"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Muli-Regular" family="Muli" pointSize="18"/>
+                                <state key="normal" title="REMIND ME" backgroundImage="remindme-button">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="remindMeAction:" destination="gl0-7d-suq" eventType="touchUpInside" id="hV8-Aa-6CV"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="Cqc-AZ-jlQ" firstAttribute="width" secondItem="cvm-Fe-3XJ" secondAttribute="width" id="9iw-rw-b2D"/>
                             <constraint firstItem="8sx-kg-ohU" firstAttribute="leading" secondItem="cvm-Fe-3XJ" secondAttribute="leading" id="FYU-bN-RBL"/>
                             <constraint firstItem="8sx-kg-ohU" firstAttribute="top" secondItem="cvm-Fe-3XJ" secondAttribute="top" id="SXE-He-NcN"/>
+                            <constraint firstItem="oKs-M1-83U" firstAttribute="leading" secondItem="cvm-Fe-3XJ" secondAttribute="leading" constant="20" id="abA-Mm-pW2"/>
                             <constraint firstItem="llo-Yl-T0L" firstAttribute="top" secondItem="8sx-kg-ohU" secondAttribute="bottom" id="jwQ-tq-bba"/>
+                            <constraint firstItem="llo-Yl-T0L" firstAttribute="top" secondItem="oKs-M1-83U" secondAttribute="bottom" constant="20" id="ksH-zr-nSj"/>
                             <constraint firstAttribute="trailing" secondItem="8sx-kg-ohU" secondAttribute="trailing" id="oAX-xA-iWw"/>
+                            <constraint firstAttribute="trailing" secondItem="oKs-M1-83U" secondAttribute="trailing" constant="20" id="sD5-8I-NzY"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="actionStepLabel" destination="ucb-Kt-lOF" id="8uL-6I-qcE"/>
                         <outlet property="contentView" destination="Cqc-AZ-jlQ" id="VXy-FY-6I6"/>
+                        <outlet property="remindMeButton" destination="oKs-M1-83U" id="HfP-zZ-pSh"/>
                         <outlet property="takeAwayLabel" destination="790-nz-dPC" id="fHa-K2-X25"/>
                     </connections>
                 </viewController>
@@ -123,4 +144,7 @@
             <point key="canvasLocation" x="200.80000000000001" y="113.79310344827587"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="remindme-button" width="336" height="44"/>
+    </resources>
 </document>
