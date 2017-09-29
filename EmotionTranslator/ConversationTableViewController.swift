@@ -287,7 +287,15 @@ class ConversationTableViewController: UITableViewController {
                 
             }
             else {
-                cell.iconImageView.image = #imageLiteral(resourceName: "user-conversation")
+                let filename = FileUtils.profileImagePath
+                
+                if let data = try? Data(contentsOf: filename) {
+                    let image = UIImage(data: data)
+                    cell.iconImageView.setRound(image: image)
+                }
+                else {
+                    cell.iconImageView.image = #imageLiteral(resourceName: "user-conversation")
+                }
             }
             
             cell.responseLabel.text = item.text
@@ -303,8 +311,26 @@ class ConversationTableViewController: UITableViewController {
                 }
             }
             else {
-                cell.iconImageView.image = #imageLiteral(resourceName: "user-conversation")
-                cell.nameLabel.text = "Me"
+                
+                let filename = FileUtils.profileImagePath
+                
+                if let data = try? Data(contentsOf: filename) {
+                    let image = UIImage(data: data)
+                    cell.iconImageView.setRound(image: image)
+                }
+                else {
+                    cell.iconImageView.image = #imageLiteral(resourceName: "user-conversation")
+                }
+                
+                if let userName = Database.shared.user.name {
+                    if !userName.isEmpty {
+                       cell.nameLabel.text = userName
+                    }
+                }
+                else {
+                    
+                    cell.nameLabel.text = "Me"
+                }
             }
             
             cell.reply = { [unowned self] text in
