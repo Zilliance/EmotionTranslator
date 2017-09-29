@@ -11,6 +11,7 @@ import UIKit
 class Conversation2TableViewController: UITableViewController {
 
     @IBOutlet weak var headerLabel: UILabel!
+    @IBOutlet weak var headerContainer: UIView!
     
     var currentStressor: Stressor!
     var gotoMonsterName: (() -> ())? = nil
@@ -30,7 +31,7 @@ class Conversation2TableViewController: UITableViewController {
                                  "I wish you would…",
                                  ]
     
-    fileprivate var replies: [String] = ["" ,"" ,"" ,"" ,]
+    fileprivate var replies: [String?] = [nil ,nil ,nil ,nil ,]
     
     private var elements: [Item] = []
     
@@ -40,7 +41,14 @@ class Conversation2TableViewController: UITableViewController {
         super.viewDidLoad()
         self.tableView.rowHeight = UITableViewAutomaticDimension
         self.tableView.estimatedRowHeight = 80
+        
+        self.tableView.layer.contents = #imageLiteral(resourceName: "backgroundConvo").cgImage
+        
+        self.headerContainer.backgroundColor = UIColor.contentBackground.withAlphaComponent(0.8)
+        self.headerContainer.layer.cornerRadius = UIConstants.Appearance.cornerRadius
+        
         self.prepareReplies()
+        
     }
 
     private func prepareReplies() {
@@ -53,7 +61,8 @@ class Conversation2TableViewController: UITableViewController {
         // prefill questions - answers
         
         for reply in self.replies {
-            guard !reply.isEmpty else { break }
+            
+            guard let _ = reply else { break }
             self.prepareQuestions()
         }
         
@@ -65,7 +74,7 @@ class Conversation2TableViewController: UITableViewController {
     }
     
     private func checkIfQuestionsAreFinished() {
-        let finished = self.replies.filter { $0.isEmpty }.count == 0
+        let finished = self.replies.flatMap { $0 }.count != 0
         if finished {
             self.questionsCompleted = true
             self.questionsEnded?()
@@ -101,8 +110,29 @@ class Conversation2TableViewController: UITableViewController {
         switch item.type {
         case .question:
             let cell = tableView.dequeueReusableCell(withIdentifier: "QuestionCell", for: indexPath) as! QuestionCell
+            
+            let filename = FileUtils.profileImagePath
+            
+            if let data = try? Data(contentsOf: filename) {
+                let image = UIImage(data: data)
+                cell.iconImageView.setRound(image: image)
+            }
+            else {
+                cell.iconImageView.image = #imageLiteral(resourceName: "user-conversation")
+            }
+            
+            
+            if let userName = Database.shared.user.name {
+                if !userName.isEmpty {
+                    cell.nameLabel.text = userName
+                }
+            }
+            else {
+                
+                cell.nameLabel.text = "Me"
+            }
+            
             cell.questionLabel.text = item.text
-            cell.questionNumberLabel.text = "Question \((indexPath.row + 1)/2 + 1)"
             return cell
         case .answer:
             let cell = tableView.dequeueReusableCell(withIdentifier: "ResponseCell", for: indexPath) as! ResponseCell
@@ -115,18 +145,37 @@ class Conversation2TableViewController: UITableViewController {
             
             let text = self.replies[(indexPath.row)/2]
             
-            cell.nameLabel.text = self.currentStressor.monster?.name
+            if let monster = self.currentStressor.monster {
+                cell.iconImageView.image = monster.shape.image(with: monster.color)
+                cell.nameLabel.text = monster.name
+            }
             
             cell.entryTextView.text = ""
             
-            if !text.isEmpty {
+            if let text = text {
                 cell.entryTextView.text = text
+                cell.skipButton.isHidden = true
             }
             else {
                 cell.entryTextView.placeholder = item.text
+                if indexPath.row + 1 == tableView.numberOfRows(inSection: 0) {
+                    cell.skipButton.isHidden = false
+                }
+                else {
+                    cell.skipButton.isHidden = true
+                }
             }
             
             cell.reply = { [unowned self] text in
+            
+                let cells = tableView.visibleCells
+                
+                for cell in cells {
+                    if let responseCell = cell as? ResponseEntryCell {
+                        responseCell.skipButton.isHidden = true
+                    }
+                }
+                
                 self.replies[indexPath.row/2] = text
                 
                 if tableView.numberOfRows(inSection: 0) == indexPath.row + 1 {

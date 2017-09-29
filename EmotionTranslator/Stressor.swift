@@ -54,10 +54,10 @@ final class Stressor: Object {
     
     // Four questions conversation (answers only stored)
     
-    dynamic var answer1 = ""
-    dynamic var answer2 = ""
-    dynamic var answer3 = ""
-    dynamic var answer4 = ""
+    dynamic var answer1: String?
+    dynamic var answer2: String?
+    dynamic var answer3: String?
+    dynamic var answer4: String?
     
     dynamic var takeAwayText: String?
     dynamic var takeAwayActions: String?

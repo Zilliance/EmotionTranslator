@@ -29,7 +29,7 @@
                             <rect key="frame" x="0.0" y="0.0" width="375" height="135"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
-                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="timer-background" translatesAutoresizingMaskIntoConstraints="NO" id="csi-DS-HBe">
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="csi-DS-HBe">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="135"/>
                                 </imageView>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SVs-HJ-oh7">
@@ -68,7 +68,7 @@
                                     </constraints>
                                 </view>
                             </subviews>
-                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstItem="SVs-HJ-oh7" firstAttribute="top" secondItem="WBZ-wp-qrt" secondAttribute="top" constant="10" id="9Yv-GH-oa1"/>
                                 <constraint firstAttribute="trailing" secondItem="SVs-HJ-oh7" secondAttribute="trailing" constant="10" id="CCN-ze-zJT"/>
@@ -234,7 +234,6 @@
                                             </connections>
                                         </textView>
                                     </subviews>
-                                    <color key="backgroundColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
                                     <constraints>
                                         <constraint firstItem="6Nl-qN-S01" firstAttribute="leading" secondItem="4NF-E3-ym3" secondAttribute="leading" constant="18" id="5oL-zS-cY1"/>
                                         <constraint firstItem="Cas-FU-f3Z" firstAttribute="top" secondItem="4NF-E3-ym3" secondAttribute="top" constant="12" id="AdF-xy-bc0"/>
@@ -521,7 +520,6 @@
         <image name="completed-stressor" width="50" height="51"/>
         <image name="iconClose" width="20" height="20"/>
         <image name="monster-placeholder" width="150" height="200"/>
-        <image name="timer-background" width="374" height="174"/>
         <image name="user-conversation" width="35" height="35"/>
     </resources>
 </document>
