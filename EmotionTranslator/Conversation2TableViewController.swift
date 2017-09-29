@@ -11,6 +11,7 @@ import UIKit
 class Conversation2TableViewController: UITableViewController {
 
     @IBOutlet weak var headerLabel: UILabel!
+    @IBOutlet weak var headerContainer: UIView!
     
     var currentStressor: Stressor!
     var gotoMonsterName: (() -> ())? = nil
@@ -40,7 +41,14 @@ class Conversation2TableViewController: UITableViewController {
         super.viewDidLoad()
         self.tableView.rowHeight = UITableViewAutomaticDimension
         self.tableView.estimatedRowHeight = 80
+        
+        self.tableView.layer.contents = #imageLiteral(resourceName: "backgroundConvo").cgImage
+        
+        self.headerContainer.backgroundColor = UIColor.contentBackground.withAlphaComponent(0.8)
+        self.headerContainer.layer.cornerRadius = UIConstants.Appearance.cornerRadius
+        
         self.prepareReplies()
+        
     }
 
     private func prepareReplies() {
@@ -102,8 +110,29 @@ class Conversation2TableViewController: UITableViewController {
         switch item.type {
         case .question:
             let cell = tableView.dequeueReusableCell(withIdentifier: "QuestionCell", for: indexPath) as! QuestionCell
+            
+            let filename = FileUtils.profileImagePath
+            
+            if let data = try? Data(contentsOf: filename) {
+                let image = UIImage(data: data)
+                cell.iconImageView.setRound(image: image)
+            }
+            else {
+                cell.iconImageView.image = #imageLiteral(resourceName: "user-conversation")
+            }
+            
+            
+            if let userName = Database.shared.user.name {
+                if !userName.isEmpty {
+                    cell.nameLabel.text = userName
+                }
+            }
+            else {
+                
+                cell.nameLabel.text = "Me"
+            }
+            
             cell.questionLabel.text = item.text
-            cell.questionNumberLabel.text = "Question \((indexPath.row + 1)/2 + 1)"
             return cell
         case .answer:
             let cell = tableView.dequeueReusableCell(withIdentifier: "ResponseCell", for: indexPath) as! ResponseCell
@@ -116,7 +145,10 @@ class Conversation2TableViewController: UITableViewController {
             
             let text = self.replies[(indexPath.row)/2]
             
-            cell.nameLabel.text = self.currentStressor.monster?.name
+            if let monster = self.currentStressor.monster {
+                cell.iconImageView.image = monster.shape.image(with: monster.color)
+                cell.nameLabel.text = monster.name
+            }
             
             cell.entryTextView.text = ""
             

@@ -13,7 +13,12 @@ import MZFormSheetController
 class QuestionCell: UITableViewCell {
     
     @IBOutlet weak var questionLabel: UILabel!
-    @IBOutlet weak var questionNumberLabel: UILabel!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var iconImageView: UIImageView!
+    
+    override func awakeFromNib() {
+        self.backgroundColor = UIColor.white.withAlphaComponent(0.8)
+    }
     
 }
 
@@ -30,7 +35,8 @@ class ResponseEntryCell: UITableViewCell {
     override func awakeFromNib() {
         self.entryTextView.layer.cornerRadius = UIConstants.Appearance.cornerRadius
         self.entryTextView.layer.borderWidth = UIConstants.Appearance.borderWidth
-        self.entryTextView.layer.borderColor = UIColor.silverColor.cgColor
+        self.entryTextView.layer.borderColor = UIColor.contentBackground.cgColor
+        self.backgroundColor = UIColor.white.withAlphaComponent(0.8)
         
     }
     @IBAction func skipAction(_ sender: Any) {
@@ -62,6 +68,10 @@ class ResponseCell: UITableViewCell {
     
     @IBOutlet weak var iconImageView: UIImageView!
     @IBOutlet weak var responseLabel: UILabel!
+    
+    override func awakeFromNib() {
+        self.backgroundColor = UIColor.white.withAlphaComponent(0.8)
+    }
     
 }
 
@@ -120,6 +130,8 @@ class ConversationTableViewController: UITableViewController {
         
         self.tableView.rowHeight = UITableViewAutomaticDimension
         self.tableView.estimatedRowHeight = 80
+        
+     self.tableView.layer.contents = #imageLiteral(resourceName: "backgroundConvo").cgImage
 
         let currentConversation = Array(self.currentStressor.conversation)
         
@@ -278,7 +290,6 @@ class ConversationTableViewController: UITableViewController {
         case .question:
             let cell = tableView.dequeueReusableCell(withIdentifier: "QuestionCell", for: indexPath) as! QuestionCell
             cell.questionLabel.text = item.text
-            cell.questionNumberLabel.text = "Question \((indexPath.row + 1)/2 + 1)"
             return cell
         case .answer:
             let cell = tableView.dequeueReusableCell(withIdentifier: "ResponseCell", for: indexPath) as! ResponseCell
