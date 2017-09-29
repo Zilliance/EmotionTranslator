@@ -95,21 +95,26 @@ class TakeAwayViewController: UITableViewController {
     }
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return 2
+        return 3
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return section == 0 ? 5 : 3
+        switch section {
+        case 0:
+            return 4
+        case 1:
+            return 2
+        case 2:
+            return 2
+        default:
+            return 0
+        }
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         var returnCell: UITableViewCell!
         switch (indexPath.section, indexPath.row) {
-        case (let section, 0):
-            let cell = tableView.dequeueReusableCell(withIdentifier: "header", for: indexPath) as! TakeAwayHeaderViewCell
-            cell.label.text = section == 0 ? "Conversation" : "Action Step"
-            returnCell = cell
             
         case (0, let row):
             let cell = tableView.dequeueReusableCell(withIdentifier: "response", for: indexPath) as! TakeAwayResponseViewCell
@@ -121,19 +126,19 @@ class TakeAwayViewController: UITableViewController {
             let monsterImage = monster.shape.image(with: monster.color)
             
             switch row {
-            case 1:
+            case 0:
                 cell.titleLabel.text = "My message to you is"
                 cell.answerLabel.text = self.currentStressor.answer1
                 cell.monsterIcon.image = monsterImage
-            case 2:
+            case 1:
                 cell.titleLabel.text = "I’m trying to help you"
                 cell.answerLabel.text = self.currentStressor.answer2
                 cell.monsterIcon.image = monsterImage
-            case 3:
+            case 2:
                 cell.titleLabel.text = "What I need to feel better is"
                 cell.answerLabel.text = self.currentStressor.answer3
                 cell.monsterIcon.image = monsterImage
-            case 4:
+            case 3:
                 cell.titleLabel.text = "I wish you would"
                 cell.answerLabel.text = self.currentStressor.answer4
                 cell.monsterIcon.image = monsterImage
@@ -142,37 +147,48 @@ class TakeAwayViewController: UITableViewController {
             }
             returnCell = cell
             
-        case (1, let row):
+        case (1, 0):
+            let cell = tableView.dequeueReusableCell(withIdentifier: "header", for: indexPath) as! TakeAwayHeaderViewCell
+            cell.label.text = "Take Away"
+            returnCell = cell
+        case (2, 0):
+            let cell = tableView.dequeueReusableCell(withIdentifier: "header", for: indexPath) as! TakeAwayHeaderViewCell
+            cell.label.text = "Action Step"
+            returnCell = cell
+            
+        case (1, 1):
             let cell = tableView.dequeueReusableCell(withIdentifier: "question", for: indexPath) as! TakeAwayQuestionViewCell
             
-            switch row {
-            case 1:
-                cell.titleLabel.text = "Based on the convo you just had, what’s your biggest takeaway from this experience?"
-                
-                if (cell.textView.text.count == 0) {
-                    cell.textView.text = self.currentStressor.takeAwayText
-                }
-                cell.textView.delegate = self
-                cell.textView.placeholder = "My biggest takeaway is… example 1, example 2 "
-                takeAwayTextView = cell.textView
-            case 2:
-                cell.titleLabel.text = "What action step does your takeaway inspire you to take?"
-                
-                if (cell.textView.text.count == 0) {
-                    cell.textView.text = self.currentStressor.takeAwayActions
-                }
-                
-                cell.textView.delegate = self
-                cell.textView.placeholder = "I am inspired to… example 1, example 2 (hint text TBD)"
-                takeAwayActionsTextView = cell.textView
-
-            default:
-                break
-            }
+            cell.titleLabel.text = "Based on the convo you just had, what’s your biggest takeaway from this experience?"
             
+            if (cell.textView.text.count == 0) {
+                cell.textView.text = self.currentStressor.takeAwayText
+            }
+            cell.textView.delegate = self
+            cell.textView.placeholder = "My biggest takeaway is… example 1, example 2 "
+            takeAwayTextView = cell.textView
+
             cell.contentView.backgroundColor = UIColor.clear
             
             returnCell = cell
+            
+        case (2, 1):
+            let cell = tableView.dequeueReusableCell(withIdentifier: "question", for: indexPath) as! TakeAwayQuestionViewCell
+            
+            cell.titleLabel.text = "What action step does your takeaway inspire you to take?"
+            
+            if (cell.textView.text.count == 0) {
+                cell.textView.text = self.currentStressor.takeAwayActions
+            }
+            
+            cell.textView.delegate = self
+            cell.textView.placeholder = "I am inspired to… example 1, example 2 (hint text TBD)"
+            takeAwayActionsTextView = cell.textView
+
+            cell.contentView.backgroundColor = UIColor.clear
+            
+            returnCell = cell
+        
             
         default:
             break
