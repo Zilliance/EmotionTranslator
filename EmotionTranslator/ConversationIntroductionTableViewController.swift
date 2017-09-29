@@ -33,7 +33,9 @@ class ConversationIntroductionTableViewController: UITableViewController {
         
         self.tableView.rowHeight = UITableViewAutomaticDimension
         self.tableView.estimatedRowHeight = 54;
-
+        
+        self.tableView.layer.contents = #imageLiteral(resourceName: "backgroundIntroduction").cgImage
+        
         self.topLabelContainerView.backgroundColor = UIColor.silverColor.withAlphaComponent(0.8)
         self.topLabelContainerView.layer.cornerRadius = UIConstants.Appearance.cornerRadius
     }
