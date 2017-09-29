@@ -60,21 +60,26 @@ class ConversationIntroductionTableViewController: UITableViewController {
         
         guard let monster = self.currentStressor.monster else { return }
         
+        
+        
         if let monsterName = monster.name {
-            
+
             let text = "\(monsterName) and you are going to have a conversation to find out what is’s trying to tell you."
             let attributedString = NSMutableAttributedString(string: text)
             let monsterRange = (text as NSString).range(of: monsterName)
             attributedString.addAttribute(NSFontAttributeName, value: UIFont.muliBold(size: 12), range: monsterRange)
-            
+
             self.topLabel.attributedText = attributedString
-            self.monsterLabel1.text = monsterName
-            self.monsterLabel2.text = monsterName
             
-            self.monsterIcon1.image = monster.shape.image(with: monster.color)
-            self.monsterIcon2.image = monster.shape.image(with: monster.color)
+            // For the example we'll use a hardcoded monster,
+            // but let's keep this logic here in case that changes
+            
+//            self.monsterLabel1.text = monsterName
+//            self.monsterLabel2.text = monsterName
+//
+//            self.monsterIcon1.image = monster.shape.image(with: monster.color)
+//            self.monsterIcon2.image = monster.shape.image(with: monster.color)
         }
-        
         
     }
     
