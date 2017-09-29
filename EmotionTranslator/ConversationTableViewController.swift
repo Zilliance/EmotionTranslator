@@ -96,6 +96,8 @@ class ConversationTableViewController: UITableViewController {
     var countdownTimer: Timer!
     var totalTime = 60 * 3
     
+    var headerResized = false
+    
     fileprivate var questionsAnswers: [QuestionAnswer] = []
     
     private var elements: [Item] = []
@@ -131,6 +133,20 @@ class ConversationTableViewController: UITableViewController {
         
         self.insertReplyBox()
         self.reply()
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+        if (!self.headerResized) {
+            self.headerResized = true
+            let headerView = self.tableView.tableHeaderView
+            headerView?.setNeedsLayout()
+            headerView?.layoutIfNeeded()
+            headerView?.frame.size = (self.tableView?.tableHeaderView?.systemLayoutSizeFitting(UILayoutFittingCompressedSize)) ?? CGSize(width: 0, height: 0)
+            self.tableView.tableHeaderView = headerView
+            
+        }
     }
     
     fileprivate func changeButtonBackground(for timer:Timer) {
