@@ -382,6 +382,8 @@ class CreateStressorViewController: AnalyzedViewController {
                     self.showAlert(title: "Please enter a stressor", message: "")
                 case .name?:
                     self.showAlert(title: "Please enter a name for your emotion", message: "")
+                case .takeaway?:
+                    self.showAlert(title: "Please enter your takeaway and action step below", message: "")
                 default:
                     self.showAlert(title: "Please enter text", message: "")
                 }
