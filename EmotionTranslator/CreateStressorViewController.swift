@@ -71,8 +71,6 @@ class CreateStressorViewController: AnalyzedViewController {
     @IBOutlet weak var continueButton: UIButton!
     @IBOutlet weak var remindMeButton: UIButton!
     
-    @IBOutlet weak var backgroundContentView: UIView!
-
     private let backButton = UIButton()
     
     var stressor: Stressor = Stressor()
@@ -160,7 +158,6 @@ class CreateStressorViewController: AnalyzedViewController {
         let item = self.stressorItems[self.currentPageIndex]
         self.setupButton(for: item)
                 
-        self.setupBackground(for: item)
         self.setupNavItem(for: item)
 
     }
@@ -240,29 +237,10 @@ class CreateStressorViewController: AnalyzedViewController {
         self.title = self.stressor.title
         self.pageControlViewController.setViewControllers([item.viewController], direction: direction, animated: true, completion: nil)
         
-        self.setupBackground(for: item)
         self.setupNavItem(for: item)
 
         Analytics.shared.send(event: ZillianceAnalytics.DetailedEvents.viewControllerShown(item.viewController.analyticsObjectName))
 
-    }
-    
-    private func setupBackground(for item: StressorItem) {
-        
-        switch item.scene {
-        case .takeaway:
-            self.backgroundContentView.layer.contents = UIImage(named: "takeAwayBackground")?.cgImage
-            self.backgroundContentView.isHidden = false
-        case .monster:
-            self.backgroundContentView.layer.contents = UIImage(named: "backgroundCharactersScreenLong")?.cgImage
-            self.backgroundContentView.isHidden = false
-        case .actionplan:
-            self.backgroundContentView.layer.contents = #imageLiteral(resourceName: "backgroundActionPlan").cgImage
-            self.backgroundContentView.isHidden = false
-        default:
-            self.backgroundContentView.isHidden = true
-        }
-        
     }
     
     private func setupNavItem(for item: StressorItem) {
