@@ -14,11 +14,12 @@ import ZillianceShared
 final class LeftMenuViewController: UIViewController {
     enum Row: Int {
         case profile = 0
+        case spacer1
         case howItWorks
         case tour
-        case videos
+        // case videos // copy cell, change title to video, uncomment here and below
         case faq
-        case spacer
+        case spacer2
         case about
         case company
     }
@@ -146,7 +147,8 @@ extension LeftMenuViewController: UITableViewDelegate {
         case .howItWorks?: fallthrough
         case .about?:
             return 30
-        case .spacer?:
+        case .spacer1?: fallthrough
+        case .spacer2?:
             return 20
         default:
             return 44
@@ -157,7 +159,8 @@ extension LeftMenuViewController: UITableViewDelegate {
         switch Row(rawValue: indexPath.row) {
         case .howItWorks?: fallthrough
         case .about?: fallthrough
-        case .spacer?:
+        case .spacer1?: fallthrough
+        case .spacer2?:
             cell.selectionStyle = .none
             cell.hideSeparatorInsets()
         default:
@@ -172,8 +175,8 @@ extension LeftMenuViewController: UITableViewDelegate {
             self.showProfile()
         case .tour?:
             self.showTour()
-        case .videos?:
-            self.showVideo()
+//        case .videos?:
+//            self.showVideo()
         case .faq?:
             self.showFaq()
         case .company?:
