@@ -126,10 +126,24 @@ class Conversation2TableViewController: UITableViewController {
             }
             else {
                 cell.entryTextView.placeholder = item.text
-                cell.skipButton.isHidden = false
+                if indexPath.row + 1 == tableView.numberOfRows(inSection: 0) {
+                    cell.skipButton.isHidden = false
+                }
+                else {
+                    cell.skipButton.isHidden = true
+                }
             }
             
             cell.reply = { [unowned self] text in
+            
+                let cells = tableView.visibleCells
+                
+                for cell in cells {
+                    if let responseCell = cell as? ResponseEntryCell {
+                        responseCell.skipButton.isHidden = true
+                    }
+                }
+                
                 self.replies[indexPath.row/2] = text
                 
                 if tableView.numberOfRows(inSection: 0) == indexPath.row + 1 {
