@@ -18,6 +18,9 @@ class ChooseMonsterViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        self.view.layer.contents = UIImage(named: "backgroundCharactersScreen")?.cgImage
+
     }
     
     //MARK -- User Actions

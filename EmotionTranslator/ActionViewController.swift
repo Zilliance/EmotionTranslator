@@ -67,6 +67,8 @@ class ActionViewController: UIViewController {
         self.takeAwayLabel.attributedText = takeAwayAttributedString
         self.actionStepLabel.attributedText = actionStepAttributedString
         
+        self.view.layer.contents = #imageLiteral(resourceName: "backgroundActionPlan").cgImage
+
     }
     
     @objc func shareTapped() {
