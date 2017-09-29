@@ -69,6 +69,7 @@
 		8C6EB5E91F6B025F0097FB13 /* ScheduleNotificationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C6EB5E41F6B025F0097FB13 /* ScheduleNotificationTableViewController.swift */; };
 		8C6EB5EA1F6B025F0097FB13 /* ScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C6EB5E51F6B025F0097FB13 /* ScheduleViewController.swift */; };
 		8C6EB5EC1F6B02790097FB13 /* ZillianceTextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C6EB5EB1F6B02790097FB13 /* ZillianceTextViewController.swift */; };
+		8C813E6B1F7D7DA1001A9350 /* UIImageView+RoundImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C813E6A1F7D7DA1001A9350 /* UIImageView+RoundImage.swift */; };
 		C0FA5645E25EC897AF28EADC /* Pods_EmotionTranslatorTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 342B6A321EC77D91CBE565A5 /* Pods_EmotionTranslatorTests.framework */; };
 		E30F87551F758D3C00685AAD /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = E30F87541F758D3B00685AAD /* Localizable.strings */; };
 		E30F87561F758D9500685AAD /* LearnMoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E30F87511F758D0300685AAD /* LearnMoreViewController.swift */; };
@@ -185,6 +186,7 @@
 		8C6EB5E41F6B025F0097FB13 /* ScheduleNotificationTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleNotificationTableViewController.swift; sourceTree = "<group>"; };
 		8C6EB5E51F6B025F0097FB13 /* ScheduleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleViewController.swift; sourceTree = "<group>"; };
 		8C6EB5EB1F6B02790097FB13 /* ZillianceTextViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZillianceTextViewController.swift; sourceTree = "<group>"; };
+		8C813E6A1F7D7DA1001A9350 /* UIImageView+RoundImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+RoundImage.swift"; sourceTree = "<group>"; };
 		B05445A012A0BCEF9D95A791 /* Pods-EmotionTranslatorUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmotionTranslatorUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EmotionTranslatorUITests/Pods-EmotionTranslatorUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		C2E2DD4D09C96B4AAF7211D3 /* Pods-EmotionTranslator.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmotionTranslator.release.xcconfig"; path = "Pods/Target Support Files/Pods-EmotionTranslator/Pods-EmotionTranslator.release.xcconfig"; sourceTree = "<group>"; };
 		C65FD7AAF27DCACDA7632C21 /* Pods_EmotionTranslatorUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EmotionTranslatorUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -530,6 +532,7 @@
 			children = (
 				4F505AEE1F72B64C0008BCB3 /* AutoscrollableViewController.swift */,
 				4F3C6AF71F7143370040AECD /* FileUtils.swift */,
+				8C813E6A1F7D7DA1001A9350 /* UIImageView+RoundImage.swift */,
 			);
 			name = Utilities;
 			sourceTree = "<group>";
@@ -963,6 +966,7 @@
 				4F505AEF1F72B64C0008BCB3 /* AutoscrollableViewController.swift in Sources */,
 				8C2B14321F54A9C9002C0353 /* VideoPlayerViewController.swift in Sources */,
 				E3BE10E41F53C7C900787921 /* Database.swift in Sources */,
+				8C813E6B1F7D7DA1001A9350 /* UIImageView+RoundImage.swift in Sources */,
 				8C2B140C1F548B8C002C0353 /* HomeCollectionViewController.swift in Sources */,
 				E35DB1781F5724F600C76B6B /* Monster.swift in Sources */,
 				8C6EB5E91F6B025F0097FB13 /* ScheduleNotificationTableViewController.swift in Sources */,
