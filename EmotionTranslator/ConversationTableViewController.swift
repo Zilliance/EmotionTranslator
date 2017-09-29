@@ -411,6 +411,15 @@ extension ConversationTableViewController {
         if self.totalTime != 0 {
             self.totalTime -= 1
         } else {
+            
+            let alertController = UIAlertController(title: "Three minutes is up!", message: "You may continue having a conversation with your emotion if you’d like.", preferredStyle: .alert)
+            
+            alertController.addAction(UIAlertAction(title: "Dismiss", style: .default) { _ in
+                alertController.dismiss(animated: true, completion: nil)
+            })
+            
+            self.present(alertController, animated: true, completion: nil)
+            
             self.endTimer()
         }
     }
