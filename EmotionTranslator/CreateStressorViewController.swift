@@ -56,7 +56,13 @@ class CreateStressorViewController: AnalyzedViewController {
             }
             
             viewController.questionsEnded = {
-                container.continueButton.setTitle("CONTINUE", for: .normal)
+                
+                if let _ = viewController as? ConversationTableViewController {
+                    container.continueButton.setTitle("I'M DONE", for: .normal)
+                }
+                else {
+                    container.continueButton.setTitle("CONTINUE", for: .normal)
+                }
                 container.continueButton.isEnabled = true
             }
             
