@@ -23,7 +23,7 @@ class EmotionViewController: UIViewController {
         self.setupView()
         
         self.view.layer.contentsGravity = kCAGravityResizeAspectFill
-        self.view.layer.contents = #imageLiteral(resourceName: "backgroundIntroduction").cgImage
+        self.view.layer.contents = #imageLiteral(resourceName: "generalBackground").cgImage
     }
     
     override func viewWillAppear(_ animated: Bool) {

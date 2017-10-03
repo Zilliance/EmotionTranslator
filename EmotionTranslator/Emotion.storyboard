@@ -28,7 +28,7 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="3ew-9W-ZME">
                         <rect key="frame" x="0.0" y="0.0" width="335" height="545"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="AddItemCell" id="ash-f1-FbA" customClass="AddItemCell" customModule="EmotionTranslator" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="335" height="44"/>
@@ -45,7 +45,7 @@
                                             </constraints>
                                         </view>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oKX-CS-Yj6">
-                                            <rect key="frame" x="30" y="7.5" width="235" height="29"/>
+                                            <rect key="frame" x="30" y="7" width="235" height="30"/>
                                             <fontDescription key="fontDescription" name="Muli-Light" family="Muli" pointSize="14"/>
                                             <state key="normal" title="Other">
                                                 <color key="titleColor" red="0.0" green="0.72156862749999995" blue="0.90588235294117647" alpha="1" colorSpace="calibratedRGB"/>
@@ -85,7 +85,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Social withdrawal/isolation" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NnK-kF-hbX">
-                                            <rect key="frame" x="28" y="14" width="167" height="16.5"/>
+                                            <rect key="frame" x="28" y="13.5" width="171.5" height="18"/>
                                             <fontDescription key="fontDescription" name="Muli-Light" family="Muli" pointSize="14"/>
                                             <color key="textColor" red="0.12549019607843137" green="0.19215686274509802" blue="0.25490196078431371" alpha="0.69999999999999996" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
@@ -184,7 +184,7 @@
                                     <constraint firstItem="mVP-mQ-rNn" firstAttribute="leading" secondItem="Nz0-G3-3vJ" secondAttribute="leading" constant="20" id="p9K-KX-5ax"/>
                                 </constraints>
                             </view>
-                            <containerView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" translatesAutoresizingMaskIntoConstraints="NO" id="ab2-Ez-mCV">
+                            <containerView opaque="NO" alpha="0.80000000000000004" contentMode="scaleToFill" verticalHuggingPriority="249" translatesAutoresizingMaskIntoConstraints="NO" id="ab2-Ez-mCV">
                                 <rect key="frame" x="20" y="90" width="335" height="545"/>
                                 <color key="backgroundColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
@@ -198,7 +198,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="ab2-Ez-mCV" firstAttribute="top" secondItem="Nz0-G3-3vJ" secondAttribute="bottom" constant="10" id="2TK-Vu-0yq"/>
                             <constraint firstAttribute="trailing" secondItem="ab2-Ez-mCV" secondAttribute="trailing" constant="20" id="2ch-4e-sD0"/>

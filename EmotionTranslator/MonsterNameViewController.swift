@@ -22,6 +22,9 @@ class MonsterNameViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.view.layer.contentsGravity = kCAGravityResizeAspectFill
+        self.view.layer.contents = #imageLiteral(resourceName: "generalBackground").cgImage
+        
         if UIDevice.isSmallerThaniPhone6 {
             self.monsterView.scaleMonster(by: 0.7)
             

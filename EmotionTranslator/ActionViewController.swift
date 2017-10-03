@@ -68,7 +68,7 @@ class ActionViewController: UIViewController {
         self.actionStepLabel.attributedText = actionStepAttributedString
         
         self.view.layer.contentsGravity = kCAGravityResizeAspectFill
-        self.view.layer.contents = #imageLiteral(resourceName: "backgroundIntroduction").cgImage
+        self.view.layer.contents = #imageLiteral(resourceName: "generalBackground").cgImage
 
     }
     

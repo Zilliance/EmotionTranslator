@@ -78,7 +78,7 @@ class TakeAwayViewController: UITableViewController {
         self.tableView.estimatedRowHeight = 70
         
         self.view.layer.contentsGravity = kCAGravityResizeAspectFill
-        self.view.layer.contents = #imageLiteral(resourceName: "backgroundIntroduction").cgImage
+        self.view.layer.contents = #imageLiteral(resourceName: "generalBackground").cgImage
     }
     
     override func viewDidLayoutSubviews() {

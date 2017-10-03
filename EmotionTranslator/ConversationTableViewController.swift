@@ -132,7 +132,7 @@ class ConversationTableViewController: UITableViewController {
         self.tableView.estimatedRowHeight = 80
 
         self.tableView.layer.contentsGravity = kCAGravityResizeAspectFill
-        self.tableView.layer.contents = #imageLiteral(resourceName: "backgroundIntroduction").cgImage
+        self.tableView.layer.contents = #imageLiteral(resourceName: "generalBackground").cgImage
         
         let currentConversation = Array(self.currentStressor.conversation)
         
