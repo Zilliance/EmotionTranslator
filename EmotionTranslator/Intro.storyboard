@@ -64,10 +64,13 @@
                                     <segue destination="yoH-GT-fhq" kind="show" id="Xsf-nI-Ysw"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" verticalCompressionResistancePriority="747" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="ahZ-z3-59Z">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" verticalCompressionResistancePriority="747" editable="NO" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="ahZ-z3-59Z">
                                 <rect key="frame" x="21" y="280" width="333" height="305"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <mutableString key="text">The Emotion Translator App helps you deal with negative emotions in a new, more effective way. Rather than something to be avoided, the App teaches you to embrace negative emotion as something that has a really important message to share with you about what you need to feel better and how to take care of yourself. By having a back and forth dialog with a negative emotion, you can become friends with it, because when you’re willing to listen to it, it goes from being this big, scary thing to be avoided, to a trusted guide here to help you on your path.
+                                <mutableString key="text">The Emotion Translator app helps you deal with negative emotions in a new, more effective way. Rather than something to be avoided, the app teaches you to embrace negative emotion as something that has a really important message to share with you about what you need to feel better and how to take care of yourself.
+
+By having a back and forth dialog with a negative emotion you can become friends with it, because when you’re willing to listen to it, it goes from being this big, scary thing to be avoided, to a trusted guide here to help you on your path. 
+
 Check out the tour and the Emotion Translator video in the main menu for more information.</mutableString>
                                 <color key="textColor" red="0.12156862745098039" green="0.19215686274509802" blue="0.25490196078431371" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="Muli-Regular" family="Muli" pointSize="14"/>
