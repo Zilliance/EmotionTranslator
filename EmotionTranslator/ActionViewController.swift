@@ -67,7 +67,8 @@ class ActionViewController: UIViewController {
         self.takeAwayLabel.attributedText = takeAwayAttributedString
         self.actionStepLabel.attributedText = actionStepAttributedString
         
-        self.view.layer.contents = #imageLiteral(resourceName: "backgroundActionPlan").cgImage
+        self.view.layer.contentsGravity = kCAGravityResizeAspectFill
+        self.view.layer.contents = #imageLiteral(resourceName: "backgroundIntroduction").cgImage
 
     }
     

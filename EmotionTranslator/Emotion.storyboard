@@ -45,7 +45,7 @@
                                             </constraints>
                                         </view>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oKX-CS-Yj6">
-                                            <rect key="frame" x="30" y="7" width="235" height="30"/>
+                                            <rect key="frame" x="30" y="7.5" width="235" height="29"/>
                                             <fontDescription key="fontDescription" name="Muli-Light" family="Muli" pointSize="14"/>
                                             <state key="normal" title="Other">
                                                 <color key="titleColor" red="0.0" green="0.72156862749999995" blue="0.90588235294117647" alpha="1" colorSpace="calibratedRGB"/>
@@ -85,7 +85,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Social withdrawal/isolation" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NnK-kF-hbX">
-                                            <rect key="frame" x="28" y="13" width="171.5" height="18"/>
+                                            <rect key="frame" x="28" y="14" width="167" height="16.5"/>
                                             <fontDescription key="fontDescription" name="Muli-Light" family="Muli" pointSize="14"/>
                                             <color key="textColor" red="0.12549019607843137" green="0.19215686274509802" blue="0.25490196078431371" alpha="0.69999999999999996" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
@@ -172,7 +172,7 @@
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="a4x-Ou-Bh4" firstAttribute="top" secondItem="4Xp-eN-NbA" secondAttribute="bottom" constant="5" id="QMk-JE-KXk"/>
                                     <constraint firstAttribute="trailing" secondItem="mVP-mQ-rNn" secondAttribute="trailing" constant="20" id="RjE-cz-8Bu"/>

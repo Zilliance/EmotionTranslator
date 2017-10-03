@@ -36,6 +36,10 @@ class NewStressorViewController: UIViewController {
     
     private func setupView() {
         
+        self.view.layer.contentsGravity = kCAGravityResizeAspectFill
+        self.view.layer.contents = #imageLiteral(resourceName: "backgroundIntroduction").cgImage
+        
+        
         self.textView.textContainerInset = UIEdgeInsetsMake(20, 20, 20, 20)
         
         self.textView.layer.cornerRadius = UIConstants.Appearance.cornerRadius

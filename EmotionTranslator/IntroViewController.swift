@@ -35,7 +35,7 @@ class IntroViewController: UIViewController {
             self.textView.font = UIFont.muliSemiBold(size: 14)
         }
         
-        self.linkIntroText()
+        //self.linkIntroText()
     }
     
     func linkIntroText() {
