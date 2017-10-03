@@ -42,7 +42,8 @@ class Conversation2TableViewController: UITableViewController {
         self.tableView.rowHeight = UITableViewAutomaticDimension
         self.tableView.estimatedRowHeight = 80
         
-        self.tableView.layer.contents = #imageLiteral(resourceName: "backgroundConvo").cgImage
+        self.tableView.layer.contentsGravity = kCAGravityResizeAspectFill
+        self.tableView.layer.contents = #imageLiteral(resourceName: "generalBackground").cgImage
         
         self.headerContainer.backgroundColor = UIColor.contentBackground.withAlphaComponent(0.8)
         self.headerContainer.layer.cornerRadius = UIConstants.Appearance.cornerRadius

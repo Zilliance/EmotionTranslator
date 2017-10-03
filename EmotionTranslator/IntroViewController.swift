@@ -55,9 +55,9 @@ class IntroViewController: UIViewController {
             NSFontAttributeName: UIFont.muliItalic(size: 14)
         ]
         
-        let tourRange = (attrText.string as NSString).range(of: "Tour")
-        let videoRange = (attrText.string as NSString).range(of: "Tour")
-        let nameRanges = (attrText.string as NSString).ranges(of: "Tour")
+        let tourRange = (attrText.string as NSString).range(of: "tour")
+        let videoRange = (attrText.string as NSString).range(of: "video")
+        let nameRanges = (attrText.string as NSString).ranges(of: "Emotion Translator")
         
         if tourRange.location != NSNotFound {
             attrText.addAttributes(tourAttributes, range: tourRange)

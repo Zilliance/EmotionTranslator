@@ -130,9 +130,10 @@ class ConversationTableViewController: UITableViewController {
         
         self.tableView.rowHeight = UITableViewAutomaticDimension
         self.tableView.estimatedRowHeight = 80
-        
-     self.tableView.layer.contents = #imageLiteral(resourceName: "backgroundConvo").cgImage
 
+        self.tableView.layer.contentsGravity = kCAGravityResizeAspectFill
+        self.tableView.layer.contents = #imageLiteral(resourceName: "generalBackground").cgImage
+        
         let currentConversation = Array(self.currentStressor.conversation)
         
         if !currentConversation.isEmpty {
