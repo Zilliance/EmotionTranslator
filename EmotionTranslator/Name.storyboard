@@ -39,30 +39,20 @@
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="62D-L2-eea">
-                                                <rect key="frame" x="20" y="20" width="335" height="60"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Now let’s give it a name" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="faR-Uk-VTb">
-                                                        <rect key="frame" x="67" y="27" width="201.5" height="23"/>
+                                                        <rect key="frame" x="87" y="18.5" width="201.5" height="23"/>
                                                         <fontDescription key="fontDescription" name="Muli-SemiBold" family="Muli" pointSize="18"/>
                                                         <color key="textColor" red="0.12549019610000001" green="0.19215686269999999" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IJi-bG-Fwz">
-                                                        <rect key="frame" x="106" y="58" width="122" height="2"/>
-                                                        <color key="backgroundColor" red="0.88235294119999996" green="0.88235294119999996" blue="0.89411764709999997" alpha="1" colorSpace="calibratedRGB"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" constant="122" id="AFq-7e-HV1"/>
-                                                            <constraint firstAttribute="height" constant="2" id="Z62-Yb-NP8"/>
-                                                        </constraints>
-                                                    </view>
                                                 </subviews>
                                                 <color key="backgroundColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="60" id="3Fg-Op-KwW"/>
                                                     <constraint firstItem="faR-Uk-VTb" firstAttribute="centerX" secondItem="62D-L2-eea" secondAttribute="centerX" id="JCa-O5-oOk"/>
-                                                    <constraint firstItem="IJi-bG-Fwz" firstAttribute="centerX" secondItem="62D-L2-eea" secondAttribute="centerX" id="W3r-dy-jaO"/>
-                                                    <constraint firstItem="IJi-bG-Fwz" firstAttribute="top" secondItem="faR-Uk-VTb" secondAttribute="bottom" constant="8" id="a2u-nG-d9w"/>
-                                                    <constraint firstAttribute="bottom" secondItem="IJi-bG-Fwz" secondAttribute="bottom" id="hhI-yR-3c9"/>
+                                                    <constraint firstItem="faR-Uk-VTb" firstAttribute="centerY" secondItem="62D-L2-eea" secondAttribute="centerY" id="oWL-17-Sdd"/>
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ng9-fR-1uI">
@@ -109,10 +99,10 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NUt-vN-OyX" userLabel="MonsterContainer">
-                                                <rect key="frame" x="20" y="80" width="335" height="434.5"/>
+                                                <rect key="frame" x="20" y="60" width="335" height="454.5"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c4x-s0-Fxz" customClass="MonsterView" customModule="EmotionTranslator" customModuleProvider="target">
-                                                        <rect key="frame" x="67.5" y="127.5" width="200" height="200"/>
+                                                        <rect key="frame" x="67.5" y="137.5" width="200" height="200"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="200" id="kKR-aY-XSW"/>
@@ -139,14 +129,14 @@
                                             <constraint firstItem="ng9-fR-1uI" firstAttribute="leading" secondItem="tb0-ds-bVv" secondAttribute="leading" id="G4e-UN-Gf6"/>
                                             <constraint firstItem="NUt-vN-OyX" firstAttribute="leading" secondItem="tb0-ds-bVv" secondAttribute="leading" constant="20" id="GYj-4X-bwP"/>
                                             <constraint firstItem="NUt-vN-OyX" firstAttribute="top" secondItem="62D-L2-eea" secondAttribute="bottom" id="QN0-GP-JPw"/>
-                                            <constraint firstAttribute="trailing" secondItem="62D-L2-eea" secondAttribute="trailing" constant="20" id="RmC-Gg-Mwl"/>
+                                            <constraint firstAttribute="trailing" secondItem="62D-L2-eea" secondAttribute="trailing" id="RmC-Gg-Mwl"/>
                                             <constraint firstAttribute="trailing" secondItem="NUt-vN-OyX" secondAttribute="trailing" constant="20" id="Vcn-L7-Q15"/>
-                                            <constraint firstItem="62D-L2-eea" firstAttribute="leading" secondItem="tb0-ds-bVv" secondAttribute="leading" constant="20" id="aHE-aX-WcL"/>
+                                            <constraint firstItem="62D-L2-eea" firstAttribute="leading" secondItem="tb0-ds-bVv" secondAttribute="leading" id="aHE-aX-WcL"/>
                                             <constraint firstAttribute="trailing" secondItem="ng9-fR-1uI" secondAttribute="trailing" id="n7O-aG-RVf"/>
                                             <constraint firstItem="ng9-fR-1uI" firstAttribute="top" secondItem="NUt-vN-OyX" secondAttribute="bottom" id="pUP-wF-Mpe"/>
                                             <constraint firstAttribute="trailing" secondItem="gpo-TX-CZF" secondAttribute="trailing" constant="20" id="unJ-My-l0P"/>
                                             <constraint firstAttribute="bottom" secondItem="gpo-TX-CZF" secondAttribute="bottom" constant="20" id="w65-IR-KoQ"/>
-                                            <constraint firstItem="62D-L2-eea" firstAttribute="top" secondItem="tb0-ds-bVv" secondAttribute="top" constant="20" id="yxf-oJ-VK1"/>
+                                            <constraint firstItem="62D-L2-eea" firstAttribute="top" secondItem="tb0-ds-bVv" secondAttribute="top" id="yxf-oJ-VK1"/>
                                         </constraints>
                                     </view>
                                 </subviews>
