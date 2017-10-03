@@ -17,7 +17,7 @@ class QuestionCell: UITableViewCell {
     @IBOutlet weak var iconImageView: UIImageView!
     
     override func awakeFromNib() {
-        self.backgroundColor = UIColor.white.withAlphaComponent(0.8)
+        self.backgroundColor = UIColor.clear
     }
     
 }
@@ -35,8 +35,8 @@ class ResponseEntryCell: UITableViewCell {
     override func awakeFromNib() {
         self.entryTextView.layer.cornerRadius = UIConstants.Appearance.cornerRadius
         self.entryTextView.layer.borderWidth = UIConstants.Appearance.borderWidth
-        self.entryTextView.layer.borderColor = UIColor.contentBackground.cgColor
-        self.backgroundColor = UIColor.white.withAlphaComponent(0.8)
+        self.entryTextView.layer.borderColor = UIColor.silverColor.cgColor
+        self.backgroundColor = UIColor.clear
         
     }
     @IBAction func skipAction(_ sender: Any) {
@@ -70,7 +70,7 @@ class ResponseCell: UITableViewCell {
     @IBOutlet weak var responseLabel: UILabel!
     
     override func awakeFromNib() {
-        self.backgroundColor = UIColor.white.withAlphaComponent(0.8)
+        self.backgroundColor = UIColor.clear
     }
     
 }
@@ -125,7 +125,7 @@ class ConversationTableViewController: UITableViewController {
         
         self.timerButton.backgroundColor = UIColor.thinkGreen
         
-        self.timerView.backgroundColor = UIColor.white.withAlphaComponent(0.8)
+        self.timerView.backgroundColor = UIColor.clear
         self.timerView.layer.cornerRadius = UIConstants.Appearance.cornerRadius
         
         self.tableView.rowHeight = UITableViewAutomaticDimension

@@ -80,7 +80,7 @@
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="60" id="Lks-Ar-DHE">
                                         <rect key="frame" x="0.0" y="155" width="375" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.80000000000000004" contentMode="center" tableViewCell="Lks-Ar-DHE" id="Lgl-6a-6Ue">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Lks-Ar-DHE" id="Lgl-6a-6Ue">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
@@ -94,7 +94,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
-                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
                                                 <constraint firstItem="H5U-DI-ul9" firstAttribute="top" secondItem="Lgl-6a-6Ue" secondAttribute="top" constant="17" id="QR7-Bi-4mL"/>
                                                 <constraint firstItem="H5U-DI-ul9" firstAttribute="leading" secondItem="Lgl-6a-6Ue" secondAttribute="leading" constant="20" id="vf3-iN-2N8"/>
@@ -105,7 +105,7 @@
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="57" id="swW-pa-SG1">
                                         <rect key="frame" x="0.0" y="215" width="375" height="57"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.80000000000000004" contentMode="center" tableViewCell="swW-pa-SG1" id="Z0Q-Fb-CpX">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="swW-pa-SG1" id="Z0Q-Fb-CpX">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="57"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
@@ -129,7 +129,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
-                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
                                                 <constraint firstItem="sHV-Bu-eRW" firstAttribute="top" secondItem="SYi-rT-Vyl" secondAttribute="bottom" constant="4" id="2tL-uq-bHM"/>
                                                 <constraint firstAttribute="trailing" secondItem="SYi-rT-Vyl" secondAttribute="trailing" constant="20" id="JZg-2Q-OVF"/>
@@ -147,7 +147,7 @@
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="57" id="NYa-Nl-jFw">
                                         <rect key="frame" x="0.0" y="272" width="375" height="57"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.80000000000000004" contentMode="center" tableViewCell="NYa-Nl-jFw" id="zxV-nu-vCQ">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="NYa-Nl-jFw" id="zxV-nu-vCQ">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="57"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
@@ -171,7 +171,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
-                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
                                                 <constraint firstItem="uCQ-fu-qSn" firstAttribute="leading" secondItem="zxV-nu-vCQ" secondAttribute="leading" constant="20" id="5l9-fb-vIr"/>
                                                 <constraint firstItem="Ewb-tB-bff" firstAttribute="leading" secondItem="uCQ-fu-qSn" secondAttribute="trailing" constant="12" id="QyQ-9G-dto"/>
@@ -189,7 +189,7 @@
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="57" id="BSx-5l-sgk">
                                         <rect key="frame" x="0.0" y="329" width="375" height="57"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.80000000000000004" contentMode="center" tableViewCell="BSx-5l-sgk" id="rrm-pH-5gw">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="BSx-5l-sgk" id="rrm-pH-5gw">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="57"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
@@ -213,7 +213,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
-                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
                                                 <constraint firstItem="icx-IX-JhJ" firstAttribute="top" secondItem="rrm-pH-5gw" secondAttribute="top" constant="2" id="BW9-im-w74"/>
                                                 <constraint firstAttribute="bottom" secondItem="WGo-Jz-iOF" secondAttribute="bottom" constant="17.5" id="FSs-5H-Ke0"/>
@@ -255,7 +255,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
-                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
                                                 <constraint firstItem="dDQ-KT-UTW" firstAttribute="leading" secondItem="CNU-vC-FR2" secondAttribute="trailing" constant="12" id="9Dx-wV-wXM"/>
                                                 <constraint firstAttribute="bottom" secondItem="ks8-A3-oYU" secondAttribute="bottom" constant="17" id="Hwx-tI-fBw"/>
