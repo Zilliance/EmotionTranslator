@@ -26,7 +26,7 @@ class ActionViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.contentView.backgroundColor = UIColor.white.withAlphaComponent(0.8)
+        self.contentView.backgroundColor = UIColor.clear
         self.setupView()
         
         if self.isStressorCompleted {

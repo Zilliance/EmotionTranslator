@@ -37,7 +37,7 @@ class ConversationIntroductionTableViewController: UITableViewController {
         self.tableView.layer.contentsGravity = kCAGravityResizeAspectFill
         self.tableView.layer.contents = #imageLiteral(resourceName: "generalBackground").cgImage
         
-        self.topLabelContainerView.backgroundColor = UIColor.silverColor.withAlphaComponent(0.8)
+        self.topLabelContainerView.backgroundColor = UIColor.clear
         self.topLabelContainerView.layer.cornerRadius = UIConstants.Appearance.cornerRadius
     }
     
