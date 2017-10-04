@@ -25,10 +25,10 @@ class Conversation2TableViewController: UITableViewController {
                              "What is an action step you wish I would take?",
                              ]
     
-    private var placeholders = ["My main message to you is...",
-                                 "I’m trying to help...",
-                                 "What I need to feel better is...",
-                                 "I wish you would…",
+    private var placeholders = ["Speak up and ask for what you need.",
+                                 "Stop letting people walk all over you.",
+                                 "For you to talk to your boss and tell her what you want.",
+                                 "Value yourself and know that your wants and needs are worthy and important.",
                                  ]
     
     fileprivate var replies: [String?] = [nil ,nil ,nil ,nil ,]
