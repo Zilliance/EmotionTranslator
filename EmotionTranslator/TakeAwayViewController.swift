@@ -81,6 +81,10 @@ class TakeAwayViewController: UITableViewController {
         self.view.layer.contents = #imageLiteral(resourceName: "generalBackground").cgImage
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        self.tableView.reloadData()
+    }
+    
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         
