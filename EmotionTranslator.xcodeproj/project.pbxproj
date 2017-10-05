@@ -318,8 +318,8 @@
 			isa = PBXGroup;
 			children = (
 				8C2B14411F55CAC5002C0353 /* Tour.storyboard */,
-				8C2B14421F55CAC5002C0353 /* TourSceneViewController.swift */,
 				8C2B14431F55CAC5002C0353 /* TourPageViewController.swift */,
+				8C2B14421F55CAC5002C0353 /* TourSceneViewController.swift */,
 			);
 			name = Tour;
 			sourceTree = "<group>";

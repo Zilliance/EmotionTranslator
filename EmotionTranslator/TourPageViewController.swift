@@ -76,6 +76,8 @@ class TourPageViewController: UIPageViewController {
         }
         
         self.view.backgroundColor = .contentBackground
+        self.view.layer.contentsGravity = kCAGravityResizeAspectFill
+        self.view.layer.contents = #imageLiteral(resourceName: "generalBackground").cgImage
         
         self.dataSource = self
         self.delegate = self
