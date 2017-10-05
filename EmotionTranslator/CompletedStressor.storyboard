@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="60S-J6-qId">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Completed Stressor View Controller-->
+        <scene sceneID="22I-Ku-zlC">
+            <objects>
+                <viewController id="60S-J6-qId" customClass="CompletedStressorViewController" customModule="EmotionTranslator" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="YxK-hq-4Xy">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Tuk-aB-p3G">
+                                <rect key="frame" x="16" y="16" width="343" height="29"/>
+                                <segments>
+                                    <segment title="Action Plan"/>
+                                    <segment title="Conversation"/>
+                                    <segment title="Takeaway"/>
+                                </segments>
+                                <connections>
+                                    <action selector="didMakeSegmentedSelection:" destination="60S-J6-qId" eventType="valueChanged" id="CFd-Wx-XGS"/>
+                                </connections>
+                            </segmentedControl>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aXA-Iu-ExQ">
+                                <rect key="frame" x="0.0" y="64" width="375" height="539"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="aXA-Iu-ExQ" firstAttribute="trailing" secondItem="lEy-4N-Wbb" secondAttribute="trailing" id="FDI-Oj-IET"/>
+                            <constraint firstItem="aXA-Iu-ExQ" firstAttribute="top" secondItem="Tuk-aB-p3G" secondAttribute="bottom" constant="20" id="M0L-N4-cfa"/>
+                            <constraint firstItem="aXA-Iu-ExQ" firstAttribute="leading" secondItem="lEy-4N-Wbb" secondAttribute="leading" id="Umv-pF-XNf"/>
+                            <constraint firstItem="Tuk-aB-p3G" firstAttribute="leading" secondItem="lEy-4N-Wbb" secondAttribute="leading" constant="16" id="V9w-Sq-rlg"/>
+                            <constraint firstItem="aXA-Iu-ExQ" firstAttribute="bottom" secondItem="lEy-4N-Wbb" secondAttribute="bottom" id="be1-qb-MQw"/>
+                            <constraint firstItem="lEy-4N-Wbb" firstAttribute="trailing" secondItem="Tuk-aB-p3G" secondAttribute="trailing" constant="16" id="hsH-lv-ipK"/>
+                            <constraint firstItem="Tuk-aB-p3G" firstAttribute="top" secondItem="lEy-4N-Wbb" secondAttribute="top" constant="16" id="zkG-Sd-iJQ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="lEy-4N-Wbb"/>
+                    </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                    <connections>
+                        <outlet property="segmentedControl" destination="Tuk-aB-p3G" id="CCa-9h-aex"/>
+                        <outlet property="subviewContainer" destination="aXA-Iu-ExQ" id="931-DT-RmO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VfQ-Kc-PAB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4104.8000000000002" y="-618.44077961019491"/>
+        </scene>
+    </scenes>
+</document>

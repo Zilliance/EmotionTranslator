@@ -174,27 +174,25 @@ class HomeCollectionViewController: UICollectionViewController, UICollectionView
         
         let stressor = self.stressors[indexPath.row]
         
-        if !stressor.completed {
-            guard let createStressorViewController = UIStoryboard(name: "CreateStressor", bundle: nil).instantiateInitialViewController() as? CreateStressorViewController else {
-                return
-            }
+        if stressor.completed {
+//            let actionPlanViewController = UIStoryboard(name: "Actionplan", bundle: nil).instantiateInitialViewController() as! ActionViewController
+//
+//            actionPlanViewController.currentStressor = stressor
+//            actionPlanViewController.isStressorCompleted = true
+//            actionPlanViewController.view.layer.contents = #imageLiteral(resourceName: "backgroundActionPlan").cgImage
+//            actionPlanViewController.view.layer.contentsGravity = kCAGravityResizeAspectFill
+            
+            let vc = UIStoryboard(name: "CompletedStressor", bundle: nil).instantiateInitialViewController() as! CompletedStressorViewController
+            
+            vc.stressor = stressor
+            self.navigationController?.pushViewController(vc, animated: true)
+            
+        } else {
+            let createStressorViewController = UIStoryboard(name: "CreateStressor", bundle: nil).instantiateInitialViewController() as! CreateStressorViewController
             
             createStressorViewController.stressor = stressor.detached()
             self.navigationController?.pushViewController(createStressorViewController, animated: true)
-            
-        } else {
-            guard let actionPlanViewController = UIStoryboard(name: "Actionplan", bundle: nil).instantiateInitialViewController() as? ActionViewController else {
-                return assertionFailure()
-            }
-            
-            actionPlanViewController.currentStressor = stressor
-            actionPlanViewController.isStressorCompleted = true
-            actionPlanViewController.view.layer.contents = #imageLiteral(resourceName: "backgroundActionPlan").cgImage
-            actionPlanViewController.view.layer.contentsGravity = kCAGravityResizeAspectFill
-            self.navigationController?.pushViewController(actionPlanViewController, animated: true)
-            
         }
-
     }
     
     // MARK: UICollectionViewDelegateFlowLayout

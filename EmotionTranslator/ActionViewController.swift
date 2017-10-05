@@ -119,7 +119,7 @@ class ActionViewController: UIViewController {
     
     private func setupForCompletedStressor() {
         self.remindMeButton.alpha = 1
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .action, target: self, action: #selector(self.shareTapped))
+        // self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .action, target: self, action: #selector(self.shareTapped))
     }
 
     @IBAction func remindMeAction(_ sender: Any) {
