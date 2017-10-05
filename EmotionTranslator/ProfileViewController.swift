@@ -14,6 +14,7 @@ final class ProfileViewController: AutoscrollableViewController {
     @IBOutlet var skipButton: UIButton!
     @IBOutlet var nameTextField: UITextField!
     @IBOutlet var avatarButton: UIButton!
+    @IBOutlet var avatarImage: UIImageView!
     
     var presentedFromIntro = true
     
@@ -23,7 +24,7 @@ final class ProfileViewController: AutoscrollableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        continueButton.isHidden = !self.presentedFromIntro
+        continueButton.setTitle(self.presentedFromIntro ? "Continue" : "Save Changes", for: .normal)
         skipButton.isHidden = !self.presentedFromIntro
 
         //text inset for textfield
@@ -59,8 +60,8 @@ final class ProfileViewController: AutoscrollableViewController {
 
         if let data = try? Data(contentsOf: filename) {
             let image = UIImage(data: data)
-            self.avatarButton.setImage(image, for: .normal)
-            self.avatarButton.layer.cornerRadius = self.avatarButton.frame.size.width / 2.0
+            self.avatarImage.image = image
+            self.avatarImage.layer.cornerRadius = self.avatarImage.frame.size.width / 2.0
             self.hadImageSet = true
         }
         
@@ -135,22 +136,21 @@ final class ProfileViewController: AutoscrollableViewController {
             }
         }
         
-        if let image = avatarButton.imageView?.image, let data = UIImagePNGRepresentation(image) {
+        if let image = avatarImage.image, let data = UIImageJPEGRepresentation(image, 0.8) {
             let filename = FileUtils.profileImagePath
             try? data.write(to: filename)
             
             if (!self.hadImageSet) {
                 Analytics.shared.send(event: EmotionTranslatorAnalytics.EmotionTranslatorEvent.profileImageSet)
             }
-
         }
     }
     
     @IBAction func continueAction(_ sender: UIButton) {
-        
-        saveData()
-        showHomeScreen()
-        
+        self.saveData()
+        if self.presentedFromIntro {
+            self.showHomeScreen()
+        }
     }
     
     @IBAction func skipAction() {
@@ -166,20 +166,17 @@ final class ProfileViewController: AutoscrollableViewController {
 
 extension ProfileViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
-    
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
-        
         
         navigationItem.rightBarButtonItem?.isEnabled = false
         if let image = info[UIImagePickerControllerOriginalImage] as? UIImage
         {
-            self.avatarButton.setImage(image, for: .normal)
-            self.avatarButton.layer.cornerRadius = self.avatarButton.frame.size.width / 2.0
+            self.avatarImage.image = image
+            self.avatarImage.layer.cornerRadius = self.avatarImage.frame.size.width / 2.0
         }
         
         picker.dismiss(animated: true, completion: nil)
         
-
     }
 }
 

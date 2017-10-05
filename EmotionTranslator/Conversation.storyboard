@@ -21,7 +21,7 @@
         <scene sceneID="VPZ-Gs-dLN">
             <objects>
                 <tableViewController id="hvE-IK-Qbo" customClass="ConversationTableViewController" customModule="EmotionTranslator" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="150" sectionHeaderHeight="28" sectionFooterHeight="28" id="fjl-hL-N4X">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="150" sectionHeaderHeight="28" sectionFooterHeight="28" id="fjl-hL-N4X">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="calibratedRGB"/>
@@ -95,7 +95,7 @@
                                                 <constraint firstAttribute="width" constant="3" id="YoU-Rt-KTJ"/>
                                             </constraints>
                                         </view>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="user-conversation" translatesAutoresizingMaskIntoConstraints="NO" id="ARk-F8-wME">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="user-conversation" translatesAutoresizingMaskIntoConstraints="NO" id="ARk-F8-wME">
                                             <rect key="frame" x="18" y="45.5" width="35" height="35"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="35" id="D9Z-UR-LDb"/>
@@ -165,7 +165,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="150"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="user-conversation" translatesAutoresizingMaskIntoConstraints="NO" id="ae7-YQ-NmF">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="user-conversation" translatesAutoresizingMaskIntoConstraints="NO" id="ae7-YQ-NmF">
                                             <rect key="frame" x="18" y="57.5" width="35" height="35"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="35" id="B0f-ia-wvf"/>
@@ -204,7 +204,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="149"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="completed-stressor" translatesAutoresizingMaskIntoConstraints="NO" id="ixP-E3-929">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="completed-stressor" translatesAutoresizingMaskIntoConstraints="NO" id="ixP-E3-929">
                                             <rect key="frame" x="18" y="2" width="35" height="35"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="35" id="hhb-co-VtQ"/>
