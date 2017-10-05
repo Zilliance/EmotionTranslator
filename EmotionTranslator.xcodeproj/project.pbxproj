@@ -306,7 +306,6 @@
 			children = (
 				8C2B14341F54AB4D002C0353 /* Intro.storyboard */,
 				8C2B14351F54AB4D002C0353 /* IntroViewController.swift */,
-				4F3C6AF51F71302D0040AECD /* ProfileViewController.swift */,
 			);
 			name = Intro;
 			sourceTree = "<group>";
@@ -434,6 +433,14 @@
 			name = "Learn More Popup";
 			sourceTree = "<group>";
 		};
+		E35295BB1F86A6EE0097C204 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				4F3C6AF51F71302D0040AECD /* ProfileViewController.swift */,
+			);
+			name = Profile;
+			sourceTree = "<group>";
+		};
 		E3BE10A81F53C6EF00787921 = {
 			isa = PBXGroup;
 			children = (
@@ -511,6 +518,7 @@
 			isa = PBXGroup;
 			children = (
 				8C2B14331F54AB1D002C0353 /* Intro */,
+				E35295BB1F86A6EE0097C204 /* Profile */,
 				8C2B14061F547DDF002C0353 /* Home */,
 				8C2B14471F55FA19002C0353 /* CreateStressor */,
 				8C2B144C1F5615F6002C0353 /* NewStressor */,

@@ -6,7 +6,10 @@
 //  Copyright © 2017 Zilliance. All rights reserved.
 //
 
+//  See Intro.storyboard for the Profile VC
+
 import UIKit
+import SVProgressHUD
 
 final class ProfileViewController: AutoscrollableViewController {
     
@@ -150,6 +153,9 @@ final class ProfileViewController: AutoscrollableViewController {
         self.saveData()
         if self.presentedFromIntro {
             self.showHomeScreen()
+        } else {
+            SVProgressHUD.showSuccess(withStatus: "Profile Saved")
+            SVProgressHUD.dismiss(withDelay: 1)
         }
     }
     
@@ -160,8 +166,6 @@ final class ProfileViewController: AutoscrollableViewController {
     override var editingViewFrame: CGRect? {
         return self.nameTextField.frame
     }
-
-    
 }
 
 extension ProfileViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {

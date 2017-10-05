@@ -231,7 +231,7 @@ Check out the tour and the Emotion Translator video in the main menu for more in
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8cq-zh-X0W" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1056" y="113"/>
+            <point key="canvasLocation" x="1055" y="125"/>
         </scene>
     </scenes>
     <resources>
