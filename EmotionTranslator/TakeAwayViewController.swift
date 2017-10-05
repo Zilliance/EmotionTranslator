@@ -171,7 +171,7 @@ class TakeAwayViewController: UITableViewController {
                 cell.textView.text = self.currentStressor.takeAwayText
             }
             cell.textView.delegate = self
-            cell.textView.placeholder = "My biggest takeaway is… example 1, example 2 "
+            cell.textView.placeholder = "I will feel better if I start speaking up and asking for what I need."
             takeAwayTextView = cell.textView
 
             cell.contentView.backgroundColor = UIColor.clear
@@ -188,7 +188,7 @@ class TakeAwayViewController: UITableViewController {
             }
             
             cell.textView.delegate = self
-            cell.textView.placeholder = "I am inspired to… example 1, example 2 (hint text TBD)"
+            cell.textView.placeholder = "Schedule time to meet with my boss."
             takeAwayActionsTextView = cell.textView
 
             cell.contentView.backgroundColor = UIColor.clear
