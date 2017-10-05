@@ -381,13 +381,13 @@
 			name = Conversation;
 			sourceTree = "<group>";
 		};
-		8C6EB5D61F69BB420097FB13 /* TakeAction */ = {
+		8C6EB5D61F69BB420097FB13 /* Take Away */ = {
 			isa = PBXGroup;
 			children = (
 				8C6EB5D71F69BB740097FB13 /* Takeaway.storyboard */,
 				8C6EB5D91F69BC920097FB13 /* TakeAwayViewController.swift */,
 			);
-			name = TakeAction;
+			name = "Take Away";
 			sourceTree = "<group>";
 		};
 		8C6EB5DB1F69C2A70097FB13 /* ActionPlan */ = {
@@ -510,18 +510,18 @@
 		E3BE10EB1F53C7DE00787921 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				8C6EB5E01F6B01FA0097FB13 /* Scheduler */,
-				8C6EB5DB1F69C2A70097FB13 /* ActionPlan */,
-				8C6EB5D61F69BB420097FB13 /* TakeAction */,
-				8C61D6A71F60A97F00389FC0 /* Conversation */,
-				8C61D6961F58BB7800389FC0 /* Monster */,
-				8C61D6851F57530800389FC0 /* Emotion */,
-				8C2B144C1F5615F6002C0353 /* NewStressor */,
-				8C2B14471F55FA19002C0353 /* CreateStressor */,
-				8C2B14401F55CA63002C0353 /* Tour */,
 				8C2B14331F54AB1D002C0353 /* Intro */,
-				8C2B141E1F54A75D002C0353 /* SideMenu */,
 				8C2B14061F547DDF002C0353 /* Home */,
+				8C2B14471F55FA19002C0353 /* CreateStressor */,
+				8C2B144C1F5615F6002C0353 /* NewStressor */,
+				8C61D6851F57530800389FC0 /* Emotion */,
+				8C61D6961F58BB7800389FC0 /* Monster */,
+				8C61D6A71F60A97F00389FC0 /* Conversation */,
+				8C6EB5D61F69BB420097FB13 /* Take Away */,
+				8C6EB5DB1F69C2A70097FB13 /* ActionPlan */,
+				8C6EB5E01F6B01FA0097FB13 /* Scheduler */,
+				8C2B141E1F54A75D002C0353 /* SideMenu */,
+				8C2B14401F55CA63002C0353 /* Tour */,
 				E30F87531F758D0900685AAD /* Learn More Popup */,
 			);
 			name = Scenes;

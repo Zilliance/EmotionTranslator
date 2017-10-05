@@ -175,14 +175,17 @@ class HomeCollectionViewController: UICollectionViewController, UICollectionView
         let stressor = self.stressors[indexPath.row]
         
         if !stressor.completed {
-            guard let createStressorViewController = UIStoryboard(name: "CreateStressor", bundle: nil).instantiateInitialViewController() as? CreateStressorViewController else { return }
+            guard let createStressorViewController = UIStoryboard(name: "CreateStressor", bundle: nil).instantiateInitialViewController() as? CreateStressorViewController else {
+                return
+            }
+            
             createStressorViewController.stressor = stressor.detached()
             self.navigationController?.pushViewController(createStressorViewController, animated: true)
             
-        }
-            
-        else {
-            guard let actionPlanViewController = UIStoryboard(name: "Actionplan", bundle: nil).instantiateInitialViewController() as? ActionViewController else { return assertionFailure() }
+        } else {
+            guard let actionPlanViewController = UIStoryboard(name: "Actionplan", bundle: nil).instantiateInitialViewController() as? ActionViewController else {
+                return assertionFailure()
+            }
             
             actionPlanViewController.currentStressor = stressor
             actionPlanViewController.isStressorCompleted = true
@@ -191,7 +194,6 @@ class HomeCollectionViewController: UICollectionViewController, UICollectionView
             self.navigationController?.pushViewController(actionPlanViewController, animated: true)
             
         }
-        
 
     }
     

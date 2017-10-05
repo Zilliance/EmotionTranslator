@@ -22,5 +22,3 @@ extension UIImageView {
         self.image = image
     }
 }
-
-
