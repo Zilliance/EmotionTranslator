@@ -33,15 +33,23 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="539"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
+                            <view userInteractionEnabled="NO" alpha="0.10000000000000001" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IIJ-XR-ej1" userLabel="Segmented Control Background">
+                                <rect key="frame" x="16" y="16" width="343" height="28"/>
+                                <color key="backgroundColor" red="0.25882352939999997" green="0.36470588240000001" blue="0.44705882349999998" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="IIJ-XR-ej1" firstAttribute="leading" secondItem="lEy-4N-Wbb" secondAttribute="leading" constant="16" id="8fD-GK-PjZ"/>
                             <constraint firstItem="aXA-Iu-ExQ" firstAttribute="trailing" secondItem="lEy-4N-Wbb" secondAttribute="trailing" id="FDI-Oj-IET"/>
                             <constraint firstItem="aXA-Iu-ExQ" firstAttribute="top" secondItem="Tuk-aB-p3G" secondAttribute="bottom" constant="20" id="M0L-N4-cfa"/>
                             <constraint firstItem="aXA-Iu-ExQ" firstAttribute="leading" secondItem="lEy-4N-Wbb" secondAttribute="leading" id="Umv-pF-XNf"/>
+                            <constraint firstItem="aXA-Iu-ExQ" firstAttribute="top" secondItem="IIJ-XR-ej1" secondAttribute="bottom" constant="20" id="V5i-Vp-EZE"/>
                             <constraint firstItem="Tuk-aB-p3G" firstAttribute="leading" secondItem="lEy-4N-Wbb" secondAttribute="leading" constant="16" id="V9w-Sq-rlg"/>
+                            <constraint firstItem="lEy-4N-Wbb" firstAttribute="trailing" secondItem="IIJ-XR-ej1" secondAttribute="trailing" constant="16" id="XSL-pK-8kH"/>
                             <constraint firstItem="aXA-Iu-ExQ" firstAttribute="bottom" secondItem="lEy-4N-Wbb" secondAttribute="bottom" id="be1-qb-MQw"/>
                             <constraint firstItem="lEy-4N-Wbb" firstAttribute="trailing" secondItem="Tuk-aB-p3G" secondAttribute="trailing" constant="16" id="hsH-lv-ipK"/>
+                            <constraint firstItem="IIJ-XR-ej1" firstAttribute="top" secondItem="lEy-4N-Wbb" secondAttribute="top" constant="16" id="wNP-lM-yP6"/>
                             <constraint firstItem="Tuk-aB-p3G" firstAttribute="top" secondItem="lEy-4N-Wbb" secondAttribute="top" constant="16" id="zkG-Sd-iJQ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="lEy-4N-Wbb"/>
