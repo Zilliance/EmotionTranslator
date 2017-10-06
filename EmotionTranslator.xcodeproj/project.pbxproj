@@ -15,6 +15,8 @@
 		4F505AEF1F72B64C0008BCB3 /* AutoscrollableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F505AEE1F72B64C0008BCB3 /* AutoscrollableViewController.swift */; };
 		7F93BEBB8175AAE788CA6307 /* Pods_EmotionTranslatorUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C65FD7AAF27DCACDA7632C21 /* Pods_EmotionTranslatorUITests.framework */; };
 		889D79537741AC722652C136 /* Pods_EmotionTranslator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAA997AB957049B5551F71EB /* Pods_EmotionTranslator.framework */; };
+		8C164D731F87FEB700929D8A /* CompletedConversation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C164D721F87FEB700929D8A /* CompletedConversation.storyboard */; };
+		8C164D771F8800CC00929D8A /* CompletedConversationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C164D761F8800CC00929D8A /* CompletedConversationTableViewController.swift */; };
 		8C2B14081F547DF7002C0353 /* HomeViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C2B14071F547DF7002C0353 /* HomeViewController.storyboard */; };
 		8C2B140A1F548B67002C0353 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2B14091F548B67002C0353 /* HomeViewController.swift */; };
 		8C2B140C1F548B8C002C0353 /* HomeCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2B140B1F548B8C002C0353 /* HomeCollectionViewController.swift */; };
@@ -134,6 +136,8 @@
 		4F3C6AF71F7143370040AECD /* FileUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileUtils.swift; sourceTree = "<group>"; };
 		4F505AEE1F72B64C0008BCB3 /* AutoscrollableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoscrollableViewController.swift; sourceTree = "<group>"; };
 		6DC6FC489D947818823F215C /* Pods-EmotionTranslatorTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmotionTranslatorTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EmotionTranslatorTests/Pods-EmotionTranslatorTests.debug.xcconfig"; sourceTree = "<group>"; };
+		8C164D721F87FEB700929D8A /* CompletedConversation.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CompletedConversation.storyboard; sourceTree = "<group>"; };
+		8C164D761F8800CC00929D8A /* CompletedConversationTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletedConversationTableViewController.swift; sourceTree = "<group>"; };
 		8C2B14071F547DF7002C0353 /* HomeViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = HomeViewController.storyboard; sourceTree = "<group>"; };
 		8C2B14091F548B67002C0353 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		8C2B140B1F548B8C002C0353 /* HomeCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewController.swift; sourceTree = "<group>"; };
@@ -450,6 +454,8 @@
 			children = (
 				E3A9BE841F86A9F00055A18A /* CompletedStressor.storyboard */,
 				E3A9BE801F86A8E60055A18A /* CompletedStressorViewController.swift */,
+				8C164D721F87FEB700929D8A /* CompletedConversation.storyboard */,
+				8C164D761F8800CC00929D8A /* CompletedConversationTableViewController.swift */,
 			);
 			name = "Completed Stressor";
 			sourceTree = "<group>";
@@ -713,6 +719,7 @@
 			files = (
 				E30F87571F758D9D00685AAD /* LearnMore.storyboard in Resources */,
 				8C61D6871F57531D00389FC0 /* Emotion.storyboard in Resources */,
+				8C164D731F87FEB700929D8A /* CompletedConversation.storyboard in Resources */,
 				8C2B14081F547DF7002C0353 /* HomeViewController.storyboard in Resources */,
 				8C2B14491F55FA45002C0353 /* CreateStressor.storyboard in Resources */,
 				8C2B14311F54A9C9002C0353 /* VideoPlayer.storyboard in Resources */,
@@ -977,6 +984,7 @@
 				8C61D68D1F57586300389FC0 /* ItemsSelectionViewController.swift in Sources */,
 				8C6EB5E71F6B025F0097FB13 /* CustomDatePickerViewController.swift in Sources */,
 				8C2B14371F54AB4D002C0353 /* IntroViewController.swift in Sources */,
+				8C164D771F8800CC00929D8A /* CompletedConversationTableViewController.swift in Sources */,
 				8C61D6841F57500D00389FC0 /* Emotion.swift in Sources */,
 				E3BE10E61F53C7CF00787921 /* Notification.swift in Sources */,
 				8C2B14461F55CAC5002C0353 /* TourPageViewController.swift in Sources */,
