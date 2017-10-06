@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import PDFGenerator
 
 class CompletedStressorViewController: UIViewController {
 
@@ -127,15 +128,31 @@ class CompletedStressorViewController: UIViewController {
     
     private func generatePDF(completion: (URL?, Error?) -> ()) {
         
-        let dst = URL(fileURLWithPath: NSTemporaryDirectory().appending(("ActionPlan") + ".pdf"))
+        let dst = URL(fileURLWithPath: NSTemporaryDirectory().appending(("CompletedStressor") + ".pdf"))
         
         do {
             
             //hide remind me button temporally
             
-//            self.remindMeButton.isHidden = true
-//            try PDFGenerator.generate([self.view], to: dst)
-//            self.remindMeButton.isHidden = false
+            let actionVC = UIStoryboard(name: "Actionplan", bundle: nil).instantiateInitialViewController() as! ActionViewController
+            actionVC.currentStressor = stressor
+            actionVC.isStressorCompleted = true
+            actionVC.view.layer.contents = #imageLiteral(resourceName: "backgroundActionPlan").cgImage
+            actionVC.remindMeButton.isHidden = true
+            actionVC.view.layer.contentsGravity = kCAGravityResizeAspectFill
+            actionVC.view.layoutIfNeeded()
+            actionVC.view.frame.size = actionVC.scrollView.contentSize
+
+            let conversationVC = UIStoryboard(name: "CompletedConversation", bundle: nil).instantiateInitialViewController() as! CompletedConversationTableViewController
+            conversationVC.currentStressor = stressor
+            conversationVC.view.layoutIfNeeded()
+            
+            let takeAwayVC = UIStoryboard(name: "CompletedTakeaway", bundle: nil).instantiateInitialViewController() as! TakeAwayViewController
+            takeAwayVC.completed = true
+            takeAwayVC.currentStressor = stressor
+            takeAwayVC.view.layoutIfNeeded()
+            
+            try PDFGenerator.generate([actionVC.view, conversationVC.view, takeAwayVC.view], to: dst)
             
             print("PDF sample saved in: " + dst.absoluteString)
             completion(dst, nil)

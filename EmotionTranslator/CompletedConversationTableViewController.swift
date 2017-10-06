@@ -251,3 +251,4 @@ extension CompletedConversationTableViewController: StressorFacetEditor {
 //        self.currentStressor.conversation.append(objectsIn: self.questionsAnswers)
     }
 }
+
