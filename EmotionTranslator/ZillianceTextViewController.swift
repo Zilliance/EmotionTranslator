@@ -7,10 +7,11 @@
 //
 
 import UIKit
+import KMPlaceholderTextView
 
 class ZillianceTextViewController: UIViewController, UIViewControllerTransitioningDelegate {
     
-    @IBOutlet weak var textView: UITextView!
+    @IBOutlet weak var textView: KMPlaceholderTextView!
     
     struct EditableText {
         var text: String = ""
@@ -89,6 +90,8 @@ class ZillianceTextViewController: UIViewController, UIViewControllerTransitioni
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.textView.placeholder = "For example, schedule time to meet with my boss."
+        
         self.setupView()
 
     }

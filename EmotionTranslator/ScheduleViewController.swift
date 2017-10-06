@@ -65,8 +65,12 @@ class ScheduleViewController: AnalyzedViewController {
         notificationsViewController.preloadedNotification = self.preloadedNotification
         calendarViewController.preloadedNotification = self.preloadedNotification
         
+        if !self.text.isEmpty {
+        
         notificationsViewController.text = self.text
         calendarViewController.text = self.text
+            
+        }
         
         self.viewControllers.append(notificationsViewController)
         self.viewControllers.append(calendarViewController)
