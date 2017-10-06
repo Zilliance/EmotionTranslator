@@ -15,6 +15,9 @@
         <array key="Muli-Regular.ttf">
             <string>Muli-Regular</string>
         </array>
+        <array key="Muli-SemiBold.ttf">
+            <string>Muli-SemiBold</string>
+        </array>
     </customFonts>
     <scenes>
         <!--Completed Conversation Table View Controller-->
@@ -25,9 +28,40 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="ao7-tc-1XZ">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="70"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Conversation" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="60Q-tX-3Di">
+                                    <rect key="frame" x="20" y="39" width="335" height="21"/>
+                                    <fontDescription key="fontDescription" name="Muli-SemiBold" family="Muli" pointSize="18"/>
+                                    <color key="textColor" red="0.12549019610000001" green="0.19215686269999999" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LxY-vI-WMZ">
+                                    <rect key="frame" x="126.5" y="68" width="122" height="2"/>
+                                    <color key="backgroundColor" red="0.88235294119999996" green="0.88235294119999996" blue="0.89411764709999997" alpha="1" colorSpace="calibratedRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="122" id="5KV-wL-0J5"/>
+                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="122" id="8s8-J9-mUI"/>
+                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="2" id="Ery-F9-ueP"/>
+                                        <constraint firstAttribute="height" constant="2" id="L38-T6-oro"/>
+                                    </constraints>
+                                </view>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="70" id="4Fy-g5-3ho"/>
+                                <constraint firstAttribute="trailing" secondItem="60Q-tX-3Di" secondAttribute="trailing" constant="20" id="9ee-P8-eUa"/>
+                                <constraint firstItem="LxY-vI-WMZ" firstAttribute="top" secondItem="60Q-tX-3Di" secondAttribute="bottom" constant="8" id="9qf-1u-rNe"/>
+                                <constraint firstAttribute="bottom" secondItem="60Q-tX-3Di" secondAttribute="bottom" constant="10" id="V77-Zs-B0Z"/>
+                                <constraint firstItem="LxY-vI-WMZ" firstAttribute="centerX" secondItem="ao7-tc-1XZ" secondAttribute="centerX" id="wGj-uN-AfV"/>
+                                <constraint firstItem="60Q-tX-3Di" firstAttribute="leading" secondItem="ao7-tc-1XZ" secondAttribute="leading" constant="20" id="x4x-c6-oMV"/>
+                            </constraints>
+                        </view>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="QuestionCell" rowHeight="126" id="RkZ-0l-uJq" customClass="QuestionCell" customModule="EmotionTranslator" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="375" height="126"/>
+                                <rect key="frame" x="0.0" y="98" width="375" height="126"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="RkZ-0l-uJq" id="JOO-l8-uX8">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="126"/>
@@ -48,13 +82,13 @@
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Me" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v0b-OT-Kt1">
-                                            <rect key="frame" x="65" y="36" width="290" height="15.5"/>
+                                            <rect key="frame" x="65" y="34.5" width="290" height="14"/>
                                             <fontDescription key="fontDescription" name="Muli-Regular" family="Muli" pointSize="12"/>
                                             <color key="textColor" red="0.45882352939999999" green="0.46666666670000001" blue="0.48627450979999998" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What’s the main message you’re trying to give me?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8i0-3d-04c">
-                                            <rect key="frame" x="65" y="53.5" width="290" height="52.5"/>
+                                            <rect key="frame" x="65" y="50.5" width="290" height="55.5"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="35.5" id="MMF-sf-1DX"/>
                                             </constraints>
@@ -63,13 +97,13 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Question 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gUh-bp-JYo">
-                                            <rect key="frame" x="65" y="8" width="290" height="18"/>
+                                            <rect key="frame" x="65" y="8" width="290" height="16.5"/>
                                             <fontDescription key="fontDescription" name="Muli-Bold" family="Muli" pointSize="14"/>
                                             <color key="textColor" red="0.12549019610000001" green="0.19215686269999999" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QJV-k7-QVG">
-                                            <rect key="frame" x="65" y="28" width="72" height="2"/>
+                                            <rect key="frame" x="65" y="26.5" width="72" height="2"/>
                                             <color key="backgroundColor" red="0.88235294119999996" green="0.88235294119999996" blue="0.89411764709999997" alpha="1" colorSpace="calibratedRGB"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="2" id="E47-b5-bTK"/>
@@ -104,7 +138,7 @@
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="ResponseCell" id="Bjr-xb-vA0" customClass="ResponseCell" customModule="EmotionTranslator" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="154" width="375" height="150"/>
+                                <rect key="frame" x="0.0" y="224" width="375" height="150"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Bjr-xb-vA0" id="okk-xd-pT8">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="150"/>
@@ -122,7 +156,7 @@
                                             <constraints>
                                                 <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="35.5" id="6qj-h4-N7u"/>
                                             </constraints>
-                                            <fontDescription key="fontDescription" name="Muli-Regular" family="Muli" pointSize="12"/>
+                                            <fontDescription key="fontDescription" name="Muli-Regular" family="Muli" pointSize="14"/>
                                             <color key="textColor" red="0.12549019610000001" green="0.19215686269999999" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -143,7 +177,7 @@
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="ResponseEntryCell" rowHeight="149" id="fiV-bg-nl0" customClass="ResponseEntryCell" customModule="EmotionTranslator" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="304" width="375" height="149"/>
+                                <rect key="frame" x="0.0" y="374" width="375" height="149"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fiV-bg-nl0" id="sOy-Jq-55o">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="149"/>
