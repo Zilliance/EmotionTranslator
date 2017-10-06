@@ -23,6 +23,7 @@ class ActionViewController: UIViewController {
     @IBOutlet weak var contentView: UIView!
     @IBOutlet weak var remindMeButton: UIButton!
     
+    @IBOutlet weak var scrollView: UIScrollView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -102,11 +103,17 @@ class ActionViewController: UIViewController {
             
             //hide remind me button temporally
             
+            let currentSize = self.view.frame.size
+            
+            self.view.frame.size = scrollView.contentSize
+            
             self.remindMeButton.isHidden = true
             
             try PDFGenerator.generate([self.view], to: dst)
             
             self.remindMeButton.isHidden = false
+            
+            self.view.frame.size = currentSize
             
             print("PDF sample saved in: " + dst.absoluteString)
             completion(dst, nil)

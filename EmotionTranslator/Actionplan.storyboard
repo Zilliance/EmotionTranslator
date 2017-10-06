@@ -136,6 +136,7 @@
                         <outlet property="actionStepLabel" destination="ucb-Kt-lOF" id="8uL-6I-qcE"/>
                         <outlet property="contentView" destination="Cqc-AZ-jlQ" id="VXy-FY-6I6"/>
                         <outlet property="remindMeButton" destination="oKs-M1-83U" id="HfP-zZ-pSh"/>
+                        <outlet property="scrollView" destination="8sx-kg-ohU" id="7CG-Ry-6Wq"/>
                         <outlet property="takeAwayLabel" destination="790-nz-dPC" id="fHa-K2-X25"/>
                     </connections>
                 </viewController>
