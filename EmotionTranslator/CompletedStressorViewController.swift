@@ -58,11 +58,12 @@ class CompletedStressorViewController: UIViewController {
                 vc.view.layer.contentsGravity = kCAGravityResizeAspectFill
                 return vc
             case 1: // Conversation
-                let vc = UIStoryboard(name: "Conversation", bundle: nil).instantiateInitialViewController() as! ConversationTableViewController
+                let vc = UIStoryboard(name: "CompletedConversation", bundle: nil).instantiateInitialViewController() as! CompletedConversationTableViewController
                 vc.currentStressor = stressor
                 return vc
             case 2: // Takeaway
-                let vc = UIStoryboard(name: "Takeaway", bundle: nil).instantiateInitialViewController() as! TakeAwayViewController
+                let vc = UIStoryboard(name: "CompletedTakeaway", bundle: nil).instantiateInitialViewController() as! TakeAwayViewController
+                vc.completed = true
                 vc.currentStressor = stressor
                 return vc
             default:

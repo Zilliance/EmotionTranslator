@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dIE-1A-Wxc">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Muli-Bold.ttf">
+            <string>Muli-Bold</string>
+        </array>
+        <array key="Muli-Light.ttf">
+            <string>Muli-Light</string>
+        </array>
+        <array key="Muli-Regular.ttf">
+            <string>Muli-Regular</string>
+        </array>
+        <array key="Muli-SemiBold.ttf">
+            <string>Muli-SemiBold</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Take Away View Controller-->
+        <scene sceneID="TX2-91-lgu">
+            <objects>
+                <tableViewController id="dIE-1A-Wxc" customClass="TakeAwayViewController" customModule="EmotionTranslator" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="fnE-qr-G1g">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="calibratedRGB"/>
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="WeV-5K-QAZ">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="70"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Takeaway" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x1F-Pc-Ngb">
+                                    <rect key="frame" x="20" y="37" width="335" height="23"/>
+                                    <fontDescription key="fontDescription" name="Muli-SemiBold" family="Muli" pointSize="18"/>
+                                    <color key="textColor" red="0.12549019610000001" green="0.19215686269999999" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H9i-CD-kh6">
+                                    <rect key="frame" x="126.5" y="68" width="122" height="2"/>
+                                    <color key="backgroundColor" red="0.88235294119999996" green="0.88235294119999996" blue="0.89411764709999997" alpha="1" colorSpace="calibratedRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="2" id="6DZ-Ux-4pv"/>
+                                        <constraint firstAttribute="width" constant="122" id="A2i-6F-vyY"/>
+                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="122" id="cLb-yf-Vjl"/>
+                                        <constraint firstAttribute="height" constant="2" id="v2q-0e-4ah"/>
+                                    </constraints>
+                                </view>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="bottom" secondItem="x1F-Pc-Ngb" secondAttribute="bottom" constant="10" id="0y6-Y8-Jdj"/>
+                                <constraint firstAttribute="height" constant="70" id="Ipx-vK-GKh"/>
+                                <constraint firstItem="x1F-Pc-Ngb" firstAttribute="leading" secondItem="WeV-5K-QAZ" secondAttribute="leading" constant="20" id="Vf6-N7-b1i"/>
+                                <constraint firstItem="H9i-CD-kh6" firstAttribute="top" secondItem="x1F-Pc-Ngb" secondAttribute="bottom" constant="8" id="XIX-bv-8lq"/>
+                                <constraint firstAttribute="trailing" secondItem="x1F-Pc-Ngb" secondAttribute="trailing" constant="20" id="Xeh-aM-mEB"/>
+                                <constraint firstItem="H9i-CD-kh6" firstAttribute="centerX" secondItem="WeV-5K-QAZ" secondAttribute="centerX" id="rSS-mx-4vx"/>
+                            </constraints>
+                        </view>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="header" rowHeight="64" id="1Om-Uz-fIC" customClass="TakeAwayHeaderViewCell" customModule="EmotionTranslator" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="98" width="375" height="64"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="1Om-Uz-fIC" id="0p0-O8-sNL">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Conversation" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HnR-s9-an0">
+                                            <rect key="frame" x="20" y="30" width="110" height="17.5"/>
+                                            <fontDescription key="fontDescription" name="Muli-Regular" family="Muli" pointSize="18"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9jX-Sj-uYH">
+                                            <rect key="frame" x="20" y="54" width="122" height="2"/>
+                                            <color key="backgroundColor" red="0.88235294119999996" green="0.88235294119999996" blue="0.89411764709999997" alpha="1" colorSpace="calibratedRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="122" id="Bhr-fn-LdC"/>
+                                                <constraint firstAttribute="height" constant="2" id="jAn-5c-vPR"/>
+                                            </constraints>
+                                        </view>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    <constraints>
+                                        <constraint firstItem="9jX-Sj-uYH" firstAttribute="leading" secondItem="HnR-s9-an0" secondAttribute="leading" id="84G-Ad-pti"/>
+                                        <constraint firstItem="HnR-s9-an0" firstAttribute="leading" secondItem="0p0-O8-sNL" secondAttribute="leading" constant="20" id="HQ0-vU-JEb"/>
+                                        <constraint firstAttribute="bottom" secondItem="9jX-Sj-uYH" secondAttribute="bottom" constant="8" id="JFD-e3-vfG"/>
+                                        <constraint firstItem="HnR-s9-an0" firstAttribute="top" secondItem="0p0-O8-sNL" secondAttribute="top" constant="30" id="U71-MH-ids"/>
+                                        <constraint firstItem="9jX-Sj-uYH" firstAttribute="top" secondItem="HnR-s9-an0" secondAttribute="bottom" constant="6.5" id="ZrI-tR-fSp"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="label" destination="HnR-s9-an0" id="Mko-Oj-80q"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="response" rowHeight="72" id="rhh-CH-Py6" customClass="TakeAwayResponseViewCell" customModule="EmotionTranslator" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="162" width="375" height="72"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="rhh-CH-Py6" id="m4E-ju-feb">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="72"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="takeAwayMonster" translatesAutoresizingMaskIntoConstraints="NO" id="EaN-yj-Erp">
+                                            <rect key="frame" x="20" y="6" width="45" height="60"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="45" id="8og-lW-NkB"/>
+                                                <constraint firstAttribute="height" constant="60" id="Btj-zy-gQ2"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cell title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vIY-oZ-qh1">
+                                            <rect key="frame" x="85" y="14" width="272" height="19"/>
+                                            <fontDescription key="fontDescription" name="Muli-Bold" family="Muli" pointSize="15"/>
+                                            <color key="textColor" red="0.62745098040000002" green="0.63921568630000003" blue="0.66274509800000003" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Response to Question 1" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2JE-uK-3D1">
+                                            <rect key="frame" x="85" y="39" width="272" height="18"/>
+                                            <fontDescription key="fontDescription" name="Muli-Light" family="Muli" pointSize="14"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    <constraints>
+                                        <constraint firstAttribute="trailingMargin" secondItem="2JE-uK-3D1" secondAttribute="trailing" constant="10" id="6rD-qh-cw1"/>
+                                        <constraint firstItem="EaN-yj-Erp" firstAttribute="top" secondItem="m4E-ju-feb" secondAttribute="top" constant="6" id="Q8X-i0-vKi"/>
+                                        <constraint firstItem="vIY-oZ-qh1" firstAttribute="leading" secondItem="EaN-yj-Erp" secondAttribute="trailing" constant="20" id="Qi0-Jm-8F6"/>
+                                        <constraint firstItem="2JE-uK-3D1" firstAttribute="top" secondItem="vIY-oZ-qh1" secondAttribute="bottom" constant="6" id="RPe-qR-hH5"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="vIY-oZ-qh1" secondAttribute="trailing" constant="10" id="T4Z-oW-aea"/>
+                                        <constraint firstItem="2JE-uK-3D1" firstAttribute="leading" secondItem="vIY-oZ-qh1" secondAttribute="leading" id="eH6-x8-LRo"/>
+                                        <constraint firstItem="EaN-yj-Erp" firstAttribute="leading" secondItem="m4E-ju-feb" secondAttribute="leading" constant="20" id="gZ5-tW-SAu"/>
+                                        <constraint firstItem="vIY-oZ-qh1" firstAttribute="top" secondItem="m4E-ju-feb" secondAttribute="topMargin" constant="6" id="kDr-S6-xjq"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="2JE-uK-3D1" secondAttribute="bottom" constant="6.5" id="kUL-GB-YxC"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="answerLabel" destination="2JE-uK-3D1" id="YE6-fZ-xvN"/>
+                                    <outlet property="monsterIcon" destination="EaN-yj-Erp" id="zfz-N2-WY7"/>
+                                    <outlet property="titleLabel" destination="vIY-oZ-qh1" id="mMn-75-CM2"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="dIE-1A-Wxc" id="7om-Dg-s5i"/>
+                            <outlet property="delegate" destination="dIE-1A-Wxc" id="PP2-wQ-XlC"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GSU-9h-Fvn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="154.40000000000001" y="158.77061469265368"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="takeAwayMonster" width="150" height="200"/>
+    </resources>
+</document>
