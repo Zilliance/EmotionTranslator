@@ -64,6 +64,8 @@ class TakeAwayViewController: UITableViewController {
     
     var backgroundView: UIView!
     
+    var completed = false
+    
     var takeAwayTextView: KMPlaceholderTextView?
     var takeAwayActionsTextView: KMPlaceholderTextView?
     var headerResized: Bool = false
@@ -101,7 +103,7 @@ class TakeAwayViewController: UITableViewController {
     }
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return 3
+        return self.completed ? 1 : 3
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

@@ -17,6 +17,7 @@
 		889D79537741AC722652C136 /* Pods_EmotionTranslator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAA997AB957049B5551F71EB /* Pods_EmotionTranslator.framework */; };
 		8C164D731F87FEB700929D8A /* CompletedConversation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C164D721F87FEB700929D8A /* CompletedConversation.storyboard */; };
 		8C164D771F8800CC00929D8A /* CompletedConversationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C164D761F8800CC00929D8A /* CompletedConversationTableViewController.swift */; };
+		8C164D791F88029600929D8A /* CompletedTakeaway.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C164D781F88029600929D8A /* CompletedTakeaway.storyboard */; };
 		8C2B14081F547DF7002C0353 /* HomeViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C2B14071F547DF7002C0353 /* HomeViewController.storyboard */; };
 		8C2B140A1F548B67002C0353 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2B14091F548B67002C0353 /* HomeViewController.swift */; };
 		8C2B140C1F548B8C002C0353 /* HomeCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2B140B1F548B8C002C0353 /* HomeCollectionViewController.swift */; };
@@ -138,6 +139,7 @@
 		6DC6FC489D947818823F215C /* Pods-EmotionTranslatorTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmotionTranslatorTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EmotionTranslatorTests/Pods-EmotionTranslatorTests.debug.xcconfig"; sourceTree = "<group>"; };
 		8C164D721F87FEB700929D8A /* CompletedConversation.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CompletedConversation.storyboard; sourceTree = "<group>"; };
 		8C164D761F8800CC00929D8A /* CompletedConversationTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletedConversationTableViewController.swift; sourceTree = "<group>"; };
+		8C164D781F88029600929D8A /* CompletedTakeaway.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CompletedTakeaway.storyboard; sourceTree = "<group>"; };
 		8C2B14071F547DF7002C0353 /* HomeViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = HomeViewController.storyboard; sourceTree = "<group>"; };
 		8C2B14091F548B67002C0353 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		8C2B140B1F548B8C002C0353 /* HomeCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewController.swift; sourceTree = "<group>"; };
@@ -456,6 +458,7 @@
 				E3A9BE801F86A8E60055A18A /* CompletedStressorViewController.swift */,
 				8C164D721F87FEB700929D8A /* CompletedConversation.storyboard */,
 				8C164D761F8800CC00929D8A /* CompletedConversationTableViewController.swift */,
+				8C164D781F88029600929D8A /* CompletedTakeaway.storyboard */,
 			);
 			name = "Completed Stressor";
 			sourceTree = "<group>";
@@ -749,6 +752,7 @@
 				8C61D6911F57727200389FC0 /* PreloadedEmotions.plist in Resources */,
 				8C2B144E1F56160D002C0353 /* Stressor.storyboard in Resources */,
 				E3BE110C1F53C83B00787921 /* Muli-Italic.ttf in Resources */,
+				8C164D791F88029600929D8A /* CompletedTakeaway.storyboard in Resources */,
 				E3BE11081F53C83B00787921 /* Muli-ExtraBold.ttf in Resources */,
 				8C2B142A1F54A942002C0353 /* SideMenu.storyboard in Resources */,
 				E3BE10BF1F53C6EF00787921 /* LaunchScreen.storyboard in Resources */,
