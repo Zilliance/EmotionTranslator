@@ -22,7 +22,7 @@
         <scene sceneID="xZV-TG-rS8">
             <objects>
                 <tableViewController id="L3f-7J-g8U" customClass="ConversationIntroductionTableViewController" customModule="EmotionTranslator" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="BRq-8a-CdP">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" dataMode="static" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="BRq-8a-CdP">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -109,7 +109,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="57"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="user-conversation" translatesAutoresizingMaskIntoConstraints="NO" id="r8s-ew-QPN">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="user-conversation" translatesAutoresizingMaskIntoConstraints="NO" id="r8s-ew-QPN">
                                                     <rect key="frame" x="20" y="0.0" width="35" height="35"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="35" id="Rck-dN-Ecp"/>
@@ -151,7 +151,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="57"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="shape-red-triangle" translatesAutoresizingMaskIntoConstraints="NO" id="uCQ-fu-qSn">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="shape-red-triangle" translatesAutoresizingMaskIntoConstraints="NO" id="uCQ-fu-qSn">
                                                     <rect key="frame" x="20" y="0.0" width="35" height="35"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="35" id="Dbd-cK-sSX"/>
@@ -193,7 +193,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="57"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="user-conversation" translatesAutoresizingMaskIntoConstraints="NO" id="iYG-TY-49a">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="user-conversation" translatesAutoresizingMaskIntoConstraints="NO" id="iYG-TY-49a">
                                                     <rect key="frame" x="20" y="0.0" width="35" height="35"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="35" id="ZsF-Ro-gN6"/>
@@ -231,11 +231,11 @@
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="74" id="6vF-xQ-skz">
                                         <rect key="frame" x="0.0" y="386" width="375" height="74"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.80000000000000004" contentMode="center" tableViewCell="6vF-xQ-skz" id="UaD-AT-h2L">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="6vF-xQ-skz" id="UaD-AT-h2L">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="74"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="shape-red-triangle" translatesAutoresizingMaskIntoConstraints="NO" id="CNU-vC-FR2">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="shape-red-triangle" translatesAutoresizingMaskIntoConstraints="NO" id="CNU-vC-FR2">
                                                     <rect key="frame" x="20" y="0.0" width="35" height="35"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="35" id="IQs-ym-7ml"/>

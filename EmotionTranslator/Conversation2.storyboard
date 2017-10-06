@@ -21,7 +21,7 @@
         <scene sceneID="DH8-dD-R9X">
             <objects>
                 <tableViewController id="zEz-7v-eNX" customClass="Conversation2TableViewController" customModule="EmotionTranslator" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="150" sectionHeaderHeight="28" sectionFooterHeight="28" id="WMb-Lv-1TP">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="150" sectionHeaderHeight="28" sectionFooterHeight="28" id="WMb-Lv-1TP">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
@@ -64,7 +64,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="126"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="user-conversation" translatesAutoresizingMaskIntoConstraints="NO" id="lzD-pm-zJW">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="user-conversation" translatesAutoresizingMaskIntoConstraints="NO" id="lzD-pm-zJW">
                                             <rect key="frame" x="18" y="45.5" width="35" height="35"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="35" id="GDz-WF-uhn"/>
@@ -72,13 +72,13 @@
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Me" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Agi-5M-Ht5">
-                                            <rect key="frame" x="65" y="10" width="290" height="15.5"/>
+                                            <rect key="frame" x="65" y="10" width="290" height="14"/>
                                             <fontDescription key="fontDescription" name="Muli-Regular" family="Muli" pointSize="12"/>
                                             <color key="textColor" red="0.45882352939999999" green="0.46666666670000001" blue="0.48627450979999998" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What’s the main message you’re trying to give me?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cSz-8M-Ufb">
-                                            <rect key="frame" x="65" y="27.5" width="290" height="78.5"/>
+                                            <rect key="frame" x="65" y="26" width="290" height="80"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="35.5" id="eiP-Jr-O9n"/>
                                             </constraints>
@@ -113,7 +113,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="116"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="user-conversation" translatesAutoresizingMaskIntoConstraints="NO" id="SkI-3Q-uor">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="user-conversation" translatesAutoresizingMaskIntoConstraints="NO" id="SkI-3Q-uor">
                                             <rect key="frame" x="18" y="40.5" width="35" height="35"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="35" id="1Vr-dw-bvX"/>
@@ -121,13 +121,13 @@
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Me" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pNv-zd-hLk">
-                                            <rect key="frame" x="65" y="0.0" width="290" height="15.5"/>
+                                            <rect key="frame" x="65" y="0.0" width="290" height="14"/>
                                             <fontDescription key="fontDescription" name="Muli-Regular" family="Muli" pointSize="12"/>
                                             <color key="textColor" red="0.45882352939999999" green="0.46666666670000001" blue="0.48627450979999998" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What’s the main message you’re trying to give me?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dck-IB-vPa">
-                                            <rect key="frame" x="65" y="17.5" width="290" height="78.5"/>
+                                            <rect key="frame" x="65" y="16" width="290" height="80"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="35.5" id="NsL-ZZ-lrJ"/>
                                             </constraints>
@@ -162,7 +162,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="132"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="completed-stressor" translatesAutoresizingMaskIntoConstraints="NO" id="gb5-LJ-9Wo">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="completed-stressor" translatesAutoresizingMaskIntoConstraints="NO" id="gb5-LJ-9Wo">
                                             <rect key="frame" x="18" y="20" width="35" height="35"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="35" id="K90-VB-UBg"/>

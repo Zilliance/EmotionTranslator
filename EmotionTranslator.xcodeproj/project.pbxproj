@@ -75,6 +75,8 @@
 		E30F87561F758D9500685AAD /* LearnMoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E30F87511F758D0300685AAD /* LearnMoreViewController.swift */; };
 		E30F87571F758D9D00685AAD /* LearnMore.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E30F87521F758D0300685AAD /* LearnMore.storyboard */; };
 		E35DB1781F5724F600C76B6B /* Monster.swift in Sources */ = {isa = PBXBuildFile; fileRef = E35DB1771F5724F600C76B6B /* Monster.swift */; };
+		E3A9BE821F86A8E60055A18A /* CompletedStressorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A9BE801F86A8E60055A18A /* CompletedStressorViewController.swift */; };
+		E3A9BE851F86A9F00055A18A /* CompletedStressor.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3A9BE841F86A9F00055A18A /* CompletedStressor.storyboard */; };
 		E3BE10B51F53C6EF00787921 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3BE10B41F53C6EF00787921 /* AppDelegate.swift */; };
 		E3BE10BC1F53C6EF00787921 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3BE10BB1F53C6EF00787921 /* Assets.xcassets */; };
 		E3BE10BF1F53C6EF00787921 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3BE10BD1F53C6EF00787921 /* LaunchScreen.storyboard */; };
@@ -194,6 +196,8 @@
 		E30F87521F758D0300685AAD /* LearnMore.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LearnMore.storyboard; sourceTree = "<group>"; };
 		E30F87541F758D3B00685AAD /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		E35DB1771F5724F600C76B6B /* Monster.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Monster.swift; sourceTree = "<group>"; };
+		E3A9BE801F86A8E60055A18A /* CompletedStressorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletedStressorViewController.swift; sourceTree = "<group>"; };
+		E3A9BE841F86A9F00055A18A /* CompletedStressor.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CompletedStressor.storyboard; sourceTree = "<group>"; };
 		E3BE10B11F53C6EF00787921 /* EmotionTranslator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EmotionTranslator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3BE10B41F53C6EF00787921 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E3BE10BB1F53C6EF00787921 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -306,7 +310,6 @@
 			children = (
 				8C2B14341F54AB4D002C0353 /* Intro.storyboard */,
 				8C2B14351F54AB4D002C0353 /* IntroViewController.swift */,
-				4F3C6AF51F71302D0040AECD /* ProfileViewController.swift */,
 			);
 			name = Intro;
 			sourceTree = "<group>";
@@ -315,28 +318,28 @@
 			isa = PBXGroup;
 			children = (
 				8C2B14411F55CAC5002C0353 /* Tour.storyboard */,
-				8C2B14421F55CAC5002C0353 /* TourSceneViewController.swift */,
 				8C2B14431F55CAC5002C0353 /* TourPageViewController.swift */,
+				8C2B14421F55CAC5002C0353 /* TourSceneViewController.swift */,
 			);
 			name = Tour;
 			sourceTree = "<group>";
 		};
-		8C2B14471F55FA19002C0353 /* CreateStressor */ = {
+		8C2B14471F55FA19002C0353 /* Create Stressor */ = {
 			isa = PBXGroup;
 			children = (
 				8C2B14481F55FA45002C0353 /* CreateStressor.storyboard */,
 				8C2B144A1F55FCDC002C0353 /* CreateStressorViewController.swift */,
 			);
-			name = CreateStressor;
+			name = "Create Stressor";
 			sourceTree = "<group>";
 		};
-		8C2B144C1F5615F6002C0353 /* NewStressor */ = {
+		8C2B144C1F5615F6002C0353 /* New Stressor */ = {
 			isa = PBXGroup;
 			children = (
 				8C2B144D1F56160D002C0353 /* Stressor.storyboard */,
 				8C2B144F1F56161C002C0353 /* NewStressorViewController.swift */,
 			);
-			name = NewStressor;
+			name = "New Stressor";
 			sourceTree = "<group>";
 		};
 		8C61D6851F57530800389FC0 /* Emotion */ = {
@@ -381,13 +384,13 @@
 			name = Conversation;
 			sourceTree = "<group>";
 		};
-		8C6EB5D61F69BB420097FB13 /* TakeAction */ = {
+		8C6EB5D61F69BB420097FB13 /* Take Away */ = {
 			isa = PBXGroup;
 			children = (
 				8C6EB5D71F69BB740097FB13 /* Takeaway.storyboard */,
 				8C6EB5D91F69BC920097FB13 /* TakeAwayViewController.swift */,
 			);
-			name = TakeAction;
+			name = "Take Away";
 			sourceTree = "<group>";
 		};
 		8C6EB5DB1F69C2A70097FB13 /* ActionPlan */ = {
@@ -432,6 +435,23 @@
 				E30F87511F758D0300685AAD /* LearnMoreViewController.swift */,
 			);
 			name = "Learn More Popup";
+			sourceTree = "<group>";
+		};
+		E35295BB1F86A6EE0097C204 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				4F3C6AF51F71302D0040AECD /* ProfileViewController.swift */,
+			);
+			name = Profile;
+			sourceTree = "<group>";
+		};
+		E35295BC1F86A86F0097C204 /* Completed Stressor */ = {
+			isa = PBXGroup;
+			children = (
+				E3A9BE841F86A9F00055A18A /* CompletedStressor.storyboard */,
+				E3A9BE801F86A8E60055A18A /* CompletedStressorViewController.swift */,
+			);
+			name = "Completed Stressor";
 			sourceTree = "<group>";
 		};
 		E3BE10A81F53C6EF00787921 = {
@@ -510,18 +530,20 @@
 		E3BE10EB1F53C7DE00787921 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				8C6EB5E01F6B01FA0097FB13 /* Scheduler */,
-				8C6EB5DB1F69C2A70097FB13 /* ActionPlan */,
-				8C6EB5D61F69BB420097FB13 /* TakeAction */,
-				8C61D6A71F60A97F00389FC0 /* Conversation */,
-				8C61D6961F58BB7800389FC0 /* Monster */,
-				8C61D6851F57530800389FC0 /* Emotion */,
-				8C2B144C1F5615F6002C0353 /* NewStressor */,
-				8C2B14471F55FA19002C0353 /* CreateStressor */,
-				8C2B14401F55CA63002C0353 /* Tour */,
 				8C2B14331F54AB1D002C0353 /* Intro */,
-				8C2B141E1F54A75D002C0353 /* SideMenu */,
+				E35295BB1F86A6EE0097C204 /* Profile */,
 				8C2B14061F547DDF002C0353 /* Home */,
+				E35295BC1F86A86F0097C204 /* Completed Stressor */,
+				8C2B14471F55FA19002C0353 /* Create Stressor */,
+				8C2B144C1F5615F6002C0353 /* New Stressor */,
+				8C61D6851F57530800389FC0 /* Emotion */,
+				8C61D6961F58BB7800389FC0 /* Monster */,
+				8C61D6A71F60A97F00389FC0 /* Conversation */,
+				8C6EB5D61F69BB420097FB13 /* Take Away */,
+				8C6EB5DB1F69C2A70097FB13 /* ActionPlan */,
+				8C6EB5E01F6B01FA0097FB13 /* Scheduler */,
+				8C2B141E1F54A75D002C0353 /* SideMenu */,
+				8C2B14401F55CA63002C0353 /* Tour */,
 				E30F87531F758D0900685AAD /* Learn More Popup */,
 			);
 			name = Scenes;
@@ -706,6 +728,7 @@
 				8C61D6A91F60AA2000389FC0 /* Introduction.storyboard in Resources */,
 				8C61D6A01F5F4D9A00389FC0 /* Name.storyboard in Resources */,
 				8C6EB5D81F69BB740097FB13 /* Takeaway.storyboard in Resources */,
+				E3A9BE851F86A9F00055A18A /* CompletedStressor.storyboard in Resources */,
 				E3BE110A1F53C83B00787921 /* Muli-ExtraLight.ttf in Resources */,
 				8C61D69C1F59F77E00389FC0 /* Create.storyboard in Resources */,
 				8C61D6A41F606BA600389FC0 /* MonsterView.xib in Resources */,
@@ -963,6 +986,7 @@
 				4F2CDCD91F55EC920048FA9C /* Analytics+EmotionTranslator.swift in Sources */,
 				8C2B14501F56161C002C0353 /* NewStressorViewController.swift in Sources */,
 				8C2B144B1F55FCDC002C0353 /* CreateStressorViewController.swift in Sources */,
+				E3A9BE821F86A8E60055A18A /* CompletedStressorViewController.swift in Sources */,
 				4F505AEF1F72B64C0008BCB3 /* AutoscrollableViewController.swift in Sources */,
 				8C2B14321F54A9C9002C0353 /* VideoPlayerViewController.swift in Sources */,
 				E3BE10E41F53C7C900787921 /* Database.swift in Sources */,

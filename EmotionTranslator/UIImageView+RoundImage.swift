@@ -12,12 +12,13 @@ import UIKit
 extension UIImageView {
     
     func setRound(image: UIImage?) {
-        guard let image = image else { return }
+        guard let image = image else {
+            return
+        }
+        
         self.layer.cornerRadius = self.frame.size.width / 2.0
-        self.contentMode = .scaleToFill
+        self.contentMode = .scaleAspectFill
         self.clipsToBounds = true
         self.image = image
     }
 }
-
-
