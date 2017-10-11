@@ -167,15 +167,12 @@ class TakeAwayViewController: UITableViewController {
             
         case (1, 1):
             let cell = tableView.dequeueReusableCell(withIdentifier: "question", for: indexPath) as! TakeAwayQuestionViewCell
-            let title = "Based on the convo you just had, what’s your biggest takeaway from this experience? Learn more."
-            
-            cell.titleLabel.attributedText = title.learnMoreAttributedString(font: cell.titleLabel.font, color: cell.titleLabel.textColor)
-            cell.titleLabel.isUserInteractionEnabled = true
-            cell.titleLabel.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(learnMoreAboutMainMessage(_:))))
+            let title = "Based on the convo you just had, what’s your biggest takeaway from this experience?"
             
             if (cell.textView.text.count == 0) {
                 cell.textView.text = self.currentStressor.takeAwayText
             }
+            
             cell.textView.delegate = self
             cell.textView.placeholder = "I will feel better if I start speaking up and asking for what I need."
             takeAwayTextView = cell.textView
@@ -186,11 +183,7 @@ class TakeAwayViewController: UITableViewController {
             
         case (2, 1):
             let cell = tableView.dequeueReusableCell(withIdentifier: "question", for: indexPath) as! TakeAwayQuestionViewCell
-            let title = "What action step does your takeaway inspire you to take? Learn more."
-            
-            cell.titleLabel.attributedText = title.learnMoreAttributedString(font: cell.titleLabel.font, color: cell.titleLabel.textColor)
-            cell.titleLabel.isUserInteractionEnabled = true
-            cell.titleLabel.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(learnMoreAboutTryingToHelp(_:))))
+            let title = "What action step does your takeaway inspire you to take?"
             
             if (cell.textView.text.count == 0) {
                 cell.textView.text = self.currentStressor.takeAwayActions
@@ -212,16 +205,6 @@ class TakeAwayViewController: UITableViewController {
         return returnCell
     }
     
-    // MARK: - Learn More
-    
-    @IBAction func learnMoreAboutMainMessage(_ sender: Any?) {
-        LearnMoreViewController.present(from: self, text: NSLocalizedString("main message learn more", comment: ""))
-    }
-    
-    @IBAction func learnMoreAboutTryingToHelp(_ sender: Any?) {
-        LearnMoreViewController.present(from: self, text: NSLocalizedString("trying to help learn more", comment: ""), size: .large)
-    }
-
 }
 
 // MARK: - CompassValidation

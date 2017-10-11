@@ -8,6 +8,16 @@
 
 import UIKit
 
+private let question1 = "What’s the main message you’re trying to give me? Learn more"
+private let question2 = "How have you been trying to help me? Learn more"
+private let question3 = "What do you need to feel better?"
+private let question4 = "What is an action step you wish I would take?"
+
+private let placeholder1 = "Speak up and ask for what you need."
+private let placeholder2 = "Stop letting people walk all over you."
+private let placeholder3 = "For you to talk to your boss and tell her what you want."
+private let placeholder4 = "Value yourself and know that your wants and needs are worthy and important."
+
 class Conversation2TableViewController: UITableViewController {
 
     @IBOutlet weak var headerLabel: UILabel!
@@ -18,18 +28,19 @@ class Conversation2TableViewController: UITableViewController {
     
     var questionsEnded: (() -> ())? = nil
     
+    private var questions = [
+        question1,
+        question2,
+        question3,
+        question4,
+     ]
     
-    private var questions = ["What’s the main message you’re trying to give me?",
-                             "How have you been trying to help me?",
-                             "What do you need to feel better?",
-                             "What is an action step you wish I would take?",
-                             ]
-    
-    private var placeholders = ["Speak up and ask for what you need.",
-                                 "Stop letting people walk all over you.",
-                                 "For you to talk to your boss and tell her what you want.",
-                                 "Value yourself and know that your wants and needs are worthy and important.",
-                                 ]
+    private var placeholders = [
+        placeholder1,
+        placeholder2,
+        placeholder3,
+        placeholder4,
+     ]
     
     fileprivate var replies: [String?] = [nil ,nil ,nil ,nil ,]
     
@@ -97,11 +108,9 @@ class Conversation2TableViewController: UITableViewController {
             }
         }
         
-        
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
         return self.elements.count
     }
     
@@ -133,7 +142,22 @@ class Conversation2TableViewController: UITableViewController {
                 cell.nameLabel.text = "Me"
             }
             
-            cell.questionLabel.text = item.text
+            // Attributed in case we have a learn more, otherwise plain text removing gesture recognizer
+            
+            if item.text == question1 {
+                cell.questionLabel.attributedText = item.text.learnMoreAttributedString(font: cell.questionLabel.font, color: cell.questionLabel.textColor)
+                cell.questionLabel.isUserInteractionEnabled = true
+                cell.questionLabel.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(learnMoreAboutMainMessage(_:))))
+            } else if item.text == question2 {
+                cell.questionLabel.attributedText = item.text.learnMoreAttributedString(font: cell.questionLabel.font, color: cell.questionLabel.textColor)
+                cell.questionLabel.isUserInteractionEnabled = true
+                cell.questionLabel.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(learnMoreAboutTryingToHelp(_:))))
+            } else {
+                cell.questionLabel.text = item.text
+                cell.questionLabel.isUserInteractionEnabled = false
+                cell.questionLabel.gestureRecognizers?.forEach { cell.questionLabel.removeGestureRecognizer($0) }
+            }
+
             return cell
         case .answer:
             let cell = tableView.dequeueReusableCell(withIdentifier: "ResponseCell", for: indexPath) as! ResponseCell
@@ -195,6 +219,15 @@ class Conversation2TableViewController: UITableViewController {
         }
     }
 
+    // MARK: - Learn More
+    
+    @IBAction func learnMoreAboutMainMessage(_ sender: Any?) {
+        LearnMoreViewController.present(from: self, text: NSLocalizedString("main message learn more", comment: ""))
+    }
+    
+    @IBAction func learnMoreAboutTryingToHelp(_ sender: Any?) {
+        LearnMoreViewController.present(from: self, text: NSLocalizedString("trying to help learn more", comment: ""), size: .large)
+    }
 }
 
 // MARK: - CompassValidation
