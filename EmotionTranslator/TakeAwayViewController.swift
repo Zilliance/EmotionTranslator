@@ -158,7 +158,7 @@ class TakeAwayViewController: UITableViewController {
             
         case (1, 0):
             let cell = tableView.dequeueReusableCell(withIdentifier: "header", for: indexPath) as! TakeAwayHeaderViewCell
-            cell.label.text = "Take Away"
+            cell.label.text = "Takeaway"
             returnCell = cell
         case (2, 0):
             let cell = tableView.dequeueReusableCell(withIdentifier: "header", for: indexPath) as! TakeAwayHeaderViewCell
@@ -167,12 +167,13 @@ class TakeAwayViewController: UITableViewController {
             
         case (1, 1):
             let cell = tableView.dequeueReusableCell(withIdentifier: "question", for: indexPath) as! TakeAwayQuestionViewCell
-            let title = "Based on the convo you just had, what’s your biggest takeaway from this experience?"
+            let title = "Based on the conversation you just had, what’s your biggest takeaway from this experience?"
             
             if (cell.textView.text.count == 0) {
                 cell.textView.text = self.currentStressor.takeAwayText
             }
             
+            cell.titleLabel.text = title
             cell.textView.delegate = self
             cell.textView.placeholder = "I will feel better if I start speaking up and asking for what I need."
             takeAwayTextView = cell.textView
@@ -189,6 +190,7 @@ class TakeAwayViewController: UITableViewController {
                 cell.textView.text = self.currentStressor.takeAwayActions
             }
             
+            cell.titleLabel.text = title
             cell.textView.delegate = self
             cell.textView.placeholder = "Schedule time to meet with my boss."
             takeAwayActionsTextView = cell.textView
