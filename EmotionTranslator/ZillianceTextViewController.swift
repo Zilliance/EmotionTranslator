@@ -97,7 +97,7 @@ class ZillianceTextViewController: UIViewController, UIViewControllerTransitioni
             
             if let takeAway = stressor.takeAwayText, let action = stressor.takeAwayActions {
                 
-                let text = "Takeaway:\n \(takeAway)\n\nAction Step:\n\(action)"
+                let text = "Takeaway:\n\(takeAway)\n\nAction Step:\n\(action)"
                 
                 self.textView.text = text
             }
