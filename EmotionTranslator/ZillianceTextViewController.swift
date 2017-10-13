@@ -97,9 +97,9 @@ class ZillianceTextViewController: UIViewController, UIViewControllerTransitioni
             
             if let takeAway = stressor.takeAwayText, let action = stressor.takeAwayActions {
                 
-                let placeholder = "Takeaway:\n \(takeAway)\n\nAction Step:\n\(action)"
+                let text = "Takeaway:\n \(takeAway)\n\nAction Step:\n\(action)"
                 
-                self.textView.placeholder = placeholder
+                self.textView.text = text
             }
         }
         else {
@@ -111,8 +111,6 @@ class ZillianceTextViewController: UIViewController, UIViewControllerTransitioni
     }
     
     private func setupView() {
-        
-        self.textView.text = nil
         
         let tapEdit = UITapGestureRecognizer(target: self, action: #selector(self.editTapped))
         self.textView.addGestureRecognizer(tapEdit)
