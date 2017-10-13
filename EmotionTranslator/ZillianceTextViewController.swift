@@ -13,6 +13,8 @@ class ZillianceTextViewController: UIViewController, UIViewControllerTransitioni
     
     @IBOutlet weak var textView: KMPlaceholderTextView!
     
+    var stressor: Stressor?
+    
     struct EditableText {
         var text: String = ""
         var type: EditTextType = .value
@@ -86,19 +88,29 @@ class ZillianceTextViewController: UIViewController, UIViewControllerTransitioni
         self.promptTexts.removeAll()
         self.textView.text = text
     }
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        self.textView.placeholder = "For example, schedule time to meet with my boss."
+        
+        
+        if let stressor = self.stressor {
+            
+            if let takeAway = stressor.takeAwayText, let action = stressor.takeAwayActions {
+                
+                let text = "Takeaway:\n\(takeAway)\n\nAction Step:\n\(action)"
+                
+                self.textView.text = text
+            }
+        }
+        else {
+            self.textView.placeholder = "For example, schedule time to meet with my boss."
+        }
         
         self.setupView()
 
     }
     
     private func setupView() {
-        
-        self.textView.text = nil
         
         let tapEdit = UITapGestureRecognizer(target: self, action: #selector(self.editTapped))
         self.textView.addGestureRecognizer(tapEdit)

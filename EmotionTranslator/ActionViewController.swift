@@ -137,6 +137,7 @@ class ActionViewController: UIViewController {
         }
         
         scheduler.title = self.currentStressor.title
+        scheduler.stressor = self.currentStressor
         
         let navigationController = OrientableNavigationController(rootViewController: scheduler)
         

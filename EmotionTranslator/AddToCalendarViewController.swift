@@ -19,6 +19,7 @@ class AddToCalendarViewController: UIViewController {
     var preloadedNotification: ZillianceShared.Notification?
     
     var text: String?
+    var stressor: Stressor?
 
     fileprivate var pickerDates: [Date] = []
 
@@ -35,6 +36,9 @@ class AddToCalendarViewController: UIViewController {
             self.zillianceTextViewController.textView.text = text
         }
         
+        if let stressor = self.stressor {
+            self.zillianceTextViewController.stressor = stressor
+        }
         
         // date picker
 
@@ -95,6 +99,7 @@ class AddToCalendarViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         self.zillianceTextViewController = segue.destination as! ZillianceTextViewController
+        self.zillianceTextViewController.stressor = self.stressor
     }
     
 }

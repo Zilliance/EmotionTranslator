@@ -27,6 +27,7 @@ class ScheduleViewController: AnalyzedViewController {
     }
     
     var text: String = ""
+    var stressor: Stressor?
     
     fileprivate var currentViewController: UIViewController?
     
@@ -65,11 +66,17 @@ class ScheduleViewController: AnalyzedViewController {
         notificationsViewController.preloadedNotification = self.preloadedNotification
         calendarViewController.preloadedNotification = self.preloadedNotification
         
+        
         if !self.text.isEmpty {
         
         notificationsViewController.text = self.text
         calendarViewController.text = self.text
             
+        }
+        
+        if let stressor = self.stressor {
+            notificationsViewController.stressor = stressor
+            calendarViewController.stressor = stressor
         }
         
         self.viewControllers.append(notificationsViewController)
