@@ -221,7 +221,7 @@ class CreateStressorViewController: AnalyzedViewController {
         }
 
         scheduler.title = self.stressor.title
-        //scheduler.text =
+        scheduler.stressor = self.stressor
         
         let navigationController = OrientableNavigationController(rootViewController: scheduler)
         

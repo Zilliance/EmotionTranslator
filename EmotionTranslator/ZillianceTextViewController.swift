@@ -13,6 +13,8 @@ class ZillianceTextViewController: UIViewController, UIViewControllerTransitioni
     
     @IBOutlet weak var textView: KMPlaceholderTextView!
     
+    var stressor: Stressor?
+    
     struct EditableText {
         var text: String = ""
         var type: EditTextType = .value
@@ -86,11 +88,23 @@ class ZillianceTextViewController: UIViewController, UIViewControllerTransitioni
         self.promptTexts.removeAll()
         self.textView.text = text
     }
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        self.textView.placeholder = "For example, schedule time to meet with my boss."
+        
+        
+        if let stressor = self.stressor {
+            
+            if let takeAway = stressor.takeAwayText, let action = stressor.takeAwayActions {
+                
+                let placeholder = "Takeaway:\n \(takeAway)\n\nAction Step:\n\(action)"
+                
+                self.textView.placeholder = placeholder
+            }
+        }
+        else {
+            self.textView.placeholder = "For example, schedule time to meet with my boss."
+        }
         
         self.setupView()
 

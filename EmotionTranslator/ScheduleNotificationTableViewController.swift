@@ -24,6 +24,7 @@ class ScheduleNotificationTableViewController: UITableViewController {
     private let dateFormatter = DateFormatter()
     
     var text: String?
+    var stressor: Stressor?
     
     fileprivate var selectedTime: Date?
 
@@ -42,6 +43,10 @@ class ScheduleNotificationTableViewController: UITableViewController {
         
         if let text = self.text {
             self.zillianceTextViewController.textView.text = text
+        }
+        
+        if let stressor = self.stressor {
+            self.zillianceTextViewController.stressor = stressor
         }
         
         self.daysSegment.tintColor = UIColor.switchBlueColor
@@ -69,6 +74,7 @@ class ScheduleNotificationTableViewController: UITableViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         self.zillianceTextViewController = segue.destination as! ZillianceTextViewController
+        self.zillianceTextViewController.stressor = self.stressor
     }
     
 
