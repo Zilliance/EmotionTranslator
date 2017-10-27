@@ -11,6 +11,7 @@ import Fabric
 import Answers
 import Amplitude_iOS
 import ZillianceShared
+import FacebookCore
 
 final class Analytics: AnalyticsService {
     
@@ -33,6 +34,8 @@ final class Analytics: AnalyticsService {
         Answers.logCustomEvent(withName: event.name, customAttributes: event.data)
         
         Amplitude.instance().logEvent(event.name, withEventProperties: event.data)
+        
+        AppEventsLogger.log(AppEvent(name: event.name))
         
     }
     

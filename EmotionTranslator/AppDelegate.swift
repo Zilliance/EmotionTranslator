@@ -8,6 +8,7 @@
 
 import UIKit
 import ZillianceShared
+import FacebookCore
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
